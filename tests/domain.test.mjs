@@ -2,15 +2,15 @@ import test, { after, before } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import { build } from 'esbuild';
-import { Miniflare } from 'miniflare';
+import { createTestDatabase } from './database.mjs';
 
 const output=await build({entryPoints:['lib/gym-service.ts'],bundle:true,write:false,platform:'node',format:'esm'});
 const {act,snapshot}=await import(`data:text/javascript;base64,${Buffer.from(output.outputFiles[0].text).toString('base64')}`);
-const runtime=new Miniflare({modules:true,script:'export default {fetch(){return new Response("ok")}}',compatibilityDate:'2026-05-15',d1Databases:['DB'],cf:false});
+let fixtureDatabase;
 let db;
 const alice={userId:'alice',displayName:'Alice'},bob={userId:'bob',displayName:'Bob'},outsider={userId:'stranger',displayName:'Stranger'};
-before(async()=>{db=await runtime.getD1Database('DB');const sql=await readFile('drizzle/0000_gray_scarlet_spider.sql','utf8');await db.batch(sql.split('--> statement-breakpoint').filter(s=>s.trim()).map(s=>db.prepare(s)));});
-after(()=>runtime.dispose());
+before(async()=>{fixtureDatabase=await createTestDatabase();db=fixtureDatabase.db;});
+after(()=>fixtureDatabase.close());
 async function fixture(){const {crewId}=await act(db,alice,{action:'createCrew',name:'Test crew',nickname:'앨리스'});const a=await snapshot(db,alice,crewId);await act(db,bob,{action:'joinCrew',invite:a.crew.invite,nickname:'밥'});return {crewId,getA:()=>snapshot(db,alice,crewId),getB:()=>snapshot(db,bob,crewId)};}
 
 test('invite membership is required; outsider cannot read or modify crew',async()=>{

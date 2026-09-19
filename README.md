@@ -9,7 +9,7 @@
 - 공통 루틴 관리 및 개인 루틴 복사·편집
 - 공통 루틴 변경사항 비교 후 선택 반영
 - Google OAuth 로그인 (별도 키 설정 필요)
-- 모바일 대응 및 D1 데이터 저장
+- 모바일 대응 및 Supabase PostgreSQL 데이터 저장
 
 장소 관리와 운동 수행 기록은 포함하지 않습니다.
 
@@ -22,7 +22,7 @@ npm run install:ci
 npm run build
 ```
 
-최초 로컬 DB 구성과 실행 방법은 [PROJECT.md](PROJECT.md), Google 로그인 설정은 [GOOGLE_LOGIN_SETUP.md](GOOGLE_LOGIN_SETUP.md)를 참고하세요.
+Vercel/Supabase 연결과 실행 방법은 [VERCEL_SUPABASE_SETUP.md](VERCEL_SUPABASE_SETUP.md), Google 로그인 설정은 [GOOGLE_LOGIN_SETUP.md](GOOGLE_LOGIN_SETUP.md)를 참고하세요.
 
 ```sh
 npm run dev

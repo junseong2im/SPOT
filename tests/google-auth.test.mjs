@@ -2,24 +2,20 @@ import test, { before, after } from 'node:test';
 import assert from 'node:assert/strict';
 import { readdir, readFile } from 'node:fs/promises';
 import { build } from 'esbuild';
-import { Miniflare } from 'miniflare';
+import { createTestDatabase } from './database.mjs';
 import { generateKeyPair, exportJWK, createLocalJWKSet, SignJWT } from 'jose';
 
 const built = await build({entryPoints:['lib/google-auth.ts'],bundle:true,write:false,platform:'node',format:'esm'});
 const auth = await import(`data:text/javascript;base64,${Buffer.from(built.outputFiles[0].text).toString('base64')}`);
-const runtime = new Miniflare({modules:true,script:'export default {fetch(){return new Response("ok")}}',compatibilityDate:'2026-05-15',d1Databases:['DB'],cf:false});
+let fixtureDatabase;
 const config = auth.googleConfig({GOOGLE_CLIENT_ID:'fixture.apps.googleusercontent.com',GOOGLE_CLIENT_SECRET:'fixture-secret',APP_ORIGIN:'https://spot.example'});
 let db, privateKey, keys;
 before(async()=>{
-  db=await runtime.getD1Database('DB');
-  for(const file of (await readdir('drizzle')).filter(f=>f.endsWith('.sql')).sort()){
-    const sql=await readFile(`drizzle/${file}`,'utf8');
-    await db.batch(sql.split('--> statement-breakpoint').filter(s=>s.trim()).map(s=>db.prepare(s)));
-  }
+  fixtureDatabase=await createTestDatabase();db=fixtureDatabase.db;
   const pair=await generateKeyPair('RS256');privateKey=pair.privateKey;
   keys=createLocalJWKSet({keys:[{...await exportJWK(pair.publicKey),kid:'fixture',alg:'RS256'}]});
 });
-after(()=>runtime.dispose());
+after(()=>fixtureDatabase.close());
 async function signed(nonce,overrides={},signingKey=privateKey){
   const now=Math.floor(Date.now()/1000);
   return new SignJWT({sub:'google-user-1',name:'테스트 친구',email:'friend@example.test',email_verified:true,nonce,iss:'https://accounts.google.com',aud:config.clientId,iat:now,exp:now+3600,...overrides}).setProtectedHeader({alg:'RS256',kid:'fixture'}).sign(signingKey);

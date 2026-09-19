@@ -26,26 +26,19 @@ GOOGLE_CLIENT_SECRET=발급받은_Client_Secret
 
 설정 후 개발 서버를 재시작한다. `/login`의 Google 버튼이 활성화된다. `.dev.vars`와 `.env`를 동시에 사용하지 않는다. 운영에서는 동일한 이름으로 런타임 환경변수와 비밀 값을 등록하며, 로컬 비밀 파일을 업로드하지 않는다. `APP_ORIGIN`은 경로 없이 정확한 외부 HTTPS 원점이어야 한다.
 
-## 3. 로컬 DB 마이그레이션
+## 3. 데이터베이스와 Vercel
 
-이 작업에서 기존 로컬 DB에는 다음 추가 마이그레이션을 적용했다. 새 체크아웃에서는 `0000` 다음에 `0001`을 한 번씩 적용한다. 기존 일정/루틴 테이블은 변경하지 않았다.
-
-```powershell
-npm run build
-node --import ./scripts/sites-env.mjs ./node_modules/wrangler/bin/wrangler.js d1 execute DB --local --config dist/server/wrangler.json --persist-to .wrangler/state --file drizzle/0001_huge_malice.sql
-npm run dev
-```
+현재는 Supabase PostgreSQL을 사용한다. [VERCEL_SUPABASE_SETUP.md](VERCEL_SUPABASE_SETUP.md)에 따라 `DATABASE_URL`과 운영 환경변수를 연결한다. 과거 D1 명령은 운영 배포에 사용하지 않는다.
 
 ## 인증 동작
 
 - 브라우저와 결합된 10분 유효 일회용 state, PKCE S256, nonce 검증.
 - `jose`로 Google 공개키 기반 RS256 서명, issuer, audience, azp, 만료 및 발급 시간 검증.
-- 사용자 키는 `google:<sub>`. 이메일 기반으로 다른 계정과 자동 연결하지 않는다. 기존 ChatGPT 데이터는 ChatGPT 로그인으로 접근한다.
+- 사용자 키는 `google:<sub>`. 이메일 기반으로 다른 계정과 자동 연결하지 않는다. 기존 ChatGPT 개발 데이터는 과거 D1 로컬 파일에 보존되며 자동 계정 연결은 하지 않는다.
 - 로그인 성공 후 기존 Google 세션을 교체하고 7일 세션 발급. DB에는 세션 토큰의 SHA-256만 저장한다. HttpOnly / SameSite=Lax, HTTPS에서는 Secure 및 `__Host-` 쿠키 사용.
 - 구글 access/refresh token을 보관하거나 다른 Google API에 접근하지 않는다.
-- 로그아웃 시 서버 세션을 폐기하고 기존 ChatGPT 로그인도 종료한다. Google 계정 자체에서 로그아웃하는 것은 아니다.
+- 로그아웃 시 서버 세션을 폐기한다. Google 계정 자체에서 로그아웃하는 것은 아니다.
 - 실제 인증은 일반 웹 브라우저에서 확인한다. 초대 링크로 진입해 로그인하면 해당 초대 화면으로 돌아온다.
-- Sites의 외부 접근 정책이 별도로 ChatGPT 로그인을 강제한다면, 구글만 사용하는 친구를 받기 전에 해당 정책과 호스팅 방식을 확인해야 한다. 플랫폼 접근 정책 변경 및 배포는 이 작업에서 수행하지 않았다.
 
 ## 검증
 

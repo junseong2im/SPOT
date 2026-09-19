@@ -1,5 +1,4 @@
-import { env } from 'cloudflare:workers';
-import { getChatGPTUser } from '@/app/chatgpt-auth';
+import { env } from '@/lib/runtime';
 import { cookieName, googleSessionUser, readCookie, type AuthUser } from './google-auth';
 
 export async function getAppUser(request: Request): Promise<AuthUser | null> {
@@ -11,6 +10,5 @@ export async function getAppUser(request: Request): Promise<AuthUser | null> {
     // Never silently switch back to another account if a Google session expired.
     return googleSessionUser(env.DB, token);
   }
-  const user = await getChatGPTUser();
-  return user ? { userId: user.userId, displayName: user.displayName, email: user.email, provider: 'chatgpt' } : null;
+  return null;
 }

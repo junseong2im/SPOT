@@ -2,3 +2,6 @@
 APP_ORIGIN=http://localhost:5173
 GOOGLE_CLIENT_ID=
 GOOGLE_CLIENT_SECRET=
+# Supabase transaction pooler connection string; keep server-side only.
+# Leave empty for isolated local PostgreSQL development.
+DATABASE_URL=

@@ -1,4 +1,4 @@
-import { env } from 'cloudflare:workers';
+import { env } from '@/lib/runtime';
 import { AuthError, authCookie, finishGoogleLogin, googleConfig, redirectResponse } from '@/lib/google-auth';
 export const dynamic = 'force-dynamic';
 

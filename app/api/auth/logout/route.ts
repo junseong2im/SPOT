@@ -1,4 +1,4 @@
-import { env } from 'cloudflare:workers';
+import { env } from '@/lib/runtime';
 import { authCookie, cookieName, readCookie, redirectResponse, revokeGoogleSession } from '@/lib/google-auth';
 export const dynamic = 'force-dynamic';
 
@@ -11,7 +11,6 @@ export async function POST(request: Request) {
       if (!env.DB) throw new Error('Database unavailable');
       await revokeGoogleSession(env.DB, token);
     }
-    // Clear both identities to prevent a previous ChatGPT cookie reappearing.
-    return redirectResponse('/signout-with-chatgpt?return_to=/', [authCookie('session', '', origin, 0), authCookie('oauth', '', origin, 0)]);
+    return redirectResponse('/login', [authCookie('session', '', origin, 0), authCookie('oauth', '', origin, 0)]);
   } catch { return redirectResponse('/login?error=logout_failed'); }
 }

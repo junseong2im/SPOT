@@ -1,3 +1,4 @@
+import type { Database } from '../db/adapter';
 import { z } from 'zod';
 import { starterRoutines, type CrewState, type Routine, type PersonalRoutine } from './gym-model';
 
@@ -20,21 +21,21 @@ const actionSchema=z.discriminatedUnion('action',[
   z.object({action:z.literal('attendance'),crewId:z.string(),sessionId:z.string(),participating:z.boolean()}),
   z.object({action:z.literal('cancelSession'),crewId:z.string(),sessionId:z.string()}),
 ]);
-async function memberCrew(db:D1Database,crewId:string,userId:string){
+async function memberCrew(db:Database,crewId:string,userId:string){
  const row=await db.prepare('SELECT c.* FROM crews c JOIN members m ON m.crew_id=c.id WHERE c.id=? AND m.user_id=?').bind(crewId,userId).first<CrewRow>();
  if(!row)throw new AppError('이 크루에 접근할 수 없어요. 초대 링크로 가입해주세요.',403);return row;
 }
-export async function snapshot(db:D1Database,user:Actor,requested?:string|null){
- const crews=(await db.prepare('SELECT c.id,c.name FROM crews c JOIN members m ON m.crew_id=c.id WHERE m.user_id=? ORDER BY c.rowid').bind(user.userId).all<{id:string;name:string}>()).results;
+export async function snapshot(db:Database,user:Actor,requested?:string|null){
+ const crews=(await db.prepare('SELECT c.id,c.name FROM crews c JOIN members m ON m.crew_id=c.id WHERE m.user_id=? ORDER BY c.name,c.id').bind(user.userId).all<{id:string;name:string}>()).results;
  const id=requested||crews[0]?.id;
  if(!id)return {user,crews,crew:null};
  const row=await memberCrew(db,id,user.userId);
  const [members,own]=await Promise.all([
- db.prepare('SELECT user_id AS userId,name FROM members WHERE crew_id=? ORDER BY rowid').bind(id).all(),
+ db.prepare('SELECT user_id AS "userId",name FROM members WHERE crew_id=? ORDER BY user_id').bind(id).all(),
  db.prepare('SELECT content,base_version,revision FROM personal WHERE crew_id=? AND user_id=?').bind(id,user.userId).all<{content:string;base_version:number;revision:number}>()]);
  return {user,crews,crew:{...row,state:JSON.parse(row.state),members:members.results,personal:own.results.map(p=>({...JSON.parse(p.content),baseVersion:p.base_version,revision:p.revision}))}};
 }
-export async function act(db:D1Database,user:Actor,raw:unknown){
+export async function act(db:Database,user:Actor,raw:unknown){
  const parsed=actionSchema.safeParse(raw);if(!parsed.success)throw new AppError('입력 내용을 확인해주세요. 이름, 날짜와 운동 구성이 올바른지 확인하세요.');const input=parsed.data;
  if(input.action==='createCrew'){
   const id=crypto.randomUUID(),invite=crypto.randomUUID().replaceAll('-','');

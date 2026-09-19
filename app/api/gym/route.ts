@@ -1,4 +1,4 @@
-import { env } from 'cloudflare:workers';
+import { env } from '@/lib/runtime';
 import { getAppUser } from '@/lib/auth';
 import { act, snapshot, AppError } from '@/lib/gym-service';
 export const dynamic='force-dynamic';

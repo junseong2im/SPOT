@@ -1,3 +1,4 @@
+import type { Database } from '../db/adapter';
 import { createRemoteJWKSet, jwtVerify, type JWTVerifyGetKey } from 'jose';
 
 export type GoogleConfig = { clientId: string; clientSecret: string; origin: string; redirectUri: string };
@@ -64,7 +65,7 @@ export function redirectResponse(location: string, cookies: string[] = []): Resp
   return new Response(null, { status: 303, headers });
 }
 
-export async function beginGoogleLogin(db: D1Database, config: GoogleConfig, returnTo: string) {
+export async function beginGoogleLogin(db: Database, config: GoogleConfig, returnTo: string) {
   const state = randomToken(), browser = randomToken(), verifier = randomToken(), nonce = randomToken();
   await db.prepare('INSERT INTO oauth_transactions(state_hash,browser_hash,verifier,nonce,return_to,expires_at,consumed) VALUES(?,?,?,?,?,?,0)')
     .bind(await hashToken(state), await hashToken(browser), verifier, nonce, safeReturnTo(returnTo), Date.now() + FLOW_SECONDS * 1000).run();
@@ -74,7 +75,7 @@ export async function beginGoogleLogin(db: D1Database, config: GoogleConfig, ret
 }
 
 type Transaction = { verifier: string; nonce: string; return_to: string };
-export async function consumeTransaction(db: D1Database, state: string | null, browser: string | null): Promise<Transaction> {
+export async function consumeTransaction(db: Database, state: string | null, browser: string | null): Promise<Transaction> {
   if (!state || !browser || !/^[A-Za-z0-9_-]{43}$/.test(state)) throw new AuthError('invalid_state');
   const transaction = await db.prepare('UPDATE oauth_transactions SET consumed=1 WHERE state_hash=? AND browser_hash=? AND expires_at>? AND consumed=0 RETURNING verifier,nonce,return_to')
     .bind(await hashToken(state), await hashToken(browser), Date.now()).first<Transaction>();
@@ -91,22 +92,22 @@ export async function verifyGoogleIdentity(idToken: string, clientId: string, no
   } catch { throw new AuthError('invalid_identity'); }
 }
 
-export async function createGoogleSession(db: D1Database, user: AuthUser): Promise<string> {
+export async function createGoogleSession(db: Database, user: AuthUser): Promise<string> {
   const token = randomToken();
   await db.prepare('INSERT INTO auth_sessions(token_hash,user_id,display_name,email,expires_at,revoked) VALUES(?,?,?,?,?,0)')
     .bind(await hashToken(token), user.userId, user.displayName, user.email, Date.now() + SESSION_SECONDS * 1000).run();
   return token;
 }
-export async function googleSessionUser(db: D1Database, token: string): Promise<AuthUser | null> {
-  const user = await db.prepare('SELECT user_id AS userId,display_name AS displayName,email FROM auth_sessions WHERE token_hash=? AND expires_at>? AND revoked=0')
+export async function googleSessionUser(db: Database, token: string): Promise<AuthUser | null> {
+  const user = await db.prepare('SELECT user_id AS "userId",display_name AS "displayName",email FROM auth_sessions WHERE token_hash=? AND expires_at>? AND revoked=0')
     .bind(await hashToken(token), Date.now()).first<Omit<AuthUser, 'provider'>>();
   return user ? { ...user, provider: 'google' } : null;
 }
-export async function revokeGoogleSession(db: D1Database, token: string) {
+export async function revokeGoogleSession(db: Database, token: string) {
   await db.prepare('UPDATE auth_sessions SET revoked=1 WHERE token_hash=?').bind(await hashToken(token)).run();
 }
 
-export async function finishGoogleLogin(db: D1Database, config: GoogleConfig, request: Request, options: { fetcher?: typeof fetch; keys?: JWTVerifyGetKey } = {}): Promise<Response> {
+export async function finishGoogleLogin(db: Database, config: GoogleConfig, request: Request, options: { fetcher?: typeof fetch; keys?: JWTVerifyGetKey } = {}): Promise<Response> {
   const url = new URL(request.url);
   const flow = await consumeTransaction(db, url.searchParams.get('state'), readCookie(request, cookieName('oauth', config.origin)));
   try {

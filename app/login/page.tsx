@@ -1,4 +1,4 @@
-import { env } from 'cloudflare:workers';
+import { env } from '@/lib/runtime';
 import { Dumbbell, ArrowLeft, ArrowUpRight } from 'lucide-react';
 import { googleConfig, safeReturnTo } from '@/lib/google-auth';
 export const dynamic = 'force-dynamic';
