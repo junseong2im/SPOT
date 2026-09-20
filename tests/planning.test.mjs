@@ -23,7 +23,7 @@ test('weekly series creates only selected weekdays and uses each weekday routine
 test('series edits preserve earlier dates and cancellation only affects selected future occurrences',async()=>{
  const f=await group();await act(db,alice,{action:'saveSession',crewId:f.crewId,revision:1,session:{id:'',title:'Series',date:'2100-01-04',time:'19:00',routineId:''},repeat:{weekdays:[1],until:'2100-01-25'}});
  let crew=(await f.get()).crew;const second=crew.state.sessions[1];
- await act(db,alice,{action:'saveSession',crewId:f.crewId,revision:crew.revision,session:{...second,time:'20:00'},scope:'future'});
+ await act(db,bob,{action:'saveSession',crewId:f.crewId,revision:crew.revision,session:{...second,time:'20:00'},scope:'future'});
  crew=(await f.get()).crew;assert.equal(crew.state.sessions[0].time,'19:00');assert.ok(crew.state.sessions.slice(1).every(s=>s.time==='20:00'));
  await act(db,alice,{action:'cancelSession',crewId:f.crewId,sessionId:second.id,scope:'future'});
  crew=(await f.get()).crew;assert.equal(crew.state.sessions[0].cancelled,false);assert.ok(crew.state.sessions.slice(1).every(s=>s.cancelled));

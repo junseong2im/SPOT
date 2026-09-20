@@ -63,7 +63,10 @@ test('schedule create, edit, attendance idempotence, owner restrictions and canc
  for(let i=0;i<2;i++)await act(db,bob,{action:'attendance',crewId:f.crewId,sessionId:event.id,participating:true});
  assert.deepEqual((await f.getA()).crew.state.sessions[0].participants,['alice','bob']);
  await assert.rejects(act(db,bob,{action:'cancelSession',crewId:f.crewId,sessionId:event.id}),e=>e.status===403);
- a=await f.getA();await assert.rejects(act(db,bob,{action:'saveSession',crewId:f.crewId,revision:a.crew.revision,session:{...event,time:'20:00'}}),e=>e.status===403);
+ a=await f.getA();await act(db,bob,{action:'saveSession',crewId:f.crewId,revision:a.crew.revision,session:{...event,time:'20:00'}});
+ assert.equal((await f.getA()).crew.state.sessions[0].time,'20:00');
+ await assert.rejects(act(db,alice,{action:'saveSession',crewId:f.crewId,revision:a.crew.revision,session:{...event,time:'21:00'}}),e=>e.status===409);
+ a=await f.getA();
  await act(db,alice,{action:'saveSession',crewId:f.crewId,revision:a.crew.revision,session:{...event,time:'20:00'}});
  await act(db,bob,{action:'attendance',crewId:f.crewId,sessionId:event.id,participating:false});
  assert.deepEqual((await f.getA()).crew.state.sessions[0].participants,['alice']);

@@ -163,7 +163,6 @@ async function actInTransaction(db:Database,user:Actor,raw:unknown){
   if(input.session.routineId&&!state.routines.some(r=>r.id===input.session.routineId))throw new AppError('루틴을 다시 선택해주세요.');
   const existing=input.session.id?state.sessions.find(s=>s.id===input.session.id):undefined;
   if(input.session.id&&!existing)throw new AppError('일정을 찾을 수 없어요.',404);
-  if(existing&&(existing.creator!==user.userId&&row.owner!==user.userId))throw new AppError('작성자 또는 크루장만 일정을 수정할 수 있어요.',403);
   if(existing?.cancelled)throw new AppError('취소된 일정은 수정할 수 없어요.');
   if(existing){
    if(input.repeat)throw new AppError('기존 일정에 반복 조건을 추가할 수 없어요. 새 반복 일정을 만들어주세요.');
