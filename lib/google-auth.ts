@@ -7,7 +7,12 @@ export type AuthEnvironment = { GOOGLE_CLIENT_ID?: string; GOOGLE_CLIENT_SECRET?
 export class AuthError extends Error {
   constructor(public code: 'not_configured' | 'invalid_state' | 'cancelled' | 'google_unavailable' | 'invalid_identity', public returnTo = '/') { super(code); }
 }
-export const SESSION_SECONDS = 7 * 24 * 60 * 60;
+export const SESSION_SECONDS = 30 * 24 * 60 * 60;
+
+export async function renewGoogleSession(db:Database,token:string,now=Date.now()){
+ const result=await db.prepare('UPDATE auth_sessions SET expires_at=? WHERE token_hash=? AND revoked=0 AND expires_at>? AND expires_at<?').bind(now+SESSION_SECONDS*1000,await hashToken(token),now,now+23*86400000).run();
+ return !!result.meta.changes;
+}
 export const FLOW_SECONDS = 10 * 60;
 const GOOGLE_AUTHORIZATION = 'https://accounts.google.com/o/oauth2/v2/auth';
 const GOOGLE_TOKEN = 'https://oauth2.googleapis.com/token';

@@ -32,6 +32,12 @@ test('invite membership is required; outsider cannot read or modify crew',async(
  await assert.rejects(act(db,outsider,{action:'joinCrew',invite:'invalid-invitation-code',nickname:'x'}),e=>e.status===404);
  await act(db,bob,{action:'joinCrew',invite:(await f.getA()).crew.invite,nickname:'another'});assert.equal((await f.getB()).crew.members.length,2);
 });
+
+test('one account can join multiple crews without duplicate membership or cross-crew leakage',async()=>{
+ const f=await fixture();const {crewId:other}=await act(db,bob,{action:'createCrew',name:'Second',nickname:'Bob'});
+ const second=(await snapshot(db,bob,other)).crew;await act(db,alice,{action:'joinCrew',invite:second.invite,nickname:'Alice'});await act(db,alice,{action:'joinCrew',invite:second.invite,nickname:'Alice'});
+ const first=await f.getA(),next=await snapshot(db,alice,other);assert.ok(first.crews.some(c=>c.id===other));assert.equal(next.crew.members.filter(m=>m.userId===alice.userId).length,1);assert.equal(first.crew.id,f.crewId);assert.equal(next.crew.id,other);
+});
 test('personal edits never mutate the common routine or another member; sync is explicit',async()=>{
  const f=await fixture();const original=(await f.getA()).crew.state.routines[0];
  for(const user of [alice,bob])await act(db,user,{action:'copyRoutine',crewId:f.crewId,routineId:original.id,version:1});

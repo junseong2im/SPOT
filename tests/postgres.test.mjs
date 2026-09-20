@@ -25,7 +25,7 @@ test('Supabase tables have RLS enabled and PUBLIC has no schema access',async()=
  const fixture=await createTestDatabase();
  try{
   const {rows}=await fixture.client.query("SELECT c.relrowsecurity FROM pg_class c JOIN pg_namespace n ON n.oid=c.relnamespace WHERE n.nspname='spot' AND c.relkind='r'");
-  assert.equal(rows.length,11);assert.ok(rows.every(row=>row.relrowsecurity));
+  assert.equal(rows.length,14);assert.ok(rows.every(row=>row.relrowsecurity));
   await fixture.client.exec('CREATE ROLE fixture_anon');
   const result=await fixture.client.query("SELECT has_schema_privilege('fixture_anon','spot','USAGE') AS allowed");
   assert.equal(result.rows[0].allowed,false);

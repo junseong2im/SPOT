@@ -120,6 +120,20 @@ test('identity uses Google subject, so matching emails never merge accounts',asy
   assert.notEqual(first.userId,other.userId);
 });
 
+test('login persists for 30 days and renewal never revives expired or revoked sessions',async()=>{
+ const now=Date.now(),user={userId:'google:renew',displayName:'Renew',email:'renew@example.test',provider:'google'};
+ assert.equal(auth.SESSION_SECONDS,30*86400);
+ const token=await auth.createGoogleSession(db,user),hash=await auth.hashToken(token);
+ assert.equal(await auth.renewGoogleSession(db,token,now),false);
+ await db.prepare('UPDATE auth_sessions SET expires_at=? WHERE token_hash=?').bind(now+86400000,hash).run();
+ assert.equal(await auth.renewGoogleSession(db,token,now),true);
+ assert.equal(Number((await db.prepare('SELECT expires_at FROM auth_sessions WHERE token_hash=?').bind(hash).first()).expires_at),now+30*86400000);
+ await auth.revokeGoogleSession(db,token);assert.equal(await auth.renewGoogleSession(db,token,now),false);
+ const expired=await auth.createGoogleSession(db,user);await db.prepare('UPDATE auth_sessions SET expires_at=? WHERE token_hash=?').bind(now-1,await auth.hashToken(expired)).run();
+ assert.equal(await auth.renewGoogleSession(db,expired,now),false);
+ assert.match(auth.authCookie('session',token,'https://spot.example',auth.SESSION_SECONDS),/Max-Age=2592000/);
+});
+
 test('a new Google login rotates an existing app session',async()=>{
   const old=await auth.createGoogleSession(db,{userId:'google:old',displayName:'Old',email:'old@example.test',provider:'google'});
   const flow=await begin();
