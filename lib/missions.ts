@@ -1,15 +1,18 @@
+import {coffeeSettlement,type CoffeeSettlement} from './coffee-settlement';
 import {z} from 'zod';
 import type {Database} from '../db/adapter';
 import {AppError} from './gym-service';
 import {localDate,type CrewState} from './gym-model';
 import {sessionStart} from './planning';
 export type Checkin={crew_id:string;session_id:string;user_id:string;session_version:number;workout_date:string;checked_at:number|string;confirmed_by:string|null;confirmed_at:number|string|null};
-export type Mission={id:string;crew_id:string;creator:string;title:string;starts:string;ends:string;target:number;promise:string;cancelled:number;progress:{userId:string;days:number;withdrawn:boolean}[];finished:boolean};
+export type Mission={id:string;crew_id:string;creator:string;title:string;starts:string;ends:string;target:number;promise:string;cancelled:number;coffee_price:number;settlement:CoffeeSettlement|null;progress:{userId:string;days:number;withdrawn:boolean}[];finished:boolean};
 const date=z.string().regex(/^\d{4}-\d{2}-\d{2}$/).refine(v=>{const d=new Date(v+'T00:00:00Z');return !isNaN(d.getTime())&&d.toISOString().slice(0,10)===v;});
 const actionSchema=z.discriminatedUnion('action',[
+ z.object({action:z.literal('finalizeCoffee'),missionId:z.string()}),
+ z.object({action:z.literal('coffeeProgress'),missionId:z.string(),kind:z.enum(['bought','received','shareSent','shareReceived']),targetId:z.string()}),
  z.object({action:z.literal('checkin'),sessionId:z.string()}),
  z.object({action:z.literal('confirm'),sessionId:z.string(),userId:z.string()}),
- z.object({action:z.literal('create'),title:z.string().trim().min(1).max(80),starts:date,ends:date,target:z.number().int().min(1).max(90),promise:z.string().trim().max(200),accepted:z.literal(true)}),
+ z.object({action:z.literal('create'),title:z.string().trim().min(1).max(80),starts:date,ends:date,target:z.number().int().min(1).max(90),promise:z.string().trim().max(200),coffeePrice:z.number().int().min(0).max(20000).default(0),accepted:z.literal(true)}),
  z.object({action:z.literal('join'),missionId:z.string(),accepted:z.literal(true)}),
  z.object({action:z.literal('withdraw'),missionId:z.string()}),
  z.object({action:z.literal('cancel'),missionId:z.string()}),
@@ -21,7 +24,7 @@ export async function missionSnapshot(db:Database,crewId:string,userId:string,no
  const records=(await db.prepare('SELECT * FROM checkins WHERE crew_id=? ORDER BY checked_at DESC').bind(crewId).all<Checkin>()).results.filter(c=>members.includes(c.user_id)&&crew.state.sessions.some(s=>s.id===c.session_id&&!s.cancelled&&(s.version??1)===c.session_version&&s.participants.includes(c.user_id)));
  const missions=(await db.prepare('SELECT * FROM missions WHERE crew_id=? ORDER BY created_at DESC LIMIT 50').bind(crewId).all<Mission>()).results;
  const enrollments=(await db.prepare('SELECT mm.* FROM mission_members mm JOIN missions m ON m.id=mm.mission_id WHERE m.crew_id=?').bind(crewId).all<{mission_id:string;user_id:string;joined_at:number|string;withdrawn:number}>()).results;
- return {checkins:records,missions:missions.map(m=>({...m,finished:now>=Date.parse(m.ends+'T23:59:59+09:00')+12*3600000,progress:enrollments.filter(p=>p.mission_id===m.id).map(p=>({userId:p.user_id,withdrawn:!!p.withdrawn||!members.includes(p.user_id),days:new Set(records.filter(c=>c.user_id===p.user_id&&c.confirmed_by&&c.workout_date>=m.starts&&c.workout_date<=m.ends&&Number(c.checked_at)>=Number(p.joined_at)).map(c=>c.workout_date)).size}))}))};
+ return {checkins:records,missions:missions.map(m=>({...m,settlement:typeof m.settlement==='string'?JSON.parse(m.settlement):m.settlement,finished:now>=Date.parse(m.ends+'T23:59:59+09:00')+12*3600000,progress:enrollments.filter(p=>p.mission_id===m.id).map(p=>({userId:p.user_id,withdrawn:!!p.withdrawn||!members.includes(p.user_id),days:new Set(records.filter(c=>c.user_id===p.user_id&&c.confirmed_by&&c.workout_date>=m.starts&&c.workout_date<=m.ends&&Number(c.checked_at)>=Number(p.joined_at)).map(c=>c.workout_date)).size}))}))};
 }
 export async function missionAction(db:Database,crewId:string,userId:string,raw:unknown,now=Date.now()){
  const parsed=actionSchema.safeParse(raw);if(!parsed.success)throw new AppError('입력 내용과 참여 동의를 확인해주세요.');
@@ -43,10 +46,32 @@ export async function missionAction(db:Database,crewId:string,userId:string,raw:
   const duration=(Date.parse(input.ends)-Date.parse(input.starts))/86400000+1;
   if(input.starts<localDate(new Date(now))||duration<1||duration>90||input.target>duration)throw new AppError('오늘 이후, 최대 90일 범위에서 목표 일수를 설정해주세요.');
   const count=await tx.prepare('SELECT count(*)::int AS n FROM missions WHERE crew_id=? AND cancelled=0 AND ends>=?').bind(crewId,localDate(new Date(now))).first<{n:number}>();if((count?.n??0)>=20)throw new AppError('진행 중인 미션은 크루당 최대 20개입니다.');
-  const id=crypto.randomUUID();await tx.prepare('INSERT INTO missions(id,crew_id,creator,title,starts,ends,target,promise,created_at) VALUES(?,?,?,?,?,?,?,?,?)').bind(id,crewId,userId,input.title,input.starts,input.ends,input.target,input.promise,now).run();await tx.prepare('INSERT INTO mission_members(mission_id,user_id,joined_at) VALUES(?,?,?)').bind(id,userId,now).run();return;
+  const id=crypto.randomUUID();await tx.prepare('INSERT INTO missions(id,crew_id,creator,title,starts,ends,target,promise,coffee_price,created_at) VALUES(?,?,?,?,?,?,?,?,?,?)').bind(id,crewId,userId,input.title,input.starts,input.ends,input.target,input.promise,input.coffeePrice,now).run();await tx.prepare('INSERT INTO mission_members(mission_id,user_id,joined_at) VALUES(?,?,?)').bind(id,userId,now).run();return;
  }
  const mission=await tx.prepare('SELECT * FROM missions WHERE id=? AND crew_id=?').bind(input.missionId,crewId).first<Mission>();if(!mission||mission.cancelled)throw new AppError('활성 미션이 아니에요.');
- if(input.action==='cancel'){if(mission.creator!==userId&&crew.owner!==userId)throw new AppError('작성자 또는 크루장만 미션을 취소할 수 있어요.',403);await tx.prepare('UPDATE missions SET cancelled=1 WHERE id=?').bind(mission.id).run();return;}
+ if(input.action==='finalizeCoffee'){
+  if(mission.creator!==userId&&crew.owner!==userId)throw new AppError('작성자 또는 크루장만 결과를 확정할 수 있어요.',403);
+  if(mission.settlement)return;
+  if(!mission.coffee_price)throw new AppError('커피 정산 미션이 아니에요.');
+  const summary=(await missionSnapshot(tx,crewId,userId,now)).missions.find(m=>m.id===mission.id)!;
+  if(!summary.finished)throw new AppError('출석 확인 기간이 끝난 뒤 확정해주세요.');
+  await tx.prepare('UPDATE missions SET settlement=? WHERE id=?').bind(JSON.stringify(coffeeSettlement(summary.progress,mission.target,mission.coffee_price,now)),mission.id).run();return;
+ }
+ if(input.action==='coffeeProgress'){
+  if(!mission.settlement)throw new AppError('먼저 결과를 확정해주세요.');
+  const settled:CoffeeSettlement=typeof mission.settlement==='string'?JSON.parse(mission.settlement):mission.settlement;
+  if(input.kind==='bought'||input.kind==='received'){
+   const cup=settled.cups.find(c=>c.userId===input.targetId);if(!cup)throw new AppError('정산 대상을 확인해주세요.');
+   if(input.kind==='bought'){if(settled.buyer!==userId)throw new AppError('구매 담당자만 표시할 수 있어요.',403);cup.bought=true;}
+   else {if(cup.userId!==userId)throw new AppError('받는 사람만 수령 확인할 수 있어요.',403);if(!cup.bought)throw new AppError('구매 완료 후 수령 확인해주세요.');cup.received=true;}
+  }else{
+   const share=settled.shares.find(c=>c.userId===input.targetId);if(!share)throw new AppError('정산 대상을 확인해주세요.');
+   if(input.kind==='shareSent'){if(share.userId!==userId)throw new AppError('본인 부담액만 표시할 수 있어요.',403);share.sent=true;}
+   else {if(settled.buyer!==userId)throw new AppError('구매 담당자만 확인할 수 있어요.',403);if(!share.sent)throw new AppError('전달 완료 표시 후 확인해주세요.');share.received=true;}
+  }
+  await tx.prepare('UPDATE missions SET settlement=? WHERE id=?').bind(JSON.stringify(settled),mission.id).run();return;
+ }
+ if(input.action==='cancel'){if(mission.settlement)throw new AppError('정산이 확정된 미션은 취소할 수 없어요.');if(mission.creator!==userId&&crew.owner!==userId)throw new AppError('작성자 또는 크루장만 미션을 취소할 수 있어요.',403);await tx.prepare('UPDATE missions SET cancelled=1 WHERE id=?').bind(mission.id).run();return;}
  if(now>Date.parse(mission.ends+'T23:59:59+09:00'))throw new AppError('이미 종료된 미션이에요.');
  if(input.action==='join')await tx.prepare('INSERT INTO mission_members(mission_id,user_id,joined_at) VALUES(?,?,?) ON CONFLICT(mission_id,user_id) DO UPDATE SET withdrawn=0,joined_at=EXCLUDED.joined_at WHERE mission_members.withdrawn=1').bind(mission.id,userId,now).run();
  else await tx.prepare('UPDATE mission_members SET withdrawn=1 WHERE mission_id=? AND user_id=?').bind(mission.id,userId).run();

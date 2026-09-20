@@ -42,3 +42,32 @@ test('attendance rejects wrong windows and stale confirmations after schedule ch
  }finally{await f.close();}
 });
 
+test('coffee settlement freezes results and only buyer and recipient can confirm their steps',async()=>{
+ const f=await setup(),db=f.db;try{
+  await missionAction(db,f.crewId,'a',{action:'create',title:'Coffee',starts:'2100-01-04',ends:'2100-01-04',target:1,promise:'',coffeePrice:5000,accepted:true},now-1000);
+  const id=(await missionSnapshot(db,f.crewId,'a',now)).missions[0].id;
+  await missionAction(db,f.crewId,'b',{action:'join',missionId:id,accepted:true},now-500);
+  let crew=(await snapshot(db,f.a,f.crewId)).crew;await act(db,f.a,{action:'saveSession',crewId:f.crewId,revision:crew.revision,session:{id:'',title:'Workout',date:'2100-01-04',time:'10:00',routineId:''}});
+  const session=(await snapshot(db,f.a,f.crewId)).crew.state.sessions[0];await missionAction(db,f.crewId,'a',{action:'checkin',sessionId:session.id},now);await missionAction(db,f.crewId,'b',{action:'confirm',sessionId:session.id,userId:'a'},now+1);
+  await assert.rejects(missionAction(db,f.crewId,'a',{action:'finalizeCoffee',missionId:id},now));
+  const later=now+2*86400000;await missionAction(db,f.crewId,'a',{action:'finalizeCoffee',missionId:id},later);
+  let settled=(await missionSnapshot(db,f.crewId,'a',later)).missions[0].settlement;assert.equal(settled.total,5000);assert.equal(settled.buyer,'b');assert.equal(settled.cups[0].userId,'a');
+  await assert.rejects(missionAction(db,f.crewId,'a',{action:'coffeeProgress',missionId:id,kind:'bought',targetId:'a'},later),e=>e.status===403);
+  await assert.rejects(missionAction(db,f.crewId,'a',{action:'coffeeProgress',missionId:id,kind:'received',targetId:'a'},later));
+  await missionAction(db,f.crewId,'b',{action:'coffeeProgress',missionId:id,kind:'bought',targetId:'a'},later);
+  await missionAction(db,f.crewId,'a',{action:'coffeeProgress',missionId:id,kind:'received',targetId:'a'},later);
+  await missionAction(db,f.crewId,'a',{action:'finalizeCoffee',missionId:id},later+1);
+  settled=(await missionSnapshot(db,f.crewId,'a',later)).missions[0].settlement;assert.equal(settled.cups[0].received,true);
+  await assert.rejects(missionAction(db,f.crewId,'a',{action:'cancel',missionId:id},later));
+ }finally{await f.close();}
+});
+
+test('coffee split conserves total including odd amounts and no-charge cases',async()=>{
+ const {coffeeSettlement}=await moduleFor('lib/coffee-settlement.ts');
+ const p=(userId,days)=>({userId,days,withdrawn:false});
+ const result=coffeeSettlement([p('w',3),p('a',0),p('b',0),p('c',0)],3,5000,1);
+ assert.deepEqual(result.shares.map(s=>s.amount),[1667,1667,1666]);assert.equal(result.shares.reduce((n,s)=>n+s.amount,0),5000);
+ assert.equal(coffeeSettlement([p('a',3),p('b',3)],3,5000,1).total,0);
+ assert.equal(coffeeSettlement([p('a',0),p('b',0)],3,5000,1).total,0);
+});
+
