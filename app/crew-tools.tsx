@@ -1,4 +1,5 @@
 'use client';
+import './crew-tools.css';
 import { useEffect, useState } from 'react';
 import { Plus, Vote, CalendarCheck, Settings, Bell, RefreshCw, LogOut, X } from 'lucide-react';
 import { Dialog, DialogContent, DialogTitle, DialogDescription } from '@/components/ui/dialog';
