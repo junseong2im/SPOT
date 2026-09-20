@@ -74,3 +74,35 @@ html.dark .sub-tabs [data-slot=tabs-trigger][data-state=active] {background:var(
 html.dark .brand-icon {background:#30251d;color:var(--brand-orange);border:1px solid #765031;}
 html.dark .routine-card .common-badge {color:var(--brand-orange);}
 html.dark :is(.routine-create,.main-nav [data-slot=tabs-trigger],.sub-tabs [data-slot=tabs-trigger]):focus-visible {outline-color:var(--brand-orange);}
+
+/* Slow flame shimmer, without flashing or moving the card layout. */
+html.dark .routine-card h3 {
+ color:#ff9384;
+ background:linear-gradient(110deg,#ff5b50 0%,#ffafa0 22%,#ff6557 42%,#ffd0b5 55%,#ff7563 70%,#ff5b50 100%);
+ background-size:250% 180%;
+ background-clip:text;
+ -webkit-background-clip:text;
+ -webkit-text-fill-color:transparent;
+ animation:spot-flame-text 4.5s ease-in-out infinite alternate;
+}
+html.dark .routine-card .routine-symbol {
+ background:#2a1718;
+ color:#ff8574;
+ animation:spot-flame-icon 3.8s ease-in-out infinite alternate;
+}
+html.dark .routine-card:nth-child(2n) h3 {animation-delay:-1.6s;}
+html.dark .routine-card:nth-child(3n) .routine-symbol {animation-delay:-2s;}
+@keyframes spot-flame-text {
+ 0% {background-position:0% 60%;text-shadow:0 -1px 8px #f4433626;}
+ 50% {background-position:65% 15%;text-shadow:0 -3px 12px #ff493338;}
+ 100% {background-position:100% 70%;text-shadow:0 -2px 9px #ff30202b;}
+}
+@keyframes spot-flame-icon {
+ 0% {color:#ff8574;filter:drop-shadow(0 -1px 2px #ff352538);}
+ 55% {color:#ffb19b;filter:drop-shadow(0 -3px 5px #ff39256b);}
+ 100% {color:#ff7565;filter:drop-shadow(0 -2px 3px #ff40204d);}
+}
+@media(prefers-reduced-motion:reduce) {
+ html.dark .routine-card h3 {animation:none;background:none;-webkit-text-fill-color:currentColor;color:#ff9384;text-shadow:none;}
+ html.dark .routine-card .routine-symbol {animation:none;filter:none;color:#ff9384;}
+}
