@@ -3,6 +3,7 @@ import { InstallApp } from './install-app';
 import "./globals.css";
 import "./spot-polish.css";
 import "./spot-dark.css";
+import "./spot-refined.css";
 
 export const metadata: Metadata = {
   title: "SPOT. | 우리들의 운동 약속",
