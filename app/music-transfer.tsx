@@ -5,7 +5,7 @@ import type {MusicRecommendation} from '@/lib/music-model';
 import {youtubeSource} from '@/lib/music-model';
 import {ExternalLink,ListMusic} from 'lucide-react';
 import './music-transfer.css';
-const isMix=(item:MusicRecommendation)=>!!youtubeSource(item.youtube_url)?.list||/playlist|\bmix\b|플리|믹스|모음|운동음악|운동노래|운동할때|workout motivation/i.test(item.title);
+const isMix=(item:MusicRecommendation)=>!!youtubeSource(item.youtube_url)?.list||/playlist|\bmix\b|플리|믹스|모음|운동음악|운동노래|운동할때|workout|bodybuilding|chris bumstead|cbum/i.test(item.title.normalize('NFKC'));
 export function MusicTransfer({items,userId,single=false}:{items:MusicRecommendation[];userId?:string;single?:boolean}){
  const [open,setOpen]=useState(false),[title,setTitle]=useState('SPOT 운동 음악'),[selected,setSelected]=useState<Record<string,boolean>>({}),[names,setNames]=useState<Record<string,{title:string;artist:string}>>({}),[manual,setManual]=useState(''),[busy,setBusy]=useState(false),[error,setError]=useState(''),[url,setUrl]=useState('');
  const eligible=items.filter(i=>!isMix(i));
