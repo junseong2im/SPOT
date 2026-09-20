@@ -76,6 +76,28 @@ html.dark .routine-card .common-badge {color:var(--brand-orange);}
 html.dark :is(.routine-create,.main-nav [data-slot=tabs-trigger],.sub-tabs [data-slot=tabs-trigger]):focus-visible {outline-color:var(--brand-orange);}
 
 /* Slow flame shimmer, without flashing or moving the card layout. */
+html.dark .primary,html.dark .circle-button,html.dark .music-play {
+ background:#ff8a34;color:#080808;border-color:#ff8a34;
+}
+html.dark .primary:hover:not(:disabled),html.dark .circle-button:hover:not(:disabled),html.dark .music-cover:hover .music-play {
+ background:#ffa05a;border-color:#ffa05a;
+}
+html.dark :is(.secondary,.spot-install-button) {
+ background:#2b2018;color:#ffb27a;border-color:#805331;
+}
+html.dark :is(.secondary,.spot-install-button):hover:not(:disabled) {
+ background:#402b1b;color:#ffd0ad;border-color:#c67b43;
+}
+html.dark .text-button {color:#ffad70;}
+html.dark .text-button:hover:not(:disabled) {background:#302219;}
+html.dark .icon-button {color:#ffad70;}
+html.dark .icon-button:hover:not(:disabled) {background:#38271b;}
+html.dark .danger {background:#421e22;color:#ffb3b8;border-color:#874048;}
+html.dark .danger:hover:not(:disabled) {background:#5b252b;}
+html.dark .joined {background:#18372c;color:#a3ebc6;border-color:#39775d;}
+html.dark :is(button,a):focus-visible {outline-color:#ffad70;}
+html.dark button:disabled {opacity:.45;}
+
 html.dark .routine-card h3 {
  color:#ff9384;
  background:linear-gradient(110deg,#ff5b50 0%,#ffafa0 22%,#ff6557 42%,#ffd0b5 55%,#ff7563 70%,#ff5b50 100%);
