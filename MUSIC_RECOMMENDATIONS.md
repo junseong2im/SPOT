@@ -13,3 +13,9 @@ YouTube Music 주소는 자동 생성한다. Spotify, Apple Music, 멜론, 지�
 새 테이블은 private `spot` 스키마, RLS 및 PUBLIC 접근 차단을 적용한다. 공개 등록 API로 관리자 역할을 획득할 수 없다. 내리기는 soft archive이며 수정은 revision으로 충돌을 감지한다.
 
 공식 플레이어 참고: https://developers.google.com/youtube/player_parameters
+
+## 플레이리스트 저장 연결 업데이트
+
+Soundiiz 공식 Playlist Import API에 선택한 제목·아티스트 목록을 전달하고, 검토/계정 연결/전송 화면을 여는 기능을 추가했다. API 키 없이 임시 가져오기 링크를 생성한다. SPOT은 대상 서비스의 토큰을 보관하지 않는다. 실제 대상 계정 저장 완료는 사용자가 외부 화면에서 진행하며 앱에서 완료로 허위 표시하지 않는다. 믹스 영상은 자동 매칭에서 제외하며 원곡 목록을 직접 입력할 수 있다. 멜론·지니·FLO·VIBE·벅스는 현재 해당 전송 서비스 지원 목록에 없다.
+
+공식 문서: https://support.soundiiz.com/hc/en-us/articles/36613501259922--API-Let-your-users-import-any-tracklist-to-Soundiiz

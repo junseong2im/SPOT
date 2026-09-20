@@ -1,0 +1,359 @@
+{
+  "incline": {
+    "exerciseName": "Incline Bench Press - Dumbbell",
+    "source": "https://wger.de/api/v2/exerciseinfo/537/",
+    "images": [
+      {
+        "src": "/exercise-images/incline-105.png",
+        "original": "https://wger.de/media/exercise-images/16/Incline-press-1.png",
+        "author": "Everkinetic",
+        "license": "CC-BY-SA 3",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en"
+      },
+      {
+        "src": "/exercise-images/incline-106.png",
+        "original": "https://wger.de/media/exercise-images/16/Incline-press-2.png",
+        "author": "Everkinetic",
+        "license": "CC-BY-SA 3",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en"
+      }
+    ]
+  },
+  "bench": {
+    "exerciseName": "Bench Press",
+    "source": "https://wger.de/api/v2/exerciseinfo/73/",
+    "images": [
+      {
+        "src": "/exercise-images/bench-68.png",
+        "original": "https://wger.de/media/exercise-images/192/Bench-press-1.png",
+        "author": "Everkinetic",
+        "license": "CC-BY-SA 3",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en"
+      },
+      {
+        "src": "/exercise-images/bench-70.png",
+        "original": "https://wger.de/media/exercise-images/192/Bench-press-2.png",
+        "author": "Everkinetic",
+        "license": "CC-BY-SA 3",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en"
+      }
+    ]
+  },
+  "chest": {
+    "exerciseName": "Chest Press",
+    "source": "https://wger.de/api/v2/exerciseinfo/129/",
+    "images": [
+      {
+        "src": "/exercise-images/chest-593.webp",
+        "original": "https://wger.de/media/exercise-images/129/b263c968-e067-4750-916a-d8758a7df23e.webp",
+        "author": "roneydya",
+        "license": "CC-BY-SA 4",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en"
+      }
+    ]
+  },
+  "fly": {
+    "exerciseName": "Butterfly",
+    "source": "https://wger.de/api/v2/exerciseinfo/135/",
+    "images": [
+      {
+        "src": "/exercise-images/fly-111.png",
+        "original": "https://wger.de/media/exercise-images/98/Butterfly-machine-2.png",
+        "author": "Everkinetic",
+        "license": "CC-BY-SA 3",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en"
+      },
+      {
+        "src": "/exercise-images/fly-112.png",
+        "original": "https://wger.de/media/exercise-images/98/Butterfly-machine-1.png",
+        "author": "Everkinetic",
+        "license": "CC-BY-SA 3",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en"
+      }
+    ]
+  },
+  "dip": {
+    "exerciseName": "Dips",
+    "source": "https://wger.de/api/v2/exerciseinfo/194/",
+    "images": [
+      {
+        "src": "/exercise-images/dip-211.png",
+        "original": "https://wger.de/media/exercise-images/194/34600351-8b0b-4cb0-8daa-583537be15b0.png",
+        "author": "cshep442",
+        "license": "CC-BY-SA 4",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en"
+      }
+    ]
+  },
+  "row": {
+    "exerciseName": "Long-Pulley (low Row)",
+    "source": "https://wger.de/api/v2/exerciseinfo/394/",
+    "images": [
+      {
+        "src": "/exercise-images/row-143.png",
+        "original": "https://wger.de/media/exercise-images/143/Cable-seated-rows-2.png",
+        "author": "Everkinetic",
+        "license": "CC-BY-SA 3",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en"
+      },
+      {
+        "src": "/exercise-images/row-144.png",
+        "original": "https://wger.de/media/exercise-images/143/Cable-seated-rows-1.png",
+        "author": "Everkinetic",
+        "license": "CC-BY-SA 3",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en"
+      }
+    ]
+  },
+  "pulldown": {
+    "exerciseName": "Neutral-grip chest pulldown",
+    "source": "https://wger.de/api/v2/exerciseinfo/1136/",
+    "images": [
+      {
+        "src": "/exercise-images/pulldown-402.png",
+        "original": "https://wger.de/media/exercise-images/1136/5778a8e9-c606-4843-89c8-9d9469eeb6e4.PNG",
+        "author": "Franpol",
+        "license": "CC-BY-SA 4",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en"
+      }
+    ]
+  },
+  "straight": {
+    "exerciseName": "Straight-Arm Pulldown (Cable)",
+    "source": "https://wger.de/api/v2/exerciseinfo/1726/",
+    "images": [
+      {
+        "src": "/exercise-images/straight-599.png",
+        "original": "https://wger.de/media/exercise-images/1726/2e7e541b-5f55-405a-ae78-3e71b3f42db4.png",
+        "author": "barry",
+        "license": "CC-BY-SA 4",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en"
+      }
+    ]
+  },
+  "shoulder": {
+    "exerciseName": "Shoulder Press, Dumbbells",
+    "source": "https://wger.de/api/v2/exerciseinfo/567/",
+    "images": [
+      {
+        "src": "/exercise-images/shoulder-173.png",
+        "original": "https://wger.de/media/exercise-images/123/dumbbell-shoulder-press-large-1.png",
+        "author": "Everkinetic",
+        "license": "CC-BY-SA 3",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en"
+      },
+      {
+        "src": "/exercise-images/shoulder-174.png",
+        "original": "https://wger.de/media/exercise-images/123/dumbbell-shoulder-press-large-2.png",
+        "author": "Everkinetic",
+        "license": "CC-BY-SA 3",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en"
+      }
+    ]
+  },
+  "lateral": {
+    "exerciseName": "Lateral Raises",
+    "source": "https://wger.de/api/v2/exerciseinfo/348/",
+    "images": [
+      {
+        "src": "/exercise-images/lateral-177.png",
+        "original": "https://wger.de/media/exercise-images/148/lateral-dumbbell-raises-large-2.png",
+        "author": "Everkinetic",
+        "license": "CC-BY-SA 3",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en"
+      },
+      {
+        "src": "/exercise-images/lateral-178.png",
+        "original": "https://wger.de/media/exercise-images/148/lateral-dumbbell-raises-large-1.png",
+        "author": "Everkinetic",
+        "license": "CC-BY-SA 3",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en"
+      }
+    ]
+  },
+  "rear": {
+    "exerciseName": "Incline Bench Reverse Fly",
+    "source": "https://wger.de/api/v2/exerciseinfo/828/",
+    "images": [
+      {
+        "src": "/exercise-images/rear-214.png",
+        "original": "https://wger.de/media/exercise-images/828/2e959dab-f39b-4c7c-9063-eb43064ab5eb.png",
+        "author": "cshep442",
+        "license": "CC-BY-SA 4",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en"
+      },
+      {
+        "src": "/exercise-images/rear-215.png",
+        "original": "https://wger.de/media/exercise-images/828/abfc7700-fadf-4f2d-ac84-e045e590a2fe.png",
+        "author": "cshep442",
+        "license": "CC-BY-SA 4",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en"
+      }
+    ]
+  },
+  "shrug": {
+    "exerciseName": "Shrugs, Dumbbells",
+    "source": "https://wger.de/api/v2/exerciseinfo/572/",
+    "images": [
+      {
+        "src": "/exercise-images/shrug-39.png",
+        "original": "https://wger.de/media/exercise-images/151/Dumbbell-shrugs-2.png",
+        "author": "Everkinetic",
+        "license": "CC-BY-SA 3",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en"
+      },
+      {
+        "src": "/exercise-images/shrug-40.png",
+        "original": "https://wger.de/media/exercise-images/151/Dumbbell-shrugs-1.png",
+        "author": "Everkinetic",
+        "license": "CC-BY-SA 3",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en"
+      }
+    ]
+  },
+  "squat": {
+    "exerciseName": "Leg Press on Hackenschmidt Machine",
+    "source": "https://wger.de/api/v2/exerciseinfo/375/",
+    "images": [
+      {
+        "src": "/exercise-images/squat-125.png",
+        "original": "https://wger.de/media/exercise-images/130/Narrow-stance-hack-squats-1-1024x721.png",
+        "author": "Everkinetic",
+        "license": "CC-BY-SA 3",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en"
+      },
+      {
+        "src": "/exercise-images/squat-126.png",
+        "original": "https://wger.de/media/exercise-images/130/Narrow-stance-hack-squats-2-1024x721.png",
+        "author": "Everkinetic",
+        "license": "CC-BY-SA 3",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en"
+      }
+    ]
+  },
+  "legpress": {
+    "exerciseName": "Leg Presses (narrow)",
+    "source": "https://wger.de/api/v2/exerciseinfo/373/",
+    "images": [
+      {
+        "src": "/exercise-images/legpress-384.png",
+        "original": "https://wger.de/media/exercise-images/373/60e2aa21-1910-40d3-9fed-babfee06dd48.png",
+        "author": "Franpol",
+        "license": "CC-BY-SA 4",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en"
+      }
+    ]
+  },
+  "legextend": {
+    "exerciseName": "Leg Extension",
+    "source": "https://wger.de/api/v2/exerciseinfo/369/",
+    "images": [
+      {
+        "src": "/exercise-images/legextend-386.png",
+        "original": "https://wger.de/media/exercise-images/369/78c915d1-e46d-4d30-8124-65d68664c3ef.png",
+        "author": "Franpol",
+        "license": "CC-BY-SA 4",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en"
+      }
+    ]
+  },
+  "legcurl": {
+    "exerciseName": "Leg Curls (laying)",
+    "source": "https://wger.de/api/v2/exerciseinfo/365/",
+    "images": [
+      {
+        "src": "/exercise-images/legcurl-179.png",
+        "original": "https://wger.de/media/exercise-images/154/lying-leg-curl-machine-large-1.png",
+        "author": "Everkinetic",
+        "license": "CC-BY-SA 3",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en"
+      },
+      {
+        "src": "/exercise-images/legcurl-180.png",
+        "original": "https://wger.de/media/exercise-images/154/lying-leg-curl-machine-large-2.png",
+        "author": "Everkinetic",
+        "license": "CC-BY-SA 3",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en"
+      }
+    ]
+  },
+  "rdl": {
+    "exerciseName": "Dumbbell Romanian Deadlift",
+    "source": "https://wger.de/api/v2/exerciseinfo/1652/",
+    "images": [
+      {
+        "src": "/exercise-images/rdl-590.webp",
+        "original": "https://wger.de/media/exercise-images/1652/0306c8c0-70cc-45d4-92de-6fa72ceaa834.webp",
+        "author": "AlucardEvil40",
+        "license": "CC-BY-SA 4",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en"
+      }
+    ]
+  },
+  "curl": {
+    "exerciseName": "Biceps Curls With Dumbbell",
+    "source": "https://wger.de/api/v2/exerciseinfo/92/",
+    "images": [
+      {
+        "src": "/exercise-images/curl-23.png",
+        "original": "https://wger.de/media/exercise-images/81/Biceps-curl-1.png",
+        "author": "Everkinetic",
+        "license": "CC-BY-SA 3",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en"
+      },
+      {
+        "src": "/exercise-images/curl-24.png",
+        "original": "https://wger.de/media/exercise-images/81/Biceps-curl-2.png",
+        "author": "Everkinetic",
+        "license": "CC-BY-SA 3",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en"
+      }
+    ]
+  },
+  "triceps": {
+    "exerciseName": "Triceps Extensions on Cable",
+    "source": "https://wger.de/api/v2/exerciseinfo/659/",
+    "images": [
+      {
+        "src": "/exercise-images/triceps-395.png",
+        "original": "https://wger.de/media/exercise-images/659/a60452f1-e2ea-43fe-baa6-c1a2208d060c.png",
+        "author": "Franpol",
+        "license": "CC-BY-SA 4",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en"
+      }
+    ]
+  },
+  "jm": {
+    "exerciseName": "Bench Press Narrow Grip",
+    "source": "https://wger.de/api/v2/exerciseinfo/76/",
+    "images": [
+      {
+        "src": "/exercise-images/jm-15.png",
+        "original": "https://wger.de/media/exercise-images/88/Narrow-grip-bench-press-1.png",
+        "author": "Everkinetic",
+        "license": "CC-BY-SA 3",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en"
+      },
+      {
+        "src": "/exercise-images/jm-16.png",
+        "original": "https://wger.de/media/exercise-images/88/Narrow-grip-bench-press-2.png",
+        "author": "Everkinetic",
+        "license": "CC-BY-SA 3",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en"
+      }
+    ]
+  },
+  "core": {
+    "exerciseName": "Crunches",
+    "source": "https://wger.de/api/v2/exerciseinfo/167/",
+    "images": [
+      {
+        "src": "/exercise-images/core-4.png",
+        "original": "https://wger.de/media/exercise-images/91/Crunches-2.png",
+        "author": "Everkinetic",
+        "license": "CC-BY-SA 3",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en"
+      }
+    ]
+  }
+}
