@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { InstallApp } from './install-app';
 import "./globals.css";
 import "./spot-polish.css";
+import "./spot-dark.css";
 
 export const metadata: Metadata = {
   title: "SPOT. | 우리들의 운동 약속",
@@ -18,7 +19,7 @@ export const metadata: Metadata = {
   },
 };
 
-export const viewport: Viewport = { themeColor: '#253529' };
+export const viewport: Viewport = { themeColor: '#0c0e0d', colorScheme: 'dark' };
 
 export default function RootLayout({
   children,
@@ -26,7 +27,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ko">
+    <html lang="ko" className="dark">
       <body className="antialiased">{children}<InstallApp /></body>
     </html>
   );
