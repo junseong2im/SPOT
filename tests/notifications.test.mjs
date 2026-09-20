@@ -22,6 +22,19 @@ test('notifications are scoped to their user and unread status can only be chang
  await act(db,f.user,{action:'readNotifications',ids:[item.id]});assert.ok((await f.get()).notifications.items[0].readAt);
  assert.equal((await snapshot(db,{userId:'other-user',displayName:'Other'})).notifications.items.length,0);
 });
+
+test('new users receive reminders ten minutes before their workout and changing time reschedules it',async()=>{
+ const user={userId:crypto.randomUUID(),displayName:'Ten minute tester'};
+ const {crewId}=await act(db,user,{action:'createCrew',name:'Ten minute crew',nickname:'Tester'});
+ await act(db,user,{action:'saveSession',crewId,revision:1,session:{id:'',title:'Workout',...future(120),routineId:''}});
+ let state=await snapshot(db,user,crewId);const session=state.crew.state.sessions[0];
+ let reminder=await db.prepare("SELECT due_at FROM notifications WHERE crew_id=? AND kind='reminder' AND push_state='queued'").bind(crewId).first();
+ assert.equal(Number(reminder.due_at),Date.parse(`${session.date}T${session.time}:00+09:00`)-600000);
+ await act(db,user,{action:'saveSession',crewId,revision:state.crew.revision,session:{...session,...future(180)}});
+ state=await snapshot(db,user,crewId);const changed=state.crew.state.sessions[0];
+ reminder=await db.prepare("SELECT due_at FROM notifications WHERE crew_id=? AND kind='reminder' AND push_state='queued'").bind(crewId).first();
+ assert.equal(Number(reminder.due_at),Date.parse(`${changed.date}T${changed.time}:00+09:00`)-600000);
+});
 test('rescheduling and cancellation invalidate old reminders',async()=>{
  const f=await ready();const oldId=(await f.get()).notifications.items[0].id;
  await act(db,f.user,{action:'saveSession',crewId:f.crewId,revision:2,session:{...f.session,...future(180)}});

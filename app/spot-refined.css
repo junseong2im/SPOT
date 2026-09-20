@@ -31,6 +31,20 @@ html.dark .lower-heading {margin-top:34px;}
 .routine-shortcut-copy strong {font-size:15px;font-weight:550;color:#f3f3f3;overflow-wrap:anywhere;}
 .routine-shortcut-copy small {font-size:12px;color:#9c9c9c;}
 .routine-shortcut>svg {flex-shrink:0;color:#777;}
+.weekly-time-list {margin-top:18px;}
+.weekly-time-row {display:grid;grid-template-columns:48px minmax(0,1fr);gap:12px;padding:9px 0;border-top:1px solid #2b2b2b;align-items:center;}
+.weekly-day {display:flex;align-items:center;justify-content:center;gap:5px;min-height:44px;color:#ddd;}
+.weekly-day small {font-size:11px;color:#999;}
+.weekly-time-row.is-today .weekly-day {background:#292929;border-radius:10px;}
+.weekly-time-row.is-today .weekly-day strong {color:#ffad70;}
+.weekly-day-sessions {display:grid;gap:5px;min-width:0;}
+.weekly-day-sessions>button {display:flex;align-items:center;gap:10px;min-height:44px;text-align:left;border-radius:8px;padding:7px 10px;background:#1c1c1c;}
+.weekly-day-sessions time {font-size:16px;font-weight:650;font-variant-numeric:tabular-nums;color:#fff;}
+.weekly-day-sessions span {font-size:13px;overflow-wrap:anywhere;flex:1;color:#ccc;}
+.weekly-day-sessions small {font-size:10px;color:#b8b8b8;white-space:nowrap;}
+.weekly-day-sessions>.weekly-unscheduled {background:transparent;color:#959595;font-size:12px;}
+.weekly-day-sessions>button:hover {background:#292929;}
+.weekly-time-note {font-size:11px;color:#a1a1a1;margin-top:12px;line-height:1.7;}
 html.dark .music-section {margin-top:36px;padding-top:28px;border-top:1px solid #292929;}
 html.dark .music-section .eyebrow {display:none;}
 html.dark .music-section h2 {font-size:19px;}

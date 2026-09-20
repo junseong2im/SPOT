@@ -4,7 +4,7 @@ import { sessionStart } from './planning';
 
 export type NotificationSettings = { enabled: number; push_enabled: number; reminder_minutes: number };
 export async function settings(db: Database, userId: string): Promise<NotificationSettings> {
- return await db.prepare('SELECT enabled,push_enabled,reminder_minutes FROM notification_preferences WHERE user_id=?').bind(userId).first<NotificationSettings>() ?? {enabled:1,push_enabled:0,reminder_minutes:60};
+ return await db.prepare('SELECT enabled,push_enabled,reminder_minutes FROM notification_preferences WHERE user_id=?').bind(userId).first<NotificationSettings>() ?? {enabled:1,push_enabled:0,reminder_minutes:10};
 }
 export async function inbox(db: Database,userId: string) {
  const rows=await db.prepare(`SELECT n.id,n.crew_id AS "crewId",n.session_id AS "sessionId",n.title,n.body,n.due_at AS "dueAt",n.read_at AS "readAt",n.push_state AS "pushState"

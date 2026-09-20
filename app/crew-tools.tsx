@@ -40,7 +40,7 @@ export function CrewManager({crew,userId,mutate,busy}:Props){
 
 export function NotificationCenter({snapshot,mutate,busy,onNavigate}:{snapshot:Snapshot;mutate:Mutate;busy:boolean;onNavigate:(crewId:string,sessionId:string)=>void}){
  const [open,setOpen]=useState(false),[working,setWorking]=useState(false),[supported,setSupported]=useState(false),[device,setDevice]=useState(false);
- const items=snapshot.notifications?.items??[],pref=snapshot.notifications?.settings??{enabled:1,push_enabled:0,reminder_minutes:60};
+ const items=snapshot.notifications?.items??[],pref=snapshot.notifications?.settings??{enabled:1,push_enabled:0,reminder_minutes:10};
  useEffect(()=>{setSupported('serviceWorker' in navigator&&'PushManager' in window&&'Notification' in window);if('serviceWorker' in navigator)void navigator.serviceWorker.getRegistration('/').then(r=>r?.pushManager.getSubscription()).then(s=>setDevice(!!s));},[]);
  async function enableDevice(){const permission=Notification.requestPermission();setWorking(true);try{
   if(await permission!=='granted')throw new Error('알림이 허용되지 않았어요. 브라우저의 사이트 설정에서 알림을 허용해주세요.');
