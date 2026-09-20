@@ -1,4 +1,5 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
+import { InstallApp } from './install-app';
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -12,8 +13,11 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",
+    apple: "/icons/apple-touch-icon.png",
   },
 };
+
+export const viewport: Viewport = { themeColor: '#253529' };
 
 export default function RootLayout({
   children,
@@ -22,7 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
-      <body className="antialiased">{children}</body>
+      <body className="antialiased">{children}<InstallApp /></body>
     </html>
   );
 }
