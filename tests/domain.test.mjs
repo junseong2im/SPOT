@@ -13,6 +13,18 @@ before(async()=>{fixtureDatabase=await createTestDatabase();db=fixtureDatabase.d
 after(()=>fixtureDatabase.close());
 async function fixture(){const {crewId}=await act(db,alice,{action:'createCrew',name:'Test crew',nickname:'앨리스'});const a=await snapshot(db,alice,crewId);await act(db,bob,{action:'joinCrew',invite:a.crew.invite,nickname:'밥'});return {crewId,getA:()=>snapshot(db,alice,crewId),getB:()=>snapshot(db,bob,crewId)};}
 
+test('detailed prescriptions and program notes survive common save, personal copy and edit',async()=>{
+ const f=await fixture();const routine={id:'detailed',name:'Day 1',subtitle:'가슴',notes:'훈련 철학\n실행 가이드',exercises:[{id:'press',name:'프레스',sets:3,reps:6,prescription:'웜업 3세트 / 탑세트 6~8회 / 백오프 2세트 8~10회, 휴식 90초'}]};
+ await act(db,alice,{action:'saveCommon',crewId:f.crewId,routine,version:0});
+ await act(db,bob,{action:'copyRoutine',crewId:f.crewId,routineId:routine.id,version:1});
+ const copied=(await f.getB()).crew.personal.find(r=>r.id===routine.id);
+ assert.equal(copied.notes,routine.notes);assert.equal(copied.exercises[0].prescription,routine.exercises[0].prescription);
+ await act(db,bob,{action:'savePersonal',crewId:f.crewId,routine:{...copied,notes:'내 메모'},revision:1});
+ assert.equal((await f.getA()).crew.state.routines.find(r=>r.id===routine.id).notes,routine.notes);
+ assert.equal((await f.getB()).crew.personal.find(r=>r.id===routine.id).notes,'내 메모');
+ await assert.rejects(act(db,alice,{action:'saveCommon',crewId:f.crewId,routine:{...routine,notes:'x'.repeat(12001)},version:1}));
+});
+
 test('invite membership is required; outsider cannot read or modify crew',async()=>{
  const f=await fixture();assert.equal((await f.getB()).crew.members.length,2);
  await assert.rejects(snapshot(db,outsider,f.crewId),e=>e.status===403);

@@ -1,5 +1,5 @@
-export type Exercise = { id: string; name: string; sets: number; reps: number };
-export type Routine = { id: string; name: string; subtitle: string; exercises: Exercise[]; version: number };
+export type Exercise = { id: string; name: string; sets: number; reps: number; prescription?: string };
+export type Routine = { id: string; name: string; subtitle: string; notes?: string; exercises: Exercise[]; version: number };
 export type PersonalRoutine = Routine & { baseVersion: number; revision: number };
 export type Session = { id: string; title: string; date: string; time: string; routineId: string; creator: string; participants: string[]; cancelled: boolean; capacity?: number | null; deadlineMinutes?: number; seriesId?: string; version?: number };
 export type PollOption = { id: string; date: string; time: string; votes: string[] };

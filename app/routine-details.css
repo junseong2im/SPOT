@@ -1,0 +1,7 @@
+.routine-details { margin: 16px 0; font-size: 14px; line-height: 1.7; overflow-wrap: anywhere; }
+.routine-details summary { cursor: pointer; font-weight: 700; color: #354c2e; padding: 8px 0; }
+.routine-details ol { list-style: decimal; padding-left: 20px; }
+.routine-details li { margin: 14px 0; }
+.routine-details li p, .routine-notes { white-space: pre-wrap; color: #58634f; }
+.routine-detail-field { margin-top: 16px; }
+.routine-detail-field textarea { width: 100%; padding: 12px; border: 1px solid #d9dfd5; border-radius: 8px; font-size: 16px; font-weight: 400; resize: vertical; background: white; color: #273022; }
