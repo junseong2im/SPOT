@@ -37,20 +37,21 @@ export function InstallApp() {
   }, []);
 
   async function install() {
-    if (!prompt) return;
+    if (busy) return;
+    if (!prompt) { setError(''); setOpen(true); return; }
     setBusy(true); setError('');
     try {
       await prompt.prompt();
       const choice = await prompt.userChoice;
       setPrompt(null);
       if (choice.outcome === 'accepted') setOpen(false);
-    } catch { setPrompt(null); setError('브라우저 메뉴에서 설치를 진행해주세요.'); }
+    } catch { setPrompt(null); setError('브라우저 메뉴에서 설치를 진행해주세요.'); setOpen(true); }
     finally { setBusy(false); }
   }
 
   if (installed) return null;
   return <aside className="spot-install">
-    <button className="spot-install-button" onClick={() => setOpen(true)}><Download size={16} aria-hidden="true"/> SPOT 앱 설치</button>
+    <button className="spot-install-button" disabled={busy} onClick={() => void install()}><Download size={16} aria-hidden="true"/> {busy ? '설치 확인 중…' : 'SPOT 앱 설치'}</button>
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogContent className="app-dialog">
         <DialogTitle>SPOT을 홈 화면에 추가하세요</DialogTitle>
