@@ -1,4 +1,5 @@
 'use client';
+import { createSnapshotLoader } from '@/lib/snapshot-loader';
 import { SuggestionBox } from './suggestion-box';
 import { MusicRecommendations } from './music-recommendations';
 import { RoutineDetails, RoutineDetailFields } from './routine-details';
@@ -33,18 +34,20 @@ export default function GymApp(){
  const [repeatEnabled,setRepeatEnabled]=useState(false),[repeatDays,setRepeatDays]=useState<number[]>([]),[repeatUntil,setRepeatUntil]=useState(''),[editScope,setEditScope]=useState('one'),[cancelScope,setCancelScope]=useState('one');
  const [returnTo,setReturnTo]=useState('/');
  const active=useRef(''),loadSequence=useRef(0),mutating=useRef(false),inviteOpened=useRef(false);
+ const requestSnapshot=useRef<ReturnType<typeof createSnapshotLoader>|null>(null);
  const crew=data.crew,user=data.user;
  const load=useCallback(async(id=active.current)=>{
   const sequence=++loadSequence.current;
-  const response=await fetch(`/api/gym${id?`?crew=${encodeURIComponent(id)}`:''}`,{cache:'no-store'});const next=await response.json() as Snapshot & {error?:string};if(!response.ok)throw new Error(next.error);
+  requestSnapshot.current??=createSnapshotLoader();
+  let next:Snapshot;try{next=await requestSnapshot.current(id);}catch(e){if(sequence===loadSequence.current){setReady(true);setError(e instanceof Error?e.message:'연결을 확인해주세요.');}throw e;}
   if(sequence===loadSequence.current){setData(next);active.current=next.crew?.id??'';setError('');setReady(true);const selected=new URLSearchParams(window.location.search).get('session');if(selected){const session=next.crew?.state.sessions.find(s=>s.id===selected);if(session){setDay(session.date);setTab('schedule');window.history.replaceState({},'','/');}}}return next as Snapshot;
  },[]);
  useEffect(()=>{
   const refresh=()=>{setToday(localDate());if(document.visibilityState==='visible'&&!mutating.current)void load().catch(e=>{setError(e.message);setReady(true);});};
   const params=new URLSearchParams(window.location.search);setReturnTo(window.location.pathname+window.location.search);
   if(params.get('crew'))active.current=params.get('crew')!;
-  refresh();const timer=setInterval(refresh,10000);window.addEventListener('focus',refresh);
-  return()=>{clearInterval(timer);window.removeEventListener('focus',refresh);};
+  void load().catch(()=>{});const timer=setInterval(refresh,10000);window.addEventListener('focus',refresh);document.addEventListener('visibilitychange',refresh);window.addEventListener('online',refresh);
+  return()=>{clearInterval(timer);window.removeEventListener('focus',refresh);document.removeEventListener('visibilitychange',refresh);window.removeEventListener('online',refresh);};
  },[load]);
  useEffect(()=>{const token=new URLSearchParams(window.location.search).get('invite');if(token)setInvite(token);if(ready&&user&&token&&!inviteOpened.current){inviteOpened.current=true;setModal('join');}},[ready,user]);
  useEffect(()=>{if(crew)setInviteLink(`${window.location.origin}/?invite=${crew.invite}`);else setInviteLink('');},[crew?.invite]);
@@ -61,10 +64,10 @@ export default function GymApp(){
   finally{mutating.current=false;setBusy(false);}
  }
  const signInHref=`/login?returnTo=${encodeURIComponent(invite?`/?invite=${invite}`:returnTo)}`;
- function requireCrew(){if(!ready){toast.info('잠시만 기다려주세요.');return false;}if(!user){window.location.assign(signInHref);return false;}if(!crew){setModal('create');return false;}return true;}
- function openSession(existing?:Session,selectedDate?:string){if(!requireCrew())return;const date=selectedDate??(tab==='schedule'?day:today);setSession(existing?{id:existing.id,title:existing.title,date:existing.date,time:existing.time,routineId:existing.routineId,capacity:existing.capacity??null,deadlineMinutes:existing.deadlineMinutes??0}:{id:'',title:'',date,time:'19:00',routineId:'',capacity:null,deadlineMinutes:0});setRepeatEnabled(false);setRepeatDays([weekday(date)]);setRepeatUntil(addDays(date,28));setEditScope('one');setSessionRevision(crew!.revision);setModal('session');}
+ function requireCrew(){if(!ready||error){void load().catch(()=>{});toast.info('운동 정보를 다시 불러오고 있어요. 연결 상태를 확인해주세요.');return false;}if(!user){window.location.assign(signInHref);return false;}if(!crew){setModal('create');return false;}return true;}
+ async function openSession(existing?:Session,selectedDate?:string){let current=data;if(!ready||error){try{current=await load();}catch{return false;}}if(!current.user){window.location.assign(signInHref);return false;}if(!current.crew){setModal('create');return false;}const date=selectedDate??(tab==='schedule'?day:today);setSession(existing?{id:existing.id,title:existing.title,date:existing.date,time:existing.time,routineId:existing.routineId,capacity:existing.capacity??null,deadlineMinutes:existing.deadlineMinutes??0}:{id:'',title:'',date,time:'19:00',routineId:'',capacity:null,deadlineMinutes:0});setRepeatEnabled(false);setRepeatDays([weekday(date)]);setRepeatUntil(addDays(date,28));setEditScope('one');setSessionRevision(current.crew.revision);setModal('session');return true;}
  function openEditor(r:Routine,kind:'common'|'personal'){if(!requireCrew())return;setEditor({kind,routine:structuredClone(r),revision:(r as PersonalRoutine).revision});}
- function openBulk(){openSession(undefined,today);if(!crew||!user)return;setRepeatEnabled(true);setRepeatDays([1,2,3,4,5]);setSession(s=>({...s,title:'함께 운동'}));}
+ async function openBulk(){if(!await openSession(undefined,today))return;setRepeatEnabled(true);setRepeatDays([1,2,3,4,5]);setSession(s=>({...s,title:'함께 운동'}));}
  function newRoutine(){if(!requireCrew())return;setEditor({kind:'common',routine:{id:crypto.randomUUID(),name:'',subtitle:'',version:0,exercises:[{id:crypto.randomUUID(),name:'',sets:3,reps:12}]}});}
  async function copyRoutine(r:Routine){if(requireCrew())await mutate({action:'copyRoutine',routineId:r.id,version:r.version},'내 루틴에 가져왔어요. 자유롭게 수정해보세요.');}
  async function submitModal(e:FormEvent){e.preventDefault();const form=new FormData(e.currentTarget as HTMLFormElement);let ok=false;
@@ -88,7 +91,7 @@ export default function GymApp(){
 
  return <div className="app-shell"><Toaster theme="dark" position="bottom-center"/><header className="topbar"><a href="/" className="brand" aria-label="SPOT 홈"><span className="brand-icon"><Dumbbell size={22}/></span>SPOT<span className="brand-dot">.</span></a><span className="top-label">OUR WORKOUT CLUB</span><div className="header-account"><SuggestionBox userId={user?.userId} signInHref={signInHref}/>{user?<><NotificationCenter snapshot={data} mutate={mutate} busy={busy} onNavigate={(crewId,sessionId)=>{void load(crewId).then(next=>{const selected=next.crew?.state.sessions.find(s=>s.id===sessionId);if(selected)setDay(selected.date);setTab('schedule');}).catch(e=>setError(e.message));}}/><button className="account-button" onClick={()=>{if(crew){setNickname(myName);setModal('profile');}else setModal('create');}}><span className="avatar">{myName.slice(0,1)}</span><span>{crew?myName:'내 계정'}</span></button><form action="/api/auth/logout" method="post" target="_top"><button className="icon-button" type="submit" aria-label="로그아웃"><LogOut size={18}/></button></form></>:<a className="secondary" href={signInHref} target="_top">로그인</a>}</div></header>
  <Tabs value={tab} onValueChange={setTab}><div className="nav-wrap"><TabsList className="main-nav" variant="line"><TabsTrigger value="home">대시보드</TabsTrigger><TabsTrigger value="schedule">운동 일정</TabsTrigger><TabsTrigger value="routines">루틴</TabsTrigger><TabsTrigger value="crew">우리 크루</TabsTrigger></TabsList><span className="nav-note">{crew?.name??'함께하는 운동, 각자의 페이스.'}</span></div>
- <main className="workspace">{error&&<div className="error-banner" role="alert"><span>{error}</span><button className="text-button" onClick={()=>void load().catch(e=>setError(e.message))}>새로고침</button></div>}
+ <main className="workspace">{!ready&&<p className="muted" role="status">운동 정보를 불러오는 중이에요…</p>}{error&&<div className="error-banner" role="alert"><span>{error}</span><button className="text-button" onClick={()=>void load().catch(e=>setError(e.message))}>새로고침</button></div>}
  {!crew&&ready&&!error&&<div className="welcome-banner"><div><strong>{user?'우리의 첫 크루를 만들어볼까요?':'친구들과 함께할 운동 약속, SPOT.'}</strong><p>{user?'크루를 만들거나 받은 초대 링크로 합류하세요.':'로그인하면 일정과 루틴을 친구들과 함께 저장하고 공유할 수 있어요.'}</p></div>{user?<div className="button-row"><button className="secondary" onClick={()=>setModal('join')}>초대로 합류</button><button className="primary" onClick={()=>setModal('create')}><Plus size={16}/>크루 만들기</button></div>:<a className="primary" href={signInHref} target="_top">로그인하고 시작하기 <ArrowUpRight size={16}/></a>}</div>}
  <TabsContent value="home"><div className="page-heading"><div><p className="eyebrow">YOUR DAILY SPOT</p><h1>오늘도, 같이 한 세트.</h1><p className="muted">{labelDate(today)} · {crew?`${crew.name}의 다음 운동을 준비해요.`:'친구들과 시간을 맞추고 나에게 맞는 루틴을 준비하세요.'}</p></div><button className="primary" onClick={()=>openSession()}><Plus size={18}/> 운동 일정 잡기</button></div>
  <div className="dashboard-grid"><section className="feature-card"><div className="section-line"><span className="pill">다음 운동</span><CalendarDays size={22}/></div><h2>{nextSession?nextSession.title:<>다음 운동은<br/>언제 만날까요?</>}</h2><p>{nextSession?`${labelDate(nextSession.date)} · ${nextSession.time} (서울)`:'함께할 첫 운동 일정을 만들어보세요.'}</p><div className="feature-bottom"><span>{nextSession?`${nextSession.participants.length}명의 친구가 함께해요`:'약속부터 가볍게 시작해요'}</span><button className="circle-button" aria-label={nextSession?'다음 운동 일정 보기':'첫 운동 일정 만들기'} onClick={()=>{if(nextSession){setDay(nextSession.date);setTab('schedule');}else openSession();}}><ArrowUpRight size={25}/></button></div></section>
