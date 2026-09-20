@@ -1,55 +1,66 @@
-/* Default SPOT night palette. Lime marks actions; charcoal separates surfaces. */
-html.dark { color-scheme: dark; --background:#0c0e0d; --foreground:#edf1eb; --card:#171b18; --card-foreground:#edf1eb; --popover:#202620; --popover-foreground:#edf1eb; --primary:#d5f487; --primary-foreground:#17200f; --secondary:#252c24; --secondary-foreground:#edf1eb; --muted:#242a24; --muted-foreground:#a7b1a3; --accent:#303b28; --accent-foreground:#e6f5cd; --border:#323a30; --input:#3c4638; --ring:#b4d574; }
+/* SPOT monochrome: near-black canvas, white type and silver controls. */
+html.dark { color-scheme: dark; --lime:#d7d9dc; --background:#050505; --foreground:#ffffff; --card:#151515; --card-foreground:#ffffff; --popover:#222222; --popover-foreground:#ffffff; --primary:#d7d9dc; --primary-foreground:#101010; --secondary:#272727; --secondary-foreground:#ffffff; --muted:#262626; --muted-foreground:#b6b8bc; --accent:#313131; --accent-foreground:#e3e3e3; --border:#343434; --input:#3e3e3e; --ring:#aaaaaa; }
 html.dark body,html.dark .login-page { background:var(--background);color:var(--foreground); }
-html.dark .topbar {background:#0c0e0d;}
-html.dark .nav-wrap {background:rgba(15,19,16,.94);border-color:var(--border);}
-html.dark .main-nav[data-slot],html.dark .sub-tabs[data-slot] {background:#20261f;}
-html.dark .main-nav [data-slot=tabs-trigger] {color:#a7b1a3;}
-html.dark .main-nav [data-slot=tabs-trigger][data-state=active],html.dark .sub-tabs [data-slot=tabs-trigger][data-state=active] {background:#35432a;color:#e4f8bd;box-shadow:none;}
-html.dark .brand-icon {color:#17200f;}
-html.dark .brand-dot,html.dark .eyebrow {color:#bddb8a;}
-html.dark :is(.muted,.top-label,.nav-note,.micro-label,.routine-hint,.login-description,.login-caption,.login-footnote,.login-config-note,.login-back) {color:#a7b1a3;}
-html.dark :is(.panel,.session-card,.login-card,.app-dialog[data-slot]) {background:#171b18;border-color:var(--border);color:var(--foreground);}
+html.dark .topbar {background:#050505;}
+html.dark .nav-wrap {background:rgba(8,8,8,.96);border-color:var(--border);}
+html.dark .main-nav[data-slot],html.dark .sub-tabs[data-slot] {background:#222222;}
+html.dark .main-nav [data-slot=tabs-trigger] {color:#b6b8bc;}
+html.dark .main-nav [data-slot=tabs-trigger][data-state=active],html.dark .sub-tabs [data-slot=tabs-trigger][data-state=active] {background:#363636;color:#dedede;box-shadow:none;}
+html.dark .brand-icon {color:#101010;}
+html.dark .brand-dot,html.dark .eyebrow {color:#b6b6b6;}
+html.dark :is(.muted,.top-label,.nav-note,.micro-label,.routine-hint,.login-description,.login-caption,.login-footnote,.login-config-note,.login-back) {color:#b6b8bc;}
+html.dark :is(.panel,.session-card,.login-card,.app-dialog[data-slot]) {background:#151515;border-color:var(--border);color:var(--foreground);}
 html.dark .app-dialog[data-slot] {box-shadow:0 24px 80px #0008;}
-html.dark .feature-card {background:#202d1b;color:#f0f6e7;border:1px solid #40552e;}
-html.dark .feature-card p,html.dark .feature-bottom {color:#c0ceb5;}
-html.dark .feature-card .pill {border-color:#637c47;color:#d5f487;}
-html.dark .primary,html.dark .circle-button {background:#d5f487;color:#17200f;}
-html.dark .primary:hover,html.dark .circle-button:hover {background:#e3ffa4;}
-html.dark :is(.secondary,.google-login,.spot-install-button) {background:#242c23;border-color:#44513a;color:#e3efda;}
-html.dark :is(.secondary,.google-login,.spot-install-button):hover:not(:disabled) {background:#33402b;border-color:#69804b;}
-html.dark .text-button {color:#c4e696;}
-html.dark .danger {background:#3d2426;color:#ffb3b6;}
-html.dark .icon-button:hover,html.dark .app-dialog [data-slot=dialog-close] {background:#2b3429;color:#d7e0d0;}
-html.dark :is(.avatar,.tile-icon,.routine-symbol) {background:#293624;color:#d5f487;border-color:#171b18;}
-html.dark :is(.routine-meta span,.week-day.is-today,.plan-week>div,.session-rules span,.repeat-config,.notification-settings,.compare-grid section,.suggestion-item,.suggestion-reply,.suggestion-notice,.music-empty,.welcome-banner,.login-invite,.update-notice) {background:#222d20;color:#c8d8ba;border-color:#3c4b33;}
+html.dark .feature-card {background:#232323;color:#efefef;border:1px solid #414141;}
+html.dark .feature-card p,html.dark .feature-bottom {color:#c1c1c1;}
+html.dark .feature-card .pill {border-color:#626262;color:#d7d9dc;}
+html.dark .primary,html.dark .circle-button {background:#d7d9dc;color:#101010;}
+html.dark .primary:hover,html.dark .circle-button:hover {background:#d7d7d7;}
+html.dark :is(.secondary,.google-login,.spot-install-button) {background:#262626;border-color:#454545;color:#e4e4e4;}
+html.dark :is(.secondary,.google-login,.spot-install-button):hover:not(:disabled) {background:#353535;border-color:#676767;}
+html.dark .text-button {color:#c0c0c0;}
+html.dark .danger {background:#2d2d2d;color:#cdcdcd;}
+html.dark .icon-button:hover,html.dark .app-dialog [data-slot=dialog-close] {background:#2d2d2d;color:#d8d8d8;}
+html.dark :is(.avatar,.tile-icon,.routine-symbol) {background:#2c2c2c;color:#d7d9dc;border-color:#151515;}
+html.dark :is(.routine-meta span,.week-day.is-today,.plan-week>div,.session-rules span,.repeat-config,.notification-settings,.compare-grid section,.suggestion-item,.suggestion-reply,.suggestion-notice,.music-empty,.welcome-banner,.login-invite,.update-notice) {background:#252525;color:#c9c9c9;border-color:#3e3e3e;}
 html.dark .routine-meta span+span {border-color:var(--border);}
-html.dark .routine-details>summary {background:#252f22;color:#d1e8b8;}
-html.dark .routine-details[open]>summary {background:#34452a;}
-html.dark :is(.routine-notes,.routine-details li p,.plan-week span,.welcome-banner p,.suggestion-item small) {color:#b8c5af;}
+html.dark .routine-details>summary {background:#272727;color:#d0d0d0;}
+html.dark .routine-details[open]>summary {background:#363636;}
+html.dark :is(.routine-notes,.routine-details li p,.plan-week span,.welcome-banner p,.suggestion-item small) {color:#b9b9b9;}
 html.dark :is(.exercise-preview,.exercise-edit-row,.routine-actions,.routine-details li,.member-list>div,.manage-row,.compact-sessions>button,footer,.session-time) {border-color:var(--border);}
-html.dark :is(.exercise-preview small,.exercise-no,.exercise-numbers small,.compare-row small,.member-role,.attendees>span,.compact-sessions small,.week-strip small,.session-time>span,.inbox-item small) {color:#a4b19a;}
-html.dark .week-day:hover {background:#273221;}
-html.dark .week-day.is-today strong {color:#d5f487;}
-html.dark .week-day.selected {background:#d5f487;color:#17200f;}
-html.dark .week-day.selected small {color:#3c4b2e;}
-html.dark .date-dot {background:#506046;}
-html.dark .date-dot.has-session {background:#b9db7d;}
-html.dark .reorder button {background:#2c3727;color:#d5e7c2;}
-html.dark :is(.field input,.exercise-edit-row input,.routine-detail-field textarea,.poll-edit-option input,.date-jump,.suggestion-dialog select,.suggestion-dialog textarea,.choice[data-slot]) {background:#111710;color:#edf1eb;border-color:#46543e;}
-html.dark .field input:read-only {background:#22291f;color:#c1ceb8;}
-html.dark input::placeholder,html.dark textarea::placeholder {color:#8e9a86;}
-html.dark .form-stack>.primary[type=submit] {box-shadow:0 0 0 7px #171b18;}
-html.dark :is(.poll-option,.inbox-item) {background:#1b2219;border-color:#37432f;color:#edf1eb;}
-html.dark .inbox-item.unread {background:#29391f;border-color:#637e44;}
-html.dark .status-chip,html.dark .joined {background:#344529;color:#d7edb9;border-color:#566d3d;}
-html.dark .poll-option small {color:#adbd9f;}
-html.dark :is(.form-error,.error-banner) {background:#382124;color:#ffc1c4;border-color:#713b40;}
-html.dark .music-card {background:#20271f;border-color:#35402e;}
-html.dark .music-card-bottom p {color:#b8c5af;}
-html.dark .music-cover {background:#18221d;}
-html.dark .music-play {background:#d5f487;color:#17200f;}
-html.dark .blank svg,html.dark .empty-inline,html.dark .empty-inline svg {color:#a4b399;}
-html.dark .login-divider {color:#a7b1a3;}
-html.dark .login-divider:before,html.dark .login-divider:after {background:#323a30;}
-@media(prefers-reduced-transparency:reduce){html.dark .nav-wrap{background:#101410;}}
+html.dark :is(.exercise-preview small,.exercise-no,.exercise-numbers small,.compare-row small,.member-role,.attendees>span,.compact-sessions small,.week-strip small,.session-time>span,.inbox-item small) {color:#a5a5a5;}
+html.dark .week-day:hover {background:#292929;}
+html.dark .week-day.is-today strong {color:#d7d9dc;}
+html.dark .week-day.selected {background:#d7d9dc;color:#101010;}
+html.dark .week-day.selected small {color:#3c3c3c;}
+html.dark .date-dot {background:#525252;}
+html.dark .date-dot.has-session {background:#b0b0b0;}
+html.dark .reorder button {background:#2e2e2e;color:#d5d5d5;}
+html.dark :is(.field input,.exercise-edit-row input,.routine-detail-field textarea,.poll-edit-option input,.date-jump,.suggestion-dialog select,.suggestion-dialog textarea,.choice[data-slot]) {background:#131313;color:#ffffff;border-color:#484848;}
+html.dark .field input:read-only {background:#232323;color:#c2c2c2;}
+html.dark input::placeholder,html.dark textarea::placeholder {color:#8f8f8f;}
+html.dark .form-stack>.primary[type=submit] {box-shadow:0 0 0 7px #151515;}
+html.dark :is(.poll-option,.inbox-item) {background:#1d1d1d;border-color:#383838;color:#ffffff;}
+html.dark .inbox-item.unread {background:#2b2b2b;border-color:#626262;}
+html.dark .status-chip,html.dark .joined {background:#363636;color:#d4d4d4;border-color:#555555;}
+html.dark .poll-option small {color:#aeaeae;}
+html.dark :is(.form-error,.error-banner) {background:#2a2a2a;color:#d7d7d7;border-color:#4f4f4f;}
+html.dark .music-card {background:#222222;border-color:#363636;}
+html.dark .music-card-bottom p {color:#b9b9b9;}
+html.dark .music-cover {background:#1d1d1d;}
+html.dark .music-play {background:#d7d9dc;color:#101010;}
+html.dark .blank svg,html.dark .empty-inline,html.dark .empty-inline svg {color:#a5a5a5;}
+html.dark .login-divider {color:#b6b8bc;}
+html.dark .login-divider:before,html.dark .login-divider:after {background:#343434;}
+@media(prefers-reduced-transparency:reduce){html.dark .nav-wrap{background:#111111;}}
+
+html.dark .brand-icon {background:#d7d9dc;color:#101010;}
+html.dark .brand-dot,html.dark .eyebrow,html.dark .music-cover-content>span {color:#d7d9dc;}
+html.dark .music-cover small {color:#d0d0d0;}
+html.dark .notification-bell>span {background:#eeeeee;}
+html.dark :is(button,a,input,textarea,summary):focus-visible {outline-color:#c7cacf;}
+html.dark .music-cover:hover .music-play {background:#ffffff;}
+html.dark .feature-card {background:linear-gradient(135deg,#202020,#101010);border-color:#505050;}
+html.dark .primary,html.dark .circle-button,html.dark .music-play {background:linear-gradient(145deg,#f0f1f2,#b6b9be);color:#101010;border-color:#c5c8cc;}
+html.dark .primary:hover,html.dark .circle-button:hover {background:#ffffff;}
+html.dark .main-nav [data-slot=tabs-trigger][data-state=active] {background:#383a3d;color:#ffffff;}
