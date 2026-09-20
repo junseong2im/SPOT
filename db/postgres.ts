@@ -19,6 +19,17 @@ export function createPostgresDriver(connectionString: string): Driver {
   };
   return {
     execute: query => run(pool, query),
+    async transaction(fn) {
+      const client = await pool.connect();
+      const driver: Driver = {
+        execute: query => run(client, query),
+        batch: async queries => { const results = []; for (const query of queries) results.push(await run(client, query)); return results; },
+        transaction: inner => inner(driver),
+      };
+      try { await client.query('BEGIN'); await client.query("SET LOCAL statement_timeout='15s'"); const result = await fn(driver); await client.query('COMMIT'); return result; }
+      catch (error) { await client.query('ROLLBACK'); throw error; }
+      finally { client.release(); }
+    },
     async batch(queries) {
       const client = await pool.connect();
       try {

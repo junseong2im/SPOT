@@ -1,11 +1,14 @@
 export type Exercise = { id: string; name: string; sets: number; reps: number };
 export type Routine = { id: string; name: string; subtitle: string; exercises: Exercise[]; version: number };
 export type PersonalRoutine = Routine & { baseVersion: number; revision: number };
-export type Session = { id: string; title: string; date: string; time: string; routineId: string; creator: string; participants: string[]; cancelled: boolean };
-export type CrewState = { routines: Routine[]; sessions: Session[] };
+export type Session = { id: string; title: string; date: string; time: string; routineId: string; creator: string; participants: string[]; cancelled: boolean; capacity?: number | null; deadlineMinutes?: number; seriesId?: string; version?: number };
+export type PollOption = { id: string; date: string; time: string; votes: string[] };
+export type TimePoll = { id: string; title: string; creator: string; routineId: string; options: PollOption[]; closesAt: number; capacity: number | null; status: 'open' | 'confirmed' | 'closed'; sessionId?: string };
+export type CrewState = { routines: Routine[]; sessions: Session[]; weekPlan?: Record<string,string>; polls?: TimePoll[] };
 export type Member = { userId: string; name: string };
 export type Crew = { id: string; name: string; invite: string; owner: string; revision: number; state: CrewState; members: Member[]; personal: PersonalRoutine[] };
-export type Snapshot = { user: { userId: string; displayName: string } | null; crews: { id: string; name: string }[]; crew: Crew | null };
+export type InboxItem = { id:string; crewId:string; sessionId:string; title:string; body:string; dueAt:number|string; readAt:number|string|null; pushState:string };
+export type Snapshot = { user: { userId: string; displayName: string } | null; crews: { id: string; name: string }[]; crew: Crew | null; notifications?: {items:InboxItem[];settings:{enabled:number;push_enabled:number;reminder_minutes:number}} };
 export const starterRoutines: Routine[] = [
   {id:'push',name:'PUSH DAY',subtitle:'가슴 · 어깨 · 삼두',version:1,exercises:[{id:'bench',name:'벤치프레스',sets:4,reps:10},{id:'incline',name:'인클라인 덤벨프레스',sets:3,reps:12},{id:'shoulder',name:'숄더프레스',sets:3,reps:10},{id:'lateral',name:'사이드 레터럴 레이즈',sets:3,reps:15},{id:'triceps',name:'케이블 푸시다운',sets:3,reps:12}]},
   {id:'pull',name:'PULL DAY',subtitle:'등 · 이두',version:1,exercises:[{id:'lat',name:'랫풀다운',sets:4,reps:10},{id:'row',name:'시티드 로우',sets:3,reps:12},{id:'dbrow',name:'덤벨 로우',sets:3,reps:12},{id:'curl',name:'덤벨 컬',sets:3,reps:12}]},

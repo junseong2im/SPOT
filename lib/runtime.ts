@@ -10,7 +10,7 @@ function getDatabase() {
   else {
     let local: Promise<import('@/db/adapter').Driver> | undefined;
     const driver = () => local ??= import('@/db/local').then(module => module.createLocalDriver());
-    database = createDatabase({ execute: async query => (await driver()).execute(query), batch: async queries => (await driver()).batch(queries) });
+    database = createDatabase({ execute: async query => (await driver()).execute(query), batch: async queries => (await driver()).batch(queries), transaction: async fn => (await driver()).transaction(fn) });
   }
   return database;
 }

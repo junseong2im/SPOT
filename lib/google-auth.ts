@@ -34,7 +34,10 @@ export function safeReturnTo(value: string | null | undefined): string {
     // Only the actual product route is a valid post-login destination.
     if (url.pathname !== '/') return '/';
     const invite = url.searchParams.get('invite');
-    return invite && /^[a-zA-Z0-9_-]{16,100}$/.test(invite) ? `/?invite=${encodeURIComponent(invite)}` : '/';
+    if (invite && /^[a-zA-Z0-9_-]{16,100}$/.test(invite)) return `/?invite=${encodeURIComponent(invite)}`;
+    const crew=url.searchParams.get('crew'),session=url.searchParams.get('session');
+    if(crew&&session&&/^[a-f0-9-]{36}$/.test(crew)&&/^[a-f0-9-]{36}$/.test(session))return `/?crew=${crew}&session=${session}`;
+    return '/';
   } catch { return '/'; }
 }
 

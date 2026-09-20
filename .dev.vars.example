@@ -5,3 +5,8 @@ GOOGLE_CLIENT_SECRET=
 # Supabase transaction pooler connection string; keep server-side only.
 # Leave empty for isolated local PostgreSQL development.
 DATABASE_URL=
+VAPID_PUBLIC_KEY=
+VAPID_PRIVATE_KEY=
+VAPID_SUBJECT=
+CRON_SECRET=
+PUSH_DELIVERY_ENABLED=false

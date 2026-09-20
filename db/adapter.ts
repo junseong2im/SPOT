@@ -5,14 +5,14 @@ export interface Statement {
   all<T = Record<string, unknown>>(): Promise<QueryResult<T>>;
   run(): Promise<QueryResult>;
 }
-export interface Database { prepare(sql: string): Statement; batch(statements: Statement[]): Promise<QueryResult[]> }
+export interface Database { prepare(sql: string): Statement; batch(statements: Statement[]): Promise<QueryResult[]>; transaction<T>(fn: (db: Database) => Promise<T>): Promise<T> }
 export type SqlQuery = { sql: string; args: unknown[] };
-export interface Driver { execute(query: SqlQuery): Promise<{ rows: Record<string, unknown>[]; changes: number }>; batch(queries: SqlQuery[]): Promise<{ rows: Record<string, unknown>[]; changes: number }[]> }
+export interface Driver { execute(query: SqlQuery): Promise<{ rows: Record<string, unknown>[]; changes: number }>; batch(queries: SqlQuery[]): Promise<{ rows: Record<string, unknown>[]; changes: number }[]>; transaction<T>(fn: (driver: Driver) => Promise<T>): Promise<T> }
 
 // The application owns these fixed SQL statements; values always remain bound parameters.
 export function postgresSql(sql: string) {
   let parameter = 0;
-  return sql.replace(/'(?:''|[^'])*'|"(?:""|[^"])*"|\?|\b(?:crews|members|personal|oauth_transactions|auth_sessions)\b/g, token => {
+  return sql.replace(/'(?:''|[^'])*'|"(?:""|[^"])*"|\?|\b(?:crews|members|personal|oauth_transactions|auth_sessions|notifications|notification_preferences|push_subscriptions)\b/g, token => {
     if (token === '?') return `$${++parameter}`;
     if (token.startsWith("'") || token.startsWith('"')) return token;
     return `spot.${token}`;
@@ -27,6 +27,7 @@ export function createDatabase(driver: Driver): Database {
     async run() { return this.all(); }
   }
   return {
+    transaction: fn => driver.transaction(transaction => fn(createDatabase(transaction))),
     prepare: sql => new Prepared(sql),
     async batch(statements) {
       const queries = statements.map(statement => {
