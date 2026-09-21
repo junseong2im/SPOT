@@ -5,14 +5,16 @@ import {Dialog,DialogContent,DialogTitle,DialogDescription} from '@/components/u
 import type {Routine} from '@/lib/gym-model';
 import {parseRoutineText,finalizeImport,type ImportDraft} from '@/lib/routine-assistant/parser';
 import {proposeEdit} from '@/lib/routine-assistant/edits';
+import {DecisionReview,type Answers,type Clarification} from '@/lib/routine-assistant/decisions';
 import './routine-assistant.css';
 
 type Props={open:boolean;onClose:()=>void;routine?:Routine;onImport?:(routines:Routine[])=>Promise<boolean>;onEdit?:(routine:Routine)=>void;busy?:boolean;serverError?:string};
 export function RoutineAssistant({open,onClose,routine,onImport,onEdit,busy=false,serverError}:Props){
  const [text,setText]=useState(''),[draft,setDraft]=useState<ImportDraft|null>(null),[edit,setEdit]=useState<ReturnType<typeof proposeEdit>|null>(null),[error,setError]=useState('');
  const [confirmed,setConfirmed]=useState(false),[working,setWorking]=useState(false),[progress,setProgress]=useState(''),[ocrReview,setOcrReview]=useState(false);
+ const [answers,setAnswers]=useState<Answers>({}),[question,setQuestion]=useState<Clarification|null>(null),[quantity,setQuantity]=useState('');
  const worker=useRef<Worker|null>(null),generation=useRef(0),locked=useRef(false);
- const reset=()=>{setDraft(null);setEdit(null);setConfirmed(false);setError('');};
+ const reset=()=>{setDraft(null);setEdit(null);setConfirmed(false);setError('');setQuestion(null);};
  useEffect(()=>()=>{generation.current++;void worker.current?.terminate();},[]);
  function close(){if(busy)return;generation.current++;void worker.current?.terminate();worker.current=null;locked.current=false;setWorking(false);onClose();}
  async function readImage(file:File){
@@ -36,16 +38,18 @@ export function RoutineAssistant({open,onClose,routine,onImport,onEdit,busy=fals
    setText(recognized);setOcrReview(true);setProgress('사진에서 읽은 글을 먼저 확인해주세요. 숫자와 표 순서가 틀릴 수 있어요.');
   }catch(e){if(run===generation.current)setError((e as Error).message);}finally{if(timer)clearTimeout(timer);if(run===generation.current){generation.current++;void worker.current?.terminate();worker.current=null;setWorking(false);locked.current=false;}}
  }
- function analyze(){reset();try{if(routine)setEdit(proposeEdit(routine,text));else{const parsed=parseRoutineText(text);parsed.routines=parsed.routines.map(r=>({...r,id:crypto.randomUUID(),exercises:r.exercises.map(e=>({...e,id:crypto.randomUUID()}))}));setDraft(parsed);}}catch(e){setError((e as Error).message);}}
+ function analyze(nextAnswers=answers){reset();try{if(routine)setEdit(proposeEdit(routine,text,nextAnswers));else{const parsed=parseRoutineText(text);parsed.routines=parsed.routines.map(r=>({...r,id:crypto.randomUUID(),exercises:r.exercises.map(e=>({...e,id:crypto.randomUUID()}))}));setDraft(parsed);}}catch(e){if(e instanceof DecisionReview){setQuestion(e.clarification);setQuantity('');}else setError((e as Error).message);}}
+ function answer(value:string){if(!question)return;const next={...answers,[question.id]:value};setAnswers(next);analyze(next);}
  async function apply(){setError('');try{if(edit&&onEdit){onEdit(edit.routine);close();}else if(draft&&onImport){const routines=finalizeImport(draft);if(await onImport(routines))close();}}catch(e){setError((e as Error).message);}}
  const unresolved=draft?.routines.flatMap(r=>r.exercises).some(e=>!e.name.trim()||e.name.length>60||e.sets==null||e.reps==null||e.sets<1||e.sets>30||e.reps<1||e.reps>100);
  return <Dialog open={open} onOpenChange={v=>!v&&close()}><DialogContent className="app-dialog assistant-dialog"><DialogTitle>{routine?'말로 루틴 수정':'글·사진으로 루틴 만들기'}</DialogTitle><DialogDescription>{routine?`${routine.name}의 변경 초안을 만들어요. 실제 저장은 편집 화면에서 합니다.`:'루틴표를 붙여넣으면 운동별로 정리해요. 사진은 기기 안에서 읽습니다.'}</DialogDescription>
   {!draft&&!edit?<div className="form-stack">
    {!routine&&<label className="secondary assistant-upload">루틴 사진 가져오기<input type="file" accept="image/png,image/jpeg,image/webp" disabled={working||busy} onChange={e=>{const file=e.target.files?.[0];e.target.value='';if(file)void readImage(file);}}/></label>}
    {progress&&<p role="status" className="muted">{progress}</p>}
-   <label className="field">{routine?'어떻게 바꿀까요?':'루틴 글'}<textarea rows={routine?4:9} maxLength={routine?500:12000} disabled={working||busy} value={text} onChange={e=>{setText(e.target.value);setError('');}} placeholder={routine?'벤치를 3세트로 바꿔줘':'월요일 가슴\n벤치 4×10\n인클라인 덤벨 프레스 3세트 8~12회\n\n수요일 등\n랫풀 4×12'}/></label>
+   <label className="field">{routine?'어떻게 바꿀까요?':'루틴 글'}<textarea rows={routine?4:9} maxLength={routine?500:12000} disabled={working||busy} value={text} onChange={e=>{setText(e.target.value);setError('');setAnswers({});setQuestion(null);}} placeholder={routine?'벤치를 3세트로 바꿔줘':'월요일 가슴\n벤치 4×10\n인클라인 덤벨 프레스 3세트 8~12회\n\n수요일 등\n랫풀 4×12'}/></label>
    {ocrReview&&!working&&<label className="check-row"><input type="checkbox" checked={confirmed} onChange={e=>setConfirmed(e.target.checked)}/>사진에서 읽은 글자·숫자·순서를 확인했어요</label>}
-   <button type="button" className="primary" disabled={working||busy||!text.trim()||(ocrReview&&!confirmed)} onClick={analyze}>초안 만들기</button>
+   {question&&<section className="assistant-question" aria-label="추가 확인"><strong>{question.question}</strong>{question.options?<div className="form-stack">{question.options.map(option=><button type="button" className="secondary" key={option.value} onClick={()=>answer(option.value)}>{option.label}</button>)}</div>:<div className="form-stack"><label className="field">확인할 숫자<input type="number" inputMode="numeric" min={question.min} max={question.max} value={quantity} onChange={e=>setQuantity(e.target.value)}/></label><button type="button" className="secondary" disabled={!quantity} onClick={()=>answer(quantity)}>이 숫자로 확인</button></div>}</section>}
+   {!question&&<button type="button" className="primary" disabled={working||busy||!text.trim()||(ocrReview&&!confirmed)} onClick={()=>analyze()}>초안 만들기</button>}
    <details><summary>어떻게 읽나요?</summary><p className="muted">운동 이름·세트·횟수는 사전과 규칙으로 해석하고, 수정 의도는 작은 학습 모델로 분류해요. 자유로운 상담 AI는 아니며 모호한 내용은 확인을 요청합니다. 수정 예: 벤치를 3세트로 / 랫풀 2회 줄여줘 / 벤치 대신 체스트 프레스로 교체해줘.</p></details>
   </div>:<div className="form-stack">
    {edit&&<ul>{edit.changes.map((change,i)=><li key={i}>{change}</li>)}</ul>}

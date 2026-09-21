@@ -44,6 +44,23 @@ test('local model inference agrees with the reproducible heldout evaluation with
  const training=new Set(train.map(x=>x.text));assert.ok(heldout.every(x=>!training.has(x.text)));
  assert.equal(heldout.filter(x=>classifyIntent(x.text).label===x.label).length,report.correct);
 });
+
+test('atomic decisions ask only for missing values and bind user choices to valid candidates',()=>{
+ let question;
+ try{proposeEdit(base,'벤치 세트 줄여줘');}catch(e){question=e.clarification;}
+ assert.equal(question.id,'amount');
+ const proposed=proposeEdit(base,'벤치 세트 줄여줘',{amount:'1'});
+ assert.equal(proposed.routine.exercises[0].sets,3);assert.equal(proposed.plan.amount.source,'user');assert.equal(proposed.plan.requiresConfirmation,true);
+ assert.equal(proposed.plan.model.calibrated,false);assert.ok(Math.abs(Object.values(proposed.plan.model.probabilities).reduce((a,b)=>a+b,0)-1)<1e-9);
+ try{proposeEdit(base,'로우를 3세트로 바꿔줘');}catch(e){question=e.clarification;}
+ assert.equal(question.id,'target');assert.deepEqual(question.options.map(x=>x.value),['a','b']);
+ assert.equal(proposeEdit(base,'로우를 3세트로 바꿔줘',{target:'b'}).plan.target.source,'user');
+ assert.throws(()=>proposeEdit(base,'로우를 3세트로 바꿔줘',{target:'other-crew-id'}));
+ assert.throws(()=>proposeEdit(base,'벤치 세트 줄여줘',{amount:'-10'}));
+ assert.throws(()=>proposeEdit(base,'벤치 세트 줄여줘',{amount:'0'}));
+ assert.throws(()=>proposeEdit(base,'벤치 3세트로 바꿔줘',{operation:'remove'}));
+ const parsed=parseRoutineText('모르는 운동 3세트');assert.equal(parsed.routines[0].exercises[0].decisions.name.status,'review');assert.equal(parsed.routines[0].exercises[0].decisions.reps.value,null);
+});
 test('bulk import is atomic, crew scoped, conflict checked and cannot overwrite routines',async()=>{
  const f=await createTestDatabase(),user={userId:'importer',displayName:'Importer'};
  try{

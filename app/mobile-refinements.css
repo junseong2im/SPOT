@@ -1,0 +1,44 @@
+.nav-label-short{display:none}
+.routine-toolbar{display:flex;gap:10px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
+.routine-scheduling{margin:16px 0 22px;border:1px solid #303030;border-radius:16px;padding:14px 18px}
+.routine-scheduling>summary{cursor:pointer;font-size:14px;font-weight:600;min-height:24px}
+.routine-scheduling[open]>summary{margin-bottom:14px}
+.routine-scheduling .week-plan{border:0;padding:0;margin:0}
+@media(max-width:760px){
+ .nav-label-long{display:none}.nav-label-short{display:inline}
+ html.dark .app-shell .main-nav[data-slot]{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:2px;width:100%;height:54px;padding:4px;overflow:hidden;border-radius:16px;scrollbar-width:none}
+ html.dark .app-shell .main-nav[data-slot]::-webkit-scrollbar{display:none}
+ html.dark .app-shell .main-nav [data-slot=tabs-trigger]{min-width:0;width:100%;min-height:44px;height:44px;padding:6px 2px;font-size:13px;border-radius:12px;white-space:nowrap}
+ html.dark .crew-context{display:grid;grid-template-columns:minmax(0,1fr) auto auto;gap:6px;align-items:center;margin-bottom:20px;padding-bottom:14px}
+ html.dark .crew-context>small{display:none}
+ html.dark .crew-context .choice{min-width:0;width:100%;height:44px;font-size:14px}
+ html.dark .crew-context>.text-button{min-height:44px;padding:6px 8px;font-size:12px;white-space:nowrap}
+ html.dark .workspace{padding-top:20px}
+ html.dark .page-heading{gap:14px;margin-bottom:22px}
+ html.dark .page-heading h1{font-size:26px;line-height:1.35;word-break:keep-all}
+ html.dark .page-heading p{font-size:14px;line-height:1.6}
+ html.dark .routine-toolbar{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;width:100%}
+ html.dark .routine-toolbar>button{width:100%;min-height:44px;justify-content:center;font-size:12px;padding:8px 6px}
+ html.dark .routine-toolbar>.routine-import{grid-column:1/-1;grid-row:1;background:var(--spot-accent,#ff862f);color:#101010;border-color:transparent;font-size:14px}
+ html.dark .starter-options{padding:16px;margin:14px 0}
+ html.dark .routine-scheduling{padding:12px 16px;margin:14px 0}
+ html.dark .topbar .icon-button,html.dark .topbar .account-button{min-width:44px;min-height:44px}
+ html.dark .topbar .header-account{gap:2px}
+ html.dark .topbar .brand{font-size:27px}
+ html.dark .app-dialog[data-slot]{max-height:calc(100dvh - 12px)!important;overflow-x:hidden;overflow-y:auto;overscroll-behavior:contain;scroll-padding-block:64px 24px}
+ html.dark .app-dialog [data-slot=dialog-title]{padding-right:44px;line-height:1.4}
+ html.dark .app-dialog [data-slot=dialog-close]{min-width:44px;min-height:44px;width:44px;height:44px;top:12px;right:12px}
+ html.dark :is(input:not([type=checkbox]):not([type=radio]):not([type=file]),textarea,select){font-size:16px!important;max-width:100%}
+ html.dark :is(input:not([type=checkbox]):not([type=radio]),select){min-height:44px}
+ html.dark .app-dialog .primary,html.dark .app-dialog .secondary,html.dark .app-dialog .text-button{min-height:44px}
+ html.dark .app-dialog .field{min-width:0}
+ html.dark .assistant-fields{grid-template-columns:minmax(0,1fr) 64px 64px}
+ html.dark .assistant-routine{padding:12px}
+ html.dark .assistant-upload{font-size:14px}
+ html.dark .assistant-dialog .check-row{line-height:1.6;gap:10px;padding:8px 0;min-height:44px}
+ html.dark .assistant-dialog .check-row input{width:20px;height:20px;flex-shrink:0;margin-top:3px}
+ html.dark .session-actions{gap:10px;flex-wrap:wrap}
+ html.dark .guide-filter{gap:6px}
+ html.dark .guide-filter button{min-height:40px}
+}
+@media(max-width:350px){html.dark .topbar .brand{font-size:23px}.topbar .brand-icon{display:none!important}html.dark .topbar{padding-inline:12px}html.dark .assistant-fields{grid-template-columns:minmax(0,1fr) 58px 58px;gap:5px}}

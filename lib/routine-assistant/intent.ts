@@ -7,5 +7,8 @@ export function classifyIntent(text:string){
  }
  const norm=Math.sqrt([...f.values()].reduce((s,v)=>s+v*v,0))||1;
  const scores=model.labels.map((label,j)=>({label,score:model.bias[j]+[...f].reduce((s,[k,v])=>s+model.weights[j][k]*v/norm,0)})).sort((a,b)=>b.score-a.score);
- return {label:scores[0].label,margin:scores[0].score-scores[1].score};
+ const weights=scores.map(s=>Math.exp(s.score-scores[0].score)),total=weights.reduce((a,b)=>a+b,0);
+ const probabilities=Object.fromEntries(scores.map((s,i)=>[s.label,weights[i]/total]));
+ const entropy=-Object.values(probabilities).reduce((sum,p)=>sum+(p>0?p*Math.log(p):0),0);
+ return {label:scores[0].label,margin:scores[0].score-scores[1].score,probabilities,concentration:1-entropy/Math.log(scores.length),calibrated:false as const};
 }

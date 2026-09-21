@@ -1,7 +1,8 @@
 import type {Routine} from '../gym-model';
 import {resolveName} from './catalog';
+import type {Decision} from './decisions';
 
-export type ImportExercise={id:string;name:string;sets:number|null;reps:number|null;prescription:string;source:string;issues:string[]};
+export type ImportExercise={id:string;name:string;sets:number|null;reps:number|null;prescription:string;source:string;issues:string[];decisions:{name:Decision<string>;sets:Decision<number>;reps:Decision<number>}};
 export type ImportRoutine={id:string;name:string;exercises:ImportExercise[]};
 export type ImportDraft={routines:ImportRoutine[];unparsed:string[];source:string};
 const number='(\\d{1,3})(?:\\s*[~–-]\\s*(\\d{1,3}))?';
@@ -36,7 +37,11 @@ function parseExercise(line:string,index:number):ImportExercise|null{
   issues.push('복합 세트 구성은 본세트 수를 확인해주세요. 원문은 수행법에 보존해요.');sets=null;
  }
  if(/\d+\s*초|\d+\s*분/.test(cleaned)&&!match&&!/\d+\s*회/.test(cleaned))issues.push('시간 기반 운동은 횟수로 자동 변환하지 않아요.');
- return {id:`import-exercise-${index}`,name:resolved.name,sets,reps,prescription:cleaned,source:line,issues};
+ return {id:`import-exercise-${index}`,name:resolved.name,sets,reps,prescription:cleaned,source:line,issues,decisions:{
+  name:{question:'어떤 운동인가요?',status:resolved.known?'resolved':'review',value:resolved.name,evidence:[rawName],source:'rule'},
+  sets:{question:'본세트가 몇 세트인가요?',status:sets===null||issues.some(i=>i.includes('세트 범위'))?'review':'resolved',value:sets,evidence:[line],source:'rule'},
+  reps:{question:'몇 회 반복하나요?',status:reps===null?'review':'resolved',value:reps,evidence:[line],source:'rule'},
+ }};
 }
 
 export function parseRoutineText(source:string):ImportDraft{
