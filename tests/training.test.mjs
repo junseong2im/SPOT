@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import {build} from 'esbuild';
 import {createTestDatabase} from './database.mjs';
 async function moduleAt(path){const out=await build({entryPoints:[path],bundle:true,write:false,platform:'node',format:'esm'});return import(`data:text/javascript;base64,${Buffer.from(out.outputFiles[0].text).toString('base64')}`);}
-const {trainingAction,trainingSnapshot}=await moduleAt('lib/training-service.ts');
+const {trainingAction,trainingSnapshot,workoutHistory}=await moduleAt('lib/training-service.ts');
 const {analyzeTraining}=await moduleAt('lib/training-analysis.ts');
 const {workoutTotals}=await moduleAt('lib/training-model.ts');
 const {act,snapshot}=await moduleAt('lib/gym-service.ts');
@@ -64,4 +64,43 @@ test('warmups and timed sets do not create false load volume; unfinished session
  const h=histories();h[0].state.exercises[0].sets.push({id:'wu',kind:'warmup',weight:100,reps:10,seconds:null,rir:null,done:true});assert.equal(workoutTotals(h[0]).volume,500);
  h[0].state.exercises[0].timed=true;h[0].state.exercises[0].sets[0].seconds=30;assert.equal(workoutTotals(h[0]).volume,0);assert.equal(workoutTotals(h[0]).timedSeconds,30);
  h[0].status='active';assert.equal(analyzeTraining(h,profile).sessions,2);
+});
+
+test('completed record correction is private and revision checked, preserves workout date and updates analysis',async()=>{
+ const f=await createTestDatabase(),db=f.db;
+ try{
+  const {crewId}=await act(db,owner,{action:'createCrew',name:'Correction',nickname:'Owner'});
+  const {workout:w}=await trainingAction(db,owner.userId,{action:'start',id:crypto.randomUUID(),crewId,routineId:'push',kind:'common',version:1});
+  const state=structuredClone(w.state);state.exercises[0].sets[0]={...state.exercises[0].sets[0],done:true,weight:50,reps:10};
+  const {workout:done}=await trainingAction(db,owner.userId,{action:'finish',id:w.id,revision:1,state});
+  state.exercises[0].sets[0].weight=60;
+  const update={action:'correct',id:w.id,revision:done.revision,state};
+  await assert.rejects(trainingAction(db,other.userId,update),e=>e.status===404);
+  const {workout:corrected}=await trainingAction(db,owner.userId,update);assert.equal(corrected.finished_at,done.finished_at);assert.equal(corrected.started_at,done.started_at);assert.equal(corrected.revision,done.revision+1);
+  assert.equal((await trainingSnapshot(db,owner.userId)).history[0].volume,600);
+  await assert.rejects(trainingAction(db,owner.userId,update),e=>e.status===409);
+  const empty=structuredClone(state);empty.exercises.forEach(e=>e.sets.forEach(s=>s.done=false));await assert.rejects(trainingAction(db,owner.userId,{...update,revision:corrected.revision,state:empty}));
+ }finally{await f.close();}
+});
+test('history pagination includes old records and remains stable for equal timestamps without leaking other users',async()=>{
+ const f=await createTestDatabase(),db=f.db;
+ try{
+  const state=histories()[0].state,time=Date.now()-100*86400000;
+  for(let i=0;i<23;i++)await db.prepare("INSERT INTO workout_sessions(id,user_id,crew_id,routine_id,routine_name,status,state,started_at,finished_at,updated_at) VALUES(?,?,?,?,?,'completed',?,?,?,?)").bind(crypto.randomUUID(),'owner','crew','r','Old',JSON.stringify(state),time-1000,time,time).run();
+  const first=await workoutHistory(db,'owner');assert.equal(first.history.length,20);assert.ok(first.cursor);
+  const second=await workoutHistory(db,'owner',first.cursor);assert.equal(second.history.length,3);assert.equal(second.cursor,null);
+  assert.equal(new Set([...first.history,...second.history].map(w=>w.id)).size,23);
+  assert.equal((await workoutHistory(db,'other',first.cursor)).history.length,0);
+  assert.equal((await trainingSnapshot(db,'owner')).analysis.sessions,0);
+  assert.equal((await trainingSnapshot(db,'owner')).history.length,20);
+  await assert.rejects(workoutHistory(db,'owner','bad cursor'));
+ }finally{await f.close();}
+});
+test('same-day sessions, stale data and painful timed exercise never trigger progression; trends keep incomplete weights unknown',()=>{
+ const now=Date.parse('2026-09-21T12:00:00Z');const sameDay=histories();sameDay.forEach((w,i)=>w.finished_at=Date.parse('2026-09-20T01:00:00Z')+i*3600000);
+ assert.equal(analyzeTraining(sameDay,profile,now).advice[0].status,'review');
+ const stale=histories();stale.forEach((w,i)=>w.finished_at=now-(20+i)*86400000);assert.equal(analyzeTraining(stale,profile,now).advice[0].status,'review');
+ const timed=histories({timed:true});timed[0].state.discomfort='yes';assert.equal(analyzeTraining(timed,profile).advice[0].status,'review');
+ const missing=histories();missing[0].state.exercises[0].sets[0].weight=null;const report=analyzeTraining(missing,profile);assert.equal(report.trends[0].points.at(-1).volume,null);
+ const blocks=histories();blocks[0].state.exercises.push({...structuredClone(blocks[0].state.exercises[0]),id:'second'});const b=analyzeTraining(blocks,profile);assert.equal(b.advice[0].status,'review');assert.equal(b.trends[0].points.at(-1).sets,2);
 });

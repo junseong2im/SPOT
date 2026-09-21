@@ -7,6 +7,13 @@ import {analyzeTraining} from './training-analysis';
 import {z} from 'zod';
 type Row=Omit<Workout,'state'|'started_at'|'finished_at'|'updated_at'>&{state:string;started_at:string|number;finished_at:string|number|null;updated_at:string|number};
 const hydrate=(row:Row):Workout=>({...row,state:workoutStateSchema.parse(JSON.parse(row.state)),started_at:Number(row.started_at),finished_at:row.finished_at===null?null:Number(row.finished_at),updated_at:Number(row.updated_at)});
+export async function workoutHistory(db:Database,userId:string,cursor?:string|null){
+ let boundary:{time:number;id:string}|null=null;
+ if(cursor){try{boundary=z.object({time:z.number().int().nonnegative(),id:z.string().uuid()}).parse(JSON.parse(Buffer.from(cursor,'base64url').toString('utf8')));}catch{throw new AppError('기록 페이지를 다시 열어주세요.');}}
+ const rows=(await db.prepare("SELECT * FROM workout_sessions WHERE user_id=? AND status='completed'"+(boundary?' AND (finished_at<? OR (finished_at=? AND id<?))':'')+' ORDER BY finished_at DESC,id DESC LIMIT 21').bind(userId,...(boundary?[boundary.time,boundary.time,boundary.id]:[])).all<Row>()).results;
+ const page=rows.slice(0,20).map(hydrate),last=page.at(-1);
+ return {history:page.map(w=>({id:w.id,name:w.routine_name,date:w.finished_at,...workoutTotals(w)})),cursor:rows.length>20&&last?Buffer.from(JSON.stringify({time:last.finished_at,id:last.id})).toString('base64url'):null};
+}
 export async function trainingSnapshot(db:Database,userId:string,id?:string|null){
  if(id){const row=await db.prepare('SELECT * FROM workout_sessions WHERE id=? AND user_id=?').bind(id,userId).first<Row>();if(!row)throw new AppError('운동 기록을 찾을 수 없어요.',404);return {workout:hydrate(row)};}
  const active=await db.prepare("SELECT * FROM workout_sessions WHERE user_id=? AND status='active'").bind(userId).first<Row>();
@@ -14,11 +21,12 @@ export async function trainingSnapshot(db:Database,userId:string,id?:string|null
  const rawProfile=await db.prepare('SELECT content FROM training_profiles WHERE user_id=?').bind(userId).first<{content:string}>();
  const parsed=trainingProfileSchema.safeParse(rawProfile?JSON.parse(rawProfile.content):{});const profile=parsed.success?parsed.data:null;
  const history=rows.slice(0,200).map(hydrate);
- return {active:active?hydrate(active):null,profile,history:history.slice(0,30).map(w=>({id:w.id,name:w.routine_name,date:w.finished_at,...workoutTotals(w)})),analysis:analyzeTraining(history,profile),truncated:rows.length>200};
+ return {active:active?hydrate(active):null,profile,...await workoutHistory(db,userId),analysis:analyzeTraining(history,profile),truncated:rows.length>200};
 }
 const actions=z.discriminatedUnion('action',[
  z.object({action:z.literal('start'),id:z.string().uuid(),crewId:z.string(),routineId:z.string(),kind:z.enum(['common','personal']),version:z.number().int()}),
  z.object({action:z.literal('save'),id:z.string().uuid(),revision:z.number().int().min(1),state:workoutStateSchema}),
+ z.object({action:z.literal('correct'),id:z.string().uuid(),revision:z.number().int().min(1),state:workoutStateSchema}),
  z.object({action:z.literal('finish'),id:z.string().uuid(),revision:z.number().int().min(1),state:workoutStateSchema}),
  z.object({action:z.literal('discard'),id:z.string().uuid(),revision:z.number().int().min(1)}),
  z.object({action:z.literal('profile'),profile:trainingProfileSchema}),
@@ -52,6 +60,12 @@ export async function trainingAction(db:Database,userId:string,raw:unknown){
    const row=await tx.prepare("INSERT INTO workout_sessions(id,user_id,crew_id,routine_id,routine_name,state,started_at,updated_at) VALUES(?,?,?,?,?,?,?,?) RETURNING *").bind(input.id,userId,input.crewId,routine.id,routine.name,JSON.stringify(validated),now,now).first<Row>();return {workout:hydrate(row!),resumed:false,carried};
   }
   const row=await tx.prepare('SELECT * FROM workout_sessions WHERE id=? AND user_id=? FOR UPDATE').bind(input.id,userId).first<Row>();if(!row)throw new AppError('운동 기록에 접근할 수 없어요.',404);
+  if(input.action==='correct'){
+   if(row.status!=='completed')throw new AppError('완료한 운동 기록만 여기에서 수정할 수 있어요.',409);
+   if(row.revision!==input.revision)throw new AppError('다른 기기에서 변경됐어요. 기록을 다시 열어주세요.',409);
+   if(!input.state.exercises.some(e=>e.sets.some(s=>s.done)))throw new AppError('완료한 세트가 한 개 이상 있어야 해요.');
+   const saved=await tx.prepare('UPDATE workout_sessions SET state=?,revision=revision+1,updated_at=? WHERE id=? AND user_id=? RETURNING *').bind(JSON.stringify(input.state),now,input.id,userId).first<Row>();return {workout:hydrate(saved!)};
+  }
   if(row.status==='completed'&&input.action==='finish'&&JSON.stringify(input.state)===JSON.stringify(hydrate(row).state))return {workout:hydrate(row)};
   if(row.status==='discarded'&&input.action==='discard')return {workout:hydrate(row)};
   if(row.status!=='active')throw new AppError('이미 종료된 운동이에요. 기록 목록을 확인해주세요.',409);
