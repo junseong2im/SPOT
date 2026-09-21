@@ -42,3 +42,31 @@
  html.dark .guide-filter button{min-height:40px}
 }
 @media(max-width:350px){html.dark .topbar .brand{font-size:23px}.topbar .brand-icon{display:none!important}html.dark .topbar{padding-inline:12px}html.dark .assistant-fields{grid-template-columns:minmax(0,1fr) 58px 58px;gap:5px}}
+
+/* Compact dashboard onboarding, expanded only on request. */
+.dashboard-guide{margin-bottom:24px;padding:18px 22px}
+.dashboard-guide>details>summary{display:flex;align-items:center;justify-content:space-between;gap:16px;cursor:pointer;list-style:none;min-height:52px}
+.dashboard-guide summary::-webkit-details-marker{display:none}
+.dashboard-guide>details>summary>span:first-child{display:grid;gap:5px}
+.guide-kicker{font-size:10px;letter-spacing:.16em;color:#ff874b;font-weight:700}
+.dashboard-guide summary strong{font-size:16px;color:#fff}
+.dashboard-guide summary small{font-size:12px;color:#aaa;line-height:1.6}
+.guide-toggle{font-size:24px;color:#aaa;flex-shrink:0}
+.dashboard-guide>details[open]>summary .guide-toggle{transform:rotate(45deg)}
+.guide-content{border-top:1px solid #303030;margin-top:16px;padding-top:16px}
+.guide-context{font-size:13px;color:#bbb;line-height:1.7;margin:0 0 18px}
+.guide-steps{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.guide-steps li{display:flex;align-items:flex-start;gap:12px;min-width:0}
+.guide-number{font-size:12px;color:#ff874b;font-variant-numeric:tabular-nums;padding-top:3px}
+.guide-steps h3{font-size:14px;margin:0 0 6px;color:#fff}
+.guide-steps p{font-size:13px;color:#aaa;line-height:1.7;margin:0;word-break:keep-all;overflow-wrap:anywhere}
+.guide-steps .text-button{min-height:44px;font-size:12px;color:#ddd}
+.guide-extras{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.guide-extras button{min-height:44px;font-size:12px}
+.guide-faq{border-top:1px solid #303030;margin-top:20px;padding-top:8px}
+.guide-faq summary{cursor:pointer;min-height:44px;display:flex;align-items:center;font-size:13px;color:#ccc}
+.guide-faq dl{margin:8px 0 0;font-size:13px;line-height:1.7}
+.guide-faq dt{font-weight:600;color:#eee;margin-top:16px}
+.guide-faq dd{margin:4px 0 0;color:#aaa}
+.dashboard-guide summary:focus-visible{outline:2px solid #ff874b;outline-offset:4px;border-radius:4px}
+@media(max-width:600px){.dashboard-guide{padding:16px}.guide-steps{grid-template-columns:1fr;gap:14px}.dashboard-guide summary strong{font-size:15px}.guide-extras{display:grid;grid-template-columns:1fr}.guide-steps p{word-break:normal}}
