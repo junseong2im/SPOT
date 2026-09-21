@@ -70,3 +70,5 @@
 .guide-faq dd{margin:4px 0 0;color:#aaa}
 .dashboard-guide summary:focus-visible{outline:2px solid #ff874b;outline-offset:4px;border-radius:4px}
 @media(max-width:600px){.dashboard-guide{padding:16px}.guide-steps{grid-template-columns:1fr;gap:14px}.dashboard-guide summary strong{font-size:15px}.guide-extras{display:grid;grid-template-columns:1fr}.guide-steps p{word-break:normal}}
+
+.health-entry{display:flex;align-items:center;justify-content:space-between;gap:16px;border:1px solid #3e3e3e;border-radius:16px;padding:16px 20px;margin-bottom:16px;background:linear-gradient(110deg,#222,#141414)}.health-entry>div{display:grid;gap:4px}.health-entry strong{font-size:16px}.health-entry small{color:#aaa;font-size:12px}.health-entry>span{font-size:24px;color:#ddd}.training-subnav>a{display:flex;align-items:center;justify-content:center;min-height:44px;font-size:12px;padding:8px 4px}

@@ -37,6 +37,8 @@ test('Google config only accepts HTTPS origins or loopback HTTP and requires bot
 });
 test('return paths cannot redirect outside the app and preserve invite only',()=>{
   for(const path of ['https://evil.example','//evil.example','/\\evil.example','/api/auth/google','/login','/signin-with-chatgpt','/%2f%2fevil.example'])assert.equal(auth.safeReturnTo(path),'/');
+  assert.equal(auth.safeReturnTo('/health?next=https://evil.example'),'/health');
+  assert.equal(auth.safeReturnTo('/health/unknown'),'/');
   assert.equal(auth.safeReturnTo('/?invite=1234567890abcdef&unsafe=1'),'/?invite=1234567890abcdef');
 });
 test('authorization request includes state, nonce and PKCE without exposing secret',async()=>{

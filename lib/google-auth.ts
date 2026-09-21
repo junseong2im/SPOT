@@ -36,7 +36,8 @@ export function safeReturnTo(value: string | null | undefined): string {
   try {
     const url = new URL(value, 'https://spot.invalid');
     if (url.origin !== 'https://spot.invalid') return '/';
-    // Only the actual product route is a valid post-login destination.
+    // Only known product routes are valid post-login destinations.
+    if (url.pathname === '/health') return '/health';
     if (url.pathname !== '/') return '/';
     const invite = url.searchParams.get('invite');
     if (invite && /^[a-zA-Z0-9_-]{16,100}$/.test(invite)) return `/?invite=${encodeURIComponent(invite)}`;

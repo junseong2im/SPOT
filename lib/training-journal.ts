@@ -37,5 +37,18 @@ export async function journalSummary(db:Database,userId:string,now=Date.now()){
  const meals=entries.filter(e=>e.content.kind==='meal'),cardio=entries.filter(e=>e.content.kind==='cardio'),recovery=entries.filter(e=>e.content.kind==='recovery');
  const sleeps=recovery.flatMap(e=>e.content.kind==='recovery'&&e.content.sleep!==null?[e.content.sleep]:[]);
  const protein=meals.flatMap(e=>e.content.kind==='meal'&&e.content.protein!==null?[e.content.protein]:[]);
- return {mealDays:new Set(meals.map(e=>e.date)).size,meals:meals.length,proteinEntries:protein.length,proteinTotal:protein.length?protein.reduce((n,x)=>n+x,0):null,cardioMinutes:cardio.reduce((n,e)=>n+(e.content.kind==='cardio'?e.content.minutes:0),0),sleepEntries:sleeps.length,sleepAverage:sleeps.length?Math.round(sleeps.reduce((n,x)=>n+x,0)/sleeps.length*10)/10:null,truncated:rows.length>1000};
+ return {mealDays:new Set(meals.map(e=>e.date)).size,meals:meals.length,proteinEntries:protein.length,proteinTotal:protein.length?protein.reduce((n,x)=>n+x,0):null,cardioEntries:cardio.length,cardioMinutes:cardio.reduce((n,e)=>n+(e.content.kind==='cardio'?e.content.minutes:0),0),sleepEntries:sleeps.length,sleepAverage:sleeps.length?Math.round(sleeps.reduce((n,x)=>n+x,0)/sleeps.length*10)/10:null,truncated:rows.length>1000};
+}
+
+export async function healthDashboard(db:Database,userId:string,now=Date.now()){
+ const today=localDate(new Date(now));
+ const [body,recovery,todayRows,week]=await Promise.all([
+  db.prepare("SELECT * FROM training_journal WHERE user_id=? AND kind='body' AND deleted=0 AND date<=? ORDER BY date DESC,updated_at DESC,id DESC LIMIT 1").bind(userId,today).first<Row>(),
+  db.prepare("SELECT * FROM training_journal WHERE user_id=? AND kind='recovery' AND deleted=0 AND date<=? ORDER BY date DESC,updated_at DESC,id DESC LIMIT 1").bind(userId,today).first<Row>(),
+  db.prepare("SELECT * FROM training_journal WHERE user_id=? AND kind='meal' AND deleted=0 AND date=? ORDER BY id LIMIT 1001").bind(userId,today).all<Row>(),
+  journalSummary(db,userId,now),
+ ]);
+ const meals=todayRows.results.slice(0,1000).map(hydrateJournal);
+ const nutrients=Object.fromEntries((['calories','protein','carbs','fat'] as const).map(key=>{const values=meals.flatMap(e=>e.content.kind==='meal'&&e.content[key]!==null?[e.content[key]!]:[]);return [key,{total:values.length?values.reduce((a,b)=>a+b,0):null,recorded:values.length}];})) as Record<'calories'|'protein'|'carbs'|'fat',{total:number|null;recorded:number}>;
+ return {today,body:body?hydrateJournal(body):null,recovery:recovery?hydrateJournal(recovery):null,nutrition:{...nutrients,meals:meals.length,truncated:todayRows.results.length>1000},week};
 }

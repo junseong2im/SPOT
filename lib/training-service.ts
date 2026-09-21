@@ -4,7 +4,6 @@ import {guideFor,normalizeExerciseSearch} from './exercise-guides';
 import {AppError} from './gym-service';
 import {trainingProfileSchema,workoutStateSchema,workoutTotals,type Workout,type WorkoutState,type TrainingProfile} from './training-model';
 import {analyzeTraining} from './training-analysis';
-import {journalSummary} from './training-journal';
 import {trainingInsights,referenceMax} from './training-insights';
 import {z} from 'zod';
 import {createHash} from 'node:crypto';
@@ -26,7 +25,7 @@ export async function trainingSnapshot(db:Database,userId:string,id?:string|null
  const rawProfile=await db.prepare('SELECT content FROM training_profiles WHERE user_id=?').bind(userId).first<{content:string}>();
  const parsed=trainingProfileSchema.safeParse(rawProfile?JSON.parse(rawProfile.content):{});const profile=parsed.success?parsed.data:null;
  const history=rows.slice(0,200).map(hydrate);
- return {active:active?hydrate(active):null,profile,...await workoutHistory(db,userId),analysis:analyzeTraining(history,profile),insights:trainingInsights(history),journal:await journalSummary(db,userId),truncated:rows.length>200};
+ return {active:active?hydrate(active):null,profile,...await workoutHistory(db,userId),analysis:analyzeTraining(history,profile),insights:trainingInsights(history),truncated:rows.length>200};
 }
 export async function nextWorkoutPlan(db:Database,userId:string,sourceId:string):Promise<NextPlan>{
  const sourceRow=await db.prepare("SELECT * FROM workout_sessions WHERE id=? AND user_id=? AND status='completed'").bind(sourceId,userId).first<Row>();if(!sourceRow)throw new AppError('원본 기록을 찾을 수 없어요.',404);
