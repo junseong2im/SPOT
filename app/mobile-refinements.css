@@ -6,7 +6,7 @@
 .routine-scheduling .week-plan{border:0;padding:0;margin:0}
 @media(max-width:760px){
  .nav-label-long{display:none}.nav-label-short{display:inline}
- html.dark .app-shell .main-nav[data-slot]{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:2px;width:100%;height:54px;padding:4px;overflow:hidden;border-radius:16px;scrollbar-width:none}
+ html.dark .app-shell .main-nav[data-slot]{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:2px;width:100%;height:54px;padding:4px;overflow:hidden;border-radius:16px;scrollbar-width:none}
  html.dark .app-shell .main-nav[data-slot]::-webkit-scrollbar{display:none}
  html.dark .app-shell .main-nav [data-slot=tabs-trigger]{min-width:0;width:100%;min-height:44px;height:44px;padding:6px 2px;font-size:13px;border-radius:12px;white-space:nowrap}
  html.dark .crew-context{display:grid;grid-template-columns:minmax(0,1fr) auto auto;gap:6px;align-items:center;margin-bottom:20px;padding-bottom:14px}
