@@ -20,6 +20,7 @@ const actionSchema=z.discriminatedUnion('action',[
   z.object({action:z.literal('joinCrew'),invite:z.string().trim().min(16).max(100),nickname:short}),
   z.object({action:z.literal('profile'),crewId:z.string(),name:short}),
   z.object({action:z.literal('saveCommon'),crewId:z.string(),routine,version:z.number().int().min(0)}),
+  z.object({action:z.literal('importRoutines'),crewId:z.string(),revision:z.number().int().min(1),routines:z.array(routine).min(1).max(10).refine(rs=>new Set(rs.map(r=>r.id)).size===rs.length)}),
   z.object({action:z.literal('savePersonal'),crewId:z.string(),routine,revision:z.number().int().min(1)}),
   z.object({action:z.literal('copyRoutine'),crewId:z.string(),routineId:z.string(),version:z.number().int().min(1)}),
   z.object({action:z.literal('syncRoutine'),crewId:z.string(),routineId:z.string(),version:z.number().int().min(1),revision:z.number().int().min(1)}),
@@ -206,6 +207,12 @@ async function actInTransaction(db:Database,user:Actor,raw:unknown){
    await invalidateSessionNotifications(db,row.id,session.id,user.userId);
   }
   session.responses={...session.responses,[user.userId]:input.response};
+ }
+ if(input.action==='importRoutines'){
+  if(input.revision!==row.revision)throw new AppError('크루 루틴이 바뀌었어요. 목록을 다시 확인한 뒤 가져와주세요.',409);
+  if(state.routines.length+input.routines.length>50)throw new AppError('공통 루틴은 최대 50개까지 저장할 수 있어요.');
+  if(input.routines.some(r=>state.routines.some(old=>old.id===r.id)))throw new AppError('이미 저장된 가져오기예요. 루틴 목록을 확인해주세요.',409);
+  state.routines.push(...input.routines.map(r=>({...r,version:1})));
  }
  if(input.action==='attendance'||input.action==='cancelSession'){
   const session=state.sessions.find(s=>s.id===input.sessionId);if(!session)throw new AppError('일정을 찾을 수 없어요.',404);

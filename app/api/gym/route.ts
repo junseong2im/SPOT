@@ -10,7 +10,7 @@ export async function GET(request:Request){try{const user=await getAppUser(reque
 export async function POST(request:Request){try{
  const user=await getAppUser(request);if(!user)throw new AppError('로그인 후 이용해주세요.',401);
  const origin=request.headers.get('origin');if(!origin||origin!==new URL(request.url).origin)throw new AppError('올바른 페이지에서 다시 시도해주세요.',403);
- const raw=await request.text();if(raw.length>50000)throw new AppError('입력 내용이 너무 길어요.',413);
+ const raw=await request.text();if(raw.length>250000)throw new AppError('입력 내용이 너무 길어요.',413);
  let input:unknown;try{input=JSON.parse(raw);}catch{throw new AppError('입력 형식을 확인해주세요.');}
  return response(await act(db(),user,input));
  }catch(e){return failure(e);}}

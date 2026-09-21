@@ -1,0 +1,722 @@
+[
+  {
+    "text": "벤치 세트를 3세트로 바꿔줘",
+    "label": "sets"
+  },
+  {
+    "text": "벤치 세트를 4세트로 바꿔줘",
+    "label": "sets"
+  },
+  {
+    "text": "벤치 세트를 12세트로 바꿔줘",
+    "label": "sets"
+  },
+  {
+    "text": "랫풀 세트를 3세트로 바꿔줘",
+    "label": "sets"
+  },
+  {
+    "text": "랫풀 세트를 4세트로 바꿔줘",
+    "label": "sets"
+  },
+  {
+    "text": "랫풀 세트를 12세트로 바꿔줘",
+    "label": "sets"
+  },
+  {
+    "text": "스쿼트 세트를 3세트로 바꿔줘",
+    "label": "sets"
+  },
+  {
+    "text": "스쿼트 세트를 4세트로 바꿔줘",
+    "label": "sets"
+  },
+  {
+    "text": "스쿼트 세트를 12세트로 바꿔줘",
+    "label": "sets"
+  },
+  {
+    "text": "사레레 세트를 3세트로 바꿔줘",
+    "label": "sets"
+  },
+  {
+    "text": "사레레 세트를 4세트로 바꿔줘",
+    "label": "sets"
+  },
+  {
+    "text": "사레레 세트를 12세트로 바꿔줘",
+    "label": "sets"
+  },
+  {
+    "text": "벤치 3세트로 설정",
+    "label": "sets"
+  },
+  {
+    "text": "벤치 4세트로 설정",
+    "label": "sets"
+  },
+  {
+    "text": "벤치 12세트로 설정",
+    "label": "sets"
+  },
+  {
+    "text": "랫풀 3세트로 설정",
+    "label": "sets"
+  },
+  {
+    "text": "랫풀 4세트로 설정",
+    "label": "sets"
+  },
+  {
+    "text": "랫풀 12세트로 설정",
+    "label": "sets"
+  },
+  {
+    "text": "스쿼트 3세트로 설정",
+    "label": "sets"
+  },
+  {
+    "text": "스쿼트 4세트로 설정",
+    "label": "sets"
+  },
+  {
+    "text": "스쿼트 12세트로 설정",
+    "label": "sets"
+  },
+  {
+    "text": "사레레 3세트로 설정",
+    "label": "sets"
+  },
+  {
+    "text": "사레레 4세트로 설정",
+    "label": "sets"
+  },
+  {
+    "text": "사레레 12세트로 설정",
+    "label": "sets"
+  },
+  {
+    "text": "벤치 세트 수 3으로 수정",
+    "label": "sets"
+  },
+  {
+    "text": "벤치 세트 수 4으로 수정",
+    "label": "sets"
+  },
+  {
+    "text": "벤치 세트 수 12으로 수정",
+    "label": "sets"
+  },
+  {
+    "text": "랫풀 세트 수 3으로 수정",
+    "label": "sets"
+  },
+  {
+    "text": "랫풀 세트 수 4으로 수정",
+    "label": "sets"
+  },
+  {
+    "text": "랫풀 세트 수 12으로 수정",
+    "label": "sets"
+  },
+  {
+    "text": "스쿼트 세트 수 3으로 수정",
+    "label": "sets"
+  },
+  {
+    "text": "스쿼트 세트 수 4으로 수정",
+    "label": "sets"
+  },
+  {
+    "text": "스쿼트 세트 수 12으로 수정",
+    "label": "sets"
+  },
+  {
+    "text": "사레레 세트 수 3으로 수정",
+    "label": "sets"
+  },
+  {
+    "text": "사레레 세트 수 4으로 수정",
+    "label": "sets"
+  },
+  {
+    "text": "사레레 세트 수 12으로 수정",
+    "label": "sets"
+  },
+  {
+    "text": "모든 운동을 3세트로",
+    "label": "sets"
+  },
+  {
+    "text": "모든 운동을 4세트로",
+    "label": "sets"
+  },
+  {
+    "text": "모든 운동을 12세트로",
+    "label": "sets"
+  },
+  {
+    "text": "벤치 세트 하나 줄여줘",
+    "label": "sets"
+  },
+  {
+    "text": "랫풀 세트 하나 줄여줘",
+    "label": "sets"
+  },
+  {
+    "text": "스쿼트 세트 하나 줄여줘",
+    "label": "sets"
+  },
+  {
+    "text": "사레레 세트 하나 줄여줘",
+    "label": "sets"
+  },
+  {
+    "text": "벤치 한 세트 더 추가해줘",
+    "label": "sets"
+  },
+  {
+    "text": "랫풀 한 세트 더 추가해줘",
+    "label": "sets"
+  },
+  {
+    "text": "스쿼트 한 세트 더 추가해줘",
+    "label": "sets"
+  },
+  {
+    "text": "사레레 한 세트 더 추가해줘",
+    "label": "sets"
+  },
+  {
+    "text": "벤치 횟수를 3회로 바꿔줘",
+    "label": "reps"
+  },
+  {
+    "text": "벤치 횟수를 4회로 바꿔줘",
+    "label": "reps"
+  },
+  {
+    "text": "벤치 횟수를 12회로 바꿔줘",
+    "label": "reps"
+  },
+  {
+    "text": "랫풀 횟수를 3회로 바꿔줘",
+    "label": "reps"
+  },
+  {
+    "text": "랫풀 횟수를 4회로 바꿔줘",
+    "label": "reps"
+  },
+  {
+    "text": "랫풀 횟수를 12회로 바꿔줘",
+    "label": "reps"
+  },
+  {
+    "text": "스쿼트 횟수를 3회로 바꿔줘",
+    "label": "reps"
+  },
+  {
+    "text": "스쿼트 횟수를 4회로 바꿔줘",
+    "label": "reps"
+  },
+  {
+    "text": "스쿼트 횟수를 12회로 바꿔줘",
+    "label": "reps"
+  },
+  {
+    "text": "사레레 횟수를 3회로 바꿔줘",
+    "label": "reps"
+  },
+  {
+    "text": "사레레 횟수를 4회로 바꿔줘",
+    "label": "reps"
+  },
+  {
+    "text": "사레레 횟수를 12회로 바꿔줘",
+    "label": "reps"
+  },
+  {
+    "text": "벤치 3회로 설정",
+    "label": "reps"
+  },
+  {
+    "text": "벤치 4회로 설정",
+    "label": "reps"
+  },
+  {
+    "text": "벤치 12회로 설정",
+    "label": "reps"
+  },
+  {
+    "text": "랫풀 3회로 설정",
+    "label": "reps"
+  },
+  {
+    "text": "랫풀 4회로 설정",
+    "label": "reps"
+  },
+  {
+    "text": "랫풀 12회로 설정",
+    "label": "reps"
+  },
+  {
+    "text": "스쿼트 3회로 설정",
+    "label": "reps"
+  },
+  {
+    "text": "스쿼트 4회로 설정",
+    "label": "reps"
+  },
+  {
+    "text": "스쿼트 12회로 설정",
+    "label": "reps"
+  },
+  {
+    "text": "사레레 3회로 설정",
+    "label": "reps"
+  },
+  {
+    "text": "사레레 4회로 설정",
+    "label": "reps"
+  },
+  {
+    "text": "사레레 12회로 설정",
+    "label": "reps"
+  },
+  {
+    "text": "벤치 반복 3회로 수정",
+    "label": "reps"
+  },
+  {
+    "text": "벤치 반복 4회로 수정",
+    "label": "reps"
+  },
+  {
+    "text": "벤치 반복 12회로 수정",
+    "label": "reps"
+  },
+  {
+    "text": "랫풀 반복 3회로 수정",
+    "label": "reps"
+  },
+  {
+    "text": "랫풀 반복 4회로 수정",
+    "label": "reps"
+  },
+  {
+    "text": "랫풀 반복 12회로 수정",
+    "label": "reps"
+  },
+  {
+    "text": "스쿼트 반복 3회로 수정",
+    "label": "reps"
+  },
+  {
+    "text": "스쿼트 반복 4회로 수정",
+    "label": "reps"
+  },
+  {
+    "text": "스쿼트 반복 12회로 수정",
+    "label": "reps"
+  },
+  {
+    "text": "사레레 반복 3회로 수정",
+    "label": "reps"
+  },
+  {
+    "text": "사레레 반복 4회로 수정",
+    "label": "reps"
+  },
+  {
+    "text": "사레레 반복 12회로 수정",
+    "label": "reps"
+  },
+  {
+    "text": "전체 운동 횟수 3회로",
+    "label": "reps"
+  },
+  {
+    "text": "전체 운동 횟수 4회로",
+    "label": "reps"
+  },
+  {
+    "text": "전체 운동 횟수 12회로",
+    "label": "reps"
+  },
+  {
+    "text": "벤치 반복 횟수 하나 줄여줘",
+    "label": "reps"
+  },
+  {
+    "text": "랫풀 반복 횟수 하나 줄여줘",
+    "label": "reps"
+  },
+  {
+    "text": "스쿼트 반복 횟수 하나 줄여줘",
+    "label": "reps"
+  },
+  {
+    "text": "사레레 반복 횟수 하나 줄여줘",
+    "label": "reps"
+  },
+  {
+    "text": "벤치 두 회 더 늘려줘",
+    "label": "reps"
+  },
+  {
+    "text": "랫풀 두 회 더 늘려줘",
+    "label": "reps"
+  },
+  {
+    "text": "스쿼트 두 회 더 늘려줘",
+    "label": "reps"
+  },
+  {
+    "text": "사레레 두 회 더 늘려줘",
+    "label": "reps"
+  },
+  {
+    "text": "벤치 빼줘",
+    "label": "remove"
+  },
+  {
+    "text": "랫풀 빼줘",
+    "label": "remove"
+  },
+  {
+    "text": "스쿼트 빼줘",
+    "label": "remove"
+  },
+  {
+    "text": "사레레 빼줘",
+    "label": "remove"
+  },
+  {
+    "text": "벤치 삭제해줘",
+    "label": "remove"
+  },
+  {
+    "text": "랫풀 삭제해줘",
+    "label": "remove"
+  },
+  {
+    "text": "스쿼트 삭제해줘",
+    "label": "remove"
+  },
+  {
+    "text": "사레레 삭제해줘",
+    "label": "remove"
+  },
+  {
+    "text": "벤치 운동 없애줘",
+    "label": "remove"
+  },
+  {
+    "text": "랫풀 운동 없애줘",
+    "label": "remove"
+  },
+  {
+    "text": "스쿼트 운동 없애줘",
+    "label": "remove"
+  },
+  {
+    "text": "사레레 운동 없애줘",
+    "label": "remove"
+  },
+  {
+    "text": "벤치 제외해줘",
+    "label": "remove"
+  },
+  {
+    "text": "랫풀 제외해줘",
+    "label": "remove"
+  },
+  {
+    "text": "스쿼트 제외해줘",
+    "label": "remove"
+  },
+  {
+    "text": "사레레 제외해줘",
+    "label": "remove"
+  },
+  {
+    "text": "루틴에서 벤치 지워줘",
+    "label": "remove"
+  },
+  {
+    "text": "루틴에서 랫풀 지워줘",
+    "label": "remove"
+  },
+  {
+    "text": "루틴에서 스쿼트 지워줘",
+    "label": "remove"
+  },
+  {
+    "text": "루틴에서 사레레 지워줘",
+    "label": "remove"
+  },
+  {
+    "text": "벤치 종목을 제거해줘",
+    "label": "remove"
+  },
+  {
+    "text": "랫풀 종목을 제거해줘",
+    "label": "remove"
+  },
+  {
+    "text": "스쿼트 종목을 제거해줘",
+    "label": "remove"
+  },
+  {
+    "text": "사레레 종목을 제거해줘",
+    "label": "remove"
+  },
+  {
+    "text": "벤치 대신 레그 프레스로 바꿔줘",
+    "label": "replace"
+  },
+  {
+    "text": "랫풀 대신 레그 프레스로 바꿔줘",
+    "label": "replace"
+  },
+  {
+    "text": "스쿼트 대신 레그 프레스로 바꿔줘",
+    "label": "replace"
+  },
+  {
+    "text": "사레레 대신 레그 프레스로 바꿔줘",
+    "label": "replace"
+  },
+  {
+    "text": "벤치를 레그 프레스로 교체해줘",
+    "label": "replace"
+  },
+  {
+    "text": "랫풀를 레그 프레스로 교체해줘",
+    "label": "replace"
+  },
+  {
+    "text": "스쿼트를 레그 프레스로 교체해줘",
+    "label": "replace"
+  },
+  {
+    "text": "사레레를 레그 프레스로 교체해줘",
+    "label": "replace"
+  },
+  {
+    "text": "벤치 말고 레그 프레스로",
+    "label": "replace"
+  },
+  {
+    "text": "랫풀 말고 레그 프레스로",
+    "label": "replace"
+  },
+  {
+    "text": "스쿼트 말고 레그 프레스로",
+    "label": "replace"
+  },
+  {
+    "text": "사레레 말고 레그 프레스로",
+    "label": "replace"
+  },
+  {
+    "text": "벤치 운동을 레그 프레스로 변경",
+    "label": "replace"
+  },
+  {
+    "text": "랫풀 운동을 레그 프레스로 변경",
+    "label": "replace"
+  },
+  {
+    "text": "스쿼트 운동을 레그 프레스로 변경",
+    "label": "replace"
+  },
+  {
+    "text": "사레레 운동을 레그 프레스로 변경",
+    "label": "replace"
+  },
+  {
+    "text": "벤치 대신에 레그 프레스 넣어줘",
+    "label": "replace"
+  },
+  {
+    "text": "랫풀 대신에 레그 프레스 넣어줘",
+    "label": "replace"
+  },
+  {
+    "text": "스쿼트 대신에 레그 프레스 넣어줘",
+    "label": "replace"
+  },
+  {
+    "text": "사레레 대신에 레그 프레스 넣어줘",
+    "label": "replace"
+  },
+  {
+    "text": "벤치 종목을 레그 프레스로 대체해줘",
+    "label": "replace"
+  },
+  {
+    "text": "랫풀 종목을 레그 프레스로 대체해줘",
+    "label": "replace"
+  },
+  {
+    "text": "스쿼트 종목을 레그 프레스로 대체해줘",
+    "label": "replace"
+  },
+  {
+    "text": "사레레 종목을 레그 프레스로 대체해줘",
+    "label": "replace"
+  },
+  {
+    "text": "오늘 날씨 알려줘",
+    "label": "unknown"
+  },
+  {
+    "text": "벤치 하면 어디 아파",
+    "label": "unknown"
+  },
+  {
+    "text": "랫풀 하면 어디 아파",
+    "label": "unknown"
+  },
+  {
+    "text": "스쿼트 하면 어디 아파",
+    "label": "unknown"
+  },
+  {
+    "text": "사레레 하면 어디 아파",
+    "label": "unknown"
+  },
+  {
+    "text": "벤치 자세 알려줘",
+    "label": "unknown"
+  },
+  {
+    "text": "랫풀 자세 알려줘",
+    "label": "unknown"
+  },
+  {
+    "text": "스쿼트 자세 알려줘",
+    "label": "unknown"
+  },
+  {
+    "text": "사레레 자세 알려줘",
+    "label": "unknown"
+  },
+  {
+    "text": "벤치 3키로",
+    "label": "unknown"
+  },
+  {
+    "text": "벤치 4키로",
+    "label": "unknown"
+  },
+  {
+    "text": "벤치 12키로",
+    "label": "unknown"
+  },
+  {
+    "text": "랫풀 3키로",
+    "label": "unknown"
+  },
+  {
+    "text": "랫풀 4키로",
+    "label": "unknown"
+  },
+  {
+    "text": "랫풀 12키로",
+    "label": "unknown"
+  },
+  {
+    "text": "스쿼트 3키로",
+    "label": "unknown"
+  },
+  {
+    "text": "스쿼트 4키로",
+    "label": "unknown"
+  },
+  {
+    "text": "스쿼트 12키로",
+    "label": "unknown"
+  },
+  {
+    "text": "사레레 3키로",
+    "label": "unknown"
+  },
+  {
+    "text": "사레레 4키로",
+    "label": "unknown"
+  },
+  {
+    "text": "사레레 12키로",
+    "label": "unknown"
+  },
+  {
+    "text": "벤치 삭제하지 마",
+    "label": "unknown"
+  },
+  {
+    "text": "랫풀 삭제하지 마",
+    "label": "unknown"
+  },
+  {
+    "text": "스쿼트 삭제하지 마",
+    "label": "unknown"
+  },
+  {
+    "text": "사레레 삭제하지 마",
+    "label": "unknown"
+  },
+  {
+    "text": "친구에게 메시지 보내줘",
+    "label": "unknown"
+  },
+  {
+    "text": "벤치 쉬는 시간 알려줘",
+    "label": "unknown"
+  },
+  {
+    "text": "랫풀 쉬는 시간 알려줘",
+    "label": "unknown"
+  },
+  {
+    "text": "스쿼트 쉬는 시간 알려줘",
+    "label": "unknown"
+  },
+  {
+    "text": "사레레 쉬는 시간 알려줘",
+    "label": "unknown"
+  },
+  {
+    "text": "좀 더 쉽게 해줘",
+    "label": "unknown"
+  },
+  {
+    "text": "3분만 운동할래",
+    "label": "unknown"
+  },
+  {
+    "text": "4분만 운동할래",
+    "label": "unknown"
+  },
+  {
+    "text": "12분만 운동할래",
+    "label": "unknown"
+  },
+  {
+    "text": "벤치 루틴 추천해줘",
+    "label": "unknown"
+  },
+  {
+    "text": "랫풀 루틴 추천해줘",
+    "label": "unknown"
+  },
+  {
+    "text": "스쿼트 루틴 추천해줘",
+    "label": "unknown"
+  },
+  {
+    "text": "사레레 루틴 추천해줘",
+    "label": "unknown"
+  }
+]

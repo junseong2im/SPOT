@@ -1,0 +1,170 @@
+[
+  {
+    "text": "숄더 프레스 세트 수를 3세트로 변경해",
+    "label": "sets"
+  },
+  {
+    "text": "숄더 프레스 세트 수를 4세트로 변경해",
+    "label": "sets"
+  },
+  {
+    "text": "숄더 프레스 세트 수를 12세트로 변경해",
+    "label": "sets"
+  },
+  {
+    "text": "시티드 로우 세트 수를 3세트로 변경해",
+    "label": "sets"
+  },
+  {
+    "text": "시티드 로우 세트 수를 4세트로 변경해",
+    "label": "sets"
+  },
+  {
+    "text": "시티드 로우 세트 수를 12세트로 변경해",
+    "label": "sets"
+  },
+  {
+    "text": "숄더 프레스를 3세트로 맞춰줘",
+    "label": "sets"
+  },
+  {
+    "text": "숄더 프레스를 4세트로 맞춰줘",
+    "label": "sets"
+  },
+  {
+    "text": "숄더 프레스를 12세트로 맞춰줘",
+    "label": "sets"
+  },
+  {
+    "text": "시티드 로우를 3세트로 맞춰줘",
+    "label": "sets"
+  },
+  {
+    "text": "시티드 로우를 4세트로 맞춰줘",
+    "label": "sets"
+  },
+  {
+    "text": "시티드 로우를 12세트로 맞춰줘",
+    "label": "sets"
+  },
+  {
+    "text": "숄더 프레스 반복을 3회로 맞춰",
+    "label": "reps"
+  },
+  {
+    "text": "숄더 프레스 반복을 4회로 맞춰",
+    "label": "reps"
+  },
+  {
+    "text": "숄더 프레스 반복을 12회로 맞춰",
+    "label": "reps"
+  },
+  {
+    "text": "시티드 로우 반복을 3회로 맞춰",
+    "label": "reps"
+  },
+  {
+    "text": "시티드 로우 반복을 4회로 맞춰",
+    "label": "reps"
+  },
+  {
+    "text": "시티드 로우 반복을 12회로 맞춰",
+    "label": "reps"
+  },
+  {
+    "text": "숄더 프레스 횟수는 3회로 변경해",
+    "label": "reps"
+  },
+  {
+    "text": "숄더 프레스 횟수는 4회로 변경해",
+    "label": "reps"
+  },
+  {
+    "text": "숄더 프레스 횟수는 12회로 변경해",
+    "label": "reps"
+  },
+  {
+    "text": "시티드 로우 횟수는 3회로 변경해",
+    "label": "reps"
+  },
+  {
+    "text": "시티드 로우 횟수는 4회로 변경해",
+    "label": "reps"
+  },
+  {
+    "text": "시티드 로우 횟수는 12회로 변경해",
+    "label": "reps"
+  },
+  {
+    "text": "숄더 프레스는 루틴에서 제외",
+    "label": "remove"
+  },
+  {
+    "text": "시티드 로우는 루틴에서 제외",
+    "label": "remove"
+  },
+  {
+    "text": "숄더 프레스 종목 삭제 부탁해",
+    "label": "remove"
+  },
+  {
+    "text": "시티드 로우 종목 삭제 부탁해",
+    "label": "remove"
+  },
+  {
+    "text": "숄더 프레스 대신 레그 프레스 운동으로 대체",
+    "label": "replace"
+  },
+  {
+    "text": "시티드 로우 대신 레그 프레스 운동으로 대체",
+    "label": "replace"
+  },
+  {
+    "text": "숄더 프레스를 레그 프레스로 교체 부탁해",
+    "label": "replace"
+  },
+  {
+    "text": "시티드 로우를 레그 프레스로 교체 부탁해",
+    "label": "replace"
+  },
+  {
+    "text": "숄더 프레스 하는 법이 궁금해",
+    "label": "unknown"
+  },
+  {
+    "text": "시티드 로우 하는 법이 궁금해",
+    "label": "unknown"
+  },
+  {
+    "text": "내일 몇 시에 갈까",
+    "label": "unknown"
+  },
+  {
+    "text": "숄더 프레스 무게는 3kg이야",
+    "label": "unknown"
+  },
+  {
+    "text": "숄더 프레스 무게는 4kg이야",
+    "label": "unknown"
+  },
+  {
+    "text": "숄더 프레스 무게는 12kg이야",
+    "label": "unknown"
+  },
+  {
+    "text": "시티드 로우 무게는 3kg이야",
+    "label": "unknown"
+  },
+  {
+    "text": "시티드 로우 무게는 4kg이야",
+    "label": "unknown"
+  },
+  {
+    "text": "시티드 로우 무게는 12kg이야",
+    "label": "unknown"
+  },
+  {
+    "text": "수정하지 말고 설명해",
+    "label": "unknown"
+  }
+]
