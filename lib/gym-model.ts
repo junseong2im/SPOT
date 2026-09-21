@@ -1,4 +1,4 @@
-export type Exercise = { id: string; name: string; sets: number; reps: number; prescription?: string };
+export type Exercise = { id: string; name: string; sets: number; reps: number; durationSeconds?:number; prescription?: string };
 export type Routine = { id: string; name: string; subtitle: string; notes?: string; exercises: Exercise[]; version: number };
 export type PersonalRoutine = Routine & { baseVersion: number; revision: number };
 export type Session = { id: string; title: string; date: string; time: string; routineId: string; creator: string; participants: string[]; cancelled: boolean; capacity?: number | null; deadlineMinutes?: number; seriesId?: string; version?: number; responses?: Record<string,'going'|'notGoing'> };

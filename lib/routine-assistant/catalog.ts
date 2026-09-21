@@ -17,7 +17,7 @@ const aliases:Record<string,string>={
 };
 export function resolveName(raw:string){
  const normalized=normalizeName(raw);
- const canonical=aliases[normalized]??exerciseGuides.find(g=>normalizeName(g.name)===normalized)?.name;
+ const canonical=aliases[normalized]??exerciseGuides.find(g=>[g.name,...g.match].some(n=>normalizeName(n)===normalized))?.name;
  // Never replace a specific movement with a broader family by substring matching.
  return {name:canonical??raw.trim(),known:!!canonical};
 }

@@ -1,6 +1,7 @@
 import type {Routine} from '../gym-model';
 import {sameExercise,normalizeName,resolveName} from './catalog';
 import {classifyIntent} from './intent';
+import {guideFor} from '../exercise-guides';
 import {resolveChoice,requireDecision,numericAnswer,DecisionReview,type Answers,type EditPlan,type Operation} from './decisions';
 
 export function proposeEdit(routine:Routine,raw:string,answers:Answers={}):{routine:Routine;changes:string[];intent:string;plan:EditPlan}{
@@ -51,6 +52,8 @@ export function proposeEdit(routine:Routine,raw:string,answers:Answers={}):{rout
   if(next.exercises.length===targets.length)throw Error('루틴에는 운동이 한 개 이상 있어야 해요.');
   next.exercises=next.exercises.filter(e=>!targets.some(t=>t.id===e.id));changes.push(`${targets[0].name} 제외`);
  }else for(const e of next.exercises.filter(e=>targets.some(t=>t.id===e.id))){
+  if(operation==='reps'&&e.durationSeconds!==undefined)throw Error('시간 기준 운동은 편집 화면에서 초 단위로 변경해주세요.');
+  if(operation==='replace'&&(guideFor(replacement)?.unit==='seconds')!==(e.durationSeconds!==undefined))throw Error('횟수와 시간 단위가 다른 운동이에요. 편집 화면에서 운동을 추가하고 시간을 정해주세요.');
   if(operation==='replace'){changes.push(`${e.name} → ${replacement} (세트·횟수 유지, 기존 운동 수행법 비움)`);e.name=replacement;e.prescription='';continue;}
   if(e.prescription&&(/웜업|워밍업|탑\s*세트|백\s*오프|슈퍼\s*세트|드롭|~|–|\d\s*-\s*\d/.test(e.prescription)||(e.prescription.match(/\d+\s*세트/g)?.length??0)>1))throw Error(`${e.name}은 복합 수행법이 있어요. 충돌을 피하려면 상세 편집에서 변경해주세요.`);
   const field=operation==='sets'?'sets':'reps',before=e[field],after=value??before+delta;

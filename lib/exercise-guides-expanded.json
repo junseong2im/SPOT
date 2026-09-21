@@ -1,0 +1,2928 @@
+[
+  {
+    "id": "wger-75",
+    "name": "덤벨 벤치프레스",
+    "body": "가슴",
+    "equipment": "덤벨 · 벤치",
+    "pose": "bench",
+    "match": [
+      "덤벨 벤치프레스",
+      "Benchpress Dumbbells"
+    ],
+    "start": "벤치에 누워 덤벨을 가슴 양옆에 준비해요.",
+    "finish": "덤벨을 위로 밀었다가 천천히 가슴 옆으로 내려요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/75/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-185",
+    "name": "디클라인 바벨 벤치프레스",
+    "body": "가슴",
+    "equipment": "바벨 · 디클라인 벤치",
+    "pose": "bench",
+    "match": [
+      "디클라인 바벨 벤치프레스",
+      "Decline Bench Press Barbell"
+    ],
+    "start": "발을 고정하고 아래로 기운 벤치에서 바를 잡아요.",
+    "finish": "바를 가슴 쪽으로 내렸다가 밀어 올려요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/185/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-538",
+    "name": "인클라인 바벨 벤치프레스",
+    "body": "가슴",
+    "equipment": "바벨 · 인클라인 벤치",
+    "pose": "incline",
+    "match": [
+      "인클라인 바벨 벤치프레스",
+      "Incline Bench Press - Barbell"
+    ],
+    "start": "등을 기울인 벤치에 붙이고 바를 잡아요.",
+    "finish": "가슴 위쪽으로 바를 조절해 내린 뒤 밀어 올려요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/538/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-539",
+    "name": "인클라인 스미스 벤치프레스",
+    "body": "가슴",
+    "equipment": "스미스 머신 · 벤치",
+    "pose": "incline",
+    "match": [
+      "인클라인 스미스 벤치프레스",
+      "Incline Bench Press - MP"
+    ],
+    "start": "벤치와 안전장치를 조절하고 바의 이동 경로를 확인해요.",
+    "finish": "바를 가슴 위쪽으로 내렸다가 밀어 올려요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/539/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-238",
+    "name": "덤벨 플라이",
+    "body": "가슴",
+    "equipment": "덤벨 · 벤치",
+    "pose": "fly",
+    "match": [
+      "덤벨 플라이",
+      "Fly With Dumbbells"
+    ],
+    "start": "벤치에 누워 덤벨을 가슴 위에 들고 팔꿈치를 살짝 굽혀요.",
+    "finish": "팔을 양옆으로 벌렸다가 같은 각도로 모아요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/238/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-237",
+    "name": "케이블 플라이",
+    "body": "가슴",
+    "equipment": "케이블 머신",
+    "pose": "fly",
+    "match": [
+      "케이블 플라이",
+      "Fly With Cable"
+    ],
+    "start": "양쪽 케이블 손잡이를 잡고 몸통을 안정시켜요.",
+    "finish": "팔꿈치 각도를 유지하며 양손을 가슴 앞에 모아요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/237/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-323",
+    "name": "케이블 크로스오버",
+    "body": "가슴",
+    "equipment": "케이블 머신",
+    "pose": "fly",
+    "match": [
+      "케이블 크로스오버",
+      "Cable Cross-over"
+    ],
+    "start": "양쪽 풀리 높이를 맞추고 손잡이를 잡아요.",
+    "finish": "양팔을 앞쪽으로 모은 뒤 천천히 벌려요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/323/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-1296",
+    "name": "로우 케이블 플라이",
+    "body": "가슴",
+    "equipment": "케이블 머신",
+    "pose": "fly",
+    "match": [
+      "로우 케이블 플라이",
+      "Low-Cable Cross-Over - NB"
+    ],
+    "start": "아래쪽 풀리의 손잡이를 잡고 서요.",
+    "finish": "양손을 앞·위쪽으로 모았다가 조절하며 내려요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/1296/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-1551",
+    "name": "푸시업",
+    "body": "가슴 · 삼두",
+    "equipment": "맨몸 · 매트",
+    "pose": "press",
+    "match": [
+      "푸시업",
+      "Push-Up"
+    ],
+    "start": "손을 바닥에 두고 머리부터 발까지 몸통을 곧게 만들어요.",
+    "finish": "팔꿈치를 굽혀 몸을 내렸다가 바닥을 밀어요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/1551/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-1086",
+    "name": "클로즈 그립 푸시업",
+    "body": "가슴 · 삼두",
+    "equipment": "맨몸 · 매트",
+    "pose": "press",
+    "match": [
+      "클로즈 그립 푸시업",
+      "Close-grip Press-ups"
+    ],
+    "start": "일반 푸시업보다 손 간격을 좁게 잡아요.",
+    "finish": "몸통을 곧게 유지하며 팔꿈치를 굽혔다 펴요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/1086/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-1112",
+    "name": "디클라인 푸시업",
+    "body": "가슴 · 삼두",
+    "equipment": "맨몸 · 벤치",
+    "pose": "press",
+    "match": [
+      "디클라인 푸시업",
+      "Push-Ups | Decline"
+    ],
+    "start": "발을 벤치에 올리고 손으로 바닥을 지지해요.",
+    "finish": "몸통을 유지하며 가슴을 바닥 쪽으로 내렸다가 밀어요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/1112/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-1831",
+    "name": "디클라인 체스트 프레스 머신",
+    "body": "가슴",
+    "equipment": "머신",
+    "pose": "press",
+    "match": [
+      "디클라인 체스트 프레스 머신",
+      "Hammerstrength Decline Chest Press"
+    ],
+    "start": "좌석과 손잡이를 몸에 맞추고 등을 패드에 붙여요.",
+    "finish": "머신 경로를 따라 손잡이를 밀었다가 돌아와요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/1831/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-81",
+    "name": "원암 덤벨 로우",
+    "body": "등",
+    "equipment": "덤벨 · 벤치",
+    "pose": "row",
+    "match": [
+      "원암 덤벨 로우",
+      "Bent Over Dumbbell Rows"
+    ],
+    "start": "한 손으로 벤치를 지지하고 반대 손에 덤벨을 들어요.",
+    "finish": "몸통을 비틀지 않고 팔꿈치를 뒤로 당겨요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/81/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-83",
+    "name": "바벨 벤트오버 로우",
+    "body": "등",
+    "equipment": "바벨",
+    "pose": "row",
+    "match": [
+      "바벨 벤트오버 로우",
+      "Bent Over Rowing"
+    ],
+    "start": "고관절을 접어 상체를 숙이고 바벨을 잡아요.",
+    "finish": "몸통 각도를 유지하며 바벨을 복부 쪽으로 당겨요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/83/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-84",
+    "name": "언더그립 바벨 로우",
+    "body": "등",
+    "equipment": "바벨",
+    "pose": "row",
+    "match": [
+      "언더그립 바벨 로우",
+      "Bent Over Rowing Reverse"
+    ],
+    "start": "손바닥이 앞을 향하도록 바를 잡고 상체를 숙여요.",
+    "finish": "몸통을 유지하며 바를 복부 방향으로 당겨요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/84/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-394",
+    "name": "시티드 케이블 로우",
+    "body": "등",
+    "equipment": "케이블 머신",
+    "pose": "row",
+    "match": [
+      "시티드 케이블 로우",
+      "Long-Pulley (low Row)"
+    ],
+    "start": "발을 지지대에 두고 케이블 손잡이를 잡아요.",
+    "finish": "몸통을 크게 젖히지 않고 손잡이를 복부 쪽으로 당겨요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/394/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-513",
+    "name": "T바 로우",
+    "body": "등",
+    "equipment": "T바 머신 · 바벨",
+    "pose": "row",
+    "match": [
+      "T바 로우",
+      "Rowing, T-bar"
+    ],
+    "start": "손잡이를 잡고 고관절을 접어 자세를 고정해요.",
+    "finish": "팔꿈치를 뒤로 보내 손잡이를 몸 쪽으로 당겨요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/513/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-1283",
+    "name": "체스트 서포티드 덤벨 로우",
+    "body": "등",
+    "equipment": "덤벨 · 인클라인 벤치",
+    "pose": "row",
+    "match": [
+      "체스트 서포티드 덤벨 로우",
+      "Incline Chest-Supported Dumbbell Row"
+    ],
+    "start": "기울인 벤치에 가슴을 대고 덤벨을 들어요.",
+    "finish": "가슴을 패드에 붙인 채 팔꿈치를 뒤로 당겨요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/1283/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-1725",
+    "name": "시티드 로우 머신",
+    "body": "등",
+    "equipment": "머신",
+    "pose": "row",
+    "match": [
+      "시티드 로우 머신",
+      "Seated Row (Machine)"
+    ],
+    "start": "좌석과 가슴 패드를 조절하고 손잡이를 잡아요.",
+    "finish": "몸통을 고정한 채 손잡이를 몸 쪽으로 당겨요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/1725/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-152",
+    "name": "친업",
+    "body": "등 · 이두",
+    "equipment": "맨몸 · 철봉",
+    "pose": "pull",
+    "match": [
+      "친업",
+      "Chin Up"
+    ],
+    "start": "손바닥이 몸 쪽을 향하도록 철봉을 잡아요.",
+    "finish": "반동을 줄이고 몸을 끌어 올렸다가 천천히 내려요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/152/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-475",
+    "name": "풀업",
+    "body": "등",
+    "equipment": "맨몸 · 철봉",
+    "pose": "pull",
+    "match": [
+      "풀업",
+      "Pull-ups"
+    ],
+    "start": "손바닥이 앞을 향하도록 철봉을 잡아요.",
+    "finish": "팔꿈치를 아래로 당기며 몸을 올렸다가 조절해 내려요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/475/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-158",
+    "name": "클로즈 그립 랫 풀다운",
+    "body": "등",
+    "equipment": "케이블 머신",
+    "pose": "pull",
+    "match": [
+      "클로즈 그립 랫 풀다운",
+      "Close-grip Lat Pull Down"
+    ],
+    "start": "허벅지 패드를 고정하고 좁은 손잡이를 잡아요.",
+    "finish": "손잡이를 가슴 위쪽으로 당겼다가 천천히 올려요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/158/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-1127",
+    "name": "언더그립 랫 풀다운",
+    "body": "등 · 이두",
+    "equipment": "케이블 머신",
+    "pose": "pull",
+    "match": [
+      "언더그립 랫 풀다운",
+      "Close-grip supinated lat pulldown"
+    ],
+    "start": "손바닥이 몸 쪽을 향하도록 손잡이를 잡아요.",
+    "finish": "팔꿈치를 아래로 당기고 천천히 원위치로 돌아와요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/1127/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-1136",
+    "name": "뉴트럴 그립 랫 풀다운",
+    "body": "등",
+    "equipment": "케이블 머신",
+    "pose": "pull",
+    "match": [
+      "뉴트럴 그립 랫 풀다운",
+      "Neutral-grip chest pulldown"
+    ],
+    "start": "손바닥이 서로 마주 보는 손잡이를 잡고 앉아요.",
+    "finish": "가슴 위쪽으로 손잡이를 당겼다가 조절해 올려요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/1136/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-959",
+    "name": "TRX 로우",
+    "body": "등",
+    "equipment": "TRX · 맨몸",
+    "pose": "row",
+    "match": [
+      "TRX 로우",
+      "TRX Rows"
+    ],
+    "start": "고정된 스트랩을 잡고 몸을 뒤로 기울여요.",
+    "finish": "몸통을 곧게 유지하며 가슴을 손잡이 쪽으로 당겨요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/959/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-184",
+    "name": "바벨 데드리프트",
+    "body": "등 · 하체",
+    "equipment": "바벨",
+    "pose": "hinge",
+    "match": [
+      "바벨 데드리프트",
+      "Deadlifts"
+    ],
+    "start": "바를 발 가까이 두고 무릎과 고관절을 굽혀 잡아요.",
+    "finish": "바를 몸 가까이 유지하며 일어섰다가 조절해 내려요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/184/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-484",
+    "name": "랙 풀",
+    "body": "등 · 하체",
+    "equipment": "바벨 · 파워랙",
+    "pose": "hinge",
+    "match": [
+      "랙 풀",
+      "Rack Deadlift"
+    ],
+    "start": "랙 안전바 위에 바벨을 두고 시작 높이를 맞춰요.",
+    "finish": "바를 몸 가까이 두고 일어섰다가 안전바 위로 내려요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/484/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-301",
+    "name": "백 익스텐션",
+    "body": "등 · 엉덩이",
+    "equipment": "백 익스텐션 벤치",
+    "pose": "hinge",
+    "match": [
+      "백 익스텐션",
+      "Hyperextensions"
+    ],
+    "start": "발과 골반을 패드에 안정적으로 고정해요.",
+    "finish": "고관절을 접었다 펴며 상체를 몸과 나란한 위치까지 올려요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/301/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-566",
+    "name": "바벨 숄더 프레스",
+    "body": "어깨",
+    "equipment": "바벨",
+    "pose": "overhead",
+    "match": [
+      "바벨 숄더 프레스",
+      "Shoulder Press, Barbell"
+    ],
+    "start": "바벨을 어깨 앞에 두고 몸통을 안정시켜요.",
+    "finish": "바를 머리 위로 밀었다가 조절하며 내려요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/566/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-567",
+    "name": "덤벨 숄더 프레스",
+    "body": "어깨",
+    "equipment": "덤벨 · 벤치",
+    "pose": "overhead",
+    "match": [
+      "덤벨 숄더 프레스",
+      "Shoulder Press, Dumbbells"
+    ],
+    "start": "덤벨을 어깨 옆에 두고 등을 지지해요.",
+    "finish": "양쪽 덤벨을 위로 밀었다가 어깨 옆으로 내려요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/567/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-543",
+    "name": "숄더 프레스 머신",
+    "body": "어깨",
+    "equipment": "머신",
+    "pose": "overhead",
+    "match": [
+      "숄더 프레스 머신",
+      "Shoulder Press, on Machine"
+    ],
+    "start": "좌석을 조절해 손잡이를 어깨 높이에 맞춰요.",
+    "finish": "등을 패드에 붙이고 머신 경로를 따라 밀어요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/543/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-256",
+    "name": "프론트 레이즈",
+    "body": "어깨",
+    "equipment": "덤벨 · 바벨",
+    "pose": "raise",
+    "match": [
+      "프론트 레이즈",
+      "Front Raises"
+    ],
+    "start": "가벼운 무게를 몸 앞에 들고 서요.",
+    "finish": "반동 없이 팔을 앞쪽으로 올렸다가 천천히 내려요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/256/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-1378",
+    "name": "원암 케이블 레터럴 레이즈",
+    "body": "어깨",
+    "equipment": "케이블 머신",
+    "pose": "raise",
+    "match": [
+      "원암 케이블 레터럴 레이즈",
+      "Cable Lateral Raises (Single Arm)"
+    ],
+    "start": "아래 풀리 손잡이를 한 손으로 잡고 옆으로 서요.",
+    "finish": "몸통을 고정하고 팔을 옆으로 들었다 내려요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/1378/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-1654",
+    "name": "레터럴 레이즈 머신",
+    "body": "어깨",
+    "equipment": "머신",
+    "pose": "raise",
+    "match": [
+      "레터럴 레이즈 머신",
+      "Machine Lateral Raise"
+    ],
+    "start": "좌석과 패드를 조절하고 팔을 패드에 대요.",
+    "finish": "팔을 옆으로 밀어 올렸다가 천천히 내려요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/1654/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-822",
+    "name": "케이블 리어 델트 플라이",
+    "body": "어깨 · 등",
+    "equipment": "케이블 머신",
+    "pose": "fly",
+    "match": [
+      "케이블 리어 델트 플라이",
+      "Cable Rear Delt Fly"
+    ],
+    "start": "양손에 반대쪽 케이블을 잡고 몸통을 세워요.",
+    "finish": "팔을 양옆으로 벌렸다가 조절하며 돌아와요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/822/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-828",
+    "name": "인클라인 리어 델트 플라이",
+    "body": "어깨 · 등",
+    "equipment": "덤벨 · 인클라인 벤치",
+    "pose": "fly",
+    "match": [
+      "인클라인 리어 델트 플라이",
+      "Incline Bench Reverse Fly"
+    ],
+    "start": "기울인 벤치에 가슴을 대고 양팔을 내려요.",
+    "finish": "팔꿈치 각도를 유지하며 양팔을 옆으로 벌려요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/828/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-571",
+    "name": "바벨 슈러그",
+    "body": "승모 · 어깨",
+    "equipment": "바벨",
+    "pose": "shrug",
+    "match": [
+      "바벨 슈러그",
+      "Shrugs, Barbells"
+    ],
+    "start": "바벨을 몸 앞에 들고 몸통을 세워요.",
+    "finish": "팔을 편 채 어깨를 위로 올렸다 천천히 내려요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/571/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-572",
+    "name": "덤벨 슈러그",
+    "body": "승모 · 어깨",
+    "equipment": "덤벨",
+    "pose": "shrug",
+    "match": [
+      "덤벨 슈러그",
+      "Shrugs, Dumbbells"
+    ],
+    "start": "덤벨을 양옆에 들고 몸통을 세워요.",
+    "finish": "어깨를 위로 올렸다가 조절해 내려요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/572/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-1732",
+    "name": "밴드 페이스풀",
+    "body": "어깨 · 등",
+    "equipment": "밴드",
+    "pose": "row",
+    "match": [
+      "밴드 페이스풀",
+      "Face pulls with yellow/green band"
+    ],
+    "start": "고정된 밴드를 얼굴 높이에서 양손으로 잡아요.",
+    "finish": "몸통을 세우고 양손을 얼굴 양옆으로 당겨요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/1732/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-203",
+    "name": "고블릿 스쿼트",
+    "body": "하체 · 엉덩이",
+    "equipment": "덤벨",
+    "pose": "squat",
+    "match": [
+      "고블릿 스쿼트",
+      "Dumbbell Goblet Squat"
+    ],
+    "start": "덤벨 하나를 가슴 앞에 세워 잡아요.",
+    "finish": "무릎과 고관절을 굽혀 앉았다가 일어서요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/203/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-257",
+    "name": "프론트 스쿼트",
+    "body": "하체",
+    "equipment": "바벨",
+    "pose": "squat",
+    "match": [
+      "프론트 스쿼트",
+      "Front Squats"
+    ],
+    "start": "바벨을 어깨 앞에 안정적으로 올려요.",
+    "finish": "몸통을 유지하며 앉았다가 바닥을 밀고 일어서요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/257/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-375",
+    "name": "핵 스쿼트 머신",
+    "body": "하체",
+    "equipment": "머신",
+    "pose": "squat",
+    "match": [
+      "핵 스쿼트 머신",
+      "Leg Press on Hackenschmidt Machine"
+    ],
+    "start": "등과 어깨를 패드에 붙이고 발판에 서요.",
+    "finish": "안전장치를 확인한 뒤 무릎을 굽혔다 펴요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/375/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-1521",
+    "name": "펜듈럼 스쿼트 머신",
+    "body": "하체",
+    "equipment": "머신",
+    "pose": "squat",
+    "match": [
+      "펜듈럼 스쿼트 머신",
+      "Pendular hack"
+    ],
+    "start": "머신 패드와 발판에 몸을 안정적으로 맞춰요.",
+    "finish": "머신의 회전 경로를 따라 앉았다가 일어서요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/1521/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-984",
+    "name": "맨몸 런지",
+    "body": "하체 · 엉덩이",
+    "equipment": "맨몸",
+    "pose": "squat",
+    "match": [
+      "맨몸 런지",
+      "Lunges"
+    ],
+    "start": "발을 앞뒤로 벌리고 몸통을 세워요.",
+    "finish": "양 무릎을 굽혀 내려갔다가 앞발로 바닥을 밀어요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/984/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-206",
+    "name": "덤벨 워킹 런지",
+    "body": "하체 · 엉덩이",
+    "equipment": "덤벨",
+    "pose": "squat",
+    "match": [
+      "덤벨 워킹 런지",
+      "Dumbbell Lunges Walking"
+    ],
+    "start": "덤벨을 양옆에 들고 똑바로 서요.",
+    "finish": "한 발씩 앞으로 내디디며 런지를 반복해요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/206/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-999",
+    "name": "리버스 런지",
+    "body": "하체 · 엉덩이",
+    "equipment": "맨몸",
+    "pose": "squat",
+    "match": [
+      "리버스 런지",
+      "Reverse lunges"
+    ],
+    "start": "발을 나란히 두고 몸통을 세워요.",
+    "finish": "한 발을 뒤로 내딛어 내려갔다가 돌아와요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/999/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-1706",
+    "name": "덤벨 불가리안 스플릿 스쿼트",
+    "body": "하체 · 엉덩이",
+    "equipment": "덤벨 · 벤치",
+    "pose": "squat",
+    "match": [
+      "덤벨 불가리안 스플릿 스쿼트",
+      "Bulgarian Squat with Dumbbells"
+    ],
+    "start": "뒷발을 벤치에 올리고 앞발로 중심을 잡아요.",
+    "finish": "앞쪽 무릎과 고관절을 굽혔다가 일어서요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/1706/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-365",
+    "name": "라잉 레그 컬",
+    "body": "하체 · 허벅지 뒤",
+    "equipment": "머신",
+    "pose": "legcurl",
+    "match": [
+      "라잉 레그 컬",
+      "Leg Curls (laying)"
+    ],
+    "start": "엎드려 골반을 패드에 대고 발목 패드를 맞춰요.",
+    "finish": "골반을 고정한 채 무릎을 굽혔다 펴요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/365/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-366",
+    "name": "시티드 레그 컬",
+    "body": "하체 · 허벅지 뒤",
+    "equipment": "머신",
+    "pose": "legcurl",
+    "match": [
+      "시티드 레그 컬",
+      "Leg Curls (sitting)"
+    ],
+    "start": "앉은 자세에서 허벅지와 발목 패드를 맞춰요.",
+    "finish": "허벅지를 고정한 채 무릎을 굽혔다 펴요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/366/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-367",
+    "name": "스탠딩 레그 컬",
+    "body": "하체 · 허벅지 뒤",
+    "equipment": "머신",
+    "pose": "legcurl",
+    "match": [
+      "스탠딩 레그 컬",
+      "Leg Curls (standing)"
+    ],
+    "start": "머신을 지지하고 한쪽 발목을 패드에 맞춰요.",
+    "finish": "몸통을 고정하고 한쪽 무릎을 굽혔다 펴요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/367/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-1652",
+    "name": "덤벨 루마니안 데드리프트",
+    "body": "하체 · 허벅지 뒤 · 엉덩이",
+    "equipment": "덤벨",
+    "pose": "hinge",
+    "match": [
+      "덤벨 루마니안 데드리프트",
+      "Dumbbell Romanian Deadlift"
+    ],
+    "start": "덤벨을 허벅지 앞에 들고 무릎을 조금 굽혀요.",
+    "finish": "엉덩이를 뒤로 보내며 덤벨을 내렸다가 일어서요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/1652/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-1642",
+    "name": "덤벨 힙 쓰러스트",
+    "body": "하체 · 엉덩이",
+    "equipment": "덤벨 · 벤치",
+    "pose": "hinge",
+    "match": [
+      "덤벨 힙 쓰러스트",
+      "Dumbbell Hip Thrust"
+    ],
+    "start": "등 위쪽을 벤치에 대고 무게를 골반 위에 안정시켜요.",
+    "finish": "발로 바닥을 밀며 골반을 올렸다가 내려요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/1642/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-1131",
+    "name": "케이블 글루트 킥백",
+    "body": "하체 · 엉덩이",
+    "equipment": "케이블 머신",
+    "pose": "extend",
+    "match": [
+      "케이블 글루트 킥백",
+      "Cable glute extension"
+    ],
+    "start": "발목 스트랩을 연결하고 지지대를 잡아요.",
+    "finish": "허리를 고정한 채 다리를 뒤로 보냈다가 돌아와요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/1131/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-1620",
+    "name": "시티드 덤벨 카프 레이즈",
+    "body": "종아리",
+    "equipment": "덤벨 · 벤치",
+    "pose": "raise",
+    "match": [
+      "시티드 덤벨 카프 레이즈",
+      "Seated Dumbbell Calf Raise"
+    ],
+    "start": "앉아서 발 앞부분을 지지하고 덤벨을 허벅지 위에 둬요.",
+    "finish": "뒤꿈치를 올렸다가 천천히 내려요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/1620/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-622",
+    "name": "스탠딩 카프 레이즈",
+    "body": "종아리",
+    "equipment": "머신",
+    "pose": "raise",
+    "match": [
+      "스탠딩 카프 레이즈",
+      "Standing Calf Raises"
+    ],
+    "start": "머신 패드와 발판 위치를 맞추고 서요.",
+    "finish": "발 앞부분으로 밀어 뒤꿈치를 올렸다 내려요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/622/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-91",
+    "name": "바벨 컬",
+    "body": "이두",
+    "equipment": "바벨",
+    "pose": "curl",
+    "match": [
+      "바벨 컬",
+      "Biceps Curls With Barbell"
+    ],
+    "start": "바벨을 잡고 팔꿈치를 몸 옆에 둬요.",
+    "finish": "몸통 반동을 줄이며 팔꿈치를 굽혔다 펴요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/91/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-92",
+    "name": "덤벨 컬",
+    "body": "이두",
+    "equipment": "덤벨",
+    "pose": "curl",
+    "match": [
+      "덤벨 컬",
+      "Biceps Curls With Dumbbell"
+    ],
+    "start": "덤벨을 양손에 들고 팔꿈치를 몸 옆에 둬요.",
+    "finish": "위팔을 유지하고 덤벨을 들어 올렸다 내려요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/92/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-94",
+    "name": "이지바 컬",
+    "body": "이두",
+    "equipment": "이지바",
+    "pose": "curl",
+    "match": [
+      "이지바 컬",
+      "Biceps Curls With SZ-bar"
+    ],
+    "start": "이지바의 굴곡진 부분을 편하게 잡아요.",
+    "finish": "몸통을 고정하고 바를 들어 올렸다 내려요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/94/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-95",
+    "name": "케이블 컬",
+    "body": "이두",
+    "equipment": "케이블 머신",
+    "pose": "curl",
+    "match": [
+      "케이블 컬",
+      "Biceps Curl With Cable"
+    ],
+    "start": "아래 풀리 손잡이를 잡고 팔꿈치를 몸 옆에 둬요.",
+    "finish": "팔꿈치를 굽혀 손잡이를 올렸다가 천천히 내려요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/95/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-272",
+    "name": "해머 컬",
+    "body": "이두 · 전완",
+    "equipment": "덤벨",
+    "pose": "curl",
+    "match": [
+      "해머 컬",
+      "Hammer Curls"
+    ],
+    "start": "손바닥이 서로 마주 보도록 덤벨을 잡아요.",
+    "finish": "그립을 유지하며 덤벨을 올렸다 내려요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/272/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-275",
+    "name": "로프 해머 컬",
+    "body": "이두 · 전완",
+    "equipment": "케이블 머신",
+    "pose": "curl",
+    "match": [
+      "로프 해머 컬",
+      "Hammercurls on Cable"
+    ],
+    "start": "아래 풀리의 로프를 양손으로 잡아요.",
+    "finish": "손바닥이 마주 보게 유지하며 로프를 들어 올려요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/275/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-465",
+    "name": "프리처 컬",
+    "body": "이두",
+    "equipment": "이지바 · 프리처 벤치",
+    "pose": "curl",
+    "match": [
+      "프리처 컬",
+      "Preacher Curls"
+    ],
+    "start": "위팔을 패드 위에 올리고 바를 잡아요.",
+    "finish": "위팔을 고정한 채 팔꿈치를 굽혔다 천천히 펴요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/465/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-1109",
+    "name": "케이블 컨센트레이션 컬",
+    "body": "이두",
+    "equipment": "케이블 머신",
+    "pose": "curl",
+    "match": [
+      "케이블 컨센트레이션 컬",
+      "Cable Concentration Curl"
+    ],
+    "start": "한 손으로 케이블을 잡고 위팔을 안정시켜요.",
+    "finish": "위팔의 위치를 유지하며 팔꿈치를 굽혔다 펴요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/1109/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-1290",
+    "name": "리버스 바벨 컬",
+    "body": "이두 · 전완",
+    "equipment": "바벨",
+    "pose": "curl",
+    "match": [
+      "리버스 바벨 컬",
+      "Reverse Grip Barbell Curls"
+    ],
+    "start": "손등이 앞을 향하도록 바벨을 잡아요.",
+    "finish": "손목을 안정시킨 채 팔꿈치를 굽혔다 펴요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/1290/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-50",
+    "name": "라잉 바벨 트라이셉스 익스텐션",
+    "body": "삼두",
+    "equipment": "바벨 · 벤치",
+    "pose": "extend",
+    "match": [
+      "라잉 바벨 트라이셉스 익스텐션",
+      "Barbell Triceps Extension"
+    ],
+    "start": "벤치에 누워 바를 가슴 위에 들고 위팔을 고정해요.",
+    "finish": "팔꿈치를 굽혀 바를 내렸다가 조절해 펴요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/50/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-246",
+    "name": "이지바 스컬 크러셔",
+    "body": "삼두",
+    "equipment": "이지바 · 벤치",
+    "pose": "extend",
+    "match": [
+      "이지바 스컬 크러셔",
+      "Skullcrusher SZ-bar"
+    ],
+    "start": "벤치에 누워 이지바를 위로 들고 위팔을 고정해요.",
+    "finish": "팔꿈치를 굽혔다 펴며 이지바를 움직여요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/246/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-76",
+    "name": "클로즈 그립 벤치프레스",
+    "body": "삼두 · 가슴",
+    "equipment": "바벨 · 벤치",
+    "pose": "bench",
+    "match": [
+      "클로즈 그립 벤치프레스",
+      "Bench Press Narrow Grip"
+    ],
+    "start": "일반 벤치프레스보다 손 간격을 좁게 잡아요.",
+    "finish": "손목을 안정시켜 바를 가슴 쪽으로 내렸다 밀어요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/76/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-197",
+    "name": "벤치 딥스",
+    "body": "삼두",
+    "equipment": "벤치 · 맨몸",
+    "pose": "dip",
+    "match": [
+      "벤치 딥스",
+      "Dips Between Two Benches"
+    ],
+    "start": "등 뒤 벤치에 손을 대고 발로 몸을 지지해요.",
+    "finish": "통증 없는 범위에서 팔꿈치를 굽혔다 펴요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/197/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-659",
+    "name": "케이블 트라이셉스 익스텐션",
+    "body": "삼두",
+    "equipment": "케이블 머신",
+    "pose": "extend",
+    "match": [
+      "케이블 트라이셉스 익스텐션",
+      "Triceps Extensions on Cable"
+    ],
+    "start": "케이블 손잡이를 잡고 위팔을 안정시켜요.",
+    "finish": "위팔을 고정하고 팔꿈치를 폈다가 돌아와요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/659/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-1900",
+    "name": "로프 트라이셉스 푸시다운",
+    "body": "삼두",
+    "equipment": "케이블 머신",
+    "pose": "extend",
+    "match": [
+      "로프 트라이셉스 푸시다운",
+      "Tricep Rope Pushdowns"
+    ],
+    "start": "위쪽 풀리의 로프를 잡고 팔꿈치를 몸 옆에 둬요.",
+    "finish": "팔꿈치를 펴 로프를 내렸다가 조절해 올려요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/1900/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-377",
+    "name": "라잉 레그 레이즈",
+    "body": "복근",
+    "equipment": "맨몸 · 매트",
+    "pose": "core",
+    "match": [
+      "라잉 레그 레이즈",
+      "Leg Raises, Lying"
+    ],
+    "start": "바닥에 누워 몸통을 안정시키고 다리를 준비해요.",
+    "finish": "반동을 줄여 다리를 올렸다가 허리가 들리지 않는 범위로 내려요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/377/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-576",
+    "name": "사이드 크런치",
+    "body": "복근",
+    "equipment": "맨몸 · 매트",
+    "pose": "core",
+    "match": [
+      "사이드 크런치",
+      "Side Crunch"
+    ],
+    "start": "옆구리를 사용할 수 있게 몸을 옆으로 기울여 누워요.",
+    "finish": "목을 당기지 않고 옆구리를 수축하며 상체를 조금 들어요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/576/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-1193",
+    "name": "러시안 트위스트",
+    "body": "복근",
+    "equipment": "덤벨 · 매트",
+    "pose": "core",
+    "match": [
+      "러시안 트위스트",
+      "Russian Twist"
+    ],
+    "start": "앉아서 몸통을 안정시키고 무게를 몸 앞에 들어요.",
+    "finish": "반동 없이 몸통을 좌우로 돌렸다가 돌아와요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/1193/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-1194",
+    "name": "팔로프 프레스",
+    "body": "복근",
+    "equipment": "케이블 머신",
+    "pose": "press",
+    "match": [
+      "팔로프 프레스",
+      "Pallof Press"
+    ],
+    "start": "케이블 옆에 서서 손잡이를 가슴 앞에 잡아요.",
+    "finish": "몸통이 돌아가지 않게 버티며 손을 앞으로 밀었다 당겨요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/1194/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-1091",
+    "name": "플랭크 숄더 탭",
+    "body": "복근 · 어깨",
+    "equipment": "맨몸 · 매트",
+    "pose": "core",
+    "match": [
+      "플랭크 숄더 탭",
+      "Plank Shoulder Taps"
+    ],
+    "start": "푸시업 지지 자세로 몸통과 골반을 고정해요.",
+    "finish": "한 손씩 반대 어깨를 가볍게 터치해요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/1091/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-1572",
+    "name": "버드독",
+    "body": "복근 · 등",
+    "equipment": "맨몸 · 매트",
+    "pose": "core",
+    "match": [
+      "버드독",
+      "Bird Dog"
+    ],
+    "start": "손과 무릎으로 바닥을 지지해요.",
+    "finish": "몸통이 돌아가지 않게 반대쪽 팔과 다리를 뻗었다 돌아와요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/1572/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-1105",
+    "name": "시티드 니 턱",
+    "body": "복근",
+    "equipment": "맨몸 · 벤치",
+    "pose": "core",
+    "match": [
+      "시티드 니 턱",
+      "Seated Knee Tuck"
+    ],
+    "start": "앉아서 손으로 지지하고 몸통을 안정시켜요.",
+    "finish": "양 무릎을 몸 쪽으로 당겼다가 천천히 뻗어요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/1105/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-167",
+    "name": "크런치",
+    "body": "복근",
+    "equipment": "맨몸 · 매트",
+    "pose": "core",
+    "match": [
+      "크런치",
+      "Crunches"
+    ],
+    "start": "바닥에 누워 무릎을 굽히고 몸통을 안정시켜요.",
+    "finish": "목을 당기지 않고 복부를 수축하며 상체를 조금 들어요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/167/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-171",
+    "name": "인클라인 크런치",
+    "body": "복근",
+    "equipment": "인클라인 벤치",
+    "pose": "core",
+    "match": [
+      "인클라인 크런치",
+      "Incline Crunches"
+    ],
+    "start": "기울인 벤치에서 발을 고정하고 누워요.",
+    "finish": "복부를 수축해 상체를 말아 올렸다 천천히 내려요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/171/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-373",
+    "name": "내로우 스탠스 레그 프레스",
+    "body": "하체",
+    "equipment": "머신",
+    "pose": "legpress",
+    "match": [
+      "내로우 스탠스 레그 프레스",
+      "Leg Presses (narrow)"
+    ],
+    "start": "등을 패드에 붙이고 발 간격을 좁게 맞춰요.",
+    "finish": "골반이 뜨지 않는 범위에서 무릎을 굽혔다 펴요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/373/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-418",
+    "name": "이지바 밀리터리 프레스",
+    "body": "어깨",
+    "equipment": "이지바",
+    "pose": "overhead",
+    "match": [
+      "이지바 밀리터리 프레스",
+      "Military Press mit SZ-Bar"
+    ],
+    "start": "이지바를 어깨 앞에 들고 몸통을 세워요.",
+    "finish": "바를 위로 밀었다가 어깨 앞으로 내려요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/418/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-456",
+    "name": "피스톨 스쿼트",
+    "body": "하체 · 엉덩이",
+    "equipment": "맨몸",
+    "pose": "squat",
+    "match": [
+      "피스톨 스쿼트",
+      "Pistol Squat"
+    ],
+    "start": "한쪽 다리로 중심을 잡고 반대 다리를 앞으로 뻗어요.",
+    "finish": "지지하는 다리로 앉았다 일어서요. 처음에는 지지대를 활용해요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/456/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-458",
+    "name": "플랭크",
+    "body": "복근",
+    "equipment": "맨몸 · 매트",
+    "pose": "core",
+    "match": [
+      "플랭크",
+      "Plank"
+    ],
+    "start": "팔꿈치와 발끝으로 바닥을 지지해요.",
+    "finish": "허리와 골반을 안정시킨 자세를 정한 시간 동안 유지해요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/458/",
+    "unit": "seconds"
+  },
+  {
+    "id": "wger-478",
+    "name": "푸시 프레스",
+    "body": "어깨 · 전신",
+    "equipment": "바벨",
+    "pose": "overhead",
+    "match": [
+      "푸시 프레스",
+      "Push Press"
+    ],
+    "start": "바를 어깨 앞에 들고 무릎을 가볍게 굽혀요.",
+    "finish": "다리를 펴는 힘과 함께 바를 위로 밀어요. 기본 프레스 숙련 후 배워요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/478/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-691",
+    "name": "스미스 업라이트 로우",
+    "body": "어깨 · 승모",
+    "equipment": "스미스 머신",
+    "pose": "row",
+    "match": [
+      "스미스 업라이트 로우",
+      "Upright Row, on Multi Press"
+    ],
+    "start": "스미스 바를 몸 앞에 잡고 몸통을 세워요.",
+    "finish": "통증 없는 범위에서 팔꿈치를 들어 바를 당겼다 내려요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/691/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-694",
+    "name": "덤벨 업라이트 로우",
+    "body": "어깨 · 승모",
+    "equipment": "덤벨",
+    "pose": "row",
+    "match": [
+      "덤벨 업라이트 로우",
+      "Upright Row w/ Dumbbells"
+    ],
+    "start": "덤벨을 몸 앞에 들고 서요.",
+    "finish": "팔꿈치를 옆으로 올리며 덤벨을 당겼다가 내려요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/694/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-958",
+    "name": "TRX 바이셉스 컬",
+    "body": "이두",
+    "equipment": "TRX · 맨몸",
+    "pose": "curl",
+    "match": [
+      "TRX 바이셉스 컬",
+      "Biceps with TRX"
+    ],
+    "start": "고정된 스트랩을 잡고 몸을 뒤로 기울여요.",
+    "finish": "위팔을 안정시켜 팔꿈치를 굽히며 몸을 당겨요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/958/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-988",
+    "name": "맨몸 불가리안 스플릿 스쿼트",
+    "body": "하체 · 엉덩이",
+    "equipment": "맨몸 · 벤치",
+    "pose": "squat",
+    "match": [
+      "맨몸 불가리안 스플릿 스쿼트",
+      "Bulgarian split squats left"
+    ],
+    "start": "뒷발을 벤치에 올리고 앞발로 중심을 잡아요.",
+    "finish": "앞쪽 무릎과 고관절을 굽혀 내려갔다 일어서요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/988/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-1000",
+    "name": "플로어 딥스",
+    "body": "삼두",
+    "equipment": "맨몸 · 매트",
+    "pose": "dip",
+    "match": [
+      "플로어 딥스",
+      "Floor dips"
+    ],
+    "start": "바닥에 앉아 손을 몸 뒤에 두고 발로 지지해요.",
+    "finish": "어깨가 불편하지 않은 범위에서 팔꿈치를 굽혔다 펴요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/1000/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-1012",
+    "name": "얼터네이팅 덤벨 컬",
+    "body": "이두",
+    "equipment": "덤벨",
+    "pose": "curl",
+    "match": [
+      "얼터네이팅 덤벨 컬",
+      "Alternating bicep curls"
+    ],
+    "start": "덤벨을 양옆에 들고 몸통을 세워요.",
+    "finish": "한 팔씩 번갈아 팔꿈치를 굽혔다 내려요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/1012/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-1080",
+    "name": "힌두 푸시업",
+    "body": "가슴 · 어깨 · 전신",
+    "equipment": "맨몸 · 매트",
+    "pose": "press",
+    "match": [
+      "힌두 푸시업",
+      "Hindu Pushups"
+    ],
+    "start": "손과 발로 지지하고 엉덩이를 높게 들어요.",
+    "finish": "상체를 앞·아래로 보냈다가 지지 자세로 돌아와요. 기본 푸시업 숙련 후 배워요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/1080/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-1087",
+    "name": "덤벨 행 파워 클린",
+    "body": "전신",
+    "equipment": "덤벨",
+    "pose": "hinge",
+    "match": [
+      "덤벨 행 파워 클린",
+      "Dumbbell Hang Power Cleans"
+    ],
+    "start": "덤벨을 몸 옆에 들고 고관절과 무릎을 조금 굽혀요.",
+    "finish": "다리를 펴며 덤벨을 어깨 앞으로 받아요. 지도 아래 동작을 먼저 익혀요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/1087/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-1088",
+    "name": "덤벨 스모 데드리프트",
+    "body": "하체 · 엉덩이",
+    "equipment": "덤벨",
+    "pose": "hinge",
+    "match": [
+      "덤벨 스모 데드리프트",
+      "Dumbbell sumo deadlift"
+    ],
+    "start": "발을 넓게 벌리고 덤벨을 몸 중앙에 잡아요.",
+    "finish": "무릎과 고관절을 폈다가 무게를 조절해 내려요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/1088/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-1089",
+    "name": "메디신볼 트위스트",
+    "body": "복근",
+    "equipment": "메디신볼 · 매트",
+    "pose": "core",
+    "match": [
+      "메디신볼 트위스트",
+      "Medicine ball twist"
+    ],
+    "start": "앉은 자세에서 공을 몸 앞에 잡아요.",
+    "finish": "반동 없이 몸통을 좌우로 돌려요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/1089/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-1098",
+    "name": "시티드 리어 델트 레이즈",
+    "body": "어깨 · 등",
+    "equipment": "덤벨 · 벤치",
+    "pose": "fly",
+    "match": [
+      "시티드 리어 델트 레이즈",
+      "Seated rear delt rise"
+    ],
+    "start": "벤치에 앉아 상체를 숙이고 덤벨을 내려요.",
+    "finish": "몸통을 안정시키고 팔을 옆으로 벌렸다 내려요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/1098/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-1100",
+    "name": "월볼",
+    "body": "전신 · 유산소",
+    "equipment": "메디신볼",
+    "pose": "squat",
+    "match": [
+      "월볼",
+      "Wall balls"
+    ],
+    "start": "벽 앞에서 공을 가슴 높이에 잡아요.",
+    "finish": "앉았다 일어나며 공을 위로 던지고 안정적으로 받아요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/1100/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-1120",
+    "name": "언더그립 로우 머신",
+    "body": "등 · 이두",
+    "equipment": "머신",
+    "pose": "row",
+    "match": [
+      "언더그립 로우 머신",
+      "Remo maquina agarre estrecho supino"
+    ],
+    "start": "손바닥이 위를 향하는 손잡이를 잡고 앉아요.",
+    "finish": "가슴과 몸통을 안정시켜 손잡이를 뒤로 당겨요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/1120/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-1138",
+    "name": "인클라인 벤치 케이블 풀다운",
+    "body": "등",
+    "equipment": "케이블 머신 · 인클라인 벤치",
+    "pose": "pull",
+    "match": [
+      "인클라인 벤치 케이블 풀다운",
+      "Incline bench pulldown"
+    ],
+    "start": "기울인 벤치로 몸통을 지지하고 위쪽 케이블을 잡아요.",
+    "finish": "몸통을 유지하며 팔꿈치를 아래로 당겼다 돌아와요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/1138/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-1185",
+    "name": "트라이셉스 푸시다운",
+    "body": "삼두",
+    "equipment": "케이블 머신",
+    "pose": "extend",
+    "match": [
+      "트라이셉스 푸시다운",
+      "Triceps Pushdown"
+    ],
+    "start": "위쪽 케이블 바를 잡고 팔꿈치를 몸 옆에 둬요.",
+    "finish": "위팔을 고정하고 팔꿈치를 펴 바를 내려요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/1185/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-1186",
+    "name": "원암 케이블 로우",
+    "body": "등",
+    "equipment": "케이블 머신",
+    "pose": "row",
+    "match": [
+      "원암 케이블 로우",
+      "One Arm Bent Row"
+    ],
+    "start": "한 손으로 케이블을 잡고 몸통을 안정시켜요.",
+    "finish": "몸을 비틀지 않고 팔꿈치를 뒤로 당겼다 돌아와요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/1186/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-1198",
+    "name": "인버티드 로우",
+    "body": "등",
+    "equipment": "바벨 · 파워랙 · 맨몸",
+    "pose": "row",
+    "match": [
+      "인버티드 로우",
+      "Inverted Rows"
+    ],
+    "start": "고정된 낮은 바 아래에서 몸을 곧게 유지해요.",
+    "finish": "가슴을 바 쪽으로 당겼다가 팔을 천천히 펴요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/1198/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-1225",
+    "name": "와이드 덤벨 컬",
+    "body": "이두",
+    "equipment": "덤벨",
+    "pose": "curl",
+    "match": [
+      "와이드 덤벨 컬",
+      "Dumbbell wide bicep curls"
+    ],
+    "start": "양팔을 몸 옆에서 살짝 벌려 덤벨을 잡아요.",
+    "finish": "위팔을 안정시킨 채 팔꿈치를 굽혔다 펴요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/1225/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-1226",
+    "name": "덤벨 컬 투 프레스",
+    "body": "이두 · 어깨",
+    "equipment": "덤벨",
+    "pose": "overhead",
+    "match": [
+      "덤벨 컬 투 프레스",
+      "Dumbbell bicep curl to press"
+    ],
+    "start": "덤벨을 몸 옆에 들고 서요.",
+    "finish": "컬로 어깨 앞까지 올린 뒤 위로 밀고 역순으로 돌아와요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/1226/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-1227",
+    "name": "덤벨 리어 델트 로우",
+    "body": "어깨 · 등",
+    "equipment": "덤벨",
+    "pose": "row",
+    "match": [
+      "덤벨 리어 델트 로우",
+      "Dumbbell rear delt row"
+    ],
+    "start": "상체를 숙이고 덤벨을 아래로 들어요.",
+    "finish": "팔꿈치를 옆으로 벌려 덤벨을 당겼다가 내려요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/1227/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-1230",
+    "name": "오버헤드 삼두 스트레칭",
+    "body": "삼두 · 스트레칭",
+    "equipment": "맨몸",
+    "pose": "extend",
+    "match": [
+      "오버헤드 삼두 스트레칭",
+      "Triceps stretch left"
+    ],
+    "start": "한 팔을 머리 위로 들고 팔꿈치를 굽혀요.",
+    "finish": "반대 손으로 가볍게 지지하고 편안한 범위에서 유지해요. 양쪽을 번갈아 해요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/1230/",
+    "unit": "seconds"
+  },
+  {
+    "id": "wger-1232",
+    "name": "스탠딩 이두 스트레칭",
+    "body": "이두 · 스트레칭",
+    "equipment": "맨몸",
+    "pose": "extend",
+    "match": [
+      "스탠딩 이두 스트레칭",
+      "Standing biceps stretch left"
+    ],
+    "start": "팔을 몸 뒤쪽으로 편안하게 뻗어요.",
+    "finish": "통증 없는 범위에서 앞쪽 팔의 긴장을 느끼며 유지해요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/1232/",
+    "unit": "seconds"
+  },
+  {
+    "id": "wger-1239",
+    "name": "스탠딩 종아리 스트레칭",
+    "body": "종아리 · 스트레칭",
+    "equipment": "맨몸 · 벽",
+    "pose": "raise",
+    "match": [
+      "스탠딩 종아리 스트레칭",
+      "Standing Calf Stretch"
+    ],
+    "start": "벽을 지지하고 한 발을 뒤로 보내요.",
+    "finish": "뒤꿈치를 바닥에 둔 채 종아리가 편안하게 늘어나는 자세를 유지해요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/1239/",
+    "unit": "seconds"
+  },
+  {
+    "id": "wger-1243",
+    "name": "맨몸 카프 레이즈",
+    "body": "종아리",
+    "equipment": "맨몸",
+    "pose": "raise",
+    "match": [
+      "맨몸 카프 레이즈",
+      "Double Leg Calf Raise"
+    ],
+    "start": "균형을 잡을 수 있는 지지대 옆에 서요.",
+    "finish": "발 앞부분으로 밀어 뒤꿈치를 올렸다 내려요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/1243/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-1274",
+    "name": "앉아서 발목 당기기 스트레칭",
+    "body": "종아리 · 스트레칭",
+    "equipment": "맨몸 · 매트",
+    "pose": "raise",
+    "match": [
+      "앉아서 발목 당기기 스트레칭",
+      "Sitting Calf Stretch (Dorsiflexion)"
+    ],
+    "start": "다리를 앞으로 뻗고 앉아요.",
+    "finish": "발끝을 몸 쪽으로 편안하게 당겨 유지해요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/1274/",
+    "unit": "seconds"
+  },
+  {
+    "id": "wger-1275",
+    "name": "밴드 발목 플랜타플렉션",
+    "body": "종아리",
+    "equipment": "밴드 · 매트",
+    "pose": "raise",
+    "match": [
+      "밴드 발목 플랜타플렉션",
+      "Plantarflexion Stretch with Band"
+    ],
+    "start": "앉아서 밴드를 발 앞부분에 걸고 양끝을 잡아요.",
+    "finish": "밴드 저항을 받으며 발끝을 앞으로 밀었다 돌아와요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/1275/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-1285",
+    "name": "버트 킥",
+    "body": "전신 · 유산소",
+    "equipment": "맨몸",
+    "pose": "squat",
+    "match": [
+      "버트 킥",
+      "Talons fesses"
+    ],
+    "start": "몸통을 세우고 가볍게 서요.",
+    "finish": "발뒤꿈치를 엉덩이 쪽으로 번갈아 올려요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/1285/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-1298",
+    "name": "하이 케이블 크로스 트라이셉스 익스텐션",
+    "body": "삼두",
+    "equipment": "케이블 머신",
+    "pose": "extend",
+    "match": [
+      "하이 케이블 크로스 트라이셉스 익스텐션",
+      "High-Cable Cross Tricep Extention - NB"
+    ],
+    "start": "높은 풀리의 손잡이를 잡고 위팔을 안정시켜요.",
+    "finish": "케이블 저항에 맞춰 팔꿈치를 폈다가 돌아와요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/1298/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-1377",
+    "name": "스탠딩 토르소 트위스트",
+    "body": "복근 · 준비운동",
+    "equipment": "맨몸",
+    "pose": "core",
+    "match": [
+      "스탠딩 토르소 트위스트",
+      "Torso Twist"
+    ],
+    "start": "발을 안정적으로 두고 몸통을 세워요.",
+    "finish": "작고 편안한 범위에서 몸통을 좌우로 돌려요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/1377/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-1387",
+    "name": "햄스트링 킥",
+    "body": "하체 · 준비운동",
+    "equipment": "맨몸",
+    "pose": "hinge",
+    "match": [
+      "햄스트링 킥",
+      "Hamstring Kicks"
+    ],
+    "start": "몸통을 세우고 균형을 잡아요.",
+    "finish": "한 다리씩 편안한 높이로 앞으로 들었다 내려요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/1387/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-1392",
+    "name": "맨몸 굿모닝",
+    "body": "하체 · 허벅지 뒤",
+    "equipment": "맨몸",
+    "pose": "hinge",
+    "match": [
+      "맨몸 굿모닝",
+      "Good Morning"
+    ],
+    "start": "무릎을 조금 굽히고 몸통을 안정시켜요.",
+    "finish": "엉덩이를 뒤로 보내 상체를 숙였다가 일어서요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/1392/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-1452",
+    "name": "니 투 체스트 스트레칭",
+    "body": "엉덩이 · 스트레칭",
+    "equipment": "맨몸 · 매트",
+    "pose": "core",
+    "match": [
+      "니 투 체스트 스트레칭",
+      "Knee to Chest Stretch"
+    ],
+    "start": "바닥에 누워 한쪽 무릎을 잡아요.",
+    "finish": "무릎을 몸 쪽으로 편안하게 당겨 유지해요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/1452/",
+    "unit": "seconds"
+  },
+  {
+    "id": "wger-1519",
+    "name": "이지바 오버헤드 트라이셉스 익스텐션",
+    "body": "삼두",
+    "equipment": "이지바",
+    "pose": "extend",
+    "match": [
+      "이지바 오버헤드 트라이셉스 익스텐션",
+      "Overhead Triceps Extension"
+    ],
+    "start": "이지바를 머리 위에 들고 위팔을 안정시켜요.",
+    "finish": "팔꿈치를 굽혀 머리 뒤로 내렸다가 조절해 펴요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/1519/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-1554",
+    "name": "클랩 푸시업",
+    "body": "가슴 · 삼두 · 전신",
+    "equipment": "맨몸 · 매트",
+    "pose": "press",
+    "match": [
+      "클랩 푸시업",
+      "Clap Push-UP"
+    ],
+    "start": "안정된 푸시업 자세를 만들어요.",
+    "finish": "바닥을 밀어 손이 뜬 동안 박수 후 착지해요. 기본 푸시업 숙련 후 지도 아래 배워요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/1554/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-1556",
+    "name": "데빌 프레스",
+    "body": "전신 · 유산소",
+    "equipment": "덤벨",
+    "pose": "hinge",
+    "match": [
+      "데빌 프레스",
+      "Devil’s Press"
+    ],
+    "start": "덤벨을 바닥에 두고 안정적인 지지 자세를 만들어요.",
+    "finish": "버피와 덤벨을 위로 드는 동작을 연결해요. 각 동작을 먼저 따로 익혀요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/1556/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-1567",
+    "name": "얼터네이팅 해머 컬",
+    "body": "이두 · 전완",
+    "equipment": "덤벨",
+    "pose": "curl",
+    "match": [
+      "얼터네이팅 해머 컬",
+      "Alternating dumbbell hammer curl"
+    ],
+    "start": "손바닥이 서로 마주 보도록 덤벨을 들어요.",
+    "finish": "한 팔씩 번갈아 덤벨을 올렸다 내려요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/1567/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-1604",
+    "name": "슬라이딩 사이드 런지",
+    "body": "하체 · 엉덩이",
+    "equipment": "슬라이더 · 맨몸",
+    "pose": "squat",
+    "match": [
+      "슬라이딩 사이드 런지",
+      "Sliding Lateral Lunge"
+    ],
+    "start": "한쪽 발을 슬라이더에 올리고 반대 발로 중심을 잡아요.",
+    "finish": "한 발을 옆으로 미는 동안 지지 다리를 굽혔다 돌아와요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/1604/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-1639",
+    "name": "덤벨 벤트오버 페이스풀",
+    "body": "어깨 · 등",
+    "equipment": "덤벨",
+    "pose": "row",
+    "match": [
+      "덤벨 벤트오버 페이스풀",
+      "Dumbbell Bent Over Face Pull"
+    ],
+    "start": "상체를 숙이고 양손에 가벼운 덤벨을 들어요.",
+    "finish": "몸통을 유지하며 팔꿈치를 옆으로 당겼다 내려요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/1639/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-1640",
+    "name": "덤벨 프론트 스쿼트",
+    "body": "하체",
+    "equipment": "덤벨",
+    "pose": "squat",
+    "match": [
+      "덤벨 프론트 스쿼트",
+      "Dumbbell Front Squat"
+    ],
+    "start": "덤벨을 어깨 앞에 안정적으로 들어요.",
+    "finish": "몸통을 세우며 앉았다가 바닥을 밀고 일어서요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/1640/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-1641",
+    "name": "싱글 레그 케틀벨 데드리프트",
+    "body": "하체 · 엉덩이",
+    "equipment": "케틀벨",
+    "pose": "hinge",
+    "match": [
+      "싱글 레그 케틀벨 데드리프트",
+      "Kettlebell One Legged Deadlift"
+    ],
+    "start": "케틀벨을 잡고 한쪽 다리로 중심을 잡아요.",
+    "finish": "고관절을 접으며 반대 다리를 뒤로 보냈다 돌아와요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/1641/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-1648",
+    "name": "중량 크런치",
+    "body": "복근",
+    "equipment": "덤벨 · 매트",
+    "pose": "core",
+    "match": [
+      "중량 크런치",
+      "Weighted Crunch"
+    ],
+    "start": "바닥에 누워 가벼운 중량을 몸 앞에 고정해요.",
+    "finish": "복부를 수축해 상체를 조금 들어 올렸다 내려요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/1648/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-1650",
+    "name": "덤벨 사이드 벤드",
+    "body": "복근",
+    "equipment": "덤벨",
+    "pose": "core",
+    "match": [
+      "덤벨 사이드 벤드",
+      "Dumbbell Side Bend"
+    ],
+    "start": "덤벨을 한 손에 들고 몸통을 세워요.",
+    "finish": "작고 조절 가능한 범위로 몸통을 옆으로 기울였다 돌아와요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/1650/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-1651",
+    "name": "덤벨 리버스 런지",
+    "body": "하체 · 엉덩이",
+    "equipment": "덤벨",
+    "pose": "squat",
+    "match": [
+      "덤벨 리버스 런지",
+      "Dumbbell Rear Lunge"
+    ],
+    "start": "덤벨을 양옆에 들고 서요.",
+    "finish": "한 발을 뒤로 내딛어 런지 후 원위치로 돌아와요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/1651/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-1653",
+    "name": "덤벨 사이드 스쿼트",
+    "body": "하체 · 엉덩이",
+    "equipment": "덤벨",
+    "pose": "squat",
+    "match": [
+      "덤벨 사이드 스쿼트",
+      "Dumbbell Side Squat"
+    ],
+    "start": "덤벨을 잡고 발을 넓게 벌려요.",
+    "finish": "한쪽 무릎과 고관절을 굽혀 중심을 옮겼다가 돌아와요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/1653/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-1734",
+    "name": "케틀벨 싱글 레그 런지",
+    "body": "하체 · 엉덩이",
+    "equipment": "케틀벨",
+    "pose": "squat",
+    "match": [
+      "케틀벨 싱글 레그 런지",
+      "Single-Leg Lunge with Kettlebell:"
+    ],
+    "start": "케틀벨을 안정적으로 잡고 발을 앞뒤로 벌려요.",
+    "finish": "앞쪽 다리로 중심을 잡고 내려갔다 일어서요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/1734/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-1736",
+    "name": "싱글 레그 덤벨 데드리프트",
+    "body": "하체 · 엉덩이",
+    "equipment": "덤벨",
+    "pose": "hinge",
+    "match": [
+      "싱글 레그 덤벨 데드리프트",
+      "Single-Leg Deadlift with Dumbbell"
+    ],
+    "start": "덤벨을 잡고 한쪽 다리로 중심을 잡아요.",
+    "finish": "고관절을 접으며 반대 다리를 뒤로 보냈다 돌아와요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/1736/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-1801",
+    "name": "바벨 백 스쿼트",
+    "body": "하체",
+    "equipment": "바벨 · 파워랙",
+    "pose": "squat",
+    "match": [
+      "바벨 백 스쿼트",
+      "Barbell Full Squat"
+    ],
+    "start": "안전바를 맞추고 바벨을 등 위에 안정적으로 올려요.",
+    "finish": "몸통을 유지하며 앉았다가 바닥을 밀고 일어서요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/1801/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-1804",
+    "name": "발목 가동성 록",
+    "body": "종아리 · 준비운동",
+    "equipment": "맨몸",
+    "pose": "raise",
+    "match": [
+      "발목 가동성 록",
+      "ankle dorsiflexion rocks"
+    ],
+    "start": "발뒤꿈치를 바닥에 두고 한쪽 무릎을 앞으로 준비해요.",
+    "finish": "뒤꿈치를 유지하며 무릎을 앞뒤로 작게 움직여요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/1804/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-1830",
+    "name": "바벨 리버스 런지",
+    "body": "하체 · 엉덩이",
+    "equipment": "바벨",
+    "pose": "squat",
+    "match": [
+      "바벨 리버스 런지",
+      "Barbell Step Back Lunge"
+    ],
+    "start": "바벨을 안정적으로 올리고 몸통을 세워요.",
+    "finish": "한 발을 뒤로 내딛어 내려갔다 돌아와요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/1830/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-1854",
+    "name": "종아리 폼롤링",
+    "body": "종아리 · 회복",
+    "equipment": "폼롤러 · 매트",
+    "pose": "core",
+    "match": [
+      "종아리 폼롤링",
+      "Calves foam roller"
+    ],
+    "start": "종아리 아래에 폼롤러를 두고 손으로 몸을 지지해요.",
+    "finish": "편안한 압력으로 작은 구간을 천천히 움직여요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/1854/",
+    "unit": "seconds"
+  },
+  {
+    "id": "wger-1855",
+    "name": "햄스트링 폼롤링",
+    "body": "허벅지 뒤 · 회복",
+    "equipment": "폼롤러 · 매트",
+    "pose": "core",
+    "match": [
+      "햄스트링 폼롤링",
+      "Hamstring Foam roller"
+    ],
+    "start": "허벅지 뒤에 폼롤러를 두고 앉아요.",
+    "finish": "무리한 압박 없이 작은 구간을 천천히 움직여요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/1855/",
+    "unit": "seconds"
+  },
+  {
+    "id": "wger-1858",
+    "name": "대퇴사두 폼롤링",
+    "body": "허벅지 앞 · 회복",
+    "equipment": "폼롤러 · 매트",
+    "pose": "core",
+    "match": [
+      "대퇴사두 폼롤링",
+      "Foam Roller quadriceps"
+    ],
+    "start": "허벅지 앞에 폼롤러를 두고 팔로 몸을 지지해요.",
+    "finish": "무릎 관절을 피하고 편안한 압력으로 움직여요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/1858/",
+    "unit": "seconds"
+  },
+  {
+    "id": "wger-1859",
+    "name": "둔근 폼롤링",
+    "body": "엉덩이 · 회복",
+    "equipment": "폼롤러 · 매트",
+    "pose": "core",
+    "match": [
+      "둔근 폼롤링",
+      "Foam Roller Gluteus"
+    ],
+    "start": "엉덩이 아래에 폼롤러를 두고 손으로 지지해요.",
+    "finish": "편안한 압력으로 엉덩이 주변을 천천히 움직여요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/1859/",
+    "unit": "seconds"
+  },
+  {
+    "id": "wger-1861",
+    "name": "옆구리 스트레칭",
+    "body": "복근 · 스트레칭",
+    "equipment": "맨몸",
+    "pose": "core",
+    "match": [
+      "옆구리 스트레칭",
+      "Side stretch"
+    ],
+    "start": "몸통을 세우고 한 팔을 위로 들어요.",
+    "finish": "몸을 반대쪽으로 편안하게 기울여 유지해요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/1861/",
+    "unit": "seconds"
+  },
+  {
+    "id": "wger-1862",
+    "name": "힙 서클",
+    "body": "엉덩이 · 준비운동",
+    "equipment": "맨몸",
+    "pose": "hinge",
+    "match": [
+      "힙 서클",
+      "Hip Circles"
+    ],
+    "start": "지지대 옆에서 몸통과 골반을 안정시켜요.",
+    "finish": "고관절을 통증 없는 작은 원으로 움직여요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/1862/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-1863",
+    "name": "힙 크로스오버",
+    "body": "엉덩이 · 준비운동",
+    "equipment": "맨몸 · 매트",
+    "pose": "core",
+    "match": [
+      "힙 크로스오버",
+      "Hip Crossover"
+    ],
+    "start": "등을 바닥에 대고 양팔로 지지해요.",
+    "finish": "골반과 다리를 편안한 범위에서 옆으로 움직였다 돌아와요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/1863/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-1864",
+    "name": "앵클 서클",
+    "body": "종아리 · 준비운동",
+    "equipment": "맨몸",
+    "pose": "raise",
+    "match": [
+      "앵클 서클",
+      "Ankle Roll"
+    ],
+    "start": "다리와 몸통을 안정적으로 지지해요.",
+    "finish": "발목을 천천히 작은 원으로 움직여요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/1864/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-1865",
+    "name": "밴드 발목 가동성 운동",
+    "body": "종아리 · 준비운동",
+    "equipment": "밴드",
+    "pose": "raise",
+    "match": [
+      "밴드 발목 가동성 운동",
+      "Banded Ankle Mobility"
+    ],
+    "start": "고정한 밴드와 발의 위치를 안정적으로 맞춰요.",
+    "finish": "뒤꿈치를 유지하며 발목을 편안한 범위로 움직여요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/1865/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-1867",
+    "name": "고관절 굴곡근 스트레칭",
+    "body": "하체 · 스트레칭",
+    "equipment": "맨몸 · 매트",
+    "pose": "hinge",
+    "match": [
+      "고관절 굴곡근 스트레칭",
+      "Hip Flexor Stretch"
+    ],
+    "start": "한쪽 무릎을 바닥에 대고 반대 발을 앞에 둬요.",
+    "finish": "허리를 과하게 젖히지 않고 골반을 조금 앞으로 보내 유지해요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/1867/",
+    "unit": "seconds"
+  },
+  {
+    "id": "wger-1868",
+    "name": "런지 트위스트 스트레칭",
+    "body": "하체 · 준비운동",
+    "equipment": "맨몸 · 매트",
+    "pose": "squat",
+    "match": [
+      "런지 트위스트 스트레칭",
+      "Lunge with Twist Stretch"
+    ],
+    "start": "안정된 런지 자세를 만들고 손으로 지지해요.",
+    "finish": "몸통을 편안한 범위로 돌렸다 원위치로 돌아와요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/1868/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-1869",
+    "name": "누워서 피겨포 스트레칭",
+    "body": "엉덩이 · 스트레칭",
+    "equipment": "맨몸 · 매트",
+    "pose": "core",
+    "match": [
+      "누워서 피겨포 스트레칭",
+      "Lying Figure Four Stretch"
+    ],
+    "start": "누워 한쪽 발목을 반대 허벅지 위에 올려요.",
+    "finish": "다리를 몸 쪽으로 편안하게 당겨 유지해요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/1869/",
+    "unit": "seconds"
+  },
+  {
+    "id": "wger-1870",
+    "name": "밴드 햄스트링 스트레칭",
+    "body": "허벅지 뒤 · 스트레칭",
+    "equipment": "밴드 · 매트",
+    "pose": "hinge",
+    "match": [
+      "밴드 햄스트링 스트레칭",
+      "Lying Hamstring Stretch with Band"
+    ],
+    "start": "누워 한쪽 발에 밴드를 걸어요.",
+    "finish": "무릎과 허리가 편안한 범위에서 다리를 들어 유지해요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/1870/",
+    "unit": "seconds"
+  },
+  {
+    "id": "wger-1872",
+    "name": "피전 스트레칭",
+    "body": "엉덩이 · 스트레칭",
+    "equipment": "맨몸 · 매트",
+    "pose": "hinge",
+    "match": [
+      "피전 스트레칭",
+      "Pigeon Stretch"
+    ],
+    "start": "바닥에서 한쪽 다리를 앞에 굽히고 몸을 지지해요.",
+    "finish": "무릎에 통증이 없는 자세에서 엉덩이를 편안하게 늘려요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/1872/",
+    "unit": "seconds"
+  },
+  {
+    "id": "wger-1873",
+    "name": "대퇴사두 스트레칭",
+    "body": "허벅지 앞 · 스트레칭",
+    "equipment": "맨몸",
+    "pose": "legcurl",
+    "match": [
+      "대퇴사두 스트레칭",
+      "Quad Stretch"
+    ],
+    "start": "균형을 잡고 한쪽 무릎을 굽혀 발목을 잡아요.",
+    "finish": "무릎과 허리가 편안한 범위에서 허벅지 앞을 늘려요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/1873/",
+    "unit": "seconds"
+  },
+  {
+    "id": "wger-1874",
+    "name": "러너스 런지 스트레칭",
+    "body": "하체 · 스트레칭",
+    "equipment": "맨몸 · 매트",
+    "pose": "squat",
+    "match": [
+      "러너스 런지 스트레칭",
+      "Runners Lunge Stretch"
+    ],
+    "start": "한 발을 앞으로 두고 손으로 바닥을 지지해요.",
+    "finish": "뒷다리와 몸통을 편안하게 뻗은 자세를 유지해요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/1874/",
+    "unit": "seconds"
+  },
+  {
+    "id": "wger-1889",
+    "name": "디클라인 벤치 레그 레이즈",
+    "body": "복근",
+    "equipment": "디클라인 벤치",
+    "pose": "core",
+    "match": [
+      "디클라인 벤치 레그 레이즈",
+      "Decline Bench Leg Raise"
+    ],
+    "start": "기울인 벤치에 누워 손잡이를 잡아요.",
+    "finish": "몸통을 안정시키고 다리를 올렸다가 조절해 내려요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/1889/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-1901",
+    "name": "바벨 클린 앤 프레스",
+    "body": "전신",
+    "equipment": "바벨",
+    "pose": "overhead",
+    "match": [
+      "바벨 클린 앤 프레스",
+      "Clean and Press"
+    ],
+    "start": "바를 잡고 고관절과 무릎을 굽혀 준비해요.",
+    "finish": "바를 어깨 앞으로 받은 뒤 위로 밀어요. 각 동작을 지도 아래 먼저 익혀요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/1901/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-1902",
+    "name": "중량 푸시업",
+    "body": "가슴 · 삼두",
+    "equipment": "맨몸 · 중량 조끼",
+    "pose": "press",
+    "match": [
+      "중량 푸시업",
+      "Weighted push-ups"
+    ],
+    "start": "중량이 움직이지 않게 고정하고 푸시업 자세를 만들어요.",
+    "finish": "몸통을 유지하며 내려갔다 바닥을 밀어요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/1902/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-1922",
+    "name": "시티드 케이블 플라이",
+    "body": "가슴",
+    "equipment": "케이블 머신 · 벤치",
+    "pose": "fly",
+    "match": [
+      "시티드 케이블 플라이",
+      "Seated Cable chest fly"
+    ],
+    "start": "벤치에 앉아 양쪽 케이블을 잡아요.",
+    "finish": "몸통을 안정시키고 양팔을 앞쪽으로 모았다 벌려요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/1922/",
+    "unit": "reps"
+  },
+  {
+    "id": "wger-2494",
+    "name": "밴드 터미널 니 익스텐션",
+    "body": "하체 · 허벅지 앞",
+    "equipment": "밴드",
+    "pose": "legextend",
+    "match": [
+      "밴드 터미널 니 익스텐션",
+      "Band Terminal Knee extension"
+    ],
+    "start": "무릎 뒤쪽에 밴드를 걸고 안정적으로 서요.",
+    "finish": "작게 굽힌 무릎을 조절해 폈다가 돌아와요.",
+    "cues": [
+      "처음에는 가벼운 저항과 조절 가능한 범위로 익혀요.",
+      "통증이 생기면 중단하고 자세를 확인해요."
+    ],
+    "source": "https://wger.de/api/v2/exerciseinfo/2494/",
+    "unit": "reps"
+  }
+]

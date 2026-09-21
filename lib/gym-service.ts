@@ -9,7 +9,7 @@ export class AppError extends Error { constructor(message:string, public status=
 type Actor={userId:string;displayName:string};
 type CrewRow={id:string;name:string;invite:string;owner:string;state:string;revision:number};
 const short=z.string().trim().min(1).max(60);
-const exercise=z.object({id:z.string().min(1).max(60),name:short,sets:z.number().int().min(1).max(30),reps:z.number().int().min(1).max(100),prescription:z.string().max(2000).optional()});
+const exercise=z.object({id:z.string().min(1).max(60),name:short,sets:z.number().int().min(1).max(30),reps:z.number().int().min(1).max(100),durationSeconds:z.number().int().min(1).max(3600).optional(),prescription:z.string().max(2000).optional()});
 const routine=z.object({id:z.string().min(1).max(60),name:short,subtitle:z.string().trim().max(80),notes:z.string().max(12000).optional(),exercises:z.array(exercise).min(1).max(30).refine(xs=>new Set(xs.map(x=>x.id)).size===xs.length,'운동 ID가 중복됐어요.')});
 const date=z.string().regex(/^\d{4}-\d{2}-\d{2}$/).refine(d=>{const parsed=new Date(`${d}T12:00:00Z`);return !isNaN(parsed.getTime())&&parsed.toISOString().slice(0,10)===d;},'날짜를 확인해주세요.');
 const capacity=z.number().int().min(1).max(100).nullable().default(null);

@@ -1,6 +1,7 @@
+import expanded from './exercise-guides-expanded.json';
 export type Pose='bench'|'incline'|'overhead'|'press'|'row'|'pull'|'raise'|'curl'|'extend'|'squat'|'hinge'|'legpress'|'legcurl'|'legextend'|'core'|'fly'|'dip'|'shrug';
-export type ExerciseGuide={id:string;name:string;body:string;equipment:string;pose:Pose;match:string[];start:string;finish:string;cues:string[]};
-export const exerciseGuides:ExerciseGuide[]=[
+export type ExerciseGuide={id:string;name:string;body:string;equipment:string;pose:Pose;match:string[];start:string;finish:string;cues:string[];unit?:'seconds'|'reps';source?:string};
+const originalGuides:ExerciseGuide[]=[
  {id:'incline',name:'인클라인 덤벨 프레스',body:'가슴',equipment:'덤벨 · 벤치',pose:'incline',match:['인클라인 덤벨프레스','인클라인 덤벨 프레스'],start:'등과 엉덩이를 벤치에 대고 덤벨을 가슴 옆에 준비해요.',finish:'손목을 곧게 유지하면서 덤벨을 위로 밀고 천천히 돌아와요.',cues:['발바닥을 바닥에 고정해요.','허리를 과하게 꺾지 않아요.','혼자 실패 지점까지 무리하지 않아요.']},
  {id:'bench',name:'벤치프레스',body:'가슴',equipment:'바벨 · 벤치',pose:'bench',match:['벤치프레스','벤치 프레스'],start:'발을 바닥에 두고 벤치에 누워 바를 잡아요.',finish:'가슴 쪽으로 조절하며 내린 뒤 밀어 올려요.',cues:['세이프티 바 또는 보조자를 준비해요.','손목과 팔꿈치를 안정적으로 맞춰요.','가슴에서 반동을 주지 않아요.']},
  {id:'chest',name:'체스트 프레스',body:'가슴',equipment:'머신',pose:'press',match:['체스트 프레스'],start:'손잡이가 가슴 높이에 오도록 의자를 맞춰요.',finish:'등을 패드에 붙이고 손잡이를 앞으로 밀어요.',cues:['어깨를 으쓱하지 않아요.','팔꿈치를 세게 잠그지 않아요.','무게추가 부딪히지 않게 돌아와요.']},
@@ -24,4 +25,19 @@ export const exerciseGuides:ExerciseGuide[]=[
  {id:'jm',name:'클로즈 그립 프레스 · JM 프레스',body:'삼두',equipment:'바벨 · 벤치',pose:'bench',match:['클로즈','JM'],start:'벤치에 누워 일반 프레스보다 좁게 바를 잡아요.',finish:'팔꿈치를 조절하며 내렸다가 밀어 올려요.',cues:['JM 프레스는 별도 숙련 동작이라 지도 후 익혀요.','초보자는 머신이나 케이블로 대체할 수 있어요.','세이프티 바를 사용해요.']},
  {id:'core',name:'크런치 · 레그 레이즈',body:'복근',equipment:'케이블 · 철봉 · 매트',pose:'core',match:['크런치','레그 레이즈'],start:'몸통을 안정시키고 반동 없는 시작 자세를 잡아요.',finish:'크런치는 몸통을 말고, 레그 레이즈는 다리와 골반을 들어요.',cues:['서로 다른 동작이므로 기구별 자세를 확인해요.','목을 잡아당기지 않아요.','허리 통증 없이 조절되는 범위를 사용해요.']},
 ];
-export function guideFor(name:string){const normalized=name.replaceAll(' ','').toLowerCase();return [...exerciseGuides].sort((a,b)=>Math.max(...b.match.map(s=>s.length))-Math.max(...a.match.map(s=>s.length))).find(g=>g.match.some(m=>normalized.includes(m.replaceAll(' ','').toLowerCase())));}
+export const normalizeExerciseSearch=(text:string)=>text.normalize('NFKC').toLowerCase().replace(/[\s\-_/·()]/g,'');
+const extraAliases:Record<string,string[]>={'wger-475':['턱걸이','pullup','pull ups'],'wger-152':['chinup','chin ups'],'wger-203':['goblet squat'],'wger-458':['플랭크','plank'],'wger-184':['데드','deadlift'],'wger-94':['ez바컬','ez bar curl'],'wger-92':['db curl'],'wger-81':['db row'],'lateral':['사레레'],'legextend':['레그익스'],'pulldown':['랫풀']};
+const originalNames=new Set(originalGuides.map(g=>normalizeExerciseSearch(g.name)));
+const browseOrder=['bench','wger-75','incline','wger-538','chest','wger-1551','wger-475','wger-152','pulldown','wger-83','wger-394','squat','wger-203','legpress','legextend','wger-366','wger-567','lateral','wger-91','wger-92','wger-272','wger-1900','wger-458','wger-167'];
+const rank=(id:string)=>browseOrder.includes(id)?browseOrder.indexOf(id):browseOrder.length;
+export const exerciseGuides:ExerciseGuide[]=[...originalGuides,...(expanded as ExerciseGuide[]).filter(g=>!originalNames.has(normalizeExerciseSearch(g.name)))].map(g=>({...g,match:[...g.match,...(extraAliases[g.id]??[])]})).sort((a,b)=>rank(a.id)-rank(b.id));
+const exactNames=new Map<string,ExerciseGuide>();
+for(const guide of exerciseGuides)for(const name of [guide.name,...guide.match])if(!exactNames.has(normalizeExerciseSearch(name)))exactNames.set(normalizeExerciseSearch(name),guide);
+const matches=exerciseGuides.flatMap(g=>g.match.map(m=>({guide:g,key:normalizeExerciseSearch(m)}))).sort((a,b)=>b.key.length-a.key.length);
+export function guideFor(name:string){const key=normalizeExerciseSearch(name);return exactNames.get(key)??matches.find(m=>m.key.length>=2&&key.includes(m.key))?.guide;}
+export const bodyFilters=['전체','가슴','등','어깨','이두','삼두','전완','하체','엉덩이','종아리','복근','전신','스트레칭','준비운동','회복'];
+export const equipmentFilters=['전체','맨몸','덤벨','바벨','머신','케이블','스미스','이지바','밴드','케틀벨','TRX','폼롤러'];
+export function findExerciseGuides(query:string,body='전체',equipment='전체'){
+ const terms=query.trim().split(/\s+/).map(normalizeExerciseSearch).filter(Boolean);
+ return exerciseGuides.filter(g=>(body==='전체'||g.body.includes(body)||(body==='하체'&&/허벅지|종아리|엉덩이/.test(g.body)))&&(equipment==='전체'||g.equipment.includes(equipment))&&terms.every(t=>normalizeExerciseSearch([g.name,g.body,g.equipment,...g.match].join(' ')).includes(t)));
+}

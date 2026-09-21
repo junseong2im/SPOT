@@ -3,7 +3,7 @@ import './routine-details.css';
 
 export function RoutineDetails({routine}:{routine:Routine}) {
   return <details className="routine-details"><summary>전체 운동 · 상세 수행법</summary>
-    <ol>{routine.exercises.map(e=><li key={e.id}><strong>{e.name}</strong><p>{e.prescription || `${e.sets}세트 × ${e.reps}회`}</p></li>)}</ol>
+    <ol>{routine.exercises.map(e=><li key={e.id}><strong>{e.name}</strong><p>{e.prescription || `${e.sets}세트 × ${e.durationSeconds!==undefined?`${e.durationSeconds}초`:`${e.reps}회`}`}</p></li>)}</ol>
     {routine.notes && <details><summary>프로그램 가이드</summary><p className="routine-notes">{routine.notes}</p></details>}
   </details>;
 }
