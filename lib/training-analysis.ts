@@ -24,7 +24,7 @@ export function analyzeTraining(history:Workout[],profile:TrainingProfile|null,n
   if(last.length<3)missing.push('같은 조건의 완료 기록 3회');
   if(e.convention==='unknown')missing.push('중량 표기 기준');
   if(e.convention==='machine'&&!e.equipmentLabel)missing.push('동일한 기구를 구분할 이름');
-  if(/웜업|워밍업|탑\s*세트|백\s*오프|강제\s*반복|슈퍼\s*세트/.test(e.prescription))missing.push('복합 세트 구성에 대한 개별 검토');
+  if(e.superset||e.sets.some(s=>s.kind==='failure')||/웜업|워밍업|탑\s*세트|백\s*오프|강제\s*반복|슈퍼\s*세트/.test(e.prescription))missing.push('복합 세트 구성에 대한 개별 검토');
   if(e.timed){
    if(last.some(x=>x.workout.state.discomfort!=='none'))missing.push('운동 중 불편감 확인');
    if(last.some(x=>!x.workout.state.conditionsConfirmed))missing.push('수행 조건 확인');
@@ -37,7 +37,7 @@ export function analyzeTraining(history:Workout[],profile:TrainingProfile|null,n
   if(last.some(x=>x.workout.state.discomfort==='yes')){advice.push({exercise:e.name,status:'review',title:'증량 제안 보류',reasons:['불편감이 보고된 기록이 있습니다. 불편한 동작을 중단하고 지속되면 전문가에게 확인하세요.'],missing});continue;}
   if(last.length===3&&new Set(last.map(x=>localDate(new Date(x.workout.finished_at!)))).size<3)missing.push('서로 다른 날짜의 기록 3회');
   if(last.length&&now-last[0].workout.finished_at!>14*86400000)missing.push('최근 14일 이내 기록');
-  const comparable=sets.length===3&&sets.every(ss=>ss.length===sets[0].length&&ss.every((s,i)=>s.weight===sets[0][i].weight))&&last.every(x=>x.exercise.plannedReps===e.plannedReps&&x.workout.state.restSeconds===entries[0].workout.state.restSeconds&&working(x.exercise).length===x.exercise.sets.filter(s=>s.kind==='working').length);
+  const comparable=sets.length===3&&sets.every(ss=>ss.length===sets[0].length&&ss.every((s,i)=>s.weight===sets[0][i].weight))&&last.every(x=>x.exercise.plannedReps===e.plannedReps&&(x.exercise.restSeconds??x.workout.state.restSeconds)===(e.restSeconds??entries[0].workout.state.restSeconds)&&working(x.exercise).length===x.exercise.sets.filter(s=>s.kind==='working').length);
   if(!comparable&&last.length>=3)missing.push('동일한 본세트 수·중량·목표 횟수·설정 휴식');
   if(missing.length){advice.push({exercise:e.name,status:'review',title:'판단에 필요한 기록을 더 모으세요',reasons:['기록이 불완전하거나 비교 조건이 달라 증량을 제안하지 않습니다.'],missing:[...new Set(missing)]});continue;}
   const reps=sets.map(ss=>ss.reduce((n,s)=>n+s.reps!,0));
