@@ -14,6 +14,7 @@ export function RoutineAssistant({open,onClose,routine,onImport,onEdit,busy=fals
  const [confirmed,setConfirmed]=useState(false),[working,setWorking]=useState(false),[progress,setProgress]=useState(''),[ocrReview,setOcrReview]=useState(false);
  const [answers,setAnswers]=useState<Answers>({}),[question,setQuestion]=useState<Clarification|null>(null),[quantity,setQuantity]=useState('');
  const worker=useRef<Worker|null>(null),generation=useRef(0),locked=useRef(false);
+ const imageInput=useRef<HTMLInputElement|null>(null);
  const reset=()=>{setDraft(null);setEdit(null);setConfirmed(false);setError('');setQuestion(null);};
  useEffect(()=>()=>{generation.current++;void worker.current?.terminate();},[]);
  function close(){if(busy)return;generation.current++;void worker.current?.terminate();worker.current=null;locked.current=false;setWorking(false);onClose();}
@@ -44,7 +45,7 @@ export function RoutineAssistant({open,onClose,routine,onImport,onEdit,busy=fals
  const unresolved=draft?.routines.flatMap(r=>r.exercises).some(e=>!e.name.trim()||e.name.length>60||e.sets==null||e.reps==null||e.sets<1||e.sets>30||e.reps<1||e.reps>100);
  return <Dialog open={open} onOpenChange={v=>!v&&close()}><DialogContent className="app-dialog assistant-dialog"><DialogTitle>{routine?'말로 루틴 수정':'글·사진으로 루틴 만들기'}</DialogTitle><DialogDescription>{routine?`${routine.name}의 변경 초안을 만들어요. 실제 저장은 편집 화면에서 합니다.`:'루틴표를 붙여넣으면 운동별로 정리해요. 사진은 기기 안에서 읽습니다.'}</DialogDescription>
   {!draft&&!edit?<div className="form-stack">
-   {!routine&&<label className="secondary assistant-upload">루틴 사진 가져오기<input type="file" accept="image/png,image/jpeg,image/webp" disabled={working||busy} onChange={e=>{const file=e.target.files?.[0];e.target.value='';if(file)void readImage(file);}}/></label>}
+   {!routine&&<><button type="button" className="secondary assistant-upload" disabled={working||busy} onClick={()=>imageInput.current?.click()}>루틴 사진 가져오기</button><input ref={imageInput} hidden type="file" accept="image/png,image/jpeg,image/webp" onChange={e=>{const file=e.target.files?.[0];e.target.value='';if(file)void readImage(file);}}/></>}
    {progress&&<p role="status" className="muted">{progress}</p>}
    <label className="field">{routine?'어떻게 바꿀까요?':'루틴 글'}<textarea rows={routine?4:9} maxLength={routine?500:12000} disabled={working||busy} value={text} onChange={e=>{setText(e.target.value);setError('');setAnswers({});setQuestion(null);}} placeholder={routine?'벤치를 3세트로 바꿔줘':'월요일 가슴\n벤치 4×10\n인클라인 덤벨 프레스 3세트 8~12회\n\n수요일 등\n랫풀 4×12'}/></label>
    {ocrReview&&!working&&<label className="check-row"><input type="checkbox" checked={confirmed} onChange={e=>setConfirmed(e.target.checked)}/>사진에서 읽은 글자·숫자·순서를 확인했어요</label>}
