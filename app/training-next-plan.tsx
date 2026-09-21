@@ -1,0 +1,10 @@
+ 'use client';
+import {useState} from 'react';
+import type {Workout} from '@/lib/training-model';
+import type {NextPlan} from '@/lib/training-next-plan';
+import {RecordedWorkout} from './training-workout';
+export function TrainingNextPlan({workout,userId}:{workout:Workout;userId:string}){
+ const [plan,setPlan]=useState<NextPlan|null>(null),[busy,setBusy]=useState(false),[error,setError]=useState('');
+ async function load(){setBusy(true);setError('');setPlan(null);try{const r=await fetch('/api/workouts?plan='+encodeURIComponent(workout.id),{cache:'no-store'});const d=await r.json() as NextPlan&{error?:string};if(!r.ok)throw Error(d.error);setPlan(d);}catch(e){setError((e as Error).message);}finally{setBusy(false);}}
+ return <details className="training-next-plan"><summary>다음 운동 초안 · 기록으로 준비하기</summary><p className="muted">같은 조건의 최근 기록과 기존 SPOT 검토 규칙으로 준비해요. 중량은 자동으로 올리지 않고, 조건을 충족한 일반 본세트만 반복 목표를 1회 늘리는 초안입니다. 실제 수행으로 기록되지는 않아요.</p><button className="secondary" disabled={busy} onClick={()=>void load()}>{busy?'기록 비교 중…':plan?'최신 기록으로 다시 비교':'다음 운동 초안 보기'}</button>{error&&<p role="alert">{error}</p>}{plan&&<>{plan.items.map(item=><section key={item.exerciseId} className="training-advice"><h3>{item.name}</h3><strong>{item.title}</strong><p>{item.sets.map((s,i)=>`${i+1}세트: ${s.seconds!==null?`${s.seconds}초`:s.from===s.to?`${s.to??'미입력'}회`:`${s.from} → ${s.to}회`}`).join(' · ')}</p><details><summary>판단 근거와 확인할 점</summary><ul>{item.reasons.map(r=><li key={r}>{r}</li>)}</ul>{item.missing.length>0&&<p>추가 확인: {item.missing.join(' · ')}</p>}</details></section>)}<p className="muted">검토가 필요한 운동은 이전 입력값을 그대로 준비합니다. 실제 컨디션에 맞춰 시작 후 조절하세요. 모든 세트는 미완료·RIR 미입력 상태로 시작합니다.</p><RecordedWorkout key={plan.token} sourceId={workout.id} planToken={plan.token} buttonLabel="이 초안으로 다음 운동 시작" routine={{id:workout.routine_id,name:workout.routine_name,subtitle:'',version:1,exercises:workout.state.exercises.map(e=>({id:e.id,name:e.name,sets:e.sets.length,reps:e.plannedReps}))}} crewId={workout.crew_id} userId={userId} kind="common"/></>}</details>;
+}

@@ -7,6 +7,8 @@ import {analyzeTraining} from './training-analysis';
 import {journalSummary} from './training-journal';
 import {trainingInsights,referenceMax} from './training-insights';
 import {z} from 'zod';
+import {createHash} from 'node:crypto';
+import {nextPlanItems,repeatState,type NextPlan} from './training-next-plan';
 type Row=Omit<Workout,'state'|'started_at'|'finished_at'|'updated_at'>&{state:string;started_at:string|number;finished_at:string|number|null;updated_at:string|number};
 const hydrate=(row:Row):Workout=>({...row,state:workoutStateSchema.parse(JSON.parse(row.state)),started_at:Number(row.started_at),finished_at:row.finished_at===null?null:Number(row.finished_at),updated_at:Number(row.updated_at)});
 export async function workoutHistory(db:Database,userId:string,cursor?:string|null,search=''){
@@ -26,6 +28,14 @@ export async function trainingSnapshot(db:Database,userId:string,id?:string|null
  const history=rows.slice(0,200).map(hydrate);
  return {active:active?hydrate(active):null,profile,...await workoutHistory(db,userId),analysis:analyzeTraining(history,profile),insights:trainingInsights(history),journal:await journalSummary(db,userId),truncated:rows.length>200};
 }
+export async function nextWorkoutPlan(db:Database,userId:string,sourceId:string):Promise<NextPlan>{
+ const sourceRow=await db.prepare("SELECT * FROM workout_sessions WHERE id=? AND user_id=? AND status='completed'").bind(sourceId,userId).first<Row>();if(!sourceRow)throw new AppError('원본 기록을 찾을 수 없어요.',404);
+ const rows=(await db.prepare("SELECT * FROM workout_sessions WHERE user_id=? AND status='completed' AND finished_at>=? ORDER BY finished_at DESC,id DESC LIMIT 200").bind(userId,Date.now()-90*86400000).all<Row>()).results;
+ const raw=await db.prepare('SELECT content FROM training_profiles WHERE user_id=?').bind(userId).first<{content:string}>();const parsed=trainingProfileSchema.safeParse(raw?JSON.parse(raw.content):{}),profile=parsed.success?parsed.data:null;
+ const source=hydrate(sourceRow),history=rows.map(hydrate),items=nextPlanItems(source,history,profile);
+ const token=createHash('sha256').update(JSON.stringify({source:source.id,revision:source.revision,records:history.map(w=>[w.id,w.revision]),profile,items})).digest('hex');
+ return {sourceId:source.id,sourceRevision:source.revision,items,token};
+}
 const actions=z.discriminatedUnion('action',[
  z.object({action:z.literal('start'),id:z.string().uuid(),crewId:z.string(),routineId:z.string(),kind:z.enum(['common','personal']),version:z.number().int()}),
  z.object({action:z.literal('save'),id:z.string().uuid(),revision:z.number().int().min(1),state:workoutStateSchema}),
@@ -33,7 +43,7 @@ const actions=z.discriminatedUnion('action',[
  z.object({action:z.literal('finish'),id:z.string().uuid(),revision:z.number().int().min(1),state:workoutStateSchema}),
  z.object({action:z.literal('discard'),id:z.string().uuid(),revision:z.number().int().min(1)}),
  z.object({action:z.literal('profile'),profile:trainingProfileSchema}),
- z.object({action:z.literal('repeat'),id:z.string().uuid(),sourceId:z.string().uuid()}),
+ z.object({action:z.literal('repeat'),id:z.string().uuid(),sourceId:z.string().uuid(),planToken:z.string().regex(/^[a-f0-9]{64}$/).optional()}),
 ]);
 export async function trainingAction(db:Database,userId:string,raw:unknown){
  const parsed=actions.safeParse(raw);if(!parsed.success)throw new AppError('입력 범위를 확인해주세요. 완료한 세트에는 횟수 또는 시간이 필요해요.');const input=parsed.data;
@@ -44,7 +54,8 @@ export async function trainingAction(db:Database,userId:string,raw:unknown){
   if(input.action==='repeat'){
    const active=await tx.prepare("SELECT * FROM workout_sessions WHERE user_id=? AND status='active'").bind(userId).first<Row>();if(active)return {workout:hydrate(active),resumed:true};
    const source=await tx.prepare("SELECT * FROM workout_sessions WHERE id=? AND user_id=? AND status='completed'").bind(input.sourceId,userId).first<Row>();if(!source)throw new AppError('원본 기록을 찾을 수 없어요.',404);
-   const state=hydrate(source).state;state.conditionsConfirmed=false;state.discomfort='unreported';state.note='';delete state.durationMinutes;state.exercises.forEach(e=>{e.sets=e.sets.filter(s=>s.done);if(!e.sets.length)e.sets=[{id:crypto.randomUUID(),kind:'working',weight:null,reps:e.timed?null:e.plannedReps,seconds:e.timed?30:null,rir:null,done:false}];delete e.referenceMax;e.sets.forEach(s=>{s.id=crypto.randomUUID();s.done=false;s.rir=null;});});
+   let plan:NextPlan|undefined;if(input.planToken){plan=await nextWorkoutPlan(tx,userId,input.sourceId);if(plan.token!==input.planToken)throw new AppError('기록이나 코칭 기준이 바뀌었어요. 다음 운동 초안을 다시 확인해주세요.',409);}
+   const state=repeatState(hydrate(source),plan?.items);if(plan)state.planBasis={sourceId:plan.sourceId,sourceRevision:plan.sourceRevision,token:plan.token,createdAt:now};
    const row=await tx.prepare('INSERT INTO workout_sessions(id,user_id,crew_id,routine_id,routine_name,state,started_at,updated_at) VALUES(?,?,?,?,?,?,?,?) RETURNING *').bind(input.id,userId,source.crew_id,source.routine_id,source.routine_name,JSON.stringify(workoutStateSchema.parse(state)),now,now).first<Row>();return {workout:hydrate(row!),resumed:false};
   }
   if(input.action==='start'){
@@ -71,6 +82,7 @@ export async function trainingAction(db:Database,userId:string,raw:unknown){
    const row=await tx.prepare("INSERT INTO workout_sessions(id,user_id,crew_id,routine_id,routine_name,state,started_at,updated_at) VALUES(?,?,?,?,?,?,?,?) RETURNING *").bind(input.id,userId,input.crewId,routine.id,routine.name,JSON.stringify(validated),now,now).first<Row>();return {workout:hydrate(row!),resumed:false,carried};
   }
   const row=await tx.prepare('SELECT * FROM workout_sessions WHERE id=? AND user_id=? FOR UPDATE').bind(input.id,userId).first<Row>();if(!row)throw new AppError('운동 기록에 접근할 수 없어요.',404);
+  if('state' in input)input.state.planBasis=hydrate(row).state.planBasis;
   if(input.action==='correct'){
    if(row.status!=='completed')throw new AppError('완료한 운동 기록만 여기에서 수정할 수 있어요.',409);
    if(row.revision!==input.revision)throw new AppError('다른 기기에서 변경됐어요. 기록을 다시 열어주세요.',409);
