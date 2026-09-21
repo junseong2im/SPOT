@@ -24,7 +24,7 @@ export async function queueSessionNotifications(db: Database,crewId: string,sess
   const start=sessionStart(session);const now=Date.now();
   if(kind==='reminder'&&(session.cancelled||start<=now))continue;
   const due=kind==='reminder'?Math.max(now,start-preference.reminder_minutes*60000):now;
-  const title=kind==='reminder'?'운동 약속을 준비하세요':kind==='updated'?'운동 약속이 변경됐어요':'운동 약속이 취소됐어요';
+  const title=kind==='reminder'?'이번 운동, 올 수 있나요?':kind==='updated'?'운동 약속이 변경됐어요':'운동 약속이 취소됐어요';
   const body=`${session.title} · ${session.date} ${session.time} (서울)`;
   const key=`${crewId}:${session.id}:${session.version??1}:${kind}:${userId}`;
   await db.prepare(`INSERT INTO notifications(id,event_key,crew_id,user_id,session_id,kind,title,body,due_at,expires_at,created_at)

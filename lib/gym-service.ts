@@ -2,7 +2,7 @@ import {auditMission} from './mission-audit';
 import type { Database } from '../db/adapter';
 import { z } from 'zod';
 import { starterRoutines, type CrewState, type Routine, type Session, type TimePoll } from './gym-model';
-import { normalizeState, repeatDates, weekday, sessionStart, participationClosed } from './planning';
+import { normalizeState, repeatDates, weekday, sessionStart, participationClosed, responseOpen } from './planning';
 import { inbox, invalidateSessionNotifications, queueSessionNotifications } from './notifications';
 
 export class AppError extends Error { constructor(message:string, public status=400){super(message);} }
@@ -25,6 +25,7 @@ const actionSchema=z.discriminatedUnion('action',[
   z.object({action:z.literal('syncRoutine'),crewId:z.string(),routineId:z.string(),version:z.number().int().min(1),revision:z.number().int().min(1)}),
   z.object({action:z.literal('saveSession'),crewId:z.string(),revision:z.number().int().min(1),session:z.object({id:z.string().max(60),title:short,date,time,routineId:z.string(),capacity,deadlineMinutes}),repeat:z.object({weekdays:z.array(z.number().int().min(0).max(6)).min(1).max(7),until:date}).optional(),scope:z.enum(['one','future']).default('one')}),
   z.object({action:z.literal('attendance'),crewId:z.string(),sessionId:z.string(),participating:z.boolean()}),
+  z.object({action:z.literal('sessionResponse'),crewId:z.string(),sessionId:z.string(),version:z.number().int().min(1),response:z.enum(['going','notGoing'])}),
   z.object({action:z.literal('cancelSession'),crewId:z.string(),sessionId:z.string(),scope:z.enum(['one','future']).default('one')}),
   z.object({action:z.literal('saveWeekPlan'),crewId:z.string(),revision:z.number().int(),plan:z.record(z.string().regex(/^[0-6]$/),z.string().max(60))}),
   z.object({action:z.literal('createPoll'),crewId:z.string(),title:short,routineId:z.string(),capacity,closesAt:z.number().int(),options:z.array(z.object({date,time})).min(2).max(12)}),
@@ -124,7 +125,7 @@ async function actInTransaction(db:Database,user:Actor,raw:unknown){
   await db.prepare("UPDATE mission_members mm SET withdrawn=1 FROM missions m WHERE m.id=mm.mission_id AND m.crew_id=? AND mm.user_id=? AND m.rules_version>=2 AND m.starts>? AND m.cancelled=0").bind(row.id,user.userId,new Date(Date.now()+9*3600000).toISOString().slice(0,10)).run();
   const others=(await db.prepare('SELECT user_id FROM members WHERE crew_id=? AND active=1 AND user_id!=?').bind(row.id,user.userId).all()).results;
   if(row.owner===user.userId&&others.length)throw new AppError('크루장을 다른 멤버에게 위임한 뒤 탈퇴해주세요.');
-  for(const session of state.sessions)session.participants=session.participants.filter(id=>id!==user.userId);
+  for(const session of state.sessions){session.participants=session.participants.filter(id=>id!==user.userId);if(session.responses)delete session.responses[user.userId];}
   for(const poll of state.polls??[])for(const option of poll.options)option.votes=option.votes.filter(id=>id!==user.userId);
   await db.prepare('UPDATE members SET active=0 WHERE crew_id=? AND user_id=?').bind(row.id,user.userId).run();
   await db.prepare("UPDATE notifications SET push_state='invalid' WHERE crew_id=? AND user_id=?").bind(row.id,user.userId).run();
@@ -175,6 +176,7 @@ async function actInTransaction(db:Database,user:Actor,raw:unknown){
     if(input.session.capacity!==null&&session.participants.length>input.session.capacity)throw new AppError('참여 중인 인원보다 정원을 줄일 수 없어요.');
     await auditMission(db,row.id,user.userId,'scheduleEdited',{before:{date:session.date,time:session.time},after:{date:input.session.date,time:input.session.time}},session.id);
     const ownDate=session.date;
+    session.responses={};
     Object.assign(session,input.session,{id:session.id,date:input.scope==='future'?ownDate:input.session.date,version:(session.version??1)+1});
     await invalidateSessionNotifications(db,row.id,session.id);
     await queueSessionNotifications(db,row.id,session,'updated');
@@ -187,6 +189,23 @@ async function actInTransaction(db:Database,user:Actor,raw:unknown){
    const seriesId=input.repeat?crypto.randomUUID():undefined;
    for(const date of dates){const session:Session={...input.session,date,id:crypto.randomUUID(),routineId:input.session.routineId||state.weekPlan?.[weekday(date)]||'',creator:user.userId,participants:[user.userId],cancelled:false,version:1,seriesId};state.sessions.push(session);await queueSessionNotifications(db,row.id,session,'reminder');}
   }
+ }
+ if(input.action==='sessionResponse'){
+  const session=state.sessions.find(s=>s.id===input.sessionId);
+  if(!session)throw new AppError('일정을 찾을 수 없어요.',404);
+  if((session.version??1)!==input.version)throw new AppError('일정이 바뀌었어요. 새 시간을 확인하고 다시 응답해주세요.',409);
+  if(!responseOpen(session))throw new AppError('참석 확인은 운동 시작 24시간 전부터 시작 전까지 가능해요.');
+  if(!session.participants.includes(user.userId)&&session.responses?.[user.userId]!=='notGoing')throw new AppError('먼저 이 일정에 참여해주세요.',403);
+  if(input.response==='going'&&!session.participants.includes(user.userId)){
+   if(session.capacity!=null&&session.participants.length>=session.capacity)throw new AppError('정원이 찼어요. 참석으로 변경할 수 없어요.',409);
+   session.participants.push(user.userId);
+   await queueSessionNotifications(db,row.id,session,'reminder',[user.userId]);
+  }
+  if(input.response==='notGoing'){
+   session.participants=session.participants.filter(id=>id!==user.userId);
+   await invalidateSessionNotifications(db,row.id,session.id,user.userId);
+  }
+  session.responses={...session.responses,[user.userId]:input.response};
  }
  if(input.action==='attendance'||input.action==='cancelSession'){
   const session=state.sessions.find(s=>s.id===input.sessionId);if(!session)throw new AppError('일정을 찾을 수 없어요.',404);
@@ -201,6 +220,7 @@ async function actInTransaction(db:Database,user:Actor,raw:unknown){
     if(session.capacity!==null&&session.capacity!==undefined&&session.participants.length>=session.capacity)throw new AppError('참여 정원이 가득 찼어요.',409);
     session.participants.push(user.userId);await queueSessionNotifications(db,row.id,session,'reminder',[user.userId]);
    }else if(!input.participating){session.participants=session.participants.filter(id=>id!==user.userId);await invalidateSessionNotifications(db,row.id,session.id,user.userId);}
+   if(session.responses)delete session.responses[user.userId];
   }
  }
  const result=await db.prepare('UPDATE crews SET state=?,revision=revision+1 WHERE id=? AND revision=?').bind(JSON.stringify(state),row.id,row.revision).run();

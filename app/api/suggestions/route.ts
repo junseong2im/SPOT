@@ -7,7 +7,7 @@ const respond=(data:unknown,status=200)=>Response.json(data,{status,headers:{'Ca
 async function handle(request:Request,write=false){try{
  const user=await getAppUser(request);if(!user)throw new AppError('로그인 후 건의함을 이용해주세요.',401);
  if(!env.DB)throw new AppError('잠시 후 다시 시도해주세요.',503);
- if(!write)return respond(await listSuggestions(env.DB,user.userId));
+ if(!write)return respond(await listSuggestions(env.DB,user.userId,new URL(request.url).searchParams.get('guide')));
  if(request.headers.get('origin')!==new URL(request.url).origin)throw new AppError('올바른 페이지에서 다시 시도해주세요.',403);
  const text=await request.text();if(text.length>12000)throw new AppError('입력 내용이 너무 길어요.',413);
  let input;try{input=JSON.parse(text);}catch{throw new AppError('입력 형식을 확인해주세요.');}
