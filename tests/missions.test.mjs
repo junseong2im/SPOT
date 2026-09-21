@@ -10,10 +10,10 @@ test('mission requires opt-in, peer-confirmed attendance, and counts each date o
  const f=await setup(),db=f.db;try{
   const mission={action:'create',title:'Two days',starts:'2100-01-04',ends:'2100-01-10',target:2,promise:'커피 한 잔',accepted:true};
   await assert.rejects(missionAction(db,f.crewId,'a',{...mission,accepted:false},now));
-  await missionAction(db,f.crewId,'a',mission,now);
+  await missionAction(db,f.crewId,'a',mission,now-86400000);
   let m=(await missionSnapshot(db,f.crewId,'a',now)).missions[0];
-  await assert.rejects(missionAction(db,f.crewId,'stranger',{action:'join',missionId:m.id,accepted:true},now),e=>e.status===403);
-  await missionAction(db,f.crewId,'b',{action:'join',missionId:m.id,accepted:true},now);
+  await assert.rejects(missionAction(db,f.crewId,'stranger',{action:'join',missionId:m.id,accepted:true},now-86400000+1),e=>e.status===403);
+  await missionAction(db,f.crewId,'b',{action:'join',missionId:m.id,accepted:true},now-86400000+1);
   for(let i=0;i<2;i++){
    let crew=(await snapshot(db,f.a,f.crewId)).crew;
    await act(db,f.a,{action:'saveSession',crewId:f.crewId,revision:crew.revision,session:{id:'',title:'Workout '+i,date:'2100-01-04',time:'10:00',routineId:''}});
@@ -26,7 +26,7 @@ test('mission requires opt-in, peer-confirmed attendance, and counts each date o
   }
   m=(await missionSnapshot(db,f.crewId,'a',now)).missions[0];assert.equal(m.progress.find(p=>p.userId==='a').days,1);
   await missionAction(db,f.crewId,'b',{action:'withdraw',missionId:m.id},now+4000);
-  assert.equal((await missionSnapshot(db,f.crewId,'b',now)).missions[0].progress.find(p=>p.userId==='b').withdrawn,true);
+  assert.equal((await missionSnapshot(db,f.crewId,'b',now)).missions[0].progress.find(p=>p.userId==='b').forfeited,true);
   await assert.rejects(missionAction(db,f.crewId,'b',{action:'cancel',missionId:m.id},now),e=>e.status===403);
  }finally{await f.close();}
 });
@@ -44,9 +44,9 @@ test('attendance rejects wrong windows and stale confirmations after schedule ch
 
 test('coffee settlement freezes results and only buyer and recipient can confirm their steps',async()=>{
  const f=await setup(),db=f.db;try{
-  await missionAction(db,f.crewId,'a',{action:'create',title:'Coffee',starts:'2100-01-04',ends:'2100-01-04',target:1,promise:'',coffeePrice:5000,accepted:true},now-1000);
+  await missionAction(db,f.crewId,'a',{action:'create',title:'Coffee',starts:'2100-01-04',ends:'2100-01-04',target:1,promise:'',coffeePrice:5000,accepted:true},now-86400000);
   const id=(await missionSnapshot(db,f.crewId,'a',now)).missions[0].id;
-  await missionAction(db,f.crewId,'b',{action:'join',missionId:id,accepted:true},now-500);
+  await missionAction(db,f.crewId,'b',{action:'join',missionId:id,accepted:true},now-86400000+1);
   let crew=(await snapshot(db,f.a,f.crewId)).crew;await act(db,f.a,{action:'saveSession',crewId:f.crewId,revision:crew.revision,session:{id:'',title:'Workout',date:'2100-01-04',time:'10:00',routineId:''}});
   const session=(await snapshot(db,f.a,f.crewId)).crew.state.sessions[0];await missionAction(db,f.crewId,'a',{action:'checkin',sessionId:session.id},now);await missionAction(db,f.crewId,'b',{action:'confirm',sessionId:session.id,userId:'a'},now+1);
   await assert.rejects(missionAction(db,f.crewId,'a',{action:'finalizeCoffee',missionId:id},now));
@@ -69,5 +69,32 @@ test('coffee split conserves total including odd amounts and no-charge cases',as
  assert.deepEqual(result.shares.map(s=>s.amount),[1667,1667,1666]);assert.equal(result.shares.reduce((n,s)=>n+s.amount,0),5000);
  assert.equal(coffeeSettlement([p('a',3),p('b',3)],3,5000,1).total,0);
  assert.equal(coffeeSettlement([p('a',0),p('b',0)],3,5000,1).total,0);
+});
+
+test('new mission rules retain forfeits and block settlement while disputes are open',async()=>{
+ const f=await setup(),db=f.db;try{
+  await missionAction(db,f.crewId,'a',{action:'create',title:'Fair rules',starts:'2100-01-04',ends:'2100-01-04',target:1,promise:'',coffeePrice:5000,accepted:true},now-86400000);
+  const id=(await missionSnapshot(db,f.crewId,'a',now)).missions[0].id;
+  await missionAction(db,f.crewId,'b',{action:'join',missionId:id,accepted:true},now-86400000+1000);
+  await missionAction(db,f.crewId,'b',{action:'withdraw',missionId:id},now);
+  let state=await missionSnapshot(db,f.crewId,'a',now);assert.equal(state.missions[0].progress.find(p=>p.userId==='b').withdrawn,false);assert.equal(state.missions[0].progress.find(p=>p.userId==='b').forfeited,true);
+  await missionAction(db,f.crewId,'b',{action:'dispute',missionId:id,reason:'출석 확인이 누락됐어요.'},now);
+  await assert.rejects(missionAction(db,f.crewId,'a',{action:'finalizeCoffee',missionId:id},now+2*86400000),/이의/);
+  state=await missionSnapshot(db,f.crewId,'a',now);const dispute=state.disputes[0];
+  await assert.rejects(missionAction(db,f.crewId,'b',{action:'resolveDispute',missionId:id,disputeId:dispute.id,reply:'임의 처리'},now),e=>e.status===403);
+  await missionAction(db,f.crewId,'a',{action:'resolveDispute',missionId:id,disputeId:dispute.id,reply:'함께 확인하여 미달성에 동의했습니다.'},now);
+  await missionAction(db,f.crewId,'a',{action:'finalizeCoffee',missionId:id},now+2*86400000);
+  assert.ok((await missionSnapshot(db,f.crewId,'a',now+2*86400000)).missions[0].settlement);
+ }finally{await f.close();}
+});
+
+test('confirmed attendance survives schedule changes and cheers are idempotent',async()=>{
+ const f=await setup(),db=f.db;try{
+  let crew=(await snapshot(db,f.a,f.crewId)).crew;await act(db,f.a,{action:'saveSession',crewId:f.crewId,revision:crew.revision,session:{id:'',title:'Workout',date:'2100-01-04',time:'10:00',routineId:''}});
+  crew=(await snapshot(db,f.a,f.crewId)).crew;const s=crew.state.sessions[0];await missionAction(db,f.crewId,'a',{action:'checkin',sessionId:s.id},now);await missionAction(db,f.crewId,'b',{action:'confirm',sessionId:s.id,userId:'a'},now+1);
+  await act(db,f.b,{action:'saveSession',crewId:f.crewId,revision:crew.revision,session:{...s,time:'11:00'}});
+  for(let i=0;i<2;i++)await missionAction(db,f.crewId,'b',{action:'cheer',sessionId:s.id,userId:'a'},now+2);
+  const state=await missionSnapshot(db,f.crewId,'a',now);assert.equal(state.checkins.length,1);assert.equal(state.cheers.length,1);assert.ok(state.events.some(e=>e.kind==='scheduleEdited'));
+ }finally{await f.close();}
 });
 

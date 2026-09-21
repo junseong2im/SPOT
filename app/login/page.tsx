@@ -16,12 +16,14 @@ const messages: Record<string, string> = {
 export default async function Login({ searchParams }: { searchParams: Promise<{ returnTo?: string; error?: string }> }) {
   const params = await searchParams;
   const returnTo = safeReturnTo(typeof params.returnTo === 'string' ? params.returnTo : '/');
+  const inviteToken=new URL(returnTo,'https://spot.invalid').searchParams.get('invite');
+  let inviteName='';if(inviteToken&&env.DB){try{inviteName=(await env.DB.prepare('SELECT name FROM crews WHERE invite=? AND archived=0').bind(inviteToken).first<{name:string}>())?.name??'';}catch{}}
   const configured = !!googleConfig(env) && !!env.DB;
   const error = typeof params.error === 'string' ? messages[params.error] : undefined;
   return <main className="login-page"><a href={returnTo} className="login-back"><ArrowLeft size={17}/> 홈으로</a><section className="login-card">
     <a href="/" className="brand"><span className="brand-icon"><Dumbbell size={22}/></span>SPOT<span className="brand-dot">.</span></a>
     <p className="eyebrow">SHOW UP. TOGETHER.</p><h1>같이 운동할 준비됐나요?</h1><p className="login-description">로그인하고 친구들과 일정을 맞춰보세요.<br/>나만의 루틴도 안전하게 보관해요.</p>
-    {returnTo.includes('invite=') && <p className="login-invite">초대받은 크루가 기다리고 있어요.<br/>로그인 후 바로 합류할 수 있어요.</p>}
+    {returnTo.includes('invite=') && <p className="login-invite">{inviteName?`${inviteName} 크루에서 초대했어요.`:'크루 초대 링크로 접속했어요.'}<br/>로그인 후 바로 합류할 수 있어요.</p>}
     {error && <p className="form-error" role="alert">{error}</p>}
     <div className="login-options">{configured ? <a className="google-login" href={`/api/auth/google?returnTo=${encodeURIComponent(returnTo)}`} target="_top"><span className="google-letter" aria-hidden="true">G</span>Google로 계속하기<ArrowUpRight size={18}/></a> : <><button className="google-login" disabled aria-describedby="google-unavailable"><span className="google-letter" aria-hidden="true">G</span>Google로 계속하기</button><p id="google-unavailable" className="login-config-note">Google 로그인 준비 중</p></>}
     </div>

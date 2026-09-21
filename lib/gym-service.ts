@@ -1,3 +1,4 @@
+import {auditMission} from './mission-audit';
 import type { Database } from '../db/adapter';
 import { z } from 'zod';
 import { starterRoutines, type CrewState, type Routine, type Session, type TimePoll } from './gym-model';
@@ -119,6 +120,8 @@ async function actInTransaction(db:Database,user:Actor,raw:unknown){
   }return {crewId:row.id};
  }
  if(input.action==='leaveCrew'){
+  await db.prepare("UPDATE mission_members mm SET forfeited=1 FROM missions m WHERE m.id=mm.mission_id AND m.crew_id=? AND mm.user_id=? AND mm.withdrawn=0 AND m.rules_version>=2 AND m.cancelled=0 AND m.starts<=? AND m.ends>=? AND m.settlement IS NULL").bind(row.id,user.userId,new Date(Date.now()+9*3600000).toISOString().slice(0,10),new Date(Date.now()+9*3600000).toISOString().slice(0,10)).run();
+  await db.prepare("UPDATE mission_members mm SET withdrawn=1 FROM missions m WHERE m.id=mm.mission_id AND m.crew_id=? AND mm.user_id=? AND m.rules_version>=2 AND m.starts>? AND m.cancelled=0").bind(row.id,user.userId,new Date(Date.now()+9*3600000).toISOString().slice(0,10)).run();
   const others=(await db.prepare('SELECT user_id FROM members WHERE crew_id=? AND active=1 AND user_id!=?').bind(row.id,user.userId).all()).results;
   if(row.owner===user.userId&&others.length)throw new AppError('크루장을 다른 멤버에게 위임한 뒤 탈퇴해주세요.');
   for(const session of state.sessions)session.participants=session.participants.filter(id=>id!==user.userId);
@@ -170,6 +173,7 @@ async function actInTransaction(db:Database,user:Actor,raw:unknown){
    const targets=input.scope==='future'&&existing.seriesId?state.sessions.filter(s=>s.seriesId===existing.seriesId&&!s.cancelled&&s.date>=existing.date):[existing];
    for(const session of targets){
     if(input.session.capacity!==null&&session.participants.length>input.session.capacity)throw new AppError('참여 중인 인원보다 정원을 줄일 수 없어요.');
+    await auditMission(db,row.id,user.userId,'scheduleEdited',{before:{date:session.date,time:session.time},after:{date:input.session.date,time:input.session.time}},session.id);
     const ownDate=session.date;
     Object.assign(session,input.session,{id:session.id,date:input.scope==='future'?ownDate:input.session.date,version:(session.version??1)+1});
     await invalidateSessionNotifications(db,row.id,session.id);

@@ -1,0 +1,2 @@
+import type {Database} from '../db/adapter';
+export async function auditMission(db:Database,crewId:string,actor:string,kind:string,details:Record<string,unknown>,sessionId?:string,missionId?:string){await db.prepare('INSERT INTO mission_events(id,crew_id,session_id,mission_id,actor,kind,details,created_at) VALUES(?,?,?,?,?,?,?,?)').bind(crypto.randomUUID(),crewId,sessionId??null,missionId??null,actor,kind,JSON.stringify(details),Date.now()).run();}

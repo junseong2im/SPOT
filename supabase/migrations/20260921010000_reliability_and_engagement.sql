@@ -1,0 +1,17 @@
+ALTER TABLE spot.missions ADD COLUMN rules_version INTEGER NOT NULL DEFAULT 1;
+ALTER TABLE spot.mission_members ADD COLUMN forfeited INTEGER NOT NULL DEFAULT 0;
+ALTER TABLE spot.mission_members ADD COLUMN participant_name TEXT NOT NULL DEFAULT '';
+ALTER TABLE spot.notification_preferences ADD COLUMN last_test_at BIGINT NOT NULL DEFAULT 0;
+ALTER TABLE spot.notification_preferences ADD COLUMN last_test_result TEXT NOT NULL DEFAULT '';
+ALTER TABLE spot.notification_preferences ADD COLUMN last_confirmed_at BIGINT NOT NULL DEFAULT 0;
+CREATE TABLE spot.mission_events(id TEXT PRIMARY KEY,crew_id TEXT NOT NULL REFERENCES spot.crews(id),session_id TEXT,mission_id TEXT,actor TEXT NOT NULL,kind TEXT NOT NULL,details TEXT NOT NULL DEFAULT '{}',created_at BIGINT NOT NULL);
+CREATE INDEX mission_events_crew_time ON spot.mission_events(crew_id,created_at DESC);
+CREATE TABLE spot.mission_disputes(id TEXT PRIMARY KEY,mission_id TEXT NOT NULL REFERENCES spot.missions(id),user_id TEXT NOT NULL,reason TEXT NOT NULL,status TEXT NOT NULL DEFAULT 'open',reply TEXT NOT NULL DEFAULT '',reviewer TEXT,created_at BIGINT NOT NULL,UNIQUE(mission_id,user_id));
+CREATE TABLE spot.cheers(crew_id TEXT NOT NULL REFERENCES spot.crews(id),session_id TEXT NOT NULL,target_id TEXT NOT NULL,actor TEXT NOT NULL,created_at BIGINT NOT NULL,PRIMARY KEY(crew_id,session_id,target_id,actor));
+CREATE TABLE spot.usage_daily(visitor_id TEXT NOT NULL,day TEXT NOT NULL,user_id TEXT,seen_at BIGINT NOT NULL,PRIMARY KEY(visitor_id,day));
+CREATE INDEX usage_daily_day ON spot.usage_daily(day);
+ALTER TABLE spot.mission_events ENABLE ROW LEVEL SECURITY;
+ALTER TABLE spot.mission_disputes ENABLE ROW LEVEL SECURITY;
+ALTER TABLE spot.cheers ENABLE ROW LEVEL SECURITY;
+ALTER TABLE spot.usage_daily ENABLE ROW LEVEL SECURITY;
+REVOKE ALL ON spot.mission_events,spot.mission_disputes,spot.cheers,spot.usage_daily FROM PUBLIC;
