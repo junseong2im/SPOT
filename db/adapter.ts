@@ -12,7 +12,7 @@ export interface Driver { execute(query: SqlQuery): Promise<{ rows: Record<strin
 // The application owns these fixed SQL statements; values always remain bound parameters.
 export function postgresSql(sql: string) {
   let parameter = 0;
-  return sql.replace(/'(?:''|[^'])*'|"(?:""|[^"])*"|\?|\b(?:crews|members|personal|oauth_transactions|auth_sessions|notifications|notification_preferences|push_subscriptions|app_admins|music_recommendations|suggestions|checkins|missions|mission_members|mission_events|mission_disputes|cheers|usage_daily)\b/g, token => {
+  return sql.replace(/'(?:''|[^'])*'|"(?:""|[^"])*"|\?|\b(?:crews|members|personal|oauth_transactions|auth_sessions|notifications|notification_preferences|push_subscriptions|app_admins|music_recommendations|suggestions|checkins|missions|mission_members|mission_events|mission_disputes|cheers|usage_daily|workout_sessions|training_profiles)\b/g, token => {
     if (token === '?') return `$${++parameter}`;
     if (token.startsWith("'") || token.startsWith('"')) return token;
     return `spot.${token}`;

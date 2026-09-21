@@ -61,14 +61,20 @@
         "original": "https://wger.de/media/exercise-images/98/Butterfly-machine-2.png",
         "author": "Everkinetic",
         "license": "CC-BY-SA 3",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en"
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+        "originalSha256": "bbcebf4eac97b0e2767f2cd92f9b63addd8096105dd58cb59633499c69ed293b",
+        "sha256": "43ad2b37548699d5198a25adeb741a540b11696db02e9778709574d143705b38",
+        "optimization": "lossless PNG; decoded RGBA pixels verified identical"
       },
       {
         "src": "/exercise-images/fly-112.png",
         "original": "https://wger.de/media/exercise-images/98/Butterfly-machine-1.png",
         "author": "Everkinetic",
         "license": "CC-BY-SA 3",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en"
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+        "originalSha256": "d1b070a22b6ddd179928c44a8fa9518cc9b80ce26b86209e43b85aaa098c259a",
+        "sha256": "4af2065a5668bd551148fa87b8affe944d1180368250f5d26577bf1ae70c396b",
+        "optimization": "lossless PNG; decoded RGBA pixels verified identical"
       }
     ]
   },
@@ -94,14 +100,20 @@
         "original": "https://wger.de/media/exercise-images/143/Cable-seated-rows-2.png",
         "author": "Everkinetic",
         "license": "CC-BY-SA 3",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en"
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+        "originalSha256": "6e52bfc5f0c486c0fb1ea40fdaf60493e92fb36b033a414a1de3c696936fac7f",
+        "sha256": "20ba4dddc5aeba41014b4228e00c49a744961e1ced88af97ab8a18902a4b9dbc",
+        "optimization": "lossless PNG; decoded RGBA pixels verified identical"
       },
       {
         "src": "/exercise-images/row-144.png",
         "original": "https://wger.de/media/exercise-images/143/Cable-seated-rows-1.png",
         "author": "Everkinetic",
         "license": "CC-BY-SA 3",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en"
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+        "originalSha256": "f3d34798088421f3fbdc54bae7b7f0e04059f50ace657e9b96bbc0c7e6404731",
+        "sha256": "077c1175e1b479daca796f95d3207ca22f936aa1177211826793ee580b3d29bb",
+        "optimization": "lossless PNG; decoded RGBA pixels verified identical"
       }
     ]
   },
@@ -180,14 +192,20 @@
         "original": "https://wger.de/media/exercise-images/828/2e959dab-f39b-4c7c-9063-eb43064ab5eb.png",
         "author": "cshep442",
         "license": "CC-BY-SA 4",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en"
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+        "originalSha256": "908c5ee47471f5c94ab26834e2f9da15b68bef0d219257e260ad3ac16223a118",
+        "sha256": "714d8a7f4afb770d1da93903f46e41107409762490ae12536cc9b3b510120da0",
+        "optimization": "lossless PNG; decoded RGBA pixels verified identical"
       },
       {
         "src": "/exercise-images/rear-215.png",
         "original": "https://wger.de/media/exercise-images/828/abfc7700-fadf-4f2d-ac84-e045e590a2fe.png",
         "author": "cshep442",
         "license": "CC-BY-SA 4",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en"
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+        "originalSha256": "b5dfc0ea4bd6fbe444af86e30dc3842b5e190b8fd0b39a3deb4f06c366d018ac",
+        "sha256": "1852ead6998befaefe63b762f9254a3c27f526a6f7c8568e0b981c4f2be37e4c",
+        "optimization": "lossless PNG; decoded RGBA pixels verified identical"
       }
     ]
   },
@@ -200,14 +218,20 @@
         "original": "https://wger.de/media/exercise-images/151/Dumbbell-shrugs-2.png",
         "author": "Everkinetic",
         "license": "CC-BY-SA 3",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en"
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+        "originalSha256": "b0c74fd695fc0ec90eac9e2c00d1f8e6652956e9fd7c806d40d3df13fced1560",
+        "sha256": "ab04c069ca6b9b35a0164c46498d6eb77e0ce4ca2b90c5d32d4a066dafa6c3f9",
+        "optimization": "lossless PNG; decoded RGBA pixels verified identical"
       },
       {
         "src": "/exercise-images/shrug-40.png",
         "original": "https://wger.de/media/exercise-images/151/Dumbbell-shrugs-1.png",
         "author": "Everkinetic",
         "license": "CC-BY-SA 3",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en"
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+        "originalSha256": "7d4582f8f8e0573cbbf40527d461a9a67337bc147e00cf097147bab753026b10",
+        "sha256": "7a4687619491aaba103e14a0505e5a748564713c4eb7f86c55fa46b449ed8185",
+        "optimization": "lossless PNG; decoded RGBA pixels verified identical"
       }
     ]
   },
@@ -227,7 +251,10 @@
         "original": "https://wger.de/media/exercise-images/130/Narrow-stance-hack-squats-2-1024x721.png",
         "author": "Everkinetic",
         "license": "CC-BY-SA 3",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en"
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+        "originalSha256": "c4c127ee73627ca543d0441b4df282d6a798134afa817d872da06003d7cd1fd2",
+        "sha256": "5993b64d2a5935c89b31ab65b7efe5578eec7499c5fdc9d8420a48abc23cb4a2",
+        "optimization": "lossless PNG; decoded RGBA pixels verified identical"
       }
     ]
   },
@@ -366,7 +393,9 @@
         "author": "Everkinetic",
         "license": "CC-BY-SA 3",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
-        "sha256": "2d8aa760a9c81b98f79937c936c4819b5686a04a1c376a072061a5493da0a5d4"
+        "sha256": "4c9534232e73bcb7db1f421f2efc07578c3db9b7b54ef34c625acf6e9b50d198",
+        "originalSha256": "2d8aa760a9c81b98f79937c936c4819b5686a04a1c376a072061a5493da0a5d4",
+        "optimization": "lossless PNG; decoded RGBA pixels verified identical"
       },
       {
         "src": "/exercise-images/wger-114.png",
@@ -374,7 +403,9 @@
         "author": "Everkinetic",
         "license": "CC-BY-SA 3",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
-        "sha256": "e80a5a428f4a0f0535b16968d7ac4f45aa00a5067181b225e4967a10d87d3aa3"
+        "sha256": "9877b6b92c442501574febfc60011982ebc0eb8ec33ca4791e54afb31daf5489",
+        "originalSha256": "e80a5a428f4a0f0535b16968d7ac4f45aa00a5067181b225e4967a10d87d3aa3",
+        "optimization": "lossless PNG; decoded RGBA pixels verified identical"
       }
     ]
   },
@@ -388,7 +419,9 @@
         "author": "Everkinetic",
         "license": "CC-BY-SA 3",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
-        "sha256": "50ea915603a7eb2b4e7bc31c47a597c04a7675df2ff3b05855fd782ac2dd9224"
+        "sha256": "01d41eff4f069ff0784dc400f2d1b8da90680ef352dc342dde686d4d8a9a57bb",
+        "originalSha256": "50ea915603a7eb2b4e7bc31c47a597c04a7675df2ff3b05855fd782ac2dd9224",
+        "optimization": "lossless PNG; decoded RGBA pixels verified identical"
       },
       {
         "src": "/exercise-images/wger-116.png",
@@ -396,7 +429,9 @@
         "author": "Everkinetic",
         "license": "CC-BY-SA 3",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
-        "sha256": "199b5e823e91efadc30cf103f3b9dc994125a2b5b714ca77258a748d1a6c12ae"
+        "sha256": "ede85950ddbdb17de0c8db1f6e397503e5a0966c175996c74d176826a1015ba0",
+        "originalSha256": "199b5e823e91efadc30cf103f3b9dc994125a2b5b714ca77258a748d1a6c12ae",
+        "optimization": "lossless PNG; decoded RGBA pixels verified identical"
       }
     ]
   },
@@ -410,7 +445,9 @@
         "author": "Everkinetic",
         "license": "CC-BY-SA 3",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
-        "sha256": "396b0bb512b64d0aba41c2093b7d246e74dc354589b6310e9b8bc2c98ecd767f"
+        "sha256": "c302371b38e2a15f4e4064bf60ad1510feb325b125adb59a2454b4a4ffb8a940",
+        "originalSha256": "396b0bb512b64d0aba41c2093b7d246e74dc354589b6310e9b8bc2c98ecd767f",
+        "optimization": "lossless PNG; decoded RGBA pixels verified identical"
       },
       {
         "src": "/exercise-images/wger-130.png",
@@ -418,7 +455,9 @@
         "author": "Everkinetic",
         "license": "CC-BY-SA 3",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
-        "sha256": "4f5b1d20639bc2abe522264f3fcf802d088d26ee6ba80a70a381cae9f34816ac"
+        "sha256": "87f340b1c93eb4baf4ae3e03cd5559449bb379ae6d10a9f4e4ec125742397a5b",
+        "originalSha256": "4f5b1d20639bc2abe522264f3fcf802d088d26ee6ba80a70a381cae9f34816ac",
+        "optimization": "lossless PNG; decoded RGBA pixels verified identical"
       }
     ]
   },
@@ -454,7 +493,9 @@
         "author": "cshep442",
         "license": "CC-BY-SA 4",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
-        "sha256": "e1b14d52d06b473106907b948e7ba5a569ca2f323ea109045d6328e2f503ec9c"
+        "sha256": "a997bc02d156a7bce550e483f18d61359b45eedbf582e7a6f8bfb00843538048",
+        "originalSha256": "e1b14d52d06b473106907b948e7ba5a569ca2f323ea109045d6328e2f503ec9c",
+        "optimization": "lossless PNG; decoded RGBA pixels verified identical"
       },
       {
         "src": "/exercise-images/wger-213.png",
@@ -462,7 +503,9 @@
         "author": "cshep442",
         "license": "CC-BY-SA 4",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
-        "sha256": "2d58380901bf5da7d60b2f4c2f271d36316257572c247bdaa075604969ac08e4"
+        "sha256": "e600adbbca42f856f93c912aad6841d1f6750b8a557dc46e1781a3bd7a7fe7ec",
+        "originalSha256": "2d58380901bf5da7d60b2f4c2f271d36316257572c247bdaa075604969ac08e4",
+        "optimization": "lossless PNG; decoded RGBA pixels verified identical"
       }
     ]
   },
@@ -476,7 +519,9 @@
         "author": "Everkinetic",
         "license": "CC-BY-SA 3",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
-        "sha256": "fbe5971a856ffa015afbe0fb84ffa4baf4bf53b8370a26a3134e93033ec4d9d1"
+        "sha256": "288218531a21c50a6f7224e19b9f83f5b8b3d0311f7fd913e08148dfef79e13f",
+        "originalSha256": "fbe5971a856ffa015afbe0fb84ffa4baf4bf53b8370a26a3134e93033ec4d9d1",
+        "optimization": "lossless PNG; decoded RGBA pixels verified identical"
       },
       {
         "src": "/exercise-images/wger-120.png",
@@ -484,7 +529,9 @@
         "author": "Everkinetic",
         "license": "CC-BY-SA 3",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
-        "sha256": "0c0166a9dc67d6810f5dd346013466867908227a33c36f44cc26e39c957ec19f"
+        "sha256": "1ffa13a12ef9c71ebe762808545e1314f0fe05a163a9c9b72c647a65fa01d3f3",
+        "originalSha256": "0c0166a9dc67d6810f5dd346013466867908227a33c36f44cc26e39c957ec19f",
+        "optimization": "lossless PNG; decoded RGBA pixels verified identical"
       }
     ]
   },
@@ -498,7 +545,9 @@
         "author": "Everkinetic",
         "license": "CC-BY-SA 3",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
-        "sha256": "f0e9a00a19f648c166647dbc5cdc16e4643b67a027a31a1a8230a8d7588cf94e"
+        "sha256": "934971f7af43e79376a5b3fa830a60ea62021c53a453d278eb5c3b5aab8eb9d2",
+        "originalSha256": "f0e9a00a19f648c166647dbc5cdc16e4643b67a027a31a1a8230a8d7588cf94e",
+        "optimization": "lossless PNG; decoded RGBA pixels verified identical"
       },
       {
         "src": "/exercise-images/wger-128.png",
@@ -506,7 +555,9 @@
         "author": "Everkinetic",
         "license": "CC-BY-SA 3",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
-        "sha256": "fd10e69ab260d525403335de4c24ddb469439234c1f8769d61b6205c64d36b9e"
+        "sha256": "0ed083a756ace8238c5fba35bdaa7a0db86b165c09cbbc201ab5240b0946dea7",
+        "originalSha256": "fd10e69ab260d525403335de4c24ddb469439234c1f8769d61b6205c64d36b9e",
+        "optimization": "lossless PNG; decoded RGBA pixels verified identical"
       }
     ]
   },
@@ -604,7 +655,9 @@
         "author": "Everkinetic",
         "license": "CC-BY-SA 3",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
-        "sha256": "53fe36407f4f1601ead650fba892ae9ef29a3d524724065484f01eecb3efe2d2"
+        "sha256": "bd5dae62c7fcf3a87a5b0af7b89034a9ac012bd818519828bda1f1be33fac69c",
+        "originalSha256": "53fe36407f4f1601ead650fba892ae9ef29a3d524724065484f01eecb3efe2d2",
+        "optimization": "lossless PNG; decoded RGBA pixels verified identical"
       },
       {
         "src": "/exercise-images/wger-90.png",
@@ -612,7 +665,9 @@
         "author": "Everkinetic",
         "license": "CC-BY-SA 3",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
-        "sha256": "f4dcd22bf2b89b2b9f569ada23ea3efe42d14331e6394d18c17789a09c56b06e"
+        "sha256": "b45846cc9dcb45366d1c3e5bd73d200d1a6074199c54802b6c2c9867c64f4805",
+        "originalSha256": "f4dcd22bf2b89b2b9f569ada23ea3efe42d14331e6394d18c17789a09c56b06e",
+        "optimization": "lossless PNG; decoded RGBA pixels verified identical"
       }
     ]
   },
@@ -626,7 +681,9 @@
         "author": "Everkinetic",
         "license": "CC-BY-SA 3",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
-        "sha256": "a215b8f46d09363cfb67c36b81a80f947e1ac2c877a8ceb3ad545bfa38d8773f"
+        "sha256": "02542326949bb2292828459cdbd3903d113913f9af46c7fcef1ab352cf17a1d9",
+        "originalSha256": "a215b8f46d09363cfb67c36b81a80f947e1ac2c877a8ceb3ad545bfa38d8773f",
+        "optimization": "lossless PNG; decoded RGBA pixels verified identical"
       },
       {
         "src": "/exercise-images/wger-92.png",
@@ -634,7 +691,9 @@
         "author": "Everkinetic",
         "license": "CC-BY-SA 3",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
-        "sha256": "304e3c8fe1073c69559e79848f5cf86fde55230b9908e1fba9f6ba437c1ced4c"
+        "sha256": "7d0683458e4df8dbbf586a7dbba84b2ff636a4020ec4e3dbbcba6973d80dfcc0",
+        "originalSha256": "304e3c8fe1073c69559e79848f5cf86fde55230b9908e1fba9f6ba437c1ced4c",
+        "optimization": "lossless PNG; decoded RGBA pixels verified identical"
       }
     ]
   },
@@ -648,7 +707,9 @@
         "author": "Everkinetic",
         "license": "CC-BY-SA 3",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
-        "sha256": "6e52bfc5f0c486c0fb1ea40fdaf60493e92fb36b033a414a1de3c696936fac7f"
+        "sha256": "20ba4dddc5aeba41014b4228e00c49a744961e1ced88af97ab8a18902a4b9dbc",
+        "originalSha256": "6e52bfc5f0c486c0fb1ea40fdaf60493e92fb36b033a414a1de3c696936fac7f",
+        "optimization": "lossless PNG; decoded RGBA pixels verified identical"
       },
       {
         "src": "/exercise-images/row-144.png",
@@ -656,7 +717,9 @@
         "author": "Everkinetic",
         "license": "CC-BY-SA 3",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
-        "sha256": "f3d34798088421f3fbdc54bae7b7f0e04059f50ace657e9b96bbc0c7e6404731"
+        "sha256": "077c1175e1b479daca796f95d3207ca22f936aa1177211826793ee580b3d29bb",
+        "originalSha256": "f3d34798088421f3fbdc54bae7b7f0e04059f50ace657e9b96bbc0c7e6404731",
+        "optimization": "lossless PNG; decoded RGBA pixels verified identical"
       }
     ]
   },
@@ -826,7 +889,9 @@
         "author": "Everkinetic",
         "license": "CC-BY-SA 3",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
-        "sha256": "a9e72302b29ec915ee99565195189b58d5edfe4dbc698427918af04d17cd99cf"
+        "sha256": "3f96ce9ff3b2c9287fb9f75756c9ddc956893ce50e0b5b31c2b68da38d6945e6",
+        "originalSha256": "a9e72302b29ec915ee99565195189b58d5edfe4dbc698427918af04d17cd99cf",
+        "optimization": "lossless PNG; decoded RGBA pixels verified identical"
       },
       {
         "src": "/exercise-images/wger-146.png",
@@ -834,7 +899,9 @@
         "author": "Everkinetic",
         "license": "CC-BY-SA 3",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
-        "sha256": "3acd69ae01efc6796d7a303bad817c2a984938062a73298c2e3a1162f3b3ab58"
+        "sha256": "8e2ab267985a06a13c444c024e6f690de22e7d44bc95f580ad652d22b37feae4",
+        "originalSha256": "3acd69ae01efc6796d7a303bad817c2a984938062a73298c2e3a1162f3b3ab58",
+        "optimization": "lossless PNG; decoded RGBA pixels verified identical"
       }
     ]
   },
@@ -936,7 +1003,9 @@
         "author": "philip",
         "license": "CC-BY-SA 4",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
-        "sha256": "a6a7add39abd69703266ba1fde86b89e57f2a8fc0434338dd6a008770893b794"
+        "sha256": "0c3c61cf38bd639d46cd35f6a11f639be3629b58e4634ffdf3ad10c9b4d3424f",
+        "originalSha256": "a6a7add39abd69703266ba1fde86b89e57f2a8fc0434338dd6a008770893b794",
+        "optimization": "lossless PNG; decoded RGBA pixels verified identical"
       }
     ]
   },
@@ -978,7 +1047,9 @@
         "author": "cshep442",
         "license": "CC-BY-SA 4",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
-        "sha256": "1e905128cd4dea075295473be0dd259e7cb49ec6619bdd9eea26062f1c994895"
+        "sha256": "48d1db9b53f3c34bde7faf9fa6fd9f4323f56e1c7de505362518037574f4997f",
+        "originalSha256": "1e905128cd4dea075295473be0dd259e7cb49ec6619bdd9eea26062f1c994895",
+        "optimization": "lossless PNG; decoded RGBA pixels verified identical"
       },
       {
         "src": "/exercise-images/wger-217.png",
@@ -986,7 +1057,9 @@
         "author": "cshep442",
         "license": "CC-BY-SA 4",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
-        "sha256": "e1904c41fa58404366ea3f31980d96f06339c083ca6c228a0b0335f1d9440a90"
+        "sha256": "9664c0070c5d46e283c4b7309f7ccf4a555586fc47992476f9fad0ac57504dd2",
+        "originalSha256": "e1904c41fa58404366ea3f31980d96f06339c083ca6c228a0b0335f1d9440a90",
+        "optimization": "lossless PNG; decoded RGBA pixels verified identical"
       }
     ]
   },
@@ -1000,7 +1073,9 @@
         "author": "cshep442",
         "license": "CC-BY-SA 4",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
-        "sha256": "908c5ee47471f5c94ab26834e2f9da15b68bef0d219257e260ad3ac16223a118"
+        "sha256": "714d8a7f4afb770d1da93903f46e41107409762490ae12536cc9b3b510120da0",
+        "originalSha256": "908c5ee47471f5c94ab26834e2f9da15b68bef0d219257e260ad3ac16223a118",
+        "optimization": "lossless PNG; decoded RGBA pixels verified identical"
       },
       {
         "src": "/exercise-images/rear-215.png",
@@ -1008,7 +1083,9 @@
         "author": "cshep442",
         "license": "CC-BY-SA 4",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
-        "sha256": "b5dfc0ea4bd6fbe444af86e30dc3842b5e190b8fd0b39a3deb4f06c366d018ac"
+        "sha256": "1852ead6998befaefe63b762f9254a3c27f526a6f7c8568e0b981c4f2be37e4c",
+        "originalSha256": "b5dfc0ea4bd6fbe444af86e30dc3842b5e190b8fd0b39a3deb4f06c366d018ac",
+        "optimization": "lossless PNG; decoded RGBA pixels verified identical"
       }
     ]
   },
@@ -1044,7 +1121,9 @@
         "author": "Everkinetic",
         "license": "CC-BY-SA 3",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
-        "sha256": "b0c74fd695fc0ec90eac9e2c00d1f8e6652956e9fd7c806d40d3df13fced1560"
+        "sha256": "ab04c069ca6b9b35a0164c46498d6eb77e0ce4ca2b90c5d32d4a066dafa6c3f9",
+        "originalSha256": "b0c74fd695fc0ec90eac9e2c00d1f8e6652956e9fd7c806d40d3df13fced1560",
+        "optimization": "lossless PNG; decoded RGBA pixels verified identical"
       },
       {
         "src": "/exercise-images/shrug-40.png",
@@ -1052,7 +1131,9 @@
         "author": "Everkinetic",
         "license": "CC-BY-SA 3",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
-        "sha256": "7d4582f8f8e0573cbbf40527d461a9a67337bc147e00cf097147bab753026b10"
+        "sha256": "7a4687619491aaba103e14a0505e5a748564713c4eb7f86c55fa46b449ed8185",
+        "originalSha256": "7d4582f8f8e0573cbbf40527d461a9a67337bc147e00cf097147bab753026b10",
+        "optimization": "lossless PNG; decoded RGBA pixels verified identical"
       }
     ]
   },
@@ -1110,7 +1191,9 @@
         "author": "Everkinetic",
         "license": "CC-BY-SA 3",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
-        "sha256": "4fb462d6f75e2e063b1f11469df38983921dea139fd06bc94183e917951d97e0"
+        "sha256": "cd21fa59d84a062e67be37aa49a8a81fb4c69a5a5311a7f62ee923581da90b19",
+        "originalSha256": "4fb462d6f75e2e063b1f11469df38983921dea139fd06bc94183e917951d97e0",
+        "optimization": "lossless PNG; decoded RGBA pixels verified identical"
       }
     ]
   },
@@ -1132,7 +1215,9 @@
         "author": "Everkinetic",
         "license": "CC-BY-SA 3",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
-        "sha256": "c4c127ee73627ca543d0441b4df282d6a798134afa817d872da06003d7cd1fd2"
+        "sha256": "5993b64d2a5935c89b31ab65b7efe5578eec7499c5fdc9d8420a48abc23cb4a2",
+        "originalSha256": "c4c127ee73627ca543d0441b4df282d6a798134afa817d872da06003d7cd1fd2",
+        "optimization": "lossless PNG; decoded RGBA pixels verified identical"
       }
     ]
   },
@@ -1174,7 +1259,9 @@
         "author": "Everkinetic",
         "license": "CC-BY-SA 3",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
-        "sha256": "07387896308a88dec1c1f9644be3eaa6bca9485c9574c56ce7c18ddd02b9751d"
+        "sha256": "fcc751155f3f17580d4a5848dd719e8675556521a271960ac1ca2883fb49970b",
+        "originalSha256": "07387896308a88dec1c1f9644be3eaa6bca9485c9574c56ce7c18ddd02b9751d",
+        "optimization": "lossless PNG; decoded RGBA pixels verified identical"
       },
       {
         "src": "/exercise-images/wger-122.png",
@@ -1182,7 +1269,9 @@
         "author": "Everkinetic",
         "license": "CC-BY-SA 3",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
-        "sha256": "e804f4c754e3b28e5887352cf5e993fbcb8384d4e88b06b83849ab2feb8d1443"
+        "sha256": "dd0d513ed9aeb4a70b4e5c3cb1a3aa963c3e148f40bef289cf2db2db5f466da1",
+        "originalSha256": "e804f4c754e3b28e5887352cf5e993fbcb8384d4e88b06b83849ab2feb8d1443",
+        "optimization": "lossless PNG; decoded RGBA pixels verified identical"
       }
     ]
   },
@@ -1924,7 +2013,9 @@
         "author": "cshep442",
         "license": "CC-BY-SA 4",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
-        "sha256": "a7812c1cbce5ebe41992e28d62299a22ff4e33f9a8e66c11039fbe55b77e64b8"
+        "sha256": "332abd93fc943eaaad31168b0bbcfb60f34b4eec323de7d89265ba4df834ea3d",
+        "originalSha256": "a7812c1cbce5ebe41992e28d62299a22ff4e33f9a8e66c11039fbe55b77e64b8",
+        "optimization": "lossless PNG; decoded RGBA pixels verified identical"
       },
       {
         "src": "/exercise-images/wger-221.png",
@@ -1932,7 +2023,9 @@
         "author": "cshep442",
         "license": "CC-BY-SA 4",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
-        "sha256": "c27918d21a2673e07d27714c10961c8212ce40422717c2c973792e609d231861"
+        "sha256": "69db3b5fbb932cbcd97f3798c90cde30033183df701f41e77cb972551c3ce6d3",
+        "originalSha256": "c27918d21a2673e07d27714c10961c8212ce40422717c2c973792e609d231861",
+        "optimization": "lossless PNG; decoded RGBA pixels verified identical"
       }
     ]
   },
