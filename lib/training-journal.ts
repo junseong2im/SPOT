@@ -1,14 +1,15 @@
 import {z} from 'zod';
-import {localDate} from './gym-model';
+import {localDate,addDays} from './gym-model';
 import type {Database} from '../db/adapter';
 import {AppError} from './gym-service';
 import {journalDate as date,journalContent,journalEntry,type JournalEntry} from './training-journal-model';
 export type {JournalEntry} from './training-journal-model';
 type Row={id:string;date:string;content:string;revision:number;deleted:number};
 export const hydrateJournal=(r:Row):JournalEntry=>({id:r.id,date:r.date,content:journalContent.parse(JSON.parse(r.content)),revision:r.revision});
-export async function journalPage(db:Database,userId:string,cursor?:string|null){
+export async function journalPage(db:Database,userId:string,cursor?:string|null,kind?:string|null){
+ if(kind&&!['body','meal','cardio','recovery'].includes(kind))throw new AppError('기록 종류를 확인해주세요.');
  let bound:{date:string;id:string}|null=null;if(cursor){try{bound=z.object({date,id:z.string().uuid()}).parse(JSON.parse(Buffer.from(cursor,'base64url').toString()));}catch{throw new AppError('기록 페이지를 다시 열어주세요.');}}
- const rows=(await db.prepare('SELECT * FROM training_journal WHERE user_id=? AND deleted=0'+(bound?' AND (date<? OR (date=? AND id<?))':'')+' ORDER BY date DESC,id DESC LIMIT 101').bind(userId,...(bound?[bound.date,bound.date,bound.id]:[])).all<Row>()).results;
+ const rows=(await db.prepare('SELECT * FROM training_journal WHERE user_id=? AND deleted=0'+(kind?' AND kind=?':'')+(bound?' AND (date<? OR (date=? AND id<?))':'')+' ORDER BY date DESC,id DESC LIMIT 101').bind(userId,...(kind?[kind]:[]),...(bound?[bound.date,bound.date,bound.id]:[])).all<Row>()).results;
  const page=rows.slice(0,100),last=page.at(-1);return {entries:page.map(hydrateJournal),cursor:rows.length>100&&last?Buffer.from(JSON.stringify({date:last.date,id:last.id})).toString('base64url'):null};
 }
 export async function journalAction(db:Database,userId:string,raw:unknown){
@@ -42,13 +43,14 @@ export async function journalSummary(db:Database,userId:string,now=Date.now()){
 
 export async function healthDashboard(db:Database,userId:string,now=Date.now()){
  const today=localDate(new Date(now));
- const [body,recovery,todayRows,week]=await Promise.all([
+ const [body,recovery,todayRows,week,timelineRows]=await Promise.all([
   db.prepare("SELECT * FROM training_journal WHERE user_id=? AND kind='body' AND deleted=0 AND date<=? ORDER BY date DESC,updated_at DESC,id DESC LIMIT 1").bind(userId,today).first<Row>(),
   db.prepare("SELECT * FROM training_journal WHERE user_id=? AND kind='recovery' AND deleted=0 AND date<=? ORDER BY date DESC,updated_at DESC,id DESC LIMIT 1").bind(userId,today).first<Row>(),
   db.prepare("SELECT * FROM training_journal WHERE user_id=? AND kind='meal' AND deleted=0 AND date=? ORDER BY id LIMIT 1001").bind(userId,today).all<Row>(),
   journalSummary(db,userId,now),
+  db.prepare('SELECT * FROM training_journal WHERE user_id=? AND deleted=0 AND date>=? AND date<=? ORDER BY date DESC,updated_at DESC,id DESC LIMIT 4001').bind(userId,addDays(today,-179),today).all<Row&{updated_at:number|string}>(),
  ]);
  const meals=todayRows.results.slice(0,1000).map(hydrateJournal);
  const nutrients=Object.fromEntries((['calories','protein','carbs','fat'] as const).map(key=>{const values=meals.flatMap(e=>e.content.kind==='meal'&&e.content[key]!==null?[e.content[key]!]:[]);return [key,{total:values.length?values.reduce((a,b)=>a+b,0):null,recorded:values.length}];})) as Record<'calories'|'protein'|'carbs'|'fat',{total:number|null;recorded:number}>;
- return {today,body:body?hydrateJournal(body):null,recovery:recovery?hydrateJournal(recovery):null,nutrition:{...nutrients,meals:meals.length,truncated:todayRows.results.length>1000},week};
+ return {today,timeline:timelineRows.results.slice(0,4000).map(r=>{const e=hydrateJournal(r);return {...e,content:{...e.content,note:'',...('name' in e.content?{name:''}:{})},updatedAt:Number(r.updated_at)};}),timelineTruncated:timelineRows.results.length>4000,body:body?hydrateJournal(body):null,recovery:recovery?hydrateJournal(recovery):null,nutrition:{...nutrients,meals:meals.length,truncated:todayRows.results.length>1000},week};
 }

@@ -8,6 +8,7 @@ const output=await build({entryPoints:['lib/gym-service.ts'],bundle:true,write:f
 const {act,snapshot}=await import(`data:text/javascript;base64,${Buffer.from(output.outputFiles[0].text).toString('base64')}`);
 let fixtureDatabase;
 let db;
+const futureDate=()=>new Date(Date.now()+3*86400000).toISOString().slice(0,10);
 const alice={userId:'alice',displayName:'Alice'},bob={userId:'bob',displayName:'Bob'},outsider={userId:'stranger',displayName:'Stranger'};
 before(async()=>{fixtureDatabase=await createTestDatabase();db=fixtureDatabase.db;});
 after(()=>fixtureDatabase.close());
@@ -64,7 +65,7 @@ test('stale writes reject without losing saved edits',async()=>{
 });
 test('schedule create, edit, attendance idempotence, owner restrictions and cancellation',async()=>{
  const f=await fixture();let a=await f.getA();
- await act(db,alice,{action:'saveSession',crewId:f.crewId,revision:a.crew.revision,session:{id:'',title:'Together',date:'2026-09-21',time:'19:00',routineId:'push'}});
+ await act(db,alice,{action:'saveSession',crewId:f.crewId,revision:a.crew.revision,session:{id:'',title:'Together',date:futureDate(),time:'19:00',routineId:'push'}});
  a=await f.getA();const event=a.crew.state.sessions[0];assert.deepEqual(event.participants,['alice']);
  for(let i=0;i<2;i++)await act(db,bob,{action:'attendance',crewId:f.crewId,sessionId:event.id,participating:true});
  assert.deepEqual((await f.getA()).crew.state.sessions[0].participants,['alice','bob']);
@@ -88,7 +89,7 @@ test('invalid dates, blank fields and invalid exercises are rejected before stor
  assert.equal((await f.getA()).crew.state.sessions.length,0);
 });
 test('simultaneous attendance uses conflict detection instead of overwriting members',async()=>{
- const f=await fixture();await act(db,alice,{action:'saveSession',crewId:f.crewId,revision:1,session:{id:'',title:'Concurrent',date:'2026-09-22',time:'20:00',routineId:''}});
+ const f=await fixture();await act(db,alice,{action:'saveSession',crewId:f.crewId,revision:1,session:{id:'',title:'Concurrent',date:futureDate(),time:'20:00',routineId:''}});
  const s=(await f.getA()).crew.state.sessions[0];
  const results=await Promise.allSettled([act(db,alice,{action:'attendance',crewId:f.crewId,sessionId:s.id,participating:false}),act(db,bob,{action:'attendance',crewId:f.crewId,sessionId:s.id,participating:true})]);
  for(let i=0;i<results.length;i++){if(results[i].status==='rejected'){assert.equal(results[i].reason.status,409);await act(db,i===0?alice:bob,{action:'attendance',crewId:f.crewId,sessionId:s.id,participating:i===1});}}
