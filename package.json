@@ -8,13 +8,15 @@
   "scripts": {
     "install:ci": "node scripts/install-ci.mjs",
     "dev": "node scripts/dev-next.mjs",
-    "build": "node scripts/prepare-ocr.mjs && next build",
+    "build": "node scripts/check-exercise-assets.mjs && node scripts/prepare-ocr.mjs && next build",
     "start": "next start",
     "db:migrate": "node --env-file-if-exists=.dev.vars scripts/migrate-db.mjs",
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
     "db:generate": "drizzle-kit generate",
     "test": "node --test tests/*.test.mjs",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "assets:check": "node scripts/check-exercise-assets.mjs",
+    "assets:optimize": "node scripts/optimize-exercise-assets.mjs"
   },
   "dependencies": {
     "@base-ui/react": "^1.7.0",

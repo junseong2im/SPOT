@@ -57,24 +57,26 @@
     "source": "https://wger.de/api/v2/exerciseinfo/135/",
     "images": [
       {
-        "src": "/exercise-images/fly-111.png",
+        "src": "/exercise-images/fly-111.webp",
         "original": "https://wger.de/media/exercise-images/98/Butterfly-machine-2.png",
         "author": "Everkinetic",
         "license": "CC-BY-SA 3",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
         "originalSha256": "bbcebf4eac97b0e2767f2cd92f9b63addd8096105dd58cb59633499c69ed293b",
-        "sha256": "43ad2b37548699d5198a25adeb741a540b11696db02e9778709574d143705b38",
-        "optimization": "lossless PNG; decoded RGBA pixels verified identical"
+        "sha256": "b2f8da243192d781d4e63abb90fb31fa8f5daf42430b7eb30ad3e7a0506f2e32",
+        "optimization": "lossless WebP; same dimensions and decoded RGBA verified identical",
+        "previousAsset": "/exercise-images/fly-111.png"
       },
       {
-        "src": "/exercise-images/fly-112.png",
+        "src": "/exercise-images/fly-112.webp",
         "original": "https://wger.de/media/exercise-images/98/Butterfly-machine-1.png",
         "author": "Everkinetic",
         "license": "CC-BY-SA 3",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
         "originalSha256": "d1b070a22b6ddd179928c44a8fa9518cc9b80ce26b86209e43b85aaa098c259a",
-        "sha256": "4af2065a5668bd551148fa87b8affe944d1180368250f5d26577bf1ae70c396b",
-        "optimization": "lossless PNG; decoded RGBA pixels verified identical"
+        "sha256": "18c513f343f706ac9d908ff137221fd2e9e15e450782c759cf1fccfec83f94ea",
+        "optimization": "lossless WebP; same dimensions and decoded RGBA verified identical",
+        "previousAsset": "/exercise-images/fly-112.png"
       }
     ]
   },
@@ -83,11 +85,15 @@
     "source": "https://wger.de/api/v2/exerciseinfo/194/",
     "images": [
       {
-        "src": "/exercise-images/dip-211.png",
+        "src": "/exercise-images/dip-211.webp",
         "original": "https://wger.de/media/exercise-images/194/34600351-8b0b-4cb0-8daa-583537be15b0.png",
         "author": "cshep442",
         "license": "CC-BY-SA 4",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en"
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+        "originalSha256": "63c92984aaa17b5f9fe49687eca502dd1530135a0b69bc2e7e29639abc046ea5",
+        "previousAsset": "/exercise-images/dip-211.png",
+        "sha256": "7656422d82a691a1bdfe81e146d0671307eccdeff5da96e7cf75a3e7f1e54c2f",
+        "optimization": "lossless WebP; same dimensions and decoded RGBA verified identical"
       }
     ]
   },
@@ -96,24 +102,26 @@
     "source": "https://wger.de/api/v2/exerciseinfo/394/",
     "images": [
       {
-        "src": "/exercise-images/row-143.png",
+        "src": "/exercise-images/row-143.webp",
         "original": "https://wger.de/media/exercise-images/143/Cable-seated-rows-2.png",
         "author": "Everkinetic",
         "license": "CC-BY-SA 3",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
         "originalSha256": "6e52bfc5f0c486c0fb1ea40fdaf60493e92fb36b033a414a1de3c696936fac7f",
-        "sha256": "20ba4dddc5aeba41014b4228e00c49a744961e1ced88af97ab8a18902a4b9dbc",
-        "optimization": "lossless PNG; decoded RGBA pixels verified identical"
+        "sha256": "6d1efe96150dcc6b33a3ad2d26c2e952fec8ad8295178ed71aa65dc27c5265d0",
+        "optimization": "lossless WebP; same dimensions and decoded RGBA verified identical",
+        "previousAsset": "/exercise-images/row-143.png"
       },
       {
-        "src": "/exercise-images/row-144.png",
+        "src": "/exercise-images/row-144.webp",
         "original": "https://wger.de/media/exercise-images/143/Cable-seated-rows-1.png",
         "author": "Everkinetic",
         "license": "CC-BY-SA 3",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
         "originalSha256": "f3d34798088421f3fbdc54bae7b7f0e04059f50ace657e9b96bbc0c7e6404731",
-        "sha256": "077c1175e1b479daca796f95d3207ca22f936aa1177211826793ee580b3d29bb",
-        "optimization": "lossless PNG; decoded RGBA pixels verified identical"
+        "sha256": "438d51da7927af729119ef42dbe4b09385452a23768ce68d71d067abd3c720d9",
+        "optimization": "lossless WebP; same dimensions and decoded RGBA verified identical",
+        "previousAsset": "/exercise-images/row-144.png"
       }
     ]
   },
@@ -135,11 +143,15 @@
     "source": "https://wger.de/api/v2/exerciseinfo/1726/",
     "images": [
       {
-        "src": "/exercise-images/straight-599.png",
+        "src": "/exercise-images/straight-599.webp",
         "original": "https://wger.de/media/exercise-images/1726/2e7e541b-5f55-405a-ae78-3e71b3f42db4.png",
         "author": "barry",
         "license": "CC-BY-SA 4",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en"
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+        "originalSha256": "2602abf246448c314dd5eba7c03f8b2e281fa70a02cd4ddfbb8006ca9668863c",
+        "previousAsset": "/exercise-images/straight-599.png",
+        "sha256": "d533b584c51688ceb4cb0921eaab1f1c870c14b62b0f38344ae8ed7602157c7e",
+        "optimization": "lossless WebP; same dimensions and decoded RGBA verified identical"
       }
     ]
   },
@@ -148,18 +160,26 @@
     "source": "https://wger.de/api/v2/exerciseinfo/567/",
     "images": [
       {
-        "src": "/exercise-images/shoulder-173.png",
+        "src": "/exercise-images/shoulder-173.webp",
         "original": "https://wger.de/media/exercise-images/123/dumbbell-shoulder-press-large-1.png",
         "author": "Everkinetic",
         "license": "CC-BY-SA 3",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en"
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+        "originalSha256": "d3fbf6690df84e743ae090164f133e84c5595a54a892d80532e0af4cb543f670",
+        "previousAsset": "/exercise-images/shoulder-173.png",
+        "sha256": "ff2ea172af066be99f609fdfdb8c2df2425e3262c9ad6c4a9471672976cf4faa",
+        "optimization": "lossless WebP; same dimensions and decoded RGBA verified identical"
       },
       {
-        "src": "/exercise-images/shoulder-174.png",
+        "src": "/exercise-images/shoulder-174.webp",
         "original": "https://wger.de/media/exercise-images/123/dumbbell-shoulder-press-large-2.png",
         "author": "Everkinetic",
         "license": "CC-BY-SA 3",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en"
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+        "originalSha256": "42aa5e8286d57566ac5e5239013deddb48201c64656f13b4d26b91f6e33182ef",
+        "previousAsset": "/exercise-images/shoulder-174.png",
+        "sha256": "3b93bcae99fce090dbedb92d9b3477c623ef71952b81f3ca37463ff216e18da6",
+        "optimization": "lossless WebP; same dimensions and decoded RGBA verified identical"
       }
     ]
   },
@@ -168,18 +188,26 @@
     "source": "https://wger.de/api/v2/exerciseinfo/348/",
     "images": [
       {
-        "src": "/exercise-images/lateral-177.png",
+        "src": "/exercise-images/lateral-177.webp",
         "original": "https://wger.de/media/exercise-images/148/lateral-dumbbell-raises-large-2.png",
         "author": "Everkinetic",
         "license": "CC-BY-SA 3",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en"
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+        "originalSha256": "acdcbbc93c7242d837f771d3422e26ad627da8faf2a3b133416fe886f8cc3cce",
+        "previousAsset": "/exercise-images/lateral-177.png",
+        "sha256": "fc8d1c796344dd3040da300335c71e84450fb5a36fc121bb57b2add9153a4f2f",
+        "optimization": "lossless WebP; same dimensions and decoded RGBA verified identical"
       },
       {
-        "src": "/exercise-images/lateral-178.png",
+        "src": "/exercise-images/lateral-178.webp",
         "original": "https://wger.de/media/exercise-images/148/lateral-dumbbell-raises-large-1.png",
         "author": "Everkinetic",
         "license": "CC-BY-SA 3",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en"
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+        "originalSha256": "7c31318be41a8ed82d6390d52eebda7ca280c18bb7727cf27f04c35c33eb3cdf",
+        "previousAsset": "/exercise-images/lateral-178.png",
+        "sha256": "2613632609a6d7d5630b867de5c9cfda37a69808df4fd8246529c56ab398726b",
+        "optimization": "lossless WebP; same dimensions and decoded RGBA verified identical"
       }
     ]
   },
@@ -188,24 +216,26 @@
     "source": "https://wger.de/api/v2/exerciseinfo/828/",
     "images": [
       {
-        "src": "/exercise-images/rear-214.png",
+        "src": "/exercise-images/rear-214.webp",
         "original": "https://wger.de/media/exercise-images/828/2e959dab-f39b-4c7c-9063-eb43064ab5eb.png",
         "author": "cshep442",
         "license": "CC-BY-SA 4",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
         "originalSha256": "908c5ee47471f5c94ab26834e2f9da15b68bef0d219257e260ad3ac16223a118",
-        "sha256": "714d8a7f4afb770d1da93903f46e41107409762490ae12536cc9b3b510120da0",
-        "optimization": "lossless PNG; decoded RGBA pixels verified identical"
+        "sha256": "1aa283b63f26ce4c1feffc5412bb283a445a9a1c4bf8809c89b3e200cc3ebdb9",
+        "optimization": "lossless WebP; same dimensions and decoded RGBA verified identical",
+        "previousAsset": "/exercise-images/rear-214.png"
       },
       {
-        "src": "/exercise-images/rear-215.png",
+        "src": "/exercise-images/rear-215.webp",
         "original": "https://wger.de/media/exercise-images/828/abfc7700-fadf-4f2d-ac84-e045e590a2fe.png",
         "author": "cshep442",
         "license": "CC-BY-SA 4",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
         "originalSha256": "b5dfc0ea4bd6fbe444af86e30dc3842b5e190b8fd0b39a3deb4f06c366d018ac",
-        "sha256": "1852ead6998befaefe63b762f9254a3c27f526a6f7c8568e0b981c4f2be37e4c",
-        "optimization": "lossless PNG; decoded RGBA pixels verified identical"
+        "sha256": "d953926f635f2233bf629e6ce187a990686b6b2e0808aa5f8c1bdb316a870518",
+        "optimization": "lossless WebP; same dimensions and decoded RGBA verified identical",
+        "previousAsset": "/exercise-images/rear-215.png"
       }
     ]
   },
@@ -214,24 +244,26 @@
     "source": "https://wger.de/api/v2/exerciseinfo/572/",
     "images": [
       {
-        "src": "/exercise-images/shrug-39.png",
+        "src": "/exercise-images/shrug-39.webp",
         "original": "https://wger.de/media/exercise-images/151/Dumbbell-shrugs-2.png",
         "author": "Everkinetic",
         "license": "CC-BY-SA 3",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
         "originalSha256": "b0c74fd695fc0ec90eac9e2c00d1f8e6652956e9fd7c806d40d3df13fced1560",
-        "sha256": "ab04c069ca6b9b35a0164c46498d6eb77e0ce4ca2b90c5d32d4a066dafa6c3f9",
-        "optimization": "lossless PNG; decoded RGBA pixels verified identical"
+        "sha256": "a75a3b3dec22ebfbe693a9799147f8d87cb314f8d8849b7ca2a06ef755447d40",
+        "optimization": "lossless WebP; same dimensions and decoded RGBA verified identical",
+        "previousAsset": "/exercise-images/shrug-39.png"
       },
       {
-        "src": "/exercise-images/shrug-40.png",
+        "src": "/exercise-images/shrug-40.webp",
         "original": "https://wger.de/media/exercise-images/151/Dumbbell-shrugs-1.png",
         "author": "Everkinetic",
         "license": "CC-BY-SA 3",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
         "originalSha256": "7d4582f8f8e0573cbbf40527d461a9a67337bc147e00cf097147bab753026b10",
-        "sha256": "7a4687619491aaba103e14a0505e5a748564713c4eb7f86c55fa46b449ed8185",
-        "optimization": "lossless PNG; decoded RGBA pixels verified identical"
+        "sha256": "df68b78e3a892e4afebabe4f887882877a0e48110dc17388fcdebea5b004e20c",
+        "optimization": "lossless WebP; same dimensions and decoded RGBA verified identical",
+        "previousAsset": "/exercise-images/shrug-40.png"
       }
     ]
   },
@@ -240,21 +272,26 @@
     "source": "https://wger.de/api/v2/exerciseinfo/375/",
     "images": [
       {
-        "src": "/exercise-images/squat-125.png",
+        "src": "/exercise-images/squat-125.webp",
         "original": "https://wger.de/media/exercise-images/130/Narrow-stance-hack-squats-1-1024x721.png",
         "author": "Everkinetic",
         "license": "CC-BY-SA 3",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en"
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+        "originalSha256": "02c9fff9d2a11b4c1125cec4f94e4edac03f4ab07d5d928dad9e13f96e2778b9",
+        "previousAsset": "/exercise-images/squat-125.png",
+        "sha256": "2a1025881953f2f646c9539123c7f1a23587b163008aeebde824ebfbe6c76a2c",
+        "optimization": "lossless WebP; same dimensions and decoded RGBA verified identical"
       },
       {
-        "src": "/exercise-images/squat-126.png",
+        "src": "/exercise-images/squat-126.webp",
         "original": "https://wger.de/media/exercise-images/130/Narrow-stance-hack-squats-2-1024x721.png",
         "author": "Everkinetic",
         "license": "CC-BY-SA 3",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
         "originalSha256": "c4c127ee73627ca543d0441b4df282d6a798134afa817d872da06003d7cd1fd2",
-        "sha256": "5993b64d2a5935c89b31ab65b7efe5578eec7499c5fdc9d8420a48abc23cb4a2",
-        "optimization": "lossless PNG; decoded RGBA pixels verified identical"
+        "sha256": "31babf37338593f602e6ca2a02dcdf35c840b5c5a767a79202b13cb4c6c9b429",
+        "optimization": "lossless WebP; same dimensions and decoded RGBA verified identical",
+        "previousAsset": "/exercise-images/squat-126.png"
       }
     ]
   },
@@ -289,18 +326,26 @@
     "source": "https://wger.de/api/v2/exerciseinfo/365/",
     "images": [
       {
-        "src": "/exercise-images/legcurl-179.png",
+        "src": "/exercise-images/legcurl-179.webp",
         "original": "https://wger.de/media/exercise-images/154/lying-leg-curl-machine-large-1.png",
         "author": "Everkinetic",
         "license": "CC-BY-SA 3",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en"
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+        "originalSha256": "e8da278d94c2c7fe5feed8aab3d4666aac55f699f19bad38c086cea2208c98ad",
+        "previousAsset": "/exercise-images/legcurl-179.png",
+        "sha256": "e2ef002579aca0fdef375a70198155fc0617d1349297e2a141bdc5fe525edbde",
+        "optimization": "lossless WebP; same dimensions and decoded RGBA verified identical"
       },
       {
-        "src": "/exercise-images/legcurl-180.png",
+        "src": "/exercise-images/legcurl-180.webp",
         "original": "https://wger.de/media/exercise-images/154/lying-leg-curl-machine-large-2.png",
         "author": "Everkinetic",
         "license": "CC-BY-SA 3",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en"
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
+        "originalSha256": "c9476f7baeaa61ea503abd07219be240eaa7cd443040447da004485d7f0dc1e4",
+        "previousAsset": "/exercise-images/legcurl-180.png",
+        "sha256": "570caec53f4019f0d739218c575d5c1ca352ee6b04b9ae8489f348f946d6de87",
+        "optimization": "lossless WebP; same dimensions and decoded RGBA verified identical"
       }
     ]
   },
@@ -388,24 +433,26 @@
     "source": "https://wger.de/api/v2/exerciseinfo/75/",
     "images": [
       {
-        "src": "/exercise-images/wger-113.png",
+        "src": "/exercise-images/wger-113.webp",
         "original": "https://wger.de/media/exercise-images/97/Dumbbell-bench-press-1.png",
         "author": "Everkinetic",
         "license": "CC-BY-SA 3",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
-        "sha256": "4c9534232e73bcb7db1f421f2efc07578c3db9b7b54ef34c625acf6e9b50d198",
+        "sha256": "566f8c5d52138623e622be88bb371b5cd8b250b4f1c500313c305dc07fb60b24",
         "originalSha256": "2d8aa760a9c81b98f79937c936c4819b5686a04a1c376a072061a5493da0a5d4",
-        "optimization": "lossless PNG; decoded RGBA pixels verified identical"
+        "optimization": "lossless WebP; same dimensions and decoded RGBA verified identical",
+        "previousAsset": "/exercise-images/wger-113.png"
       },
       {
-        "src": "/exercise-images/wger-114.png",
+        "src": "/exercise-images/wger-114.webp",
         "original": "https://wger.de/media/exercise-images/97/Dumbbell-bench-press-2.png",
         "author": "Everkinetic",
         "license": "CC-BY-SA 3",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
-        "sha256": "9877b6b92c442501574febfc60011982ebc0eb8ec33ca4791e54afb31daf5489",
+        "sha256": "b2ca59e2fac833b829f6c0c8f97a0c823646bd1e27c1fd9070f44cc8da4d0387",
         "originalSha256": "e80a5a428f4a0f0535b16968d7ac4f45aa00a5067181b225e4967a10d87d3aa3",
-        "optimization": "lossless PNG; decoded RGBA pixels verified identical"
+        "optimization": "lossless WebP; same dimensions and decoded RGBA verified identical",
+        "previousAsset": "/exercise-images/wger-114.png"
       }
     ]
   },
@@ -414,24 +461,26 @@
     "source": "https://wger.de/api/v2/exerciseinfo/185/",
     "images": [
       {
-        "src": "/exercise-images/wger-115.png",
+        "src": "/exercise-images/wger-115.webp",
         "original": "https://wger.de/media/exercise-images/100/Decline-bench-press-1.png",
         "author": "Everkinetic",
         "license": "CC-BY-SA 3",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
-        "sha256": "01d41eff4f069ff0784dc400f2d1b8da90680ef352dc342dde686d4d8a9a57bb",
+        "sha256": "620aecfe2cf267e33df86529a527686797c82e951f5816fb4750c41f17cdd095",
         "originalSha256": "50ea915603a7eb2b4e7bc31c47a597c04a7675df2ff3b05855fd782ac2dd9224",
-        "optimization": "lossless PNG; decoded RGBA pixels verified identical"
+        "optimization": "lossless WebP; same dimensions and decoded RGBA verified identical",
+        "previousAsset": "/exercise-images/wger-115.png"
       },
       {
-        "src": "/exercise-images/wger-116.png",
+        "src": "/exercise-images/wger-116.webp",
         "original": "https://wger.de/media/exercise-images/100/Decline-bench-press-2.png",
         "author": "Everkinetic",
         "license": "CC-BY-SA 3",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
-        "sha256": "ede85950ddbdb17de0c8db1f6e397503e5a0966c175996c74d176826a1015ba0",
+        "sha256": "01bd877ccc21f611db391919b4f109e4c719c37155a9ef78f53725ada71c51b4",
         "originalSha256": "199b5e823e91efadc30cf103f3b9dc994125a2b5b714ca77258a748d1a6c12ae",
-        "optimization": "lossless PNG; decoded RGBA pixels verified identical"
+        "optimization": "lossless WebP; same dimensions and decoded RGBA verified identical",
+        "previousAsset": "/exercise-images/wger-116.png"
       }
     ]
   },
@@ -440,24 +489,26 @@
     "source": "https://wger.de/api/v2/exerciseinfo/538/",
     "images": [
       {
-        "src": "/exercise-images/wger-129.png",
+        "src": "/exercise-images/wger-129.webp",
         "original": "https://wger.de/media/exercise-images/41/Incline-bench-press-1.png",
         "author": "Everkinetic",
         "license": "CC-BY-SA 3",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
-        "sha256": "c302371b38e2a15f4e4064bf60ad1510feb325b125adb59a2454b4a4ffb8a940",
+        "sha256": "4dc1703eab17a0827031e54c31bd5614cff669a97fe5e0241f0969cc45701f58",
         "originalSha256": "396b0bb512b64d0aba41c2093b7d246e74dc354589b6310e9b8bc2c98ecd767f",
-        "optimization": "lossless PNG; decoded RGBA pixels verified identical"
+        "optimization": "lossless WebP; same dimensions and decoded RGBA verified identical",
+        "previousAsset": "/exercise-images/wger-129.png"
       },
       {
-        "src": "/exercise-images/wger-130.png",
+        "src": "/exercise-images/wger-130.webp",
         "original": "https://wger.de/media/exercise-images/41/Incline-bench-press-2.png",
         "author": "Everkinetic",
         "license": "CC-BY-SA 3",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
-        "sha256": "87f340b1c93eb4baf4ae3e03cd5559449bb379ae6d10a9f4e4ec125742397a5b",
+        "sha256": "1b478c8b9680c8324b1daf3169565b5a82636bf394ecfaa198080d77292e3a64",
         "originalSha256": "4f5b1d20639bc2abe522264f3fcf802d088d26ee6ba80a70a381cae9f34816ac",
-        "optimization": "lossless PNG; decoded RGBA pixels verified identical"
+        "optimization": "lossless WebP; same dimensions and decoded RGBA verified identical",
+        "previousAsset": "/exercise-images/wger-130.png"
       }
     ]
   },
@@ -488,24 +539,26 @@
     "source": "https://wger.de/api/v2/exerciseinfo/238/",
     "images": [
       {
-        "src": "/exercise-images/wger-212.png",
+        "src": "/exercise-images/wger-212.webp",
         "original": "https://wger.de/media/exercise-images/238/2fc242d3-5bdd-4f97-99bd-678adb8c96fc.png",
         "author": "cshep442",
         "license": "CC-BY-SA 4",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
-        "sha256": "a997bc02d156a7bce550e483f18d61359b45eedbf582e7a6f8bfb00843538048",
+        "sha256": "6cf93aff1293e75d8f8403b50c4e4baaa2922dddfc2e9e199152f07db473c645",
         "originalSha256": "e1b14d52d06b473106907b948e7ba5a569ca2f323ea109045d6328e2f503ec9c",
-        "optimization": "lossless PNG; decoded RGBA pixels verified identical"
+        "optimization": "lossless WebP; same dimensions and decoded RGBA verified identical",
+        "previousAsset": "/exercise-images/wger-212.png"
       },
       {
-        "src": "/exercise-images/wger-213.png",
+        "src": "/exercise-images/wger-213.webp",
         "original": "https://wger.de/media/exercise-images/238/c6464fb3-1924-4ff1-adfa-fd36da9b5d13.png",
         "author": "cshep442",
         "license": "CC-BY-SA 4",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
-        "sha256": "e600adbbca42f856f93c912aad6841d1f6750b8a557dc46e1781a3bd7a7fe7ec",
+        "sha256": "b99c2888cca46ae528701a38b70ea62c64ef61bc4e5a9cb796aeeec8ea990c50",
         "originalSha256": "2d58380901bf5da7d60b2f4c2f271d36316257572c247bdaa075604969ac08e4",
-        "optimization": "lossless PNG; decoded RGBA pixels verified identical"
+        "optimization": "lossless WebP; same dimensions and decoded RGBA verified identical",
+        "previousAsset": "/exercise-images/wger-213.png"
       }
     ]
   },
@@ -514,24 +567,26 @@
     "source": "https://wger.de/api/v2/exerciseinfo/237/",
     "images": [
       {
-        "src": "/exercise-images/wger-119.png",
+        "src": "/exercise-images/wger-119.webp",
         "original": "https://wger.de/media/exercise-images/122/Incline-cable-flyes-1.png",
         "author": "Everkinetic",
         "license": "CC-BY-SA 3",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
-        "sha256": "288218531a21c50a6f7224e19b9f83f5b8b3d0311f7fd913e08148dfef79e13f",
+        "sha256": "cb4d2e087fcf2ef2cabd8f141774d615b94b8ecd68bdee58300daeaecc922513",
         "originalSha256": "fbe5971a856ffa015afbe0fb84ffa4baf4bf53b8370a26a3134e93033ec4d9d1",
-        "optimization": "lossless PNG; decoded RGBA pixels verified identical"
+        "optimization": "lossless WebP; same dimensions and decoded RGBA verified identical",
+        "previousAsset": "/exercise-images/wger-119.png"
       },
       {
-        "src": "/exercise-images/wger-120.png",
+        "src": "/exercise-images/wger-120.webp",
         "original": "https://wger.de/media/exercise-images/122/Incline-cable-flyes-2.png",
         "author": "Everkinetic",
         "license": "CC-BY-SA 3",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
-        "sha256": "1ffa13a12ef9c71ebe762808545e1314f0fe05a163a9c9b72c647a65fa01d3f3",
+        "sha256": "2af737948708912e4370af1a13e2ec36471320529423908ff4f7e574c85b0863",
         "originalSha256": "0c0166a9dc67d6810f5dd346013466867908227a33c36f44cc26e39c957ec19f",
-        "optimization": "lossless PNG; decoded RGBA pixels verified identical"
+        "optimization": "lossless WebP; same dimensions and decoded RGBA verified identical",
+        "previousAsset": "/exercise-images/wger-120.png"
       }
     ]
   },
@@ -540,24 +595,26 @@
     "source": "https://wger.de/api/v2/exerciseinfo/323/",
     "images": [
       {
-        "src": "/exercise-images/wger-127.png",
+        "src": "/exercise-images/wger-127.webp",
         "original": "https://wger.de/media/exercise-images/71/Cable-crossover-2.png",
         "author": "Everkinetic",
         "license": "CC-BY-SA 3",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
-        "sha256": "934971f7af43e79376a5b3fa830a60ea62021c53a453d278eb5c3b5aab8eb9d2",
+        "sha256": "9b18da6718321331554a9e1c936e27926f26eebf82da03e0951c3dd011d13dc7",
         "originalSha256": "f0e9a00a19f648c166647dbc5cdc16e4643b67a027a31a1a8230a8d7588cf94e",
-        "optimization": "lossless PNG; decoded RGBA pixels verified identical"
+        "optimization": "lossless WebP; same dimensions and decoded RGBA verified identical",
+        "previousAsset": "/exercise-images/wger-127.png"
       },
       {
-        "src": "/exercise-images/wger-128.png",
+        "src": "/exercise-images/wger-128.webp",
         "original": "https://wger.de/media/exercise-images/71/Cable-crossover-1.png",
         "author": "Everkinetic",
         "license": "CC-BY-SA 3",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
-        "sha256": "0ed083a756ace8238c5fba35bdaa7a0db86b165c09cbbc201ab5240b0946dea7",
+        "sha256": "267e41e1fdbc6d9cd024336d17ef7bba055d725962780b8fc243fa5c763562dd",
         "originalSha256": "fd10e69ab260d525403335de4c24ddb469439234c1f8769d61b6205c64d36b9e",
-        "optimization": "lossless PNG; decoded RGBA pixels verified identical"
+        "optimization": "lossless WebP; same dimensions and decoded RGBA verified identical",
+        "previousAsset": "/exercise-images/wger-128.png"
       }
     ]
   },
@@ -566,12 +623,15 @@
     "source": "https://wger.de/api/v2/exerciseinfo/1296/",
     "images": [
       {
-        "src": "/exercise-images/wger-462.png",
+        "src": "/exercise-images/wger-462.webp",
         "original": "https://wger.de/media/exercise-images/1296/c42782fe-337a-44f4-9079-7f6dedab4885.png",
         "author": "JackSparrow",
         "license": "CC-BY-SA 4",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
-        "sha256": "a3423e2beed64ddddda733d8c61d925f83acd883dcbe1b76e98602e110363411"
+        "sha256": "213b5639ad69299e750aec9368ee12bb7f6131842e96907b99ec31afb2d68fc0",
+        "originalSha256": "a3423e2beed64ddddda733d8c61d925f83acd883dcbe1b76e98602e110363411",
+        "previousAsset": "/exercise-images/wger-462.png",
+        "optimization": "lossless WebP; same dimensions and decoded RGBA verified identical"
       }
     ]
   },
@@ -580,12 +640,15 @@
     "source": "https://wger.de/api/v2/exerciseinfo/1551/",
     "images": [
       {
-        "src": "/exercise-images/wger-524.png",
+        "src": "/exercise-images/wger-524.webp",
         "original": "https://wger.de/media/exercise-images/1551/a6a9e561-3965-45c6-9f2b-ee671e1a3a45.png",
         "author": "Settebello",
         "license": "CC-BY-SA 4",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
-        "sha256": "ece83e006d9e578d9f61281b50c1869e763d2e99bc005993868838250111b9b6"
+        "sha256": "b0455117c79227d52a967a0faf955288b614135204fae1c9bd012b656e13f657",
+        "originalSha256": "ece83e006d9e578d9f61281b50c1869e763d2e99bc005993868838250111b9b6",
+        "previousAsset": "/exercise-images/wger-524.png",
+        "optimization": "lossless WebP; same dimensions and decoded RGBA verified identical"
       }
     ]
   },
@@ -650,24 +713,26 @@
     "source": "https://wger.de/api/v2/exerciseinfo/83/",
     "images": [
       {
-        "src": "/exercise-images/wger-84.png",
+        "src": "/exercise-images/wger-84.webp",
         "original": "https://wger.de/media/exercise-images/109/Barbell-rear-delt-row-1.png",
         "author": "Everkinetic",
         "license": "CC-BY-SA 3",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
-        "sha256": "bd5dae62c7fcf3a87a5b0af7b89034a9ac012bd818519828bda1f1be33fac69c",
+        "sha256": "b6a1a979e6bbd7c913460a6399f8f04b065609b44ed9df6d551754d2893fbee3",
         "originalSha256": "53fe36407f4f1601ead650fba892ae9ef29a3d524724065484f01eecb3efe2d2",
-        "optimization": "lossless PNG; decoded RGBA pixels verified identical"
+        "optimization": "lossless WebP; same dimensions and decoded RGBA verified identical",
+        "previousAsset": "/exercise-images/wger-84.png"
       },
       {
-        "src": "/exercise-images/wger-90.png",
+        "src": "/exercise-images/wger-90.webp",
         "original": "https://wger.de/media/exercise-images/109/Barbell-rear-delt-row-2.png",
         "author": "Everkinetic",
         "license": "CC-BY-SA 3",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
-        "sha256": "b45846cc9dcb45366d1c3e5bd73d200d1a6074199c54802b6c2c9867c64f4805",
+        "sha256": "99bb70e4e735bc53a04e16361aadc1ed56b745f806718b1aacb43469e101b971",
         "originalSha256": "f4dcd22bf2b89b2b9f569ada23ea3efe42d14331e6394d18c17789a09c56b06e",
-        "optimization": "lossless PNG; decoded RGBA pixels verified identical"
+        "optimization": "lossless WebP; same dimensions and decoded RGBA verified identical",
+        "previousAsset": "/exercise-images/wger-90.png"
       }
     ]
   },
@@ -676,24 +741,26 @@
     "source": "https://wger.de/api/v2/exerciseinfo/84/",
     "images": [
       {
-        "src": "/exercise-images/wger-91.png",
+        "src": "/exercise-images/wger-91.webp",
         "original": "https://wger.de/media/exercise-images/110/Reverse-grip-bent-over-rows-1.png",
         "author": "Everkinetic",
         "license": "CC-BY-SA 3",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
-        "sha256": "02542326949bb2292828459cdbd3903d113913f9af46c7fcef1ab352cf17a1d9",
+        "sha256": "b73e7db1a1611b7e756036bf854e5bb3eb01df54d55b78e854fd058f9d4f5119",
         "originalSha256": "a215b8f46d09363cfb67c36b81a80f947e1ac2c877a8ceb3ad545bfa38d8773f",
-        "optimization": "lossless PNG; decoded RGBA pixels verified identical"
+        "optimization": "lossless WebP; same dimensions and decoded RGBA verified identical",
+        "previousAsset": "/exercise-images/wger-91.png"
       },
       {
-        "src": "/exercise-images/wger-92.png",
+        "src": "/exercise-images/wger-92.webp",
         "original": "https://wger.de/media/exercise-images/110/Reverse-grip-bent-over-rows-2.png",
         "author": "Everkinetic",
         "license": "CC-BY-SA 3",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
-        "sha256": "7d0683458e4df8dbbf586a7dbba84b2ff636a4020ec4e3dbbcba6973d80dfcc0",
+        "sha256": "0dfaae11475e8e00e2b60624d6e8e5313a63d13993237b2c448031a1e23cee26",
         "originalSha256": "304e3c8fe1073c69559e79848f5cf86fde55230b9908e1fba9f6ba437c1ced4c",
-        "optimization": "lossless PNG; decoded RGBA pixels verified identical"
+        "optimization": "lossless WebP; same dimensions and decoded RGBA verified identical",
+        "previousAsset": "/exercise-images/wger-92.png"
       }
     ]
   },
@@ -702,24 +769,26 @@
     "source": "https://wger.de/api/v2/exerciseinfo/394/",
     "images": [
       {
-        "src": "/exercise-images/row-143.png",
+        "src": "/exercise-images/row-143.webp",
         "original": "https://wger.de/media/exercise-images/143/Cable-seated-rows-2.png",
         "author": "Everkinetic",
         "license": "CC-BY-SA 3",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
-        "sha256": "20ba4dddc5aeba41014b4228e00c49a744961e1ced88af97ab8a18902a4b9dbc",
+        "sha256": "6d1efe96150dcc6b33a3ad2d26c2e952fec8ad8295178ed71aa65dc27c5265d0",
         "originalSha256": "6e52bfc5f0c486c0fb1ea40fdaf60493e92fb36b033a414a1de3c696936fac7f",
-        "optimization": "lossless PNG; decoded RGBA pixels verified identical"
+        "optimization": "lossless WebP; same dimensions and decoded RGBA verified identical",
+        "previousAsset": "/exercise-images/row-143.png"
       },
       {
-        "src": "/exercise-images/row-144.png",
+        "src": "/exercise-images/row-144.webp",
         "original": "https://wger.de/media/exercise-images/143/Cable-seated-rows-1.png",
         "author": "Everkinetic",
         "license": "CC-BY-SA 3",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
-        "sha256": "077c1175e1b479daca796f95d3207ca22f936aa1177211826793ee580b3d29bb",
+        "sha256": "438d51da7927af729119ef42dbe4b09385452a23768ce68d71d067abd3c720d9",
         "originalSha256": "f3d34798088421f3fbdc54bae7b7f0e04059f50ace657e9b96bbc0c7e6404731",
-        "optimization": "lossless PNG; decoded RGBA pixels verified identical"
+        "optimization": "lossless WebP; same dimensions and decoded RGBA verified identical",
+        "previousAsset": "/exercise-images/row-144.png"
       }
     ]
   },
@@ -764,12 +833,15 @@
     "source": "https://wger.de/api/v2/exerciseinfo/1725/",
     "images": [
       {
-        "src": "/exercise-images/wger-598.png",
+        "src": "/exercise-images/wger-598.webp",
         "original": "https://wger.de/media/exercise-images/1725/f0ebd44e-b8e1-400c-b598-ca371f3a07af.png",
         "author": "barry",
         "license": "CC-BY-SA 4",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
-        "sha256": "7ed079371488bc15515239e1f0d144db50f1b237c95a1e6238a797df2cf5a5f8"
+        "sha256": "2e08bdb74067b8d75480c96611baa71e178f7c8d48594e457975d1058869cc9a",
+        "originalSha256": "7ed079371488bc15515239e1f0d144db50f1b237c95a1e6238a797df2cf5a5f8",
+        "previousAsset": "/exercise-images/wger-598.png",
+        "optimization": "lossless WebP; same dimensions and decoded RGBA verified identical"
       }
     ]
   },
@@ -856,12 +928,15 @@
     "source": "https://wger.de/api/v2/exerciseinfo/959/",
     "images": [
       {
-        "src": "/exercise-images/wger-272.png",
+        "src": "/exercise-images/wger-272.webp",
         "original": "https://wger.de/media/exercise-images/959/53a5e008-bc31-4ee0-9463-69a858c2ec18.png",
         "author": "clafal",
         "license": "CC-BY-SA 4",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
-        "sha256": "b91fa1c0a57e8ecc22de65b1881dae88f4e4d2ba4dcffe604d865d43b4950327"
+        "sha256": "efd9a39ddfe427a8f7b203c73429dba29eacc1440e82c12cccdb46376964b74f",
+        "originalSha256": "b91fa1c0a57e8ecc22de65b1881dae88f4e4d2ba4dcffe604d865d43b4950327",
+        "previousAsset": "/exercise-images/wger-272.png",
+        "optimization": "lossless WebP; same dimensions and decoded RGBA verified identical"
       }
     ]
   },
@@ -884,24 +959,26 @@
     "source": "https://wger.de/api/v2/exerciseinfo/484/",
     "images": [
       {
-        "src": "/exercise-images/wger-145.png",
+        "src": "/exercise-images/wger-145.webp",
         "original": "https://wger.de/media/exercise-images/161/Dead-lifts-2.png",
         "author": "Everkinetic",
         "license": "CC-BY-SA 3",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
-        "sha256": "3f96ce9ff3b2c9287fb9f75756c9ddc956893ce50e0b5b31c2b68da38d6945e6",
+        "sha256": "94574b7a10edf3a11ee4ced630b2c8641d1e6cfe1f15713a1adda4adda168e42",
         "originalSha256": "a9e72302b29ec915ee99565195189b58d5edfe4dbc698427918af04d17cd99cf",
-        "optimization": "lossless PNG; decoded RGBA pixels verified identical"
+        "optimization": "lossless WebP; same dimensions and decoded RGBA verified identical",
+        "previousAsset": "/exercise-images/wger-145.png"
       },
       {
-        "src": "/exercise-images/wger-146.png",
+        "src": "/exercise-images/wger-146.webp",
         "original": "https://wger.de/media/exercise-images/161/Dead-lifts-1.png",
         "author": "Everkinetic",
         "license": "CC-BY-SA 3",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
-        "sha256": "8e2ab267985a06a13c444c024e6f690de22e7d44bc95f580ad652d22b37feae4",
+        "sha256": "bbe54b167f680f975957e80cbebe14d813f4ce873efa5c36446e894f2b5acca3",
         "originalSha256": "3acd69ae01efc6796d7a303bad817c2a984938062a73298c2e3a1162f3b3ab58",
-        "optimization": "lossless PNG; decoded RGBA pixels verified identical"
+        "optimization": "lossless WebP; same dimensions and decoded RGBA verified identical",
+        "previousAsset": "/exercise-images/wger-146.png"
       }
     ]
   },
@@ -932,20 +1009,26 @@
     "source": "https://wger.de/api/v2/exerciseinfo/566/",
     "images": [
       {
-        "src": "/exercise-images/wger-171.png",
+        "src": "/exercise-images/wger-171.webp",
         "original": "https://wger.de/media/exercise-images/119/seated-barbell-shoulder-press-large-1.png",
         "author": "Everkinetic",
         "license": "CC-BY-SA 3",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
-        "sha256": "34584e3751dceb4e6ef8b91fe0d0408f1a7ef7930b11a9367859af7a900af424"
+        "sha256": "610b1be80c717a008e756ef3507605cbf16097bbde3ee4f1a41a766b5ed55cbc",
+        "originalSha256": "34584e3751dceb4e6ef8b91fe0d0408f1a7ef7930b11a9367859af7a900af424",
+        "previousAsset": "/exercise-images/wger-171.png",
+        "optimization": "lossless WebP; same dimensions and decoded RGBA verified identical"
       },
       {
-        "src": "/exercise-images/wger-172.png",
+        "src": "/exercise-images/wger-172.webp",
         "original": "https://wger.de/media/exercise-images/119/seated-barbell-shoulder-press-large-2.png",
         "author": "Everkinetic",
         "license": "CC-BY-SA 3",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
-        "sha256": "4033f2e600e96fb6614a861a70fc41d5c3a368749c87a31efd16449ee6e27dbb"
+        "sha256": "e5f78d72dc60288b3edc38ba016feb4dfe3af5d13914f3f4493bc78d5f647130",
+        "originalSha256": "4033f2e600e96fb6614a861a70fc41d5c3a368749c87a31efd16449ee6e27dbb",
+        "previousAsset": "/exercise-images/wger-172.png",
+        "optimization": "lossless WebP; same dimensions and decoded RGBA verified identical"
       }
     ]
   },
@@ -954,20 +1037,26 @@
     "source": "https://wger.de/api/v2/exerciseinfo/567/",
     "images": [
       {
-        "src": "/exercise-images/shoulder-173.png",
+        "src": "/exercise-images/shoulder-173.webp",
         "original": "https://wger.de/media/exercise-images/123/dumbbell-shoulder-press-large-1.png",
         "author": "Everkinetic",
         "license": "CC-BY-SA 3",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
-        "sha256": "d3fbf6690df84e743ae090164f133e84c5595a54a892d80532e0af4cb543f670"
+        "sha256": "ff2ea172af066be99f609fdfdb8c2df2425e3262c9ad6c4a9471672976cf4faa",
+        "originalSha256": "d3fbf6690df84e743ae090164f133e84c5595a54a892d80532e0af4cb543f670",
+        "previousAsset": "/exercise-images/shoulder-173.png",
+        "optimization": "lossless WebP; same dimensions and decoded RGBA verified identical"
       },
       {
-        "src": "/exercise-images/shoulder-174.png",
+        "src": "/exercise-images/shoulder-174.webp",
         "original": "https://wger.de/media/exercise-images/123/dumbbell-shoulder-press-large-2.png",
         "author": "Everkinetic",
         "license": "CC-BY-SA 3",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
-        "sha256": "42aa5e8286d57566ac5e5239013deddb48201c64656f13b4d26b91f6e33182ef"
+        "sha256": "3b93bcae99fce090dbedb92d9b3477c623ef71952b81f3ca37463ff216e18da6",
+        "originalSha256": "42aa5e8286d57566ac5e5239013deddb48201c64656f13b4d26b91f6e33182ef",
+        "previousAsset": "/exercise-images/shoulder-174.png",
+        "optimization": "lossless WebP; same dimensions and decoded RGBA verified identical"
       }
     ]
   },
@@ -998,14 +1087,15 @@
     "source": "https://wger.de/api/v2/exerciseinfo/256/",
     "images": [
       {
-        "src": "/exercise-images/wger-337.png",
+        "src": "/exercise-images/wger-337.webp",
         "original": "https://wger.de/media/exercise-images/256/b7def5bc-2352-499b-b9e5-fff741003831.png",
         "author": "philip",
         "license": "CC-BY-SA 4",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
-        "sha256": "0c3c61cf38bd639d46cd35f6a11f639be3629b58e4634ffdf3ad10c9b4d3424f",
+        "sha256": "6fc6592021eb2414a703b0334da2a349454eae9d11d4cb2d2dd01b4e52fd0559",
         "originalSha256": "a6a7add39abd69703266ba1fde86b89e57f2a8fc0434338dd6a008770893b794",
-        "optimization": "lossless PNG; decoded RGBA pixels verified identical"
+        "optimization": "lossless WebP; same dimensions and decoded RGBA verified identical",
+        "previousAsset": "/exercise-images/wger-337.png"
       }
     ]
   },
@@ -1042,24 +1132,26 @@
     "source": "https://wger.de/api/v2/exerciseinfo/822/",
     "images": [
       {
-        "src": "/exercise-images/wger-216.png",
+        "src": "/exercise-images/wger-216.webp",
         "original": "https://wger.de/media/exercise-images/822/74affc0d-03b6-4f33-b5f4-a822a2615f68.png",
         "author": "cshep442",
         "license": "CC-BY-SA 4",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
-        "sha256": "48d1db9b53f3c34bde7faf9fa6fd9f4323f56e1c7de505362518037574f4997f",
+        "sha256": "f2e3b587c45f54793cb37aee5b453e6c349afe3064fcf93fa1eb5c41083746e7",
         "originalSha256": "1e905128cd4dea075295473be0dd259e7cb49ec6619bdd9eea26062f1c994895",
-        "optimization": "lossless PNG; decoded RGBA pixels verified identical"
+        "optimization": "lossless WebP; same dimensions and decoded RGBA verified identical",
+        "previousAsset": "/exercise-images/wger-216.png"
       },
       {
-        "src": "/exercise-images/wger-217.png",
+        "src": "/exercise-images/wger-217.webp",
         "original": "https://wger.de/media/exercise-images/822/6a770e5d-cd62-4754-a18c-eebe2103d7c5.png",
         "author": "cshep442",
         "license": "CC-BY-SA 4",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
-        "sha256": "9664c0070c5d46e283c4b7309f7ccf4a555586fc47992476f9fad0ac57504dd2",
+        "sha256": "59c0f57f77bca8febf0a8c2889da4b4eaa709a365d2b416ee8ab38fb73994440",
         "originalSha256": "e1904c41fa58404366ea3f31980d96f06339c083ca6c228a0b0335f1d9440a90",
-        "optimization": "lossless PNG; decoded RGBA pixels verified identical"
+        "optimization": "lossless WebP; same dimensions and decoded RGBA verified identical",
+        "previousAsset": "/exercise-images/wger-217.png"
       }
     ]
   },
@@ -1068,24 +1160,26 @@
     "source": "https://wger.de/api/v2/exerciseinfo/828/",
     "images": [
       {
-        "src": "/exercise-images/rear-214.png",
+        "src": "/exercise-images/rear-214.webp",
         "original": "https://wger.de/media/exercise-images/828/2e959dab-f39b-4c7c-9063-eb43064ab5eb.png",
         "author": "cshep442",
         "license": "CC-BY-SA 4",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
-        "sha256": "714d8a7f4afb770d1da93903f46e41107409762490ae12536cc9b3b510120da0",
+        "sha256": "1aa283b63f26ce4c1feffc5412bb283a445a9a1c4bf8809c89b3e200cc3ebdb9",
         "originalSha256": "908c5ee47471f5c94ab26834e2f9da15b68bef0d219257e260ad3ac16223a118",
-        "optimization": "lossless PNG; decoded RGBA pixels verified identical"
+        "optimization": "lossless WebP; same dimensions and decoded RGBA verified identical",
+        "previousAsset": "/exercise-images/rear-214.png"
       },
       {
-        "src": "/exercise-images/rear-215.png",
+        "src": "/exercise-images/rear-215.webp",
         "original": "https://wger.de/media/exercise-images/828/abfc7700-fadf-4f2d-ac84-e045e590a2fe.png",
         "author": "cshep442",
         "license": "CC-BY-SA 4",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
-        "sha256": "1852ead6998befaefe63b762f9254a3c27f526a6f7c8568e0b981c4f2be37e4c",
+        "sha256": "d953926f635f2233bf629e6ce187a990686b6b2e0808aa5f8c1bdb316a870518",
         "originalSha256": "b5dfc0ea4bd6fbe444af86e30dc3842b5e190b8fd0b39a3deb4f06c366d018ac",
-        "optimization": "lossless PNG; decoded RGBA pixels verified identical"
+        "optimization": "lossless WebP; same dimensions and decoded RGBA verified identical",
+        "previousAsset": "/exercise-images/rear-215.png"
       }
     ]
   },
@@ -1116,24 +1210,26 @@
     "source": "https://wger.de/api/v2/exerciseinfo/572/",
     "images": [
       {
-        "src": "/exercise-images/shrug-39.png",
+        "src": "/exercise-images/shrug-39.webp",
         "original": "https://wger.de/media/exercise-images/151/Dumbbell-shrugs-2.png",
         "author": "Everkinetic",
         "license": "CC-BY-SA 3",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
-        "sha256": "ab04c069ca6b9b35a0164c46498d6eb77e0ce4ca2b90c5d32d4a066dafa6c3f9",
+        "sha256": "a75a3b3dec22ebfbe693a9799147f8d87cb314f8d8849b7ca2a06ef755447d40",
         "originalSha256": "b0c74fd695fc0ec90eac9e2c00d1f8e6652956e9fd7c806d40d3df13fced1560",
-        "optimization": "lossless PNG; decoded RGBA pixels verified identical"
+        "optimization": "lossless WebP; same dimensions and decoded RGBA verified identical",
+        "previousAsset": "/exercise-images/shrug-39.png"
       },
       {
-        "src": "/exercise-images/shrug-40.png",
+        "src": "/exercise-images/shrug-40.webp",
         "original": "https://wger.de/media/exercise-images/151/Dumbbell-shrugs-1.png",
         "author": "Everkinetic",
         "license": "CC-BY-SA 3",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
-        "sha256": "7a4687619491aaba103e14a0505e5a748564713c4eb7f86c55fa46b449ed8185",
+        "sha256": "df68b78e3a892e4afebabe4f887882877a0e48110dc17388fcdebea5b004e20c",
         "originalSha256": "7d4582f8f8e0573cbbf40527d461a9a67337bc147e00cf097147bab753026b10",
-        "optimization": "lossless PNG; decoded RGBA pixels verified identical"
+        "optimization": "lossless WebP; same dimensions and decoded RGBA verified identical",
+        "previousAsset": "/exercise-images/shrug-40.png"
       }
     ]
   },
@@ -1178,22 +1274,26 @@
     "source": "https://wger.de/api/v2/exerciseinfo/257/",
     "images": [
       {
-        "src": "/exercise-images/wger-149.png",
+        "src": "/exercise-images/wger-149.webp",
         "original": "https://wger.de/media/exercise-images/191/Front-squat-1-857x1024.png",
         "author": "Everkinetic",
         "license": "CC-BY-SA 3",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
-        "sha256": "4068499db0a18054ceb56c01e36f0d74c58bb9a3f0729e1d990acd21d8d84159"
+        "sha256": "76788554f0d5824b4630eef9a566bedcd5b3e99846051b8f0a43ce4abdd165aa",
+        "originalSha256": "4068499db0a18054ceb56c01e36f0d74c58bb9a3f0729e1d990acd21d8d84159",
+        "previousAsset": "/exercise-images/wger-149.png",
+        "optimization": "lossless WebP; same dimensions and decoded RGBA verified identical"
       },
       {
-        "src": "/exercise-images/wger-150.png",
+        "src": "/exercise-images/wger-150.webp",
         "original": "https://wger.de/media/exercise-images/191/Front-squat-2-857x1024.png",
         "author": "Everkinetic",
         "license": "CC-BY-SA 3",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
-        "sha256": "cd21fa59d84a062e67be37aa49a8a81fb4c69a5a5311a7f62ee923581da90b19",
+        "sha256": "c88805f85fbfe82ee658a4b2c4a4ee0aaf2fbc758708d227476eb23f3a9ad581",
         "originalSha256": "4fb462d6f75e2e063b1f11469df38983921dea139fd06bc94183e917951d97e0",
-        "optimization": "lossless PNG; decoded RGBA pixels verified identical"
+        "optimization": "lossless WebP; same dimensions and decoded RGBA verified identical",
+        "previousAsset": "/exercise-images/wger-150.png"
       }
     ]
   },
@@ -1202,22 +1302,26 @@
     "source": "https://wger.de/api/v2/exerciseinfo/375/",
     "images": [
       {
-        "src": "/exercise-images/squat-125.png",
+        "src": "/exercise-images/squat-125.webp",
         "original": "https://wger.de/media/exercise-images/130/Narrow-stance-hack-squats-1-1024x721.png",
         "author": "Everkinetic",
         "license": "CC-BY-SA 3",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
-        "sha256": "02c9fff9d2a11b4c1125cec4f94e4edac03f4ab07d5d928dad9e13f96e2778b9"
+        "sha256": "2a1025881953f2f646c9539123c7f1a23587b163008aeebde824ebfbe6c76a2c",
+        "originalSha256": "02c9fff9d2a11b4c1125cec4f94e4edac03f4ab07d5d928dad9e13f96e2778b9",
+        "previousAsset": "/exercise-images/squat-125.png",
+        "optimization": "lossless WebP; same dimensions and decoded RGBA verified identical"
       },
       {
-        "src": "/exercise-images/squat-126.png",
+        "src": "/exercise-images/squat-126.webp",
         "original": "https://wger.de/media/exercise-images/130/Narrow-stance-hack-squats-2-1024x721.png",
         "author": "Everkinetic",
         "license": "CC-BY-SA 3",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
-        "sha256": "5993b64d2a5935c89b31ab65b7efe5578eec7499c5fdc9d8420a48abc23cb4a2",
+        "sha256": "31babf37338593f602e6ca2a02dcdf35c840b5c5a767a79202b13cb4c6c9b429",
         "originalSha256": "c4c127ee73627ca543d0441b4df282d6a798134afa817d872da06003d7cd1fd2",
-        "optimization": "lossless PNG; decoded RGBA pixels verified identical"
+        "optimization": "lossless WebP; same dimensions and decoded RGBA verified identical",
+        "previousAsset": "/exercise-images/squat-126.png"
       }
     ]
   },
@@ -1254,24 +1358,26 @@
     "source": "https://wger.de/api/v2/exerciseinfo/206/",
     "images": [
       {
-        "src": "/exercise-images/wger-121.png",
+        "src": "/exercise-images/wger-121.webp",
         "original": "https://wger.de/media/exercise-images/113/Walking-lunges-1.png",
         "author": "Everkinetic",
         "license": "CC-BY-SA 3",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
-        "sha256": "fcc751155f3f17580d4a5848dd719e8675556521a271960ac1ca2883fb49970b",
+        "sha256": "bc0042fc4ac6ac33f2d0c65ce2848376631951cd49298f044ff0456f12b1654d",
         "originalSha256": "07387896308a88dec1c1f9644be3eaa6bca9485c9574c56ce7c18ddd02b9751d",
-        "optimization": "lossless PNG; decoded RGBA pixels verified identical"
+        "optimization": "lossless WebP; same dimensions and decoded RGBA verified identical",
+        "previousAsset": "/exercise-images/wger-121.png"
       },
       {
-        "src": "/exercise-images/wger-122.png",
+        "src": "/exercise-images/wger-122.webp",
         "original": "https://wger.de/media/exercise-images/113/Walking-lunges-2.png",
         "author": "Everkinetic",
         "license": "CC-BY-SA 3",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
-        "sha256": "dd0d513ed9aeb4a70b4e5c3cb1a3aa963c3e148f40bef289cf2db2db5f466da1",
+        "sha256": "86005311b066cf14245356a9845c3f2524fd8280ef40b4b1455499bf0b2f92ac",
         "originalSha256": "e804f4c754e3b28e5887352cf5e993fbcb8384d4e88b06b83849ab2feb8d1443",
-        "optimization": "lossless PNG; decoded RGBA pixels verified identical"
+        "optimization": "lossless WebP; same dimensions and decoded RGBA verified identical",
+        "previousAsset": "/exercise-images/wger-122.png"
       }
     ]
   },
@@ -1316,20 +1422,26 @@
     "source": "https://wger.de/api/v2/exerciseinfo/365/",
     "images": [
       {
-        "src": "/exercise-images/legcurl-179.png",
+        "src": "/exercise-images/legcurl-179.webp",
         "original": "https://wger.de/media/exercise-images/154/lying-leg-curl-machine-large-1.png",
         "author": "Everkinetic",
         "license": "CC-BY-SA 3",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
-        "sha256": "e8da278d94c2c7fe5feed8aab3d4666aac55f699f19bad38c086cea2208c98ad"
+        "sha256": "e2ef002579aca0fdef375a70198155fc0617d1349297e2a141bdc5fe525edbde",
+        "originalSha256": "e8da278d94c2c7fe5feed8aab3d4666aac55f699f19bad38c086cea2208c98ad",
+        "previousAsset": "/exercise-images/legcurl-179.png",
+        "optimization": "lossless WebP; same dimensions and decoded RGBA verified identical"
       },
       {
-        "src": "/exercise-images/legcurl-180.png",
+        "src": "/exercise-images/legcurl-180.webp",
         "original": "https://wger.de/media/exercise-images/154/lying-leg-curl-machine-large-2.png",
         "author": "Everkinetic",
         "license": "CC-BY-SA 3",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
-        "sha256": "c9476f7baeaa61ea503abd07219be240eaa7cd443040447da004485d7f0dc1e4"
+        "sha256": "570caec53f4019f0d739218c575d5c1ca352ee6b04b9ae8489f348f946d6de87",
+        "originalSha256": "c9476f7baeaa61ea503abd07219be240eaa7cd443040447da004485d7f0dc1e4",
+        "previousAsset": "/exercise-images/legcurl-180.png",
+        "optimization": "lossless WebP; same dimensions and decoded RGBA verified identical"
       }
     ]
   },
@@ -1338,20 +1450,26 @@
     "source": "https://wger.de/api/v2/exerciseinfo/366/",
     "images": [
       {
-        "src": "/exercise-images/wger-181.png",
+        "src": "/exercise-images/wger-181.webp",
         "original": "https://wger.de/media/exercise-images/117/seated-leg-curl-large-1.png",
         "author": "Everkinetic",
         "license": "CC-BY-SA 3",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
-        "sha256": "d13ff4f8aa04ab62b8ed1b42a9493307bd4077eaf4f84da57d4cc7dbe28ac372"
+        "sha256": "5f4ffc6df4294eac9258d0e792935a5741486feb85dd84ec07c46efa3540b37b",
+        "originalSha256": "d13ff4f8aa04ab62b8ed1b42a9493307bd4077eaf4f84da57d4cc7dbe28ac372",
+        "previousAsset": "/exercise-images/wger-181.png",
+        "optimization": "lossless WebP; same dimensions and decoded RGBA verified identical"
       },
       {
-        "src": "/exercise-images/wger-182.png",
+        "src": "/exercise-images/wger-182.webp",
         "original": "https://wger.de/media/exercise-images/117/seated-leg-curl-large-2.png",
         "author": "Everkinetic",
         "license": "CC-BY-SA 3",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
-        "sha256": "9985758b68e0d1b8eddbe5b5e5f3ede345005b21eca337e74245b13bd02c8593"
+        "sha256": "82680e784617c0d233d41096754d171f840f4169221814bb48b84e0da2643d0e",
+        "originalSha256": "9985758b68e0d1b8eddbe5b5e5f3ede345005b21eca337e74245b13bd02c8593",
+        "previousAsset": "/exercise-images/wger-182.png",
+        "optimization": "lossless WebP; same dimensions and decoded RGBA verified identical"
       }
     ]
   },
@@ -1360,20 +1478,26 @@
     "source": "https://wger.de/api/v2/exerciseinfo/367/",
     "images": [
       {
-        "src": "/exercise-images/wger-183.png",
+        "src": "/exercise-images/wger-183.webp",
         "original": "https://wger.de/media/exercise-images/118/standing-leg-curls-large-1.png",
         "author": "Everkinetic",
         "license": "CC-BY-SA 3",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
-        "sha256": "9ac2c223546eb7e2413e8937a2462ab31c12586c856f43404f1d1070750bb8fe"
+        "sha256": "81bba70a6d79759b550a6d785e2842cc1d09dfc542dad5205f1c57e47925d003",
+        "originalSha256": "9ac2c223546eb7e2413e8937a2462ab31c12586c856f43404f1d1070750bb8fe",
+        "previousAsset": "/exercise-images/wger-183.png",
+        "optimization": "lossless WebP; same dimensions and decoded RGBA verified identical"
       },
       {
-        "src": "/exercise-images/wger-184.png",
+        "src": "/exercise-images/wger-184.webp",
         "original": "https://wger.de/media/exercise-images/118/standing-leg-curls-large-2.png",
         "author": "Everkinetic",
         "license": "CC-BY-SA 3",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.en",
-        "sha256": "be95d60736fa80223a832b9b30b1978ddd0139df44d7267a0cedce5a6efc1fa9"
+        "sha256": "71611eafad9e5c6b4e8b2ac9c49cf06b7d7e9d589e7cbc17c81a65a64d0b8319",
+        "originalSha256": "be95d60736fa80223a832b9b30b1978ddd0139df44d7267a0cedce5a6efc1fa9",
+        "previousAsset": "/exercise-images/wger-184.png",
+        "optimization": "lossless WebP; same dimensions and decoded RGBA verified identical"
       }
     ]
   },
@@ -1634,12 +1758,15 @@
     "source": "https://wger.de/api/v2/exerciseinfo/50/",
     "images": [
       {
-        "src": "/exercise-images/wger-359.png",
+        "src": "/exercise-images/wger-359.webp",
         "original": "https://wger.de/media/exercise-images/50/695ced5c-9961-4076-add2-cb250d01089e.png",
         "author": "Franpol",
         "license": "CC-BY-SA 4",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
-        "sha256": "2208982b92f13001fca0ff3ecfb4ed5a7ac512a8ccb7418ff25778ba070ee7e5"
+        "sha256": "a1444240055211ca82cb5d65702763e9dc079d059cf11a074bc68b40a200e9da",
+        "originalSha256": "2208982b92f13001fca0ff3ecfb4ed5a7ac512a8ccb7418ff25778ba070ee7e5",
+        "previousAsset": "/exercise-images/wger-359.png",
+        "optimization": "lossless WebP; same dimensions and decoded RGBA verified identical"
       },
       {
         "src": "/exercise-images/wger-360.jpg",
@@ -1736,12 +1863,15 @@
     "source": "https://wger.de/api/v2/exerciseinfo/1900/",
     "images": [
       {
-        "src": "/exercise-images/wger-649.png",
+        "src": "/exercise-images/wger-649.webp",
         "original": "https://wger.de/media/exercise-images/1900/a8243245-8f8f-4e2b-93ca-694d416cb11d.png",
         "author": "nishant0712",
         "license": "CC-BY-SA 4",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
-        "sha256": "32f51a2dea653c756498f50d06ff30b30edc4b4619e58b4abb5bd21e48a9c345"
+        "sha256": "51e1fea5763d65210fbc9b13c1c233cb1ee0c482c341729d5ba855a1ffcb2b4c",
+        "originalSha256": "32f51a2dea653c756498f50d06ff30b30edc4b4619e58b4abb5bd21e48a9c345",
+        "previousAsset": "/exercise-images/wger-649.png",
+        "optimization": "lossless WebP; same dimensions and decoded RGBA verified identical"
       }
     ]
   },
@@ -1836,12 +1966,15 @@
     "source": "https://wger.de/api/v2/exerciseinfo/1572/",
     "images": [
       {
-        "src": "/exercise-images/wger-545.png",
+        "src": "/exercise-images/wger-545.webp",
         "original": "https://wger.de/media/exercise-images/1572/3d14e761-a73d-49da-8804-f3016a7573ff.png",
         "author": "Settebello",
         "license": "CC-BY-SA 4",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
-        "sha256": "1d051dd4d38df73c4f83adaff08845fc0a354ce3727a93b65dad654bd92a3172"
+        "sha256": "7b33d43464556655ffa728c6b7f68aca314463e7b49bc45c2bd97173dfa665cd",
+        "originalSha256": "1d051dd4d38df73c4f83adaff08845fc0a354ce3727a93b65dad654bd92a3172",
+        "previousAsset": "/exercise-images/wger-545.png",
+        "optimization": "lossless WebP; same dimensions and decoded RGBA verified identical"
       }
     ]
   },
@@ -1850,12 +1983,15 @@
     "source": "https://wger.de/api/v2/exerciseinfo/1105/",
     "images": [
       {
-        "src": "/exercise-images/wger-344.png",
+        "src": "/exercise-images/wger-344.webp",
         "original": "https://wger.de/media/exercise-images/1105/36776818-799a-40bf-9eca-aebb3aa5008f.png",
         "author": "utkb",
         "license": "CC-BY-SA 4",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
-        "sha256": "00aa2a27719d9aa234bb9c8135a290159320b2a312b5ba169a67a8d1a64865b4"
+        "sha256": "586078c830863d406c4056fc997fc445b010b86e36a811b6859264187d9fd8b3",
+        "originalSha256": "00aa2a27719d9aa234bb9c8135a290159320b2a312b5ba169a67a8d1a64865b4",
+        "previousAsset": "/exercise-images/wger-344.png",
+        "optimization": "lossless WebP; same dimensions and decoded RGBA verified identical"
       }
     ]
   },
@@ -1950,20 +2086,26 @@
     "source": "https://wger.de/api/v2/exerciseinfo/458/",
     "images": [
       {
-        "src": "/exercise-images/wger-346.png",
+        "src": "/exercise-images/wger-346.webp",
         "original": "https://wger.de/media/exercise-images/458/b7bd9c28-9f1d-4647-bd17-ab6a3adf5770.png",
         "author": "utkb",
         "license": "CC-BY-SA 4",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
-        "sha256": "006a934daf47e95ccf37a0482bce110b12b4f2f49c55f7b6d4fc97aba3e588d5"
+        "sha256": "500fd52c72d052a9f28ecb145fda57343ee751c72e32aa15101157f50393b6ab",
+        "originalSha256": "006a934daf47e95ccf37a0482bce110b12b4f2f49c55f7b6d4fc97aba3e588d5",
+        "previousAsset": "/exercise-images/wger-346.png",
+        "optimization": "lossless WebP; same dimensions and decoded RGBA verified identical"
       },
       {
-        "src": "/exercise-images/wger-347.png",
+        "src": "/exercise-images/wger-347.webp",
         "original": "https://wger.de/media/exercise-images/458/902e6836-394e-458b-b94e-101d714294e2.png",
         "author": "utkb",
         "license": "CC-BY-SA 4",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
-        "sha256": "006a934daf47e95ccf37a0482bce110b12b4f2f49c55f7b6d4fc97aba3e588d5"
+        "sha256": "500fd52c72d052a9f28ecb145fda57343ee751c72e32aa15101157f50393b6ab",
+        "originalSha256": "006a934daf47e95ccf37a0482bce110b12b4f2f49c55f7b6d4fc97aba3e588d5",
+        "previousAsset": "/exercise-images/wger-347.png",
+        "optimization": "lossless WebP; same dimensions and decoded RGBA verified identical"
       }
     ]
   },
@@ -2008,24 +2150,26 @@
     "source": "https://wger.de/api/v2/exerciseinfo/694/",
     "images": [
       {
-        "src": "/exercise-images/wger-220.png",
+        "src": "/exercise-images/wger-220.webp",
         "original": "https://wger.de/media/exercise-images/694/119e6823-6960-4341-a9e1-aaf78d7fb57c.png",
         "author": "cshep442",
         "license": "CC-BY-SA 4",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
-        "sha256": "332abd93fc943eaaad31168b0bbcfb60f34b4eec323de7d89265ba4df834ea3d",
+        "sha256": "25b4fe34a94a622868175a57cfdec3534b423c6636e77c00a39eacdba1ff061e",
         "originalSha256": "a7812c1cbce5ebe41992e28d62299a22ff4e33f9a8e66c11039fbe55b77e64b8",
-        "optimization": "lossless PNG; decoded RGBA pixels verified identical"
+        "optimization": "lossless WebP; same dimensions and decoded RGBA verified identical",
+        "previousAsset": "/exercise-images/wger-220.png"
       },
       {
-        "src": "/exercise-images/wger-221.png",
+        "src": "/exercise-images/wger-221.webp",
         "original": "https://wger.de/media/exercise-images/694/2e69c005-b241-4806-8557-fc5a4d5ee44d.png",
         "author": "cshep442",
         "license": "CC-BY-SA 4",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
-        "sha256": "69db3b5fbb932cbcd97f3798c90cde30033183df701f41e77cb972551c3ce6d3",
+        "sha256": "d5ea6b7ff0b254e3bb14dc3ca3dd62cad9959bde5c78221737e7e2bcb5ea9178",
         "originalSha256": "c27918d21a2673e07d27714c10961c8212ce40422717c2c973792e609d231861",
-        "optimization": "lossless PNG; decoded RGBA pixels verified identical"
+        "optimization": "lossless WebP; same dimensions and decoded RGBA verified identical",
+        "previousAsset": "/exercise-images/wger-221.png"
       }
     ]
   },
@@ -2034,20 +2178,26 @@
     "source": "https://wger.de/api/v2/exerciseinfo/958/",
     "images": [
       {
-        "src": "/exercise-images/wger-429.png",
+        "src": "/exercise-images/wger-429.webp",
         "original": "https://wger.de/media/exercise-images/958/947ac249-475d-44ed-bed3-8dc433374f59.png",
         "author": "cynomops",
         "license": "CC-BY-SA 4",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
-        "sha256": "e13203bf8b3ebfd824256ac7216086ff65518f37520e600f6a0dc523380b3adc"
+        "sha256": "e8f20cb0d976276fff64184e1f67e18634bd86b4188f0891db463118c93af1c8",
+        "originalSha256": "e13203bf8b3ebfd824256ac7216086ff65518f37520e600f6a0dc523380b3adc",
+        "previousAsset": "/exercise-images/wger-429.png",
+        "optimization": "lossless WebP; same dimensions and decoded RGBA verified identical"
       },
       {
-        "src": "/exercise-images/wger-430.png",
+        "src": "/exercise-images/wger-430.webp",
         "original": "https://wger.de/media/exercise-images/958/95f2bbc4-2f95-476d-a9b8-81b333fe2ef5.png",
         "author": "cynomops",
         "license": "CC-BY-SA 4",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
-        "sha256": "e13203bf8b3ebfd824256ac7216086ff65518f37520e600f6a0dc523380b3adc"
+        "sha256": "e8f20cb0d976276fff64184e1f67e18634bd86b4188f0891db463118c93af1c8",
+        "originalSha256": "e13203bf8b3ebfd824256ac7216086ff65518f37520e600f6a0dc523380b3adc",
+        "previousAsset": "/exercise-images/wger-430.png",
+        "optimization": "lossless WebP; same dimensions and decoded RGBA verified identical"
       }
     ]
   },
@@ -2308,12 +2458,15 @@
     "source": "https://wger.de/api/v2/exerciseinfo/1232/",
     "images": [
       {
-        "src": "/exercise-images/wger-450.png",
+        "src": "/exercise-images/wger-450.webp",
         "original": "https://wger.de/media/exercise-images/1232/2b6de046-5806-49e3-bf36-b6fae16af021.png",
         "author": "anonymous",
         "license": "CC-BY-SA 4",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
-        "sha256": "4c66fbdee68cbdf76ff4d1ee2dd8df4839cdfc75162af63b2afb5b731dbf6424"
+        "sha256": "8c7569d72e081765912494078d865cbfe88162a06fe75e5fa8553e1fdf8ea0c3",
+        "originalSha256": "4c66fbdee68cbdf76ff4d1ee2dd8df4839cdfc75162af63b2afb5b731dbf6424",
+        "previousAsset": "/exercise-images/wger-450.png",
+        "optimization": "lossless WebP; same dimensions and decoded RGBA verified identical"
       }
     ]
   },
@@ -2336,12 +2489,15 @@
     "source": "https://wger.de/api/v2/exerciseinfo/1243/",
     "images": [
       {
-        "src": "/exercise-images/wger-453.png",
+        "src": "/exercise-images/wger-453.webp",
         "original": "https://wger.de/media/exercise-images/1243/53d4fabe-c994-4907-873f-8d82813a9832.png",
         "author": "erikocobra",
         "license": "CC-BY-SA 4",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
-        "sha256": "b8f6bac56f07f578ef49de95211e2b68929d81b41a7f13b13a912142bb174d7d"
+        "sha256": "97cc71b32424c0e1187780bec4ef5892a3cad4bf3bc7e0df43dfa7000954d61c",
+        "originalSha256": "b8f6bac56f07f578ef49de95211e2b68929d81b41a7f13b13a912142bb174d7d",
+        "previousAsset": "/exercise-images/wger-453.png",
+        "optimization": "lossless WebP; same dimensions and decoded RGBA verified identical"
       }
     ]
   },
@@ -2350,12 +2506,15 @@
     "source": "https://wger.de/api/v2/exerciseinfo/1274/",
     "images": [
       {
-        "src": "/exercise-images/wger-454.png",
+        "src": "/exercise-images/wger-454.webp",
         "original": "https://wger.de/media/exercise-images/1274/bcffdf52-3c36-4b0c-b787-fb84f20bf82d.png",
         "author": "erikocobra",
         "license": "CC-BY-SA 4",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
-        "sha256": "afedf87c60067d1eb48cc4b2f121fabfdfd87b956671a34b240569b4a5715a7f"
+        "sha256": "f3ff6e82da7a8c2eacb84825bb9f1279171c110af6b7b74cbfebcb1ca70e151e",
+        "originalSha256": "afedf87c60067d1eb48cc4b2f121fabfdfd87b956671a34b240569b4a5715a7f",
+        "previousAsset": "/exercise-images/wger-454.png",
+        "optimization": "lossless WebP; same dimensions and decoded RGBA verified identical"
       }
     ]
   },
@@ -2364,12 +2523,15 @@
     "source": "https://wger.de/api/v2/exerciseinfo/1275/",
     "images": [
       {
-        "src": "/exercise-images/wger-455.png",
+        "src": "/exercise-images/wger-455.webp",
         "original": "https://wger.de/media/exercise-images/1275/0652d306-93eb-42f0-b564-7c3261ea809a.png",
         "author": "erikocobra",
         "license": "CC-BY-SA 4",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
-        "sha256": "6336260b7b0fe7dac60b73a454f69d981c6f9ddd2979ef9db01f0dce026853a3"
+        "sha256": "47719d9ae55bdf3f63b0363203277ad34b505b32c351589fdbc9bca53abb39e1",
+        "originalSha256": "6336260b7b0fe7dac60b73a454f69d981c6f9ddd2979ef9db01f0dce026853a3",
+        "previousAsset": "/exercise-images/wger-455.png",
+        "optimization": "lossless WebP; same dimensions and decoded RGBA verified identical"
       }
     ]
   },
@@ -2392,12 +2554,15 @@
     "source": "https://wger.de/api/v2/exerciseinfo/1298/",
     "images": [
       {
-        "src": "/exercise-images/wger-464.png",
+        "src": "/exercise-images/wger-464.webp",
         "original": "https://wger.de/media/exercise-images/1298/ec4b83ec-5a8f-4303-9050-99ec4389bc2a.png",
         "author": "JackSparrow",
         "license": "CC-BY-SA 4",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
-        "sha256": "97b6d25fffcd757da3343704c24db5af9f5691700dc23f13c071b797af2ad58d"
+        "sha256": "659da4bbcc585ac1e7b40302d157f37df50c92b9d81e2dcdacf5ce4955bf7874",
+        "originalSha256": "97b6d25fffcd757da3343704c24db5af9f5691700dc23f13c071b797af2ad58d",
+        "previousAsset": "/exercise-images/wger-464.png",
+        "optimization": "lossless WebP; same dimensions and decoded RGBA verified identical"
       }
     ]
   },
@@ -2420,12 +2585,15 @@
     "source": "https://wger.de/api/v2/exerciseinfo/1387/",
     "images": [
       {
-        "src": "/exercise-images/wger-519.png",
+        "src": "/exercise-images/wger-519.webp",
         "original": "https://wger.de/media/exercise-images/1387/a2cf7eda-5540-4105-b30e-1c2f2679a6c7.png",
         "author": "captive0592",
         "license": "CC-BY-SA 4",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
-        "sha256": "f0388103c39d10d41d0538a43e4a9d391d9e61995cae71c87146922998fe76d8"
+        "sha256": "efa8b90cd4df29d3c1bd27dec1bcfec9511b74365832c579f500d2b08364f687",
+        "originalSha256": "f0388103c39d10d41d0538a43e4a9d391d9e61995cae71c87146922998fe76d8",
+        "previousAsset": "/exercise-images/wger-519.png",
+        "optimization": "lossless WebP; same dimensions and decoded RGBA verified identical"
       }
     ]
   },
@@ -2456,12 +2624,15 @@
     "source": "https://wger.de/api/v2/exerciseinfo/1452/",
     "images": [
       {
-        "src": "/exercise-images/wger-639.png",
+        "src": "/exercise-images/wger-639.webp",
         "original": "https://wger.de/media/exercise-images/1452/85a6b9de-4eec-445b-8ebb-f1950b076aba.png",
         "author": "Davidgj32",
         "license": "CC-BY-SA 4",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
-        "sha256": "353cd0223fe76d5a589f85e12c334f276bcbf10b0053b3aef8e3df10a1ba2248"
+        "sha256": "194cb12021b15c3eb67100c5547368aedfe5b72446aa0dd838bdab9b4e49ed3f",
+        "originalSha256": "353cd0223fe76d5a589f85e12c334f276bcbf10b0053b3aef8e3df10a1ba2248",
+        "previousAsset": "/exercise-images/wger-639.png",
+        "optimization": "lossless WebP; same dimensions and decoded RGBA verified identical"
       }
     ]
   },
@@ -2484,12 +2655,15 @@
     "source": "https://wger.de/api/v2/exerciseinfo/1554/",
     "images": [
       {
-        "src": "/exercise-images/wger-526.png",
+        "src": "/exercise-images/wger-526.webp",
         "original": "https://wger.de/media/exercise-images/1554/49207a62-8799-4b47-8c0b-7bde02926f3d.png",
         "author": "Settebello",
         "license": "CC-BY-SA 4",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
-        "sha256": "7e6f3da44a68a285da8d987ad2ebc47f636bf17555e911d7dce0e1bb9be8ad47"
+        "sha256": "51f4bef2fdaec1fe783adb0d1504c77ce9a6f4ff013b42c097f706c16a569c2e",
+        "originalSha256": "7e6f3da44a68a285da8d987ad2ebc47f636bf17555e911d7dce0e1bb9be8ad47",
+        "previousAsset": "/exercise-images/wger-526.png",
+        "optimization": "lossless WebP; same dimensions and decoded RGBA verified identical"
       }
     ]
   },
@@ -2498,12 +2672,15 @@
     "source": "https://wger.de/api/v2/exerciseinfo/1556/",
     "images": [
       {
-        "src": "/exercise-images/wger-528.png",
+        "src": "/exercise-images/wger-528.webp",
         "original": "https://wger.de/media/exercise-images/1556/a23c820b-e08b-4911-a6a4-80f16c15d2e0.png",
         "author": "Settebello",
         "license": "CC-BY-SA 4",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
-        "sha256": "86c832f6c4f6f5f3a0fda5ae02e4f18b15bbd1ead56deda698df1e33fb9572af"
+        "sha256": "aff4763d7c0edb26264120f506446ed19b37bde76c65ac1ecd5e668d8f907d18",
+        "originalSha256": "86c832f6c4f6f5f3a0fda5ae02e4f18b15bbd1ead56deda698df1e33fb9572af",
+        "previousAsset": "/exercise-images/wger-528.png",
+        "optimization": "lossless WebP; same dimensions and decoded RGBA verified identical"
       }
     ]
   },
@@ -2512,12 +2689,15 @@
     "source": "https://wger.de/api/v2/exerciseinfo/1567/",
     "images": [
       {
-        "src": "/exercise-images/wger-539.png",
+        "src": "/exercise-images/wger-539.webp",
         "original": "https://wger.de/media/exercise-images/1567/0a8c155c-a48e-47e8-9df3-e39f025c6cad.png",
         "author": "Mariano_O",
         "license": "CC-BY-SA 4",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
-        "sha256": "23cb491e8c890142e476da3a93c7423e33d17267d6dd6b5e4d11622cd09b13a3"
+        "sha256": "116107c7019b3e5ea66136a7f8133c71955f46c30d5bfe2810455ba82c375058",
+        "originalSha256": "23cb491e8c890142e476da3a93c7423e33d17267d6dd6b5e4d11622cd09b13a3",
+        "previousAsset": "/exercise-images/wger-539.png",
+        "optimization": "lossless WebP; same dimensions and decoded RGBA verified identical"
       }
     ]
   },
@@ -2526,12 +2706,15 @@
     "source": "https://wger.de/api/v2/exerciseinfo/1604/",
     "images": [
       {
-        "src": "/exercise-images/wger-550.png",
+        "src": "/exercise-images/wger-550.webp",
         "original": "https://wger.de/media/exercise-images/1604/7695428e-bfed-4021-b987-498d93153995.png",
         "author": "RiccaBaro",
         "license": "CC-BY-SA 4",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
-        "sha256": "aa9938528b7c9a1c7d65d24d50a908a1430bf21a03ecc6c1fe7b1c79e3e211e4"
+        "sha256": "1bedea90d9a6904b40a5942166e9b4b7546334316bbc35a5361ea9b843aa8e82",
+        "originalSha256": "aa9938528b7c9a1c7d65d24d50a908a1430bf21a03ecc6c1fe7b1c79e3e211e4",
+        "previousAsset": "/exercise-images/wger-550.png",
+        "optimization": "lossless WebP; same dimensions and decoded RGBA verified identical"
       }
     ]
   },
@@ -2638,12 +2821,15 @@
     "source": "https://wger.de/api/v2/exerciseinfo/1734/",
     "images": [
       {
-        "src": "/exercise-images/wger-602.png",
+        "src": "/exercise-images/wger-602.webp",
         "original": "https://wger.de/media/exercise-images/1734/782e2fbb-1267-476d-a817-14f3b83e0564.png",
         "author": "Tierrasverdes",
         "license": "CC-BY-SA 4",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
-        "sha256": "626f7b645ce1ebddb78061f5d14a8b829cdbbfedfb0f513c814280cff3c17b29"
+        "sha256": "8e1dbaae182127bd67078a6fc71633b749eae21dcb377523e1ab60905d8cf6f6",
+        "originalSha256": "626f7b645ce1ebddb78061f5d14a8b829cdbbfedfb0f513c814280cff3c17b29",
+        "previousAsset": "/exercise-images/wger-602.png",
+        "optimization": "lossless WebP; same dimensions and decoded RGBA verified identical"
       }
     ]
   },
@@ -2652,12 +2838,15 @@
     "source": "https://wger.de/api/v2/exerciseinfo/1736/",
     "images": [
       {
-        "src": "/exercise-images/wger-604.png",
+        "src": "/exercise-images/wger-604.webp",
         "original": "https://wger.de/media/exercise-images/1736/aa724cc5-c485-4f3e-9d2a-0c6ae4baefbe.png",
         "author": "Tierrasverdes",
         "license": "CC-BY-SA 4",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
-        "sha256": "873ace61687a2897ffddd5f697238523920866ed68679bd33531b4040c2fd43c"
+        "sha256": "847cd4f761b0665685ce0029fafec9e495cb4a3850f28a0b58fa94ff7cba1f8b",
+        "originalSha256": "873ace61687a2897ffddd5f697238523920866ed68679bd33531b4040c2fd43c",
+        "previousAsset": "/exercise-images/wger-604.png",
+        "optimization": "lossless WebP; same dimensions and decoded RGBA verified identical"
       }
     ]
   },
@@ -2772,12 +2961,15 @@
     "source": "https://wger.de/api/v2/exerciseinfo/1861/",
     "images": [
       {
-        "src": "/exercise-images/wger-629.png",
+        "src": "/exercise-images/wger-629.webp",
         "original": "https://wger.de/media/exercise-images/1861/0ffe4e99-71ad-47fb-b98c-1f243faa0499.png",
         "author": "Davidgj32",
         "license": "CC-BY-SA 4",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
-        "sha256": "c546ce439c6eb239ce84214834c60321a44cdd548374e48f0321a82a069e716b"
+        "sha256": "5ae6aeff88f63945993599f1b5b84cde9d56e83c64583c3df691bd699f079fde",
+        "originalSha256": "c546ce439c6eb239ce84214834c60321a44cdd548374e48f0321a82a069e716b",
+        "previousAsset": "/exercise-images/wger-629.png",
+        "optimization": "lossless WebP; same dimensions and decoded RGBA verified identical"
       }
     ]
   },
@@ -2786,12 +2978,15 @@
     "source": "https://wger.de/api/v2/exerciseinfo/1862/",
     "images": [
       {
-        "src": "/exercise-images/wger-630.png",
+        "src": "/exercise-images/wger-630.webp",
         "original": "https://wger.de/media/exercise-images/1862/93d993f8-1d8c-4e21-99c6-08b2fe424a17.png",
         "author": "Davidgj32",
         "license": "CC-BY-SA 4",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
-        "sha256": "b89c4f98873df495ab3e4588dd633e783e18937b9f985e657f917ee2977fc3f8"
+        "sha256": "b65de1c346c1646fdc69222e59435f0fbe432adf4aae154730b8d173d99a27ca",
+        "originalSha256": "b89c4f98873df495ab3e4588dd633e783e18937b9f985e657f917ee2977fc3f8",
+        "previousAsset": "/exercise-images/wger-630.png",
+        "optimization": "lossless WebP; same dimensions and decoded RGBA verified identical"
       }
     ]
   },
@@ -2800,12 +2995,15 @@
     "source": "https://wger.de/api/v2/exerciseinfo/1863/",
     "images": [
       {
-        "src": "/exercise-images/wger-631.png",
+        "src": "/exercise-images/wger-631.webp",
         "original": "https://wger.de/media/exercise-images/1863/5f29959d-0fd1-46d2-98b7-0c2cb5d9ee13.png",
         "author": "Davidgj32",
         "license": "CC-BY-SA 4",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
-        "sha256": "711bec6b9355b96fc2f30633d05f13994b4d9351190a935983f77ebc7cd412b8"
+        "sha256": "fe398ba41ae1a94ef8d7dbe431b27bc8841b807da79b05a31c3b4a2337342071",
+        "originalSha256": "711bec6b9355b96fc2f30633d05f13994b4d9351190a935983f77ebc7cd412b8",
+        "previousAsset": "/exercise-images/wger-631.png",
+        "optimization": "lossless WebP; same dimensions and decoded RGBA verified identical"
       }
     ]
   },
@@ -2814,12 +3012,15 @@
     "source": "https://wger.de/api/v2/exerciseinfo/1864/",
     "images": [
       {
-        "src": "/exercise-images/wger-632.png",
+        "src": "/exercise-images/wger-632.webp",
         "original": "https://wger.de/media/exercise-images/1864/5970cdd8-0123-4eba-a921-2157fb6adacf.png",
         "author": "Davidgj32",
         "license": "CC-BY-SA 4",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
-        "sha256": "f0585f2d544161ebfe125e4a16debfc6fe28c60c601a0ca416a9b5418b8fed6a"
+        "sha256": "f4cf0f9a0a5928512b2d5b35aa690b38f7b9b03ae7de087cbd9d0c83d1b01e1f",
+        "originalSha256": "f0585f2d544161ebfe125e4a16debfc6fe28c60c601a0ca416a9b5418b8fed6a",
+        "previousAsset": "/exercise-images/wger-632.png",
+        "optimization": "lossless WebP; same dimensions and decoded RGBA verified identical"
       }
     ]
   },
@@ -2828,12 +3029,15 @@
     "source": "https://wger.de/api/v2/exerciseinfo/1865/",
     "images": [
       {
-        "src": "/exercise-images/wger-633.png",
+        "src": "/exercise-images/wger-633.webp",
         "original": "https://wger.de/media/exercise-images/1865/c2c9848e-5094-4ed9-bd81-0831b6551483.png",
         "author": "Davidgj32",
         "license": "CC-BY-SA 4",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
-        "sha256": "db8af2f2da9cee90fbd2fbdfc7e1b8e27c361b03366cd772eaf612df32f1e62f"
+        "sha256": "494c198ddfd82450e15e2afff1ff491373e369ac465a34c7e571e1f7a8b28592",
+        "originalSha256": "db8af2f2da9cee90fbd2fbdfc7e1b8e27c361b03366cd772eaf612df32f1e62f",
+        "previousAsset": "/exercise-images/wger-633.png",
+        "optimization": "lossless WebP; same dimensions and decoded RGBA verified identical"
       }
     ]
   },
@@ -2842,12 +3046,15 @@
     "source": "https://wger.de/api/v2/exerciseinfo/1867/",
     "images": [
       {
-        "src": "/exercise-images/wger-635.png",
+        "src": "/exercise-images/wger-635.webp",
         "original": "https://wger.de/media/exercise-images/1867/767631e5-10d2-46b8-b03f-cc298f96963b.png",
         "author": "Davidgj32",
         "license": "CC-BY-SA 4",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
-        "sha256": "0971847fa0d7347a453a64dff710e005583b5576aaaf3c5b4ae5b3e5ad2fe83d"
+        "sha256": "bb75b0d7b7cfc8fb35649f5300952e818b841cf8d92b099dae51d595e1903b62",
+        "originalSha256": "0971847fa0d7347a453a64dff710e005583b5576aaaf3c5b4ae5b3e5ad2fe83d",
+        "previousAsset": "/exercise-images/wger-635.png",
+        "optimization": "lossless WebP; same dimensions and decoded RGBA verified identical"
       }
     ]
   },
@@ -2856,12 +3063,15 @@
     "source": "https://wger.de/api/v2/exerciseinfo/1868/",
     "images": [
       {
-        "src": "/exercise-images/wger-636.png",
+        "src": "/exercise-images/wger-636.webp",
         "original": "https://wger.de/media/exercise-images/1868/446e7065-215d-4a91-9da7-9416101442bb.png",
         "author": "Davidgj32",
         "license": "CC-BY-SA 4",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
-        "sha256": "a54976da5fbd48ef9b928608eecec22f74a07cecc2a03c76a4f1ebc90faa8364"
+        "sha256": "f71affefe290cbc74d8d12822a516826e530873dee9d8a78c481cf6e6224a33b",
+        "originalSha256": "a54976da5fbd48ef9b928608eecec22f74a07cecc2a03c76a4f1ebc90faa8364",
+        "previousAsset": "/exercise-images/wger-636.png",
+        "optimization": "lossless WebP; same dimensions and decoded RGBA verified identical"
       }
     ]
   },
@@ -2870,12 +3080,15 @@
     "source": "https://wger.de/api/v2/exerciseinfo/1869/",
     "images": [
       {
-        "src": "/exercise-images/wger-637.png",
+        "src": "/exercise-images/wger-637.webp",
         "original": "https://wger.de/media/exercise-images/1869/c49187bd-9f90-4a7a-b25e-1d50e857a104.png",
         "author": "Davidgj32",
         "license": "CC-BY-SA 4",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
-        "sha256": "9e2871ef4050b93e4ee410076a28576466456fc7b4b4afcf595a2c323cac13db"
+        "sha256": "7390f71935c083eefdef53e312c75fb6c7dd7e3a7c91c87ee43dfe89691218f1",
+        "originalSha256": "9e2871ef4050b93e4ee410076a28576466456fc7b4b4afcf595a2c323cac13db",
+        "previousAsset": "/exercise-images/wger-637.png",
+        "optimization": "lossless WebP; same dimensions and decoded RGBA verified identical"
       }
     ]
   },
@@ -2884,12 +3097,15 @@
     "source": "https://wger.de/api/v2/exerciseinfo/1870/",
     "images": [
       {
-        "src": "/exercise-images/wger-638.png",
+        "src": "/exercise-images/wger-638.webp",
         "original": "https://wger.de/media/exercise-images/1870/7465bbcf-3b86-42a6-8d2f-12a3d1f60a15.png",
         "author": "Davidgj32",
         "license": "CC-BY-SA 4",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
-        "sha256": "b83763cbbdbeec80734420b529e2b439b369f0a0df348130daa9fde317d59246"
+        "sha256": "0d206a3b9f9ff52b952ece8959f287111f2105893985faaeee86857d6ff5386a",
+        "originalSha256": "b83763cbbdbeec80734420b529e2b439b369f0a0df348130daa9fde317d59246",
+        "previousAsset": "/exercise-images/wger-638.png",
+        "optimization": "lossless WebP; same dimensions and decoded RGBA verified identical"
       }
     ]
   },
@@ -2898,12 +3114,15 @@
     "source": "https://wger.de/api/v2/exerciseinfo/1872/",
     "images": [
       {
-        "src": "/exercise-images/wger-640.png",
+        "src": "/exercise-images/wger-640.webp",
         "original": "https://wger.de/media/exercise-images/1872/df982df1-512a-4eb9-acd9-68cc1c265df6.png",
         "author": "Davidgj32",
         "license": "CC-BY-SA 4",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
-        "sha256": "747ba75a39a55cdf391f71483e6b08449e9e5ce079fd94f70c7c3191c2e08dcd"
+        "sha256": "c9d27994cb0e4dd91d0319956c26d447403e8e1be4fe8b840bbd4a81cf6d3d15",
+        "originalSha256": "747ba75a39a55cdf391f71483e6b08449e9e5ce079fd94f70c7c3191c2e08dcd",
+        "previousAsset": "/exercise-images/wger-640.png",
+        "optimization": "lossless WebP; same dimensions and decoded RGBA verified identical"
       }
     ]
   },
@@ -2912,12 +3131,15 @@
     "source": "https://wger.de/api/v2/exerciseinfo/1873/",
     "images": [
       {
-        "src": "/exercise-images/wger-641.png",
+        "src": "/exercise-images/wger-641.webp",
         "original": "https://wger.de/media/exercise-images/1873/c0ed299b-6d87-4d90-885d-bb3b5d85f1eb.png",
         "author": "Davidgj32",
         "license": "CC-BY-SA 4",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
-        "sha256": "13a08d6a7e892558ecd4c6183e6d92734397c9cfe468612c8e55126942387fd8"
+        "sha256": "81c146e270f5347176d8c15850b2c1aa63c5ce962b0a28f06f2c7679232a06a2",
+        "originalSha256": "13a08d6a7e892558ecd4c6183e6d92734397c9cfe468612c8e55126942387fd8",
+        "previousAsset": "/exercise-images/wger-641.png",
+        "optimization": "lossless WebP; same dimensions and decoded RGBA verified identical"
       }
     ]
   },
@@ -2926,12 +3148,15 @@
     "source": "https://wger.de/api/v2/exerciseinfo/1874/",
     "images": [
       {
-        "src": "/exercise-images/wger-642.png",
+        "src": "/exercise-images/wger-642.webp",
         "original": "https://wger.de/media/exercise-images/1874/66fca8a5-41e8-42d1-8776-5e46a4902650.png",
         "author": "Davidgj32",
         "license": "CC-BY-SA 4",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
-        "sha256": "f69da212d2aec9676b429dc5b9d1ed32fb735c0b0e8d3a9d63e3abaa6a5267fa"
+        "sha256": "f2d5d5a0f8b75316ae8994a6a5e294c2dea8ba976dbaa93a9ffb0fbda454412f",
+        "originalSha256": "f69da212d2aec9676b429dc5b9d1ed32fb735c0b0e8d3a9d63e3abaa6a5267fa",
+        "previousAsset": "/exercise-images/wger-642.png",
+        "optimization": "lossless WebP; same dimensions and decoded RGBA verified identical"
       }
     ]
   },
@@ -2940,12 +3165,15 @@
     "source": "https://wger.de/api/v2/exerciseinfo/1889/",
     "images": [
       {
-        "src": "/exercise-images/wger-646.png",
+        "src": "/exercise-images/wger-646.webp",
         "original": "https://wger.de/media/exercise-images/1889/bc51ef67-0c12-4340-a36c-42ef722778dd.png",
         "author": "nishant0712",
         "license": "CC-BY-SA 4",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
-        "sha256": "fd54a6fd64689272e05f1cfad94b5e2f587100505550883b714ddca250531371"
+        "sha256": "1f4a5f9d34b0f21c6b4e531b41b42ef9dc732612a4c9e6cc584b6ecd63ae9b46",
+        "originalSha256": "fd54a6fd64689272e05f1cfad94b5e2f587100505550883b714ddca250531371",
+        "previousAsset": "/exercise-images/wger-646.png",
+        "optimization": "lossless WebP; same dimensions and decoded RGBA verified identical"
       }
     ]
   },
@@ -2954,12 +3182,15 @@
     "source": "https://wger.de/api/v2/exerciseinfo/1901/",
     "images": [
       {
-        "src": "/exercise-images/wger-650.png",
+        "src": "/exercise-images/wger-650.webp",
         "original": "https://wger.de/media/exercise-images/1901/046f0f42-0ed5-48c5-a9ee-41de25e3b6a0.png",
         "author": "nishant0712",
         "license": "CC-BY-SA 4",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
-        "sha256": "05bcc8f90ab86fd6a751bb25a2c38b980eda3af526018da5b61ce6e1aa8ef073"
+        "sha256": "cd66864c28909a042464cc25e7c617ed3cbc74f80561f21ba1901ca74309adec",
+        "originalSha256": "05bcc8f90ab86fd6a751bb25a2c38b980eda3af526018da5b61ce6e1aa8ef073",
+        "previousAsset": "/exercise-images/wger-650.png",
+        "optimization": "lossless WebP; same dimensions and decoded RGBA verified identical"
       }
     ]
   },
@@ -2968,12 +3199,15 @@
     "source": "https://wger.de/api/v2/exerciseinfo/1902/",
     "images": [
       {
-        "src": "/exercise-images/wger-651.png",
+        "src": "/exercise-images/wger-651.webp",
         "original": "https://wger.de/media/exercise-images/1902/d0c3f170-543c-4be4-bc70-5c6dc606406c.png",
         "author": "nishant0712",
         "license": "CC-BY-SA 4",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
-        "sha256": "bf72d811289e3840b9b6825bfc20baf9bdaae59856f33fc98b0f4b5d943847a3"
+        "sha256": "2f8e35442392497458162e9bcbda48cad474bf47dea5720731c467e3bb92bfe8",
+        "originalSha256": "bf72d811289e3840b9b6825bfc20baf9bdaae59856f33fc98b0f4b5d943847a3",
+        "previousAsset": "/exercise-images/wger-651.png",
+        "optimization": "lossless WebP; same dimensions and decoded RGBA verified identical"
       }
     ]
   },
@@ -2996,20 +3230,26 @@
     "source": "https://wger.de/api/v2/exerciseinfo/2494/",
     "images": [
       {
-        "src": "/exercise-images/wger-706.png",
+        "src": "/exercise-images/wger-706.webp",
         "original": "https://wger.de/media/exercise-images/2494/02f1ae86-d374-4b5a-b314-a76c487ea1e9.png",
         "author": "Knickers1833",
         "license": "CC-BY-SA 4",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
-        "sha256": "72941c6d1a8dcc11ccfbb6eba3949a0abcc3c4a67211302e18497bacb8c3dd18"
+        "sha256": "2ecb3f80af062a349b54ff44015d30a9acaf76cea5b7d07916e47ef28a391925",
+        "originalSha256": "72941c6d1a8dcc11ccfbb6eba3949a0abcc3c4a67211302e18497bacb8c3dd18",
+        "previousAsset": "/exercise-images/wger-706.png",
+        "optimization": "lossless WebP; same dimensions and decoded RGBA verified identical"
       },
       {
-        "src": "/exercise-images/wger-707.png",
+        "src": "/exercise-images/wger-707.webp",
         "original": "https://wger.de/media/exercise-images/2494/2213ff47-94e8-4884-919f-5af8a2fe9c0f.png",
         "author": "Knickers1833",
         "license": "CC-BY-SA 4",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
-        "sha256": "1249d04c0298ea3665bfa61fecbe89b3792b9e48a43b4f01aab3368d32de602e"
+        "sha256": "293b1b75349088d3c7e27447114913ef80ec78b31ce8a24b7f85a479fa61e6e8",
+        "originalSha256": "1249d04c0298ea3665bfa61fecbe89b3792b9e48a43b4f01aab3368d32de602e",
+        "previousAsset": "/exercise-images/wger-707.png",
+        "optimization": "lossless WebP; same dimensions and decoded RGBA verified identical"
       }
     ]
   }

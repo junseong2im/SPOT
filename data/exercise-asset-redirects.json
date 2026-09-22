@@ -1,0 +1,467 @@
+[
+  {
+    "source": "/exercise-images/fly-111.png",
+    "destination": "/exercise-images/fly-111.webp",
+    "permanent": true
+  },
+  {
+    "source": "/exercise-images/fly-112.png",
+    "destination": "/exercise-images/fly-112.webp",
+    "permanent": true
+  },
+  {
+    "source": "/exercise-images/dip-211.png",
+    "destination": "/exercise-images/dip-211.webp",
+    "permanent": true
+  },
+  {
+    "source": "/exercise-images/row-143.png",
+    "destination": "/exercise-images/row-143.webp",
+    "permanent": true
+  },
+  {
+    "source": "/exercise-images/row-144.png",
+    "destination": "/exercise-images/row-144.webp",
+    "permanent": true
+  },
+  {
+    "source": "/exercise-images/straight-599.png",
+    "destination": "/exercise-images/straight-599.webp",
+    "permanent": true
+  },
+  {
+    "source": "/exercise-images/shoulder-173.png",
+    "destination": "/exercise-images/shoulder-173.webp",
+    "permanent": true
+  },
+  {
+    "source": "/exercise-images/shoulder-174.png",
+    "destination": "/exercise-images/shoulder-174.webp",
+    "permanent": true
+  },
+  {
+    "source": "/exercise-images/lateral-177.png",
+    "destination": "/exercise-images/lateral-177.webp",
+    "permanent": true
+  },
+  {
+    "source": "/exercise-images/lateral-178.png",
+    "destination": "/exercise-images/lateral-178.webp",
+    "permanent": true
+  },
+  {
+    "source": "/exercise-images/rear-214.png",
+    "destination": "/exercise-images/rear-214.webp",
+    "permanent": true
+  },
+  {
+    "source": "/exercise-images/rear-215.png",
+    "destination": "/exercise-images/rear-215.webp",
+    "permanent": true
+  },
+  {
+    "source": "/exercise-images/shrug-39.png",
+    "destination": "/exercise-images/shrug-39.webp",
+    "permanent": true
+  },
+  {
+    "source": "/exercise-images/shrug-40.png",
+    "destination": "/exercise-images/shrug-40.webp",
+    "permanent": true
+  },
+  {
+    "source": "/exercise-images/squat-125.png",
+    "destination": "/exercise-images/squat-125.webp",
+    "permanent": true
+  },
+  {
+    "source": "/exercise-images/squat-126.png",
+    "destination": "/exercise-images/squat-126.webp",
+    "permanent": true
+  },
+  {
+    "source": "/exercise-images/legcurl-179.png",
+    "destination": "/exercise-images/legcurl-179.webp",
+    "permanent": true
+  },
+  {
+    "source": "/exercise-images/legcurl-180.png",
+    "destination": "/exercise-images/legcurl-180.webp",
+    "permanent": true
+  },
+  {
+    "source": "/exercise-images/wger-113.png",
+    "destination": "/exercise-images/wger-113.webp",
+    "permanent": true
+  },
+  {
+    "source": "/exercise-images/wger-114.png",
+    "destination": "/exercise-images/wger-114.webp",
+    "permanent": true
+  },
+  {
+    "source": "/exercise-images/wger-115.png",
+    "destination": "/exercise-images/wger-115.webp",
+    "permanent": true
+  },
+  {
+    "source": "/exercise-images/wger-116.png",
+    "destination": "/exercise-images/wger-116.webp",
+    "permanent": true
+  },
+  {
+    "source": "/exercise-images/wger-129.png",
+    "destination": "/exercise-images/wger-129.webp",
+    "permanent": true
+  },
+  {
+    "source": "/exercise-images/wger-130.png",
+    "destination": "/exercise-images/wger-130.webp",
+    "permanent": true
+  },
+  {
+    "source": "/exercise-images/wger-212.png",
+    "destination": "/exercise-images/wger-212.webp",
+    "permanent": true
+  },
+  {
+    "source": "/exercise-images/wger-213.png",
+    "destination": "/exercise-images/wger-213.webp",
+    "permanent": true
+  },
+  {
+    "source": "/exercise-images/wger-119.png",
+    "destination": "/exercise-images/wger-119.webp",
+    "permanent": true
+  },
+  {
+    "source": "/exercise-images/wger-120.png",
+    "destination": "/exercise-images/wger-120.webp",
+    "permanent": true
+  },
+  {
+    "source": "/exercise-images/wger-127.png",
+    "destination": "/exercise-images/wger-127.webp",
+    "permanent": true
+  },
+  {
+    "source": "/exercise-images/wger-128.png",
+    "destination": "/exercise-images/wger-128.webp",
+    "permanent": true
+  },
+  {
+    "source": "/exercise-images/wger-462.png",
+    "destination": "/exercise-images/wger-462.webp",
+    "permanent": true
+  },
+  {
+    "source": "/exercise-images/wger-524.png",
+    "destination": "/exercise-images/wger-524.webp",
+    "permanent": true
+  },
+  {
+    "source": "/exercise-images/wger-84.png",
+    "destination": "/exercise-images/wger-84.webp",
+    "permanent": true
+  },
+  {
+    "source": "/exercise-images/wger-90.png",
+    "destination": "/exercise-images/wger-90.webp",
+    "permanent": true
+  },
+  {
+    "source": "/exercise-images/wger-91.png",
+    "destination": "/exercise-images/wger-91.webp",
+    "permanent": true
+  },
+  {
+    "source": "/exercise-images/wger-92.png",
+    "destination": "/exercise-images/wger-92.webp",
+    "permanent": true
+  },
+  {
+    "source": "/exercise-images/wger-598.png",
+    "destination": "/exercise-images/wger-598.webp",
+    "permanent": true
+  },
+  {
+    "source": "/exercise-images/wger-272.png",
+    "destination": "/exercise-images/wger-272.webp",
+    "permanent": true
+  },
+  {
+    "source": "/exercise-images/wger-145.png",
+    "destination": "/exercise-images/wger-145.webp",
+    "permanent": true
+  },
+  {
+    "source": "/exercise-images/wger-146.png",
+    "destination": "/exercise-images/wger-146.webp",
+    "permanent": true
+  },
+  {
+    "source": "/exercise-images/wger-171.png",
+    "destination": "/exercise-images/wger-171.webp",
+    "permanent": true
+  },
+  {
+    "source": "/exercise-images/wger-172.png",
+    "destination": "/exercise-images/wger-172.webp",
+    "permanent": true
+  },
+  {
+    "source": "/exercise-images/wger-337.png",
+    "destination": "/exercise-images/wger-337.webp",
+    "permanent": true
+  },
+  {
+    "source": "/exercise-images/wger-216.png",
+    "destination": "/exercise-images/wger-216.webp",
+    "permanent": true
+  },
+  {
+    "source": "/exercise-images/wger-217.png",
+    "destination": "/exercise-images/wger-217.webp",
+    "permanent": true
+  },
+  {
+    "source": "/exercise-images/wger-149.png",
+    "destination": "/exercise-images/wger-149.webp",
+    "permanent": true
+  },
+  {
+    "source": "/exercise-images/wger-150.png",
+    "destination": "/exercise-images/wger-150.webp",
+    "permanent": true
+  },
+  {
+    "source": "/exercise-images/wger-121.png",
+    "destination": "/exercise-images/wger-121.webp",
+    "permanent": true
+  },
+  {
+    "source": "/exercise-images/wger-122.png",
+    "destination": "/exercise-images/wger-122.webp",
+    "permanent": true
+  },
+  {
+    "source": "/exercise-images/wger-181.png",
+    "destination": "/exercise-images/wger-181.webp",
+    "permanent": true
+  },
+  {
+    "source": "/exercise-images/wger-182.png",
+    "destination": "/exercise-images/wger-182.webp",
+    "permanent": true
+  },
+  {
+    "source": "/exercise-images/wger-183.png",
+    "destination": "/exercise-images/wger-183.webp",
+    "permanent": true
+  },
+  {
+    "source": "/exercise-images/wger-184.png",
+    "destination": "/exercise-images/wger-184.webp",
+    "permanent": true
+  },
+  {
+    "source": "/exercise-images/wger-359.png",
+    "destination": "/exercise-images/wger-359.webp",
+    "permanent": true
+  },
+  {
+    "source": "/exercise-images/wger-649.png",
+    "destination": "/exercise-images/wger-649.webp",
+    "permanent": true
+  },
+  {
+    "source": "/exercise-images/wger-545.png",
+    "destination": "/exercise-images/wger-545.webp",
+    "permanent": true
+  },
+  {
+    "source": "/exercise-images/wger-344.png",
+    "destination": "/exercise-images/wger-344.webp",
+    "permanent": true
+  },
+  {
+    "source": "/exercise-images/wger-346.png",
+    "destination": "/exercise-images/wger-346.webp",
+    "permanent": true
+  },
+  {
+    "source": "/exercise-images/wger-347.png",
+    "destination": "/exercise-images/wger-347.webp",
+    "permanent": true
+  },
+  {
+    "source": "/exercise-images/wger-220.png",
+    "destination": "/exercise-images/wger-220.webp",
+    "permanent": true
+  },
+  {
+    "source": "/exercise-images/wger-221.png",
+    "destination": "/exercise-images/wger-221.webp",
+    "permanent": true
+  },
+  {
+    "source": "/exercise-images/wger-429.png",
+    "destination": "/exercise-images/wger-429.webp",
+    "permanent": true
+  },
+  {
+    "source": "/exercise-images/wger-430.png",
+    "destination": "/exercise-images/wger-430.webp",
+    "permanent": true
+  },
+  {
+    "source": "/exercise-images/wger-450.png",
+    "destination": "/exercise-images/wger-450.webp",
+    "permanent": true
+  },
+  {
+    "source": "/exercise-images/wger-453.png",
+    "destination": "/exercise-images/wger-453.webp",
+    "permanent": true
+  },
+  {
+    "source": "/exercise-images/wger-454.png",
+    "destination": "/exercise-images/wger-454.webp",
+    "permanent": true
+  },
+  {
+    "source": "/exercise-images/wger-455.png",
+    "destination": "/exercise-images/wger-455.webp",
+    "permanent": true
+  },
+  {
+    "source": "/exercise-images/wger-464.png",
+    "destination": "/exercise-images/wger-464.webp",
+    "permanent": true
+  },
+  {
+    "source": "/exercise-images/wger-519.png",
+    "destination": "/exercise-images/wger-519.webp",
+    "permanent": true
+  },
+  {
+    "source": "/exercise-images/wger-639.png",
+    "destination": "/exercise-images/wger-639.webp",
+    "permanent": true
+  },
+  {
+    "source": "/exercise-images/wger-526.png",
+    "destination": "/exercise-images/wger-526.webp",
+    "permanent": true
+  },
+  {
+    "source": "/exercise-images/wger-528.png",
+    "destination": "/exercise-images/wger-528.webp",
+    "permanent": true
+  },
+  {
+    "source": "/exercise-images/wger-539.png",
+    "destination": "/exercise-images/wger-539.webp",
+    "permanent": true
+  },
+  {
+    "source": "/exercise-images/wger-550.png",
+    "destination": "/exercise-images/wger-550.webp",
+    "permanent": true
+  },
+  {
+    "source": "/exercise-images/wger-602.png",
+    "destination": "/exercise-images/wger-602.webp",
+    "permanent": true
+  },
+  {
+    "source": "/exercise-images/wger-604.png",
+    "destination": "/exercise-images/wger-604.webp",
+    "permanent": true
+  },
+  {
+    "source": "/exercise-images/wger-629.png",
+    "destination": "/exercise-images/wger-629.webp",
+    "permanent": true
+  },
+  {
+    "source": "/exercise-images/wger-630.png",
+    "destination": "/exercise-images/wger-630.webp",
+    "permanent": true
+  },
+  {
+    "source": "/exercise-images/wger-631.png",
+    "destination": "/exercise-images/wger-631.webp",
+    "permanent": true
+  },
+  {
+    "source": "/exercise-images/wger-632.png",
+    "destination": "/exercise-images/wger-632.webp",
+    "permanent": true
+  },
+  {
+    "source": "/exercise-images/wger-633.png",
+    "destination": "/exercise-images/wger-633.webp",
+    "permanent": true
+  },
+  {
+    "source": "/exercise-images/wger-635.png",
+    "destination": "/exercise-images/wger-635.webp",
+    "permanent": true
+  },
+  {
+    "source": "/exercise-images/wger-636.png",
+    "destination": "/exercise-images/wger-636.webp",
+    "permanent": true
+  },
+  {
+    "source": "/exercise-images/wger-637.png",
+    "destination": "/exercise-images/wger-637.webp",
+    "permanent": true
+  },
+  {
+    "source": "/exercise-images/wger-638.png",
+    "destination": "/exercise-images/wger-638.webp",
+    "permanent": true
+  },
+  {
+    "source": "/exercise-images/wger-640.png",
+    "destination": "/exercise-images/wger-640.webp",
+    "permanent": true
+  },
+  {
+    "source": "/exercise-images/wger-641.png",
+    "destination": "/exercise-images/wger-641.webp",
+    "permanent": true
+  },
+  {
+    "source": "/exercise-images/wger-642.png",
+    "destination": "/exercise-images/wger-642.webp",
+    "permanent": true
+  },
+  {
+    "source": "/exercise-images/wger-646.png",
+    "destination": "/exercise-images/wger-646.webp",
+    "permanent": true
+  },
+  {
+    "source": "/exercise-images/wger-650.png",
+    "destination": "/exercise-images/wger-650.webp",
+    "permanent": true
+  },
+  {
+    "source": "/exercise-images/wger-651.png",
+    "destination": "/exercise-images/wger-651.webp",
+    "permanent": true
+  },
+  {
+    "source": "/exercise-images/wger-706.png",
+    "destination": "/exercise-images/wger-706.webp",
+    "permanent": true
+  },
+  {
+    "source": "/exercise-images/wger-707.png",
+    "destination": "/exercise-images/wger-707.webp",
+    "permanent": true
+  }
+]
