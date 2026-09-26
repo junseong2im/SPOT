@@ -1,0 +1,41 @@
+{
+  "format": "gymworkout-encrypted-local-backup",
+  "version": 1,
+  "sourceCommit": "4123a01a9da640980bba461466816fe4279ef7e1",
+  "fileCount": 1231,
+  "directoryCount": 50,
+  "totalBytes": 108029098,
+  "compression": "gzip",
+  "encryption": {
+    "algorithm": "aes-256-gcm",
+    "nonce": "iLrduAIBEp4P7TUI",
+    "authTag": "WVBefkHlZ5opIjNLrvayYA=="
+  },
+  "ciphertext": {
+    "sha256": "93247e6644963daf712661cf456d8f7fe25d8a16a720d750c302aabe71efa8c6",
+    "bytes": 64147292,
+    "chunkSize": 20971520,
+    "chunks": [
+      {
+        "file": "encrypted-000001.bin",
+        "size": 20971520,
+        "sha256": "de07f737ddb0da979f9586ba7a9ad92b38277d52345ad6fa12b3cdebc02e53e6"
+      },
+      {
+        "file": "encrypted-000002.bin",
+        "size": 20971520,
+        "sha256": "3946078e5eb45c6e02241ab663a216663daf2531ecc3c295a77d90d817bad56c"
+      },
+      {
+        "file": "encrypted-000003.bin",
+        "size": 20971520,
+        "sha256": "a7b8fdd31042dc8cb294f62c4e98adb8c5bf78c4d6fb3617600f265e34c84666"
+      },
+      {
+        "file": "encrypted-000004.bin",
+        "size": 1232732,
+        "sha256": "625d416ca874a705cf39108288b891eb52c16db6f70edda6b9a8f7ad13ce6bf3"
+      }
+    ]
+  }
+}
